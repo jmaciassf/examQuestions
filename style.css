@@ -1,0 +1,13 @@
+body {padding: 0;margin: 0;font-family: system-ui;}
+.title {background-color: #5f5fff;text-align: center;font-weight: 500;font-family: system-ui;font-size: x-large;color: white;padding: 7px;}
+
+.item {border: 2px solid #b8b8b8;margin: 10px;border-radius: 10px;padding: 10px;}
+.options {
+    margin-top: 5px;
+}
+.options .option {
+    cursor: pointer;
+    padding: 7px 2px;
+    display: block;
+}
+.options .option:hover {background-color: #ddd;}
