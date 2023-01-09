@@ -38,7 +38,7 @@ $(document).ready(function(){
                 var idOption = "option"+optionCounter;
                 options += 
                 `<label class="option" for="${idOption}" answer="${option.answer}">
-                    <input type="checkbox" id="${idOption}"><span>${option.text}</span>
+                    <input type="checkbox" id="${idOption}"><span class="text">${option.text}</span>
                 </label>`;
             });
 

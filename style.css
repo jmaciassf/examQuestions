@@ -1,13 +1,23 @@
 body {padding: 0;margin: 0;font-family: system-ui;}
-.title {background-color: #5f5fff;text-align: center;font-weight: 500;font-family: system-ui;font-size: x-large;color: white;padding: 7px;}
+.title {background-color: #5f5fff;text-align: center;font-weight: 500;font-family: system-ui;font-size: 24px;color: white;padding: 9px;margin-bottom: 20px;}
 
 .item {border: 2px solid #b8b8b8;margin: 10px;border-radius: 10px;padding: 10px;}
 .options {
-    margin-top: 5px;
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 500;
 }
 .options .option {
     cursor: pointer;
-    padding: 7px 2px;
+    padding: 15px 2px;
     display: block;
+    display: flex;
 }
 .options .option:hover {background-color: #ddd;}
+.option input {/* transform: scale(1.5); *//* margin: 0px 0px 0 25px; *//* display: inline-block; *//* top: 45px; *//* position: relative; */width: 50px;height: 60px;/* border: 20px solid; */margin-top: 5px;}
+.option .text {
+    /* margin-left: 113px; */
+    /* display: inline-block; */
+    flex: 1;
+    margin-left: 25px;
+}
