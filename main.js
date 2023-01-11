@@ -23,6 +23,8 @@ $(document).ready(function(){
                 if(index == 1 && element.answers.includes('B')) answer = true;
                 if(index == 2 && element.answers.includes('C')) answer = true;
                 if(index == 3 && element.answers.includes('D')) answer = true;
+                if(index == 4 && element.answers.includes('E')) answer = true;
+                if(index == 5 && element.answers.includes('F')) answer = true;
                 
                 arrOptions.push({ text: option, answer: answer });
             });
@@ -42,12 +44,31 @@ $(document).ready(function(){
                 </label>`;
             });
 
-            $("#items").append(
-            `<div class="item">
+            var addHTML = 
+            $(`<div class="item">
                 <div class="question">${element.question}</div>
                 <div class="options">${options}</div>
-            </div>`
-            );
+                <div class="buttons flex"><input class="btnAnswer" type="button" value="Display answer"></div>
+            </div>`);
+
+            $("#items").append(addHTML);
+
+            // Validar la respuesta
+            var $btnAnswer = $(addHTML).find(".btnAnswer");
+            $btnAnswer.click(function(){
+                console.log("answer click");
+                var $item = $(this).parents(".item");
+
+                $item.find(".option").each(function(){
+                    var $option = $(this);
+                    var isAnswer = $option.attr("answer") == "true";
+                    var isChecked = $option.find("input").is(":checked");
+
+                    //var isCorrect = isAnswer && isChecked ? $option.addClass("correct") : $option.addClass("error");
+                });
+
+                $item.addClass("showAnswers");
+            });
         });
 
     }).catch(function(error) {
