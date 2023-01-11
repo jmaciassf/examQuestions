@@ -3,13 +3,15 @@ $(document).ready(function(){
 
     fetch("https://raw.githubusercontent.com/jmaciassf/examQuestions/main/Salesforce-Developer-I.json") .then((response) => response.json())
     .then(function(response){
+        // Total questions
+        $(".subtitle").text(response.length + " questions");
 
         // Random array order
         response = response.sort(function () {
             return Math.random() - 0.5;
         });
 
-        var optionCounter = 0;
+        var questionCounter = optionCounter = 0;
         response.forEach(element => {
             console.log(element);
 
@@ -44,11 +46,15 @@ $(document).ready(function(){
                 </label>`;
             });
 
+            questionCounter++;
             var addHTML = 
             $(`<div class="item">
-                <div class="question">${element.question}</div>
-                <div class="options">${options}</div>
-                <div class="buttons flex"><input class="btnAnswer" type="button" value="Display answer"></div>
+                <div class="title">Question ${questionCounter}</div>
+                <div class="body">
+                    <div class="question">${element.question}</div>
+                    <div class="options">${options}</div>
+                    <div class="buttons flex"><input class="btnAnswer" type="button" value="Display answer"></div>
+                </div>
             </div>`);
 
             $("#items").append(addHTML);
@@ -63,11 +69,9 @@ $(document).ready(function(){
                     var $option = $(this);
                     var isAnswer = $option.attr("answer") == "true";
                     var isChecked = $option.find("input").is(":checked");
-
-                    //var isCorrect = isAnswer && isChecked ? $option.addClass("correct") : $option.addClass("error");
                 });
 
-                $item.addClass("showAnswers");
+                $item.addClass("showAnswers").find("input").attr("disabled", true);
             });
         });
 

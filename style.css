@@ -1,13 +1,21 @@
 body {padding: 0;margin: 0;font-family: system-ui;}
-.title {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 24px;color: white;padding: 9px;/* margin-bottom: 20px; */}
-
-.item {border: 2px solid #b8b8b8;margin: 10px;border-radius: 10px;padding: 10px;}
+.header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 24px;color: white;padding: 9px;/* margin-bottom: 20px; */}
+.subtitle {padding: 5px 10px 0;text-align: end;}
+.item {border: 1px solid #b8b8b8;margin: 10px;border-radius: 0 0 10px 10px;/* padding: 10px; */}
 .item.showAnswers .option[answer=true] {
     background-color: #26bc2694;
 }
+.item .title {
+    border-bottom: 1px solid #b8b8b8;
+    background-color: #bebebe4a;
+    padding: 7px 10px;
+}
+.item .body {
+    padding: 10px;
+}
 
 .options {
-    margin-top: 5px;
+    margin-top: 10px;
     /* font-size: 45px; */
     font-weight: 500;
     /* font-size: 30px; */
@@ -20,8 +28,9 @@ body {padding: 0;margin: 0;font-family: system-ui;}
     display: flex;
     border-radius: 10px;
     margin-top: 2px;
+    line-height: 23px;
 }
-.options .option:hover {background-color: #ddd;}
+.options .option:hover {background-color: #dddddd6e;}
 .option input {/* top: 45px; */width: 16px;height: 25px;/* border: 20px solid; */margin-top: 5px;margin: 0;/* vertical-align: baseline; *//* position: absolute; */display: table;vertical-align: baseline;}
 .option .text {
     /* margin-left: 113px; */
@@ -29,6 +38,7 @@ body {padding: 0;margin: 0;font-family: system-ui;}
     flex: 1;
     margin-left: 10px;
 }
+.buttons {/* margin-top: 10px; */}
 .flex { display: flex; }
-.btnAnswer {flex: 1;padding: 10px;background-color: blue;color: white;font-weight: 600;font-family: unset;letter-spacing: 0.7px;border-radius: 20px;cursor: pointer;border: none;}
+.btnAnswer {flex: 1;padding: 10px;background-color: blue;color: white;font-weight: 600;font-family: unset;letter-spacing: 0.7px;border-radius: 20px;cursor: pointer;border: none;margin-top: 10px;}
 .showAnswers .btnAnswer { display: none; }

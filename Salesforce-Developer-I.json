@@ -1,5 +1,5 @@
 [{ 
-	"question": "A developer in a Salesforce org with 100 Accounts executes the following code using the Developer console: <br>Account myAccount = new Account(Name = 'MyAccount');<br>Insert myAccount;<br>For (Integer x = 0; x < 250; x++) {<br>Account newAccount = new Account (Name='MyAccount' + x);<br>try {Insert newAccount;}catch (Exception ex) {System.debug (ex) ;}}insert new Account (Name='myAccount'); How many accounts are in the org after this code is run?", 
+	"question": "A developer in a Salesforce org with 100 Accounts executes the following code using the Developer console: <code><br>Account myAccount = new Account(Name = 'MyAccount');<br>Insert myAccount;<br>For (Integer x = 0; x < 250; x++) {<p style=\"text-indent: 20px;\">Account newAccount = new Account (Name='MyAccount' + x);<br>try {<p style=\"text-indent: 20px;\">Insert newAccount;</p>}catch (Exception ex) {<p style=\"text-indent: 20px;\">System.debug (ex);</p>}<br>}</p>insert new Account (Name='myAccount');</code> How many accounts are in the org after this code is run?", 
 	"options": ["101", "100", "102", "252"],
 	"answers": ["B"]
 }, 
@@ -176,54 +176,55 @@
 	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "In which two org types can a developer create new Apex Classes? Choose 2 answers",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Developer Edition",
+		"Sandbox",
+		"Enterprise Edition",
+		"Unlimited"
 	],
-	"answers": [""]
+	"answers": ["A", "B"]
 },
 { 
-	"question": "",
+	"question": "What declarative method helps ensure quality data? Choose 3 answers",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Page layouts",
+		"Lookup filters",
+		"Exception handling",
+		"Workflow alerts",
+		"Validation rules"
 	],
-	"answers": [""]
+	"answers": ["A", "B", "E"]
 },
 { 
-	"question": "",
+	"question": "A developer has a block of code that omits any statements that indicate whether the code block should execute with or without sharing. What will automatically obey the organization-wide defaults and sharing settings for the user who executes the code in the Salesforce organization?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Apex Triggers",
+		"HTTP Callouts",
+		"Apex Controllers",
+		"Anonymous Blocks"
 	],
-	"answers": [""]
+	"answers": ["D"]
 },
 { 
-	"question": "",
+	"question": "How would a developer change the field type of a custom field on the Account object from string to an integer?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Make the changes in the developer console, and then the change will automatically be reflected in the Apex code.",
+		"Mate the change in the declarative UI, then update the field type to an integer field in the Apex code.",
+		"Make the change in the declarative UI, an then the change will automatically be reflected in the Apex code.",
+		"Remove all references in the code, make the change in the declarative UI, and restore the references with the new type."
 	],
-	"answers": [""]
+	"answers": ["D"]
 },
 { 
-	"question": "",
+	"question": "Which type of code represents the Controller in MVC architecture on the Force.com platform? (Choose 2)",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"JavaScript that is used to make a menu item display itself.",
+		"A static resource that contains CSS and images.",
+		"Custom Apex and JavaScript code that is used to manipulate data.",
+		"StandardController system methods that are referenced by Visualforce."
 	],
-	"answers": [""]
+	"answers": ["C", "D"]
 },
 { 
 	"question": "",
