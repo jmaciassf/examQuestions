@@ -105,24 +105,75 @@
 	"answers": ["B", "C", "E"]
 },
 { 
-	"question": "",
+	"question": "What are two valid options for iterating through each Account in the collection List<Account> named AccountList? (Choose two.)",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"for (Account theAccount : AccountList) {...}",
+		"for(AccountList) {...}",
+		"for (List L : AccountList) {...}",
+		"for (Integer i=0; i < AccountList.Size(); i++) {...}"
 	],
-	"answers": [""]
+	"answers": ["A", "D"]
 },
 { 
-	"question": "",
+	"question": "A candidate may apply to multiple jobs at the company Universal Containers by submitting a single application per job posting, that application cannot be modified to be resubmitted to a different job posting. What can the administrator do to associate an application with each job posting in the schema for the organization?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Create a lookup relationship on both objects to a junction object called Job Posting Applications.",
+		"Create a master-detail relationship in the Job Postings custom object to the Applications custom object.",
+		"Create a master-detail relationship in the Application custom object to the Job Postings custom object.",
+		"Create a lookup relationship in the Applications custom object to the Job Postings custom object."
 	],
-	"answers": [""]
+	"answers": ["C"]
+},
+{ 
+	"question": "What is a capability of the Developer Console?",
+	"options": [
+		"Execute Anonymous Apex code, Create/Edit code, view Debug Logs.",
+		"Execute Anonymous Apex code, Run REST API, create/Edit code.",
+		"Execute Anonymous Apex code, Create/Edit code, Deploy code changes.",
+		"Execute Anonymous Apex code, Run REST API, deploy code changes."
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "In a single record, a user selects multiple values from a multi-select picklist. How are the selected values represented in Apex?",
+	"options": [
+		"As a String with each value separated by a comma",
+		"As a Set with each value as an element in the set",
+		"As a String with each value separated by a semicolon",
+		"As a List with each value as an element in the list Previous"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "Which two statements are true about Apex code executed in Anonymous Blocks? Choose 2 answers",
+	"options": [
+		"Successful DML operations are automatically committed",
+		"All DML operations are automatically rolled back",
+		"The code runs with the permissions of the user specified in the runAs() statement",
+		"The code runs with the permissions of the logged user.",
+		"The code runs in system mode having access to all objects and fields."
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "What can a Lightning Component contain in its resource bundle? Choose 2 answer",
+	"options": [
+		"Custom client side rendering behavior.",
+		"Build scripts for minification",
+		"Properties files with global settings",
+		"CSS styles scoped to the component"
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "A developer wants to list all of the Tasks for each Account on the Account detail page. When a task is created for a Contact, what does the developer need to do to display the Task on the related Account record?",
+	"options": [
+		"Nothing. The task is automatically displayed on the Account page.",
+		"Nothing. The Task cannot be related to an Account and a Contact.",
+		"Create a Workflow rule to relate the Task to the Contact's Account.",
+		"Create an Account formula field that displays the Task information."
+	],
+	"answers": ["A"]
 },
 { 
 	"question": "",
