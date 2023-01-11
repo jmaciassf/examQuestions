@@ -47,7 +47,7 @@ $(document).ready(function(){
             });
 
             questionCounter++;
-            var addHTML = 
+            var $item = 
             $(`<div class="item">
                 <div class="title">Question ${questionCounter}</div>
                 <div class="body">
@@ -57,13 +57,22 @@ $(document).ready(function(){
                 </div>
             </div>`);
 
-            $("#items").append(addHTML);
+            $("#items").append($item);
+            var $body = $item.find(".body");
+
+            // Title toggle - Add icon to view if the answer was correct
+            $item.find(".title").click(function(){
+                console.log("title click");
+                $body.slideToggle(function(){
+                    console.log("toggle end");
+                    $body.is(":visible") ? $item.removeClass("bodyHide") : $item.addClass("bodyHide");
+                });
+            });
 
             // Validar la respuesta
-            var $btnAnswer = $(addHTML).find(".btnAnswer");
+            var $btnAnswer = $item.find(".btnAnswer");
             $btnAnswer.click(function(){
                 console.log("answer click");
-                var $item = $(this).parents(".item");
 
                 $item.find(".option").each(function(){
                     var $option = $(this);
@@ -74,8 +83,7 @@ $(document).ready(function(){
                 $item.addClass("showAnswers").find("input").attr("disabled", true);
             });
         });
-
     }).catch(function(error) {
-    console.log('Hubo un problema con la petición Fetch:' + error.message);
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
     });
 });

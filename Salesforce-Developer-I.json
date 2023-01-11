@@ -227,6 +227,178 @@
 	"answers": ["C", "D"]
 },
 { 
+	"question": "Which statement about change set deployments is accurate? (Choose 3)",
+	"options": [
+		"They use an all or none deployment model.",
+		"They require a deployment connection.",
+		"They can be used to transfer Contact records.",
+		"They can be used to deploy custom settings data.",
+		"They can be used only between related organizations."
+	],
+	"answers": ["A", "B", "E"]
+},
+{ 
+	"question": "What should a developer working in a sandbox use to exercise a new test Class before the developer deploys that test production? Choose 2 answers",
+	"options": [
+		"The REST API and ApexTestRun method",
+		"The Apex Test Execution page in Salesforce Setup.",
+		"The Test menu in the Developer Console.",
+		"The Run Tests page in Salesforce Setup."
+	],
+	"answers": ["B", "C"]
+},
+{ 
+	"question": "How would a developer determine if a CustomObject__c record has been manually shared with the current user in Apex?",
+	"options": [
+		"By querying the role hierarchy.",
+		"By calling the isShared() method for the record.",
+		"By querying CustomObject__Share.",
+		"By calling the profile settings of the current user."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "What are three ways for a developer to execute tests in an org? Choose 3.",
+	"options": [
+		"Bulk API",
+		"ToolingAPI",
+		"Metadata API",
+		"Setup Menu",
+		"Developer Console"
+	],
+	"answers": ["B", "D", "E"]
+},
+{ 
+	"question": "Which two queries can a developer use in a visualforce controller to protect against SOQL injection Vulnerabilities? Choose 2 answers",
+	"options": [
+		"String qryName = '%' + String.enforceSecurityChecks(name)+ '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
+		"String qryName = '%' + name '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
+		"String qryName = '%' + String.escpaeSingleQuotes(name)+ '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
+		"String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);"
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "A developer writes a SOQL query to find child records for a specific parent. How many levels can be returned in a single query?",
+	"options": [
+		"1",
+		"7",
+		"5",
+		"3"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "A developer wants to use all of the functionality provided by the standard controller for an object, but needs to override the Save standard action in a controller extension. Which two are required in the controller extension class?",
+	"options": [
+		"Create a method named Save with a return data type of PageReference.",
+		"Create a method that references this.superSave()",
+		"Define the class with a constructor that takes an instance of StandardController as a parameter.",
+		"Define the class with a constructor that creates a new instance of the StandardController class."
+	],
+	"answers": ["A", "C"]
+},
+{ 
+	"question": "What is the advantage of Salesforce Lightning?",
+	"options": [
+		"Uses service side for better handling",
+		"Option 4",
+		"Pre-defined components to give Standard Look and Feel",
+		"Option 3"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
 	"question": "",
 	"options": [
 		"",
