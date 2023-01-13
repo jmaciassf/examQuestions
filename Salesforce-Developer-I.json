@@ -309,14 +309,105 @@
 	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "On which object can an administrator create a roll-up summary field?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Any object that is on the master side of a master-detail relationship.",
+		"Any object that is on the parent side of a lookup relationship.",
+		"Any object that is on the detail side of a master-detail relationship.",
+		"Any object that is on the child side of a lookup relationship."
 	],
-	"answers": [""]
+	"answers": ["A"]
+},
+{ 
+	"question": "How can a developer retrieve all Opportunity record type labels to populate a list collection? Choose 2 answers",
+	"options": [
+		"Obtain describe object results for the Opportunity object.",
+		"Write a for loop that extracts values from the Opportunity.RecordType.Name field.",
+		"Use the global variable $RecordType and extract a list from the map.",
+		"Write a SOQL for loop that iterates on the RecordType object."
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "A platform developer needs to implement a declarative solution that will display the most recent closed won date for all opportunity records associated with an account. Which field is required to achieve this declaratively?",
+	"options": [
+		"Roll-up summary field on the opportunity object",
+		"Cross-object formula field on the account object",
+		"Roll-up summary field on the account object",
+		"Cross-object formula field on the opportunity object"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "What are two considerations for deciding to use a roll-up summary field? Choose 2 answer's partner.",
+	"options": [
+		"Roll-up summary can be performed on formula fields, but if their formula contains an #Error result, it may affect the summary value.",
+		"Roll-up summary fields do not cause validation rules on the parent object unless that object is edited separately.",
+		"Roll-up cannot be performed on formula fields.",
+		"Roll-up cannot be performed on formula fields that use cross-object references or on-the-fly calculations such as NOW()."
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "What is a valid way of loading external JavaScript files into a Visualforce page? (Choose 2)",
+	"options": [
+		"Using an (apex:includeScript)* tag. \\>",
+		"Using an (apex:define)* tag.",
+		"Using a (link)* tag.",
+		"Using a (script)* tag."
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "A custom exception \"RecordNotFoundException\" is defined by the following code of block: <code>public class RecordNotFoundException extends Exception()</code> Which statement can a developer use to throw a custom exception? Choose 2 answers",
+	"options": [
+		"Throw new RecordNotFoundException(\"problem occured\");",
+		"Throw new RecordNotFoundException();",
+		"throw RecordNotFoundException(\"problem occured\");",
+		"Throw RecordNotFoundException();"
+	],
+	"answers": ["A", "B"]
+},
+{ 
+	"question": "Which code segment can be used to control when the dowork() method is called?",
+	"options": [
+		"For (Trigger.isRunning t: Trigger.new) { dowork(); }",
+		"If(Trigger.isRunning) dowork();",
+		"For (Trigger.isInsert t: Trigger.new) { dowork(); }",
+		"If(Trigger.isInsert) dowork();"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A developer writes a before insert trigger. How can the developer access the incoming records in the trigger body?",
+	"options": [
+		"By accessing the Trigger.new context variable.",
+		"By accessing the Trigger.newRecords context variable.",
+		"By accessing the Trigger.newMap context variable.",
+		"By accessing the Tripper.newList context variable."
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "A developer has a single custom controller class that works with a Visualforce Wizard to support creating and editing multiple sObjects. The wizard accepts data from user inputs across multiple Visualforce pages and from a parameter on the initial URL. Which statement is unnecessary inside the unit test for the custom controller? Choose two",
+	"options": [
+		"Public ExtendedController (ApexPages.StandardController cntrl) { }",
+		"ApexPages.currentPage().getParameters().put('input', 'TestValue')",
+		"Test.setCurrentPage(pageRef),",
+		"String nextPage = controller.save().getUrl();"
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "What is a capability of formula fields? (Choose 3)",
+	"options": [
+		"Generate a link using the HYPERLINK function to a specific record in a legacy system.",
+		"Display the previous values for a field using the PRIORVALUE function.",
+		"Return and display a field value from another object using the VLOOKUP function.",
+		"Determine if a datetime field has passed using the NOW function.",
+		"Determine which of three different images to display using the IF function."
+	],
+	"answers": ["A", "D", "E"]
 },
 { 
 	"question": "",

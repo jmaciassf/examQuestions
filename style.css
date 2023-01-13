@@ -1,9 +1,9 @@
-body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;}
+body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;color: #373737;}
 .header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 24px;color: white;padding: 9px;/* margin-bottom: 20px; */}
 .subtitle {padding: 5px 10px 0;text-align: end;}
 .item {border: 1px solid #b8b8b8ad;margin: 10px;border-radius: 0 0 10px 10px;border-radius: 5px;}
 .item.showAnswers .option[answer=true] {
-    background-color: #26bc2694;
+    background-color: #26bc2694 !important;
 }
 .item.bodyHide {/* border-radius: 0; *//* border-radius: 5px; */}
 .item.bodyHide .title { border: none; }
@@ -34,7 +34,6 @@ code .tab {
     font-weight: 500;
 }
 .showAnswers .options { margin-bottom: 0; }
-
 .options .option {
     cursor: pointer;
     padding: 5px 5px;
@@ -43,6 +42,7 @@ code .tab {
     margin-top: 2px;
     line-height: 23px;
 }
+.showAnswers .options .option:hover { background-color: inherit; }
 .options .option:hover {background-color: #dddddd6e;}
 .option input {/* top: 45px; */width: 16px;height: 25px;/* border: 20px solid; */margin-top: 5px;margin: 0;/* vertical-align: baseline; *//* position: absolute; */display: table;vertical-align: baseline;}
 .option .text {
@@ -53,5 +53,6 @@ code .tab {
 }
 .buttons {/* margin-top: 10px; */}
 .flex { display: flex; }
-.btnAnswer {flex: 1;padding: 10px;background-color: blue;color: white;font-weight: 600;font-family: unset;letter-spacing: 0.7px;border-radius: 20px;cursor: pointer;border: none;margin-top: 10px;}
-.showAnswers .btnAnswer { display: none; }
+.btnAnswer, .btnNextQuestion {flex: 1;padding: 10px;background-color: #3030ff;color: white;font-weight: 600;font-family: unset;letter-spacing: 0.7px;border-radius: 10px;cursor: pointer;border: none;margin-top: 10px;}
+.showAnswers .btnAnswer, .btnNextQuestion {display: none;}
+.showAnswers .btnNextQuestion {display: block;background-color: #e4e4e4;color: inherit;}

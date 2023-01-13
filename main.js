@@ -3,21 +3,20 @@ $(document).ready(function(){
 
     fetch("https://raw.githubusercontent.com/jmaciassf/examQuestions/main/Salesforce-Developer-I.json") .then((response) => response.json())
     .then(function(response){
-        // Total questions
-        $(".subtitle").text(response.length + " questions");
 
         // Random array order
         response = response.sort(function () {
             return Math.random() - 0.5;
         });
 
-        var questionCounter = optionCounter = 0;
+        var questionCounter = optionCounter = countQuestions = 0;
         response.forEach(element => {
             console.log(element);
 
             if(!element.question || !element.options)
                 return;
                 
+            countQuestions++;
             var arrOptions = []
             element.options.forEach(function(option, index){
                 var answer = false
@@ -53,7 +52,10 @@ $(document).ready(function(){
                 <div class="body">
                     <div class="question">${element.question}</div>
                     <div class="options">${options}</div>
-                    <div class="buttons flex"><input class="btnAnswer" type="button" value="Display answer"></div>
+                    <div class="buttons flex">
+                        <input class="btnAnswer" type="button" value="Display answer">
+                        <input class="btnNextQuestion" type="button" value="Next question">
+                    </div>
                 </div>
             </div>`);
 
@@ -61,7 +63,8 @@ $(document).ready(function(){
             var $body = $item.find(".body");
 
             // Title toggle - Add icon to view if the answer was correct
-            $item.find(".title").click(function(){
+            var $title = $item.find(".title");
+            $title.click(function(){
                 console.log("title click");
                 $body.slideToggle(function(){
                     console.log("toggle end");
@@ -80,9 +83,21 @@ $(document).ready(function(){
                     var isChecked = $option.find("input").is(":checked");
                 });
 
-                $item.addClass("showAnswers").find("input").attr("disabled", true);
+                $item.addClass("showAnswers").find(".options input").attr("disabled", true);
+            });
+
+            // Next question
+            var $next = $item.find(".btnNextQuestion");
+            $next.click(function(){
+                console.log("next question");
+
+                $title.click();
+                $("body").scrollTop( $("body").scrollTop() + 45 );
             });
         });
+        
+        // Total questions
+        $(".subtitle").text(countQuestions + " questions");
     }).catch(function(error) {
         console.log('Hubo un problema con la petición Fetch:' + error.message);
     });
