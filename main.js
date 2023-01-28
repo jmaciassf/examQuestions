@@ -9,7 +9,8 @@ $(document).ready(function(){
             return Math.random() - 0.5;
         });
 
-        var questionCounter = optionCounter = countQuestions = 0;
+        var questionCounter = optionCounter = countQuestions = 
+            countSuccess = countErrors = countQuestionsDone = 0;
         response.forEach(element => {
             console.log(element);
 
@@ -77,12 +78,41 @@ $(document).ready(function(){
             $btnAnswer.click(function(){
                 console.log("answer click");
 
+                let hasErrors = false;
                 $item.find(".option").each(function(){
                     var $option = $(this);
                     var isAnswer = $option.attr("answer") == "true";
                     var isChecked = $option.find("input").is(":checked");
+
+                    if(isAnswer && isChecked){
+                        // Success
+                    }
+                    else if((isAnswer && !isChecked) || (!isAnswer && isChecked)){
+                        // Error
+                        hasErrors = true;
+                        $option.addClass("error");
+                    }
                 });
 
+                // Calculate percentage of success
+                $item.addClass("answered");
+                if(hasErrors){
+                    countErrors++;
+                    $item.addClass("error");
+                }
+                else {
+                    countSuccess++;   
+                    $item.addClass("success");
+                }
+                countQuestionsDone++;
+                let percentage = Math.round(100 * countSuccess / countQuestionsDone)+"%";
+                //Math.round(percentage*100)/100
+                console.log(percentage);
+                $(".header .success .number").html(countSuccess);
+                $(".header .errors .number").html(countErrors);
+                $(".header .percentage .number").html(percentage);
+                
+                // Disable inputs
                 $item.addClass("showAnswers").find(".options input").attr("disabled", true);
             });
 
@@ -91,8 +121,19 @@ $(document).ready(function(){
             $next.click(function(){
                 console.log("next question");
 
+                // Collapse actual item
                 $title.click();
-                $("body").scrollTop( $("body").scrollTop() + 45 );
+                
+                // Expand next item
+                let $nextItem = $item.next();
+                expandItem($nextItem);
+
+                // Scroll en el siguiente item
+                let scrollTop = $nextItem.position().top - $item.height() - 25;
+                $("body").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
+                    
+                });
+                
             });
         });
         
@@ -102,3 +143,22 @@ $(document).ready(function(){
         console.log('Hubo un problema con la petición Fetch:' + error.message);
     });
 });
+
+// Expandir item de pregunta
+function expandItem($item){
+    console.log("expandItem");
+
+    // Si está visible => no expandir
+    if($item.find(".body").is(":visible"))
+        return;
+    
+    var $title = $item.find(".title");
+    $title.click();
+}
+
+/*
+only select one option at time
+red border when error occurs
+button to show full screen cards like quizlet
+count errors and success, and percentage
+*/

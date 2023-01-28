@@ -276,7 +276,7 @@
 		"String qryName = '%' + String.escpaeSingleQuotes(name)+ '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
 		"String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);"
 	],
-	"answers": ["A", "D"]
+	"answers": ["C", "D"]
 },
 { 
 	"question": "A developer writes a SOQL query to find child records for a specific parent. How many levels can be returned in a single query?",
