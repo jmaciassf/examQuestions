@@ -410,6 +410,201 @@
 	"answers": ["A", "D", "E"]
 },
 { 
+	"question": "Which three steps allow a custom SVG to be included in a Lightning web component? Choose 3 answers",
+	"options": [
+		"Upload the SVG as a static resource",  
+		"Reference the getter in the HTML template",  
+		"Import the SVG as a content asset file",  
+		"Reference the import in HTML Template",
+		"Import the static resource and provide a getter for it in JavaScript"
+	],
+	"answers": ["A", "B", "C"]
+},
+{ 
+	"question": "Which process automation should be used to send an outbound message without using Apex code?",
+	"options": [
+		"Approval Process", 
+		"Process builder", 
+		"Workflow Rule", 
+		"Flow Builder"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "A developer is tasked to perform a security review of the ContactSearch Apex class that exists in the system. Within the class, the developer identifies the following method as a security threat. <code>List<Contact> performSearch(String lastname){<div class=\"tab\">Return Database.query(SELECT Id, FirstName, LastName FROM Contact WHERE LastName like % ’ + LastName + ‘ % ‘ );<br>}</code>What are two ways the developer can update the method to prevent a SOQL injection attack? Choose 2 answers",
+	"options": [
+		"Use variable binding and replace the dynamic query with a static SOQL.",  
+		"Use a regular expression on the parameter to remove special characters.",  
+		"Use the escapeSingleQuotes method to sanitize the parameter before its use.",  
+		"Use the @ReadOnly annotation and the with sharing keyword on the class."
+	],
+	"answers": ["A", "C"]
+},
+{ 
+	"question": "A developer uses a loop to check each Contact in a list. When a Contact with the Title of “Boss” is found, the Apex method should jump to the first line of code outside of the for loop.<br>Which Apex solution will let the developer implement this requirement?",
+	"options": [
+		"break;", 
+		"continue;",
+		"exit;",
+		"next;"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "The values “High”, “Medium”, and “Low” are identified as common values for multiple picklists across different objects. What is an approach a developer can take to streamline maintenance of the picklists and their values, while also restricting the values to the ones mentioned above?",
+	"options": [
+		"Create the picklist on each object as a required field and select “Display values alphabetically, not in the order entered”",  
+		"Create the picklist on each object and use a Global Picklist Value Set containing the values.",  
+		"Create the picklist on each object and select “Restrict picklist to the values defined in the value set”.",  
+		"Create the picklist on each object and add a validation rule to ensure data integrity."
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "Which aspect of Apex programming is limited due to multitenancy?",
+	"options": [
+		"The number of active apex classes.",
+		"The number of methods in an apex class.",
+		"The number of records processed in a loop.",
+		"The number of records returned from a database query."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Universal Containers has an order system that uses an Order Number to identify an order for customers and service agents. Order records will be imported into Salesforce. How should the order number field be defined in Salesforce?",
+	"options": [
+		"Number with External ID",  
+		"Lookup",  
+		"Direct Lookup",
+		"Indirect Lookup"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "A Visual Flow uses an Apex Action to provide additional information about multiple Contacts stored in a custom class, ContactInfo. Which is the correct definition of the Apex method that gets the additional information?",
+	"options": [
+		"@InvocableMethod(label=’Additional Info’) Public static ContactInfo getInfo(Id contactId) { /*implementation*/ }",  
+		"@InvocableMethod(label=’Additional Info’) Public ContactInfo getInfo(Id contactId) { /*implementation*/ }", 
+		"@InvocableMethod(label=’Additional Info’) Public List getInfo(List<Id> contactIds) { /*implementation*/ }",
+		"@InvocableMethod(label=’Additional Info’) Public static List getInfo(List<Id> contactIds) { /*implementation*/ }"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Universal Containers wants to back up all of the data and attachments in its Salesforce org once a month. Which approach should a developer use to meet this requirement?",
+	"options": [
+		"Define a Data Export scheduled job.",  
+		"Use the Data loader command line.",  
+		"Create a schedulable apex class.",  
+		"Schedule a report."
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "Assuming that 'name' is a String obtained by an <apex:inputText> tag on a Visualforce page. Which two SOQL queries performed are safe from SOQL injections? Choose 2 answers",
+	"options": [
+		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + String.escapeSingleQuotes(name) + '%\";<br>List<Account> results = Database.query(query);",
+		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name.noQuotes() + '%\"; <br>List<Account> results = Database.query(query);",
+		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name + '%\";<br>List<Account> results = Database.query(query);",
+		"String query = '%' + name + '%';<br>List<Account> results = [SELECT Id FROM Account WHERE Name LIKE :query];"
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "A team of developers is working on a source-driven project that allows them to work independently, with many different org configurations. Which type of Salesforce orgs should they use for their deployment?",
+	"options": [
+		"Scratch Orgs",  
+		"Full Copy Sandboxes",  
+		"Developer Sandboxes",  
+		"Developer Orgs"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "Which code displays the content of Visualforce page as PDF?",
+	"options": [
+		"<apex:page contentType=\"application/pdf\">",
+		"<apex:page renderAs=\"pdf\">",
+		"<apex:page renderAs=\"application/pdf\">",
+		"<apex:page contentType=\"pdf\">"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "A developer needs to implement the functionality for a service agent to gather multiple pieces of information from a customer in order to send a replacement credit card. Which automation tool meets these requirements?",
+	"options": [
+		"Workflow",  
+		"Flow Builder",
+		"Process builder",  
+		"Escalation rules"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "What does the Lightning Component framework provide to developers?",
+	"options": [
+		"Automatic code generation",  
+		"Customized testing",  
+		"Prebuilt components that can be reused",
+		"Support for Classic and Lightning UIs",
+		"Templates to create custom components",
+		"Extended governor limits for applications"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "Which three operations affect the number of times a trigger can fire? Choose 3 answers",
+	"options": [
+		"Workflow Rules",  
+		"Process Flows",  
+		"Criteria based sharing calculations",
+		"Email messages",  
+		"Roll-up Summary fields"
+	],
+	"answers": ["A", "B", "E"]
+},
+{ 
+	"question": "Which three are phases in the Salesforce Application Event propagation framework? Choose 2 answers",
+	"options": [
+		"Capture",
+		"Bubble",  
+		"Init",  
+		"Setup",  
+		"Default"
+	],
+	"answers": ["A", "B", "E"]
+},
+{ 
+	"question": "A developer must create a DrawList class that provides capabilities defined in the Sortable and Drawable interfaces.<code>Public interface Sortable {<div class=\"tab\">Void sort();</div><br>}<br><br>Public interface Drawable {<div class=\"tab\">Void draw();</div><br>}</code>Which is the correct implementation?",
+	"options": [
+		"Public class DrawList extends Sortable, extends Drawable {<div class=\"tab\">public void sort() { /*implementation*/}<br>public void draw() { /*implementation*/}</div>}",
+		"Public class DrawList extends Sortable, Drawable {<div class=\"tab\">public void sort() { /*implementation*/}<br>public void draw() { /*implementation*/}</div>}",
+		"Public class DrawList implements Sortable, Drawable {<div class=\"tab\">public void sort() { /*implementation*/}<br>public void draw() { /*implementation*/}</div>}",
+		"Public class DrawList implements Sortable, Implements Drawable {<div class=\"tab\">public void sort() { /*implementation*/}<br>public void draw() { /*implementation*/}</div>}"
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
 	"question": "",
 	"options": [
 		"",
