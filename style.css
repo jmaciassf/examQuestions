@@ -3,7 +3,7 @@
 }
 
 body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;color: #373737;}
-.header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 23px -2px #000000c7;}
+.header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 18px -2px #000000c7;}
 .header .title {
     padding: 5px;
     display: block;
@@ -23,7 +23,7 @@ body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;color: #373737
 }
 .header .results > div { flex: 1; }
 .subtitle {padding: 5px 10px 0;text-align: end;margin-top: 65px;}
-.item {border: 1px solid #b8b8b8ad;margin: 13px 10px;border-radius: 0 0 10px 10px;border-radius: 5px;}
+.item {border: 1px solid #b8b8b8ad;margin: 20px 10px;border-radius: 0 0 10px 10px;border-radius: 5px;}
 .item.showAnswers .option[answer=true] {
     background-color: var(--success) !important;
 }
@@ -59,7 +59,7 @@ code {
     font-size: 12px;
     border-radius: 3px;
 }
-code .tab {
+code .tab, .option .tab {
     margin-left: 20px;
 }
 

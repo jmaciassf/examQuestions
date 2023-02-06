@@ -14,7 +14,7 @@
 	"answers": ["B", "D"]
 },
 { 
-	"question": "A visualforce interface is created for Case Management that includes both standard and custom functionality defined in an Apex class called myControllerExtension. The visualforce page should include which <apex:page> attribute(s) to correctly implement controller functionality?", 
+	"question": "A visualforce interface is created for Case Management that includes both standard and custom functionality defined in an Apex class called myControllerExtension. The visualforce page should include which &lt;apex:page> attribute(s) to correctly implement controller functionality?", 
 	"options": [
 		"StandardController = \"case\" and extensions = \"myControllerExtension\"",
 		"Extensions= \"myControllerExtension\"",
@@ -36,7 +36,7 @@
 { 
 	"question": "Universal Containers wants a list button to display a Visualforce page that allows users to edit multiple records. Which Visualforce feature supports this requirement?",
 	"options": [
-		"<apex:listButton> tag",
+		"&lt;apex:listButton> tag",
 		"Custom controller",
 		"RecordSetVar page attribute",
 		"Controller extension"
@@ -431,7 +431,7 @@
 	"answers": ["C"]
 },
 { 
-	"question": "A developer is tasked to perform a security review of the ContactSearch Apex class that exists in the system. Within the class, the developer identifies the following method as a security threat. <code>List<Contact> performSearch(String lastname){<div class=\"tab\">Return Database.query(SELECT Id, FirstName, LastName FROM Contact WHERE LastName like % ’ + LastName + ‘ % ‘ );<br>}</code>What are two ways the developer can update the method to prevent a SOQL injection attack? Choose 2 answers",
+	"question": "A developer is tasked to perform a security review of the ContactSearch Apex class that exists in the system. Within the class, the developer identifies the following method as a security threat. <code>List<Contact> performSearch(String lastname){<div class=\"tab\">Return Database.query(SELECT Id, FirstName, LastName FROM Contact WHERE LastName like % ’ + LastName + ‘ % ‘ );</div>}</code>What are two ways the developer can update the method to prevent a SOQL injection attack? Choose 2 answers",
 	"options": [
 		"Use variable binding and replace the dynamic query with a static SOQL.",  
 		"Use a regular expression on the parameter to remove special characters.",  
@@ -501,7 +501,7 @@
 	"answers": ["A"]
 },
 { 
-	"question": "Assuming that 'name' is a String obtained by an <apex:inputText> tag on a Visualforce page. Which two SOQL queries performed are safe from SOQL injections? Choose 2 answers",
+	"question": "Assuming that 'name' is a String obtained by an &lt;apex:inputText> tag on a Visualforce page. Which two SOQL queries performed are safe from SOQL injections? Choose 2 answers",
 	"options": [
 		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + String.escapeSingleQuotes(name) + '%\";<br>List<Account> results = Database.query(query);",
 		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name.noQuotes() + '%\"; <br>List<Account> results = Database.query(query);",
@@ -523,10 +523,10 @@
 { 
 	"question": "Which code displays the content of Visualforce page as PDF?",
 	"options": [
-		"<apex:page contentType=\"application/pdf\">",
-		"<apex:page renderAs=\"pdf\">",
-		"<apex:page renderAs=\"application/pdf\">",
-		"<apex:page contentType=\"pdf\">"
+		"&lt;apex:page contentType=\"application/pdf\">",
+		"&lt;apex:page renderAs=\"pdf\">",
+		"&lt;apex:page renderAs=\"application/pdf\">",
+		"&lt;apex:page contentType=\"pdf\">"
 	],
 	"answers": ["B"]
 },
@@ -582,87 +582,87 @@
 		"Public class DrawList implements Sortable, Drawable {<div class=\"tab\">public void sort() { /*implementation*/}<br>public void draw() { /*implementation*/}</div>}",
 		"Public class DrawList implements Sortable, Implements Drawable {<div class=\"tab\">public void sort() { /*implementation*/}<br>public void draw() { /*implementation*/}</div>}"
 	],
-	"answers": [""]
+	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "Given the following anonymous Block:<code>List<Case> casesToUpdate = new List<Case>();<br>For(Case thisCase : [SELECT Id, Status FROM Case LIMIT 50000)){<div class=\"tab\">thisCase.Status = 'Working';<br>casesToUpdate.add(thisCase);</div>}<br><br>try {<div class=\"tab\">Database.update(casesToUpdate.false);</div>}<br>catch(Exception e) {<div class=\"tab\">System.debug{e.getmessage());</div>}</code>What should a developer consider for an environment that has over 10,000 case records?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"The transaction will fail due to exceeding governor limit.",  
+		"The try/catch block will handle any DML exceptions thrown.",  
+		"The try/catch block will handle exceptions thrown by governor limit.",  
+		"The transaction will succeed and changes will be committed."
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "A developer needs to prevent the creation of Request records when certain conditions exist in the system. A Requestlogic class exists that checks the conditions. What is the correct implementation?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Triggger RequestTrigger on Request (before insert) {<div class=\"tab\">If(RequestLogic.isValid(Request))<div class=\"tab\">Request.addError(‘Your request cannot be created at this time.’);</div></div>}",
+		"Trigger RequestTrigger on Request (before insert) {<div class=\"tab\">RequestLogic.validateRecords(trigger.new);</div>}",
+		"Triggger RequestTrigger on Request (after insert) {<div class=\"tab\">RequestLogic.validateRecords{trigger.new};</div>}",
+		"Triggger RequestTrigger on Request (after insert) {<div class=\"tab\">If(RequestLogic.isValid(Request))<div class=\"tab\">Request.addError(‘Your request cannot be created at this time.’);</div></div>}"
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "Universal Containers stores the availability date on each Line Item of an Order and Orders are only shipped when all of the Line Items are available. Which method should be used to calculate the estimated ship date for an Order?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Use a Max Roll-Up Summary field on the latest availability date fields.",  
+		"Use a CEILING formula on each of the latest availability date fields.",  
+		"Use a DAYS formula on each of the latest availability date fields.", 
+		"Use a Roll-Up Summary field on the latest availability date fields."
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "Which exception type cannot be caught?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"NoAccessException",  
+		"LimitException",  
+		"A Custom Exception",  
+		"CalloutException"
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": " A developer needs to confirm that a Contact trigger works correctly without changing the organizations data. What should the developer do to test the Contact trigger?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Use the New button on the Salesforce Contacts Tab to create a new Contact record.",  
+		"Use the Open Execute Anonymous feature on the Developer Console to run an “insert Contact” Apex Class.",  
+		"Use the Test menu on the Developer Console to run all test classes for the Contact trigger.",  
+		"Use Deploy from the VSCode IDE to deploy an “insert Contact” Apex Class."
 	],
-	"answers": [""]
+	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "A developer wants to retrieve the Contact and Users with the email address ‘dev@uc.com’. Which SOSL statement should the developer use?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"FIND {dev@uc.com} IN Email Fields RETURNING Contact (Email), User (Email)",
+		"FIND {Email = 'dev@uc.com'} RETURNING Contact (Email), User (Email)",
+		"FIND {Email = 'dev@uc.com'} IN Contact, User",
+		"FIND Email IN Contact, User FOR {dev2uc.com}"
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "A developer has an Apex controller for a Visualforce page that takes an ID as a URL parameter. How should the developer prevent a cross site scripting vulnerability?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Apexpage.currentPage().getParameters.get(‘url_param’);", 
+		"String.escapeSingleQuotes(ApexPages.currentPage().getParameters().get(‘url_param’))", 
+		"Apexpage.currentPage().getParameters.get(‘url_param’).escapeHtml4()",
+		"String.valueOf(ApexPages.currentPage().getParameters().get(‘url_param’))"
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "Where are two locations a developer can look to find information about the status of asynchronous or future calls? Choose 2 answers",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Apex Jobs",
+		"Apex Flex Queue",
+		"Paused Flow interviews component",  
+		"Time-Based workflow monitor"
 	],
-	"answers": [""]
+	"answers": ["A", "B"]
 },
 { 
 	"question": "",

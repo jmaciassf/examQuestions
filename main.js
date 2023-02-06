@@ -129,7 +129,7 @@ $(document).ready(function(){
                 expandItem($nextItem);
 
                 // Scroll en el siguiente item
-                let scrollTop = $nextItem.position().top - $item.height() - 25;
+                let scrollTop = $nextItem.position().top - $item.height() - 20;
                 $("body").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
                     
                 });
