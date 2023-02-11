@@ -879,34 +879,34 @@
 	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "A recursive transaction is initiated by a DML statement creating records for these two objects:<br><br>1. Accounts<br>2. Contacts<br><br>The Account trigger hits a stack depth of 16. Which statement is true regarding the outcome of the transaction?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"The transaction succeeds as long as the contact trigger stack depth is less than 16.",  
+		"The transaction succeeds and all changes are committed to the database.",  
+		"The transaction fails and all the changes are rolled back.",
+		"The transaction fails only if the contact trigger stack depth is greater or equal to 16."
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "A developer created a Visualforce page and custom controller to display the Account type field as shown below. Custom controller code:<code>public class customCtrlr {<div class=\"tab\">private Account theAccount;<br>public String actType;<br>public customCtrlr(){<div class=\"tab\">theAccount = (SELECT Id, Type FROM Account WHERE Id =  :ApexPages.currentPage().getParameters().get('id'));<br>actType = theAccount.Type;</div>}</div>}</code>Visualforce page snippet:<code>The Account Type is {!actType}</code>The value of the account type field is not being displayed correctly on the page. Assuming the custom controller is properly referenced on the Visualforce page, what should the developer do to correct the problem?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Add a getter method for the actType attribute",
+		"Convert the Account.Type to a String",  
+		"Add with sharing to the custom controller",  
+		"Change the Account attribute to public"
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "A developer must implement a CheckPaymentProcessor class that provides check processing payment capabilities that adhere to what is defined for payments in the PaymentProcessor  interface. <code>public interface PaymentProcessor { <div class=\"tab\">void pay(Decimal amount);</div>}</code>Which is the correct implementation to use the PaymentProcessor interface class?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Public class CheckPaymentProcessor implements PaymentProcessor { Public void pay(Decimal amount) {} }",  
+		"Public class CheckPaymentProcessor implements PaymentProcessor { Public void pay(Decimal amount); }",  
+		"Public class CheckPaymentProcessor extends PaymentProcessor { Public void pay(Decimal amount) () }",  
+		"Public class CheckPaymentProcessor extends PaymentProcessor { Public void pay(Decimal amount); }"
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
 	"question": "",
