@@ -55,6 +55,7 @@ $(document).ready(function(){
                     <div class="options">${options}</div>
                     <div class="buttons flex">
                         <input class="btnAnswer" type="button" value="Display answer">
+                        <span class="btnReload"></span>
                         <input class="btnNextQuestion" type="button" value="Next question">
                     </div>
                 </div>
@@ -62,6 +63,7 @@ $(document).ready(function(){
 
             $("#items").append($item);
             var $body = $item.find(".body");
+            let $options = $item.find(".option");
 
             // Title toggle - Add icon to view if the answer was correct
             var $title = $item.find(".title");
@@ -79,7 +81,7 @@ $(document).ready(function(){
                 console.log("answer click");
 
                 let hasErrors = false;
-                $item.find(".option").each(function(){
+                $options.each(function(){
                     var $option = $(this);
                     var isAnswer = $option.attr("answer") == "true";
                     var isChecked = $option.find("input").is(":checked");
@@ -105,16 +107,24 @@ $(document).ready(function(){
                     $item.addClass("success");
                 }
                 countQuestionsDone++;
-                let percentage = Math.round(100 * countSuccess / countQuestionsDone)+"%";
-                //Math.round(percentage*100)/100
-                console.log(percentage);
-                $(".header .success .number").html(countSuccess);
-                $(".header .errors .number").html(countErrors);
-                $(".header .percentage .number").html(percentage);
+
+                // Set statistics
+                reloadStatistics();
                 
                 // Disable inputs
                 $item.addClass("showAnswers").find(".options input").attr("disabled", true);
             });
+
+            function reloadStatistics(){
+                let percentage = 0;
+                if(countQuestionsDone)
+                    percentage = Math.round(100 * countSuccess / countQuestionsDone)+"%";
+                
+                console.log(percentage);
+                $(".header .success .number").html(countSuccess);
+                $(".header .errors .number").html(countErrors);
+                $(".header .percentage .number").html(percentage);
+            }
 
             // Next question
             var $next = $item.find(".btnNextQuestion");
@@ -155,6 +165,22 @@ $(document).ready(function(){
                     }
                 }
             });
+
+            $item.find(".btnReload").click(function(){
+                console.log("reload");
+                $checkboxs.prop("checked", false).attr("disabled", false);
+
+                if($item.hasClass("error")){
+                    countErrors--;
+                }
+                else if($item.hasClass("success")) {
+                    countSuccess--;
+                }
+                countQuestionsDone--;
+                reloadStatistics();
+                
+                $item.removeClass("success error answered showAnswers");
+            })
         });
         
         // Total questions
@@ -176,9 +202,8 @@ function expandItem($item){
     $title.click();
 }
 
+window.onbeforeunload = function (){ return ""; };
+
 /*
-only select one option at time
-red border when error occurs
 button to show full screen cards like quizlet
-count errors and success, and percentage
 */

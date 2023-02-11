@@ -89,6 +89,8 @@ code .tab, .option .tab {
 }
 .buttons {/* margin-top: 10px; */}
 .flex { display: flex; }
-.btnAnswer, .btnNextQuestion {flex: 1;padding: 10px;background-color: #3030ff;color: white;font-weight: 600;font-family: unset;letter-spacing: 0.7px;border-radius: 10px;cursor: pointer;border: none;margin-top: 10px;}
+.btnAnswer, .btnNextQuestion, .btnReload {flex: 1;padding: 10px;background-color: #3030ff;color: white;font-weight: 600;font-family: unset;letter-spacing: 0.7px;border-radius: 10px;cursor: pointer;border: none;margin-top: 10px;}
 .showAnswers .btnAnswer, .btnNextQuestion {display: none;}
+span.btnReload {display: none;}
 .showAnswers .btnNextQuestion {display: block;background-color: #e4e4e4;color: inherit;}
+.showAnswers .btnReload {display: block;background-color: #e4e4e4;margin-right: 10px;color: inherit;text-align: center;/* width: auto; */flex: none;/* width: min-content; */background-image: url(replay.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 7px;}

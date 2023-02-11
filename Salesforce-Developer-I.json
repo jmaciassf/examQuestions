@@ -248,15 +248,16 @@
 	"answers": ["C"]
 },
 { 
-	"question": "What are three ways for a developer to execute tests in an org? Choose 3.",
+	"question": "What are three ways for a developer to execute tests in an org? Choose 4.",
 	"options": [
 		"Bulk API",
-		"ToolingAPI",
+		"Tooling API",
 		"Metadata API",
 		"Setup Menu",
-		"Developer Console"
+		"Developer Console",
+		"Salesforce DX"
 	],
-	"answers": ["B", "D", "E"]
+	"answers": ["B", "D", "E", "F"]
 },
 { 
 	"question": "Which two queries can a developer use in a visualforce controller to protect against SOQL injection Vulnerabilities? Choose 2 answers",
@@ -838,44 +839,44 @@
 	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "A developer is implementing an Apex class for a financial system. Within the class, the variables ‘creditAmount’ and ‘debtAmount’ should not be able to change once a value is assigned. In which two ways can the developer declare the variables to ensure their value can only be assigned one time? Choose 2 answers.",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Use the final keyword and assign its value in the class constructor.",
+		"Use the static keyword and assign its value in a static initializer.",
+		"Use the static keyword and assign its value in the class constructor.",
+		"Use the final keyword and assign its value when declaring the variable."
 	],
-	"answers": [""]
+	"answers": ["A", "D"]
 },
 { 
-	"question": "",
+	"question": "Universal Containers (UC) wants to lower its shipping cost while making the shipping process more efficient. The Distribution Officer advises UC to implement global addresses to allow multiple Accounts to share a default pickup address. The developer is tasked to create the supporting object and relationship for this business requirement and uses the Setup Menu to create a custom object called “Global Address”. Which field should the developer add to create the most efficient model that supports the business need?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Add a Lookup field on the Account object to the Global Address object",  
+		"Add a Lookup field on the Global Address object to the Account object",  
+		"Add a Master-Detail field on the Global Address object to the Account object",  
+		"Add a Master-Detail field on the account object to the Global Address object"
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "How should a custom user interface be provided when a user edits an Account in Lightning Experience?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Override the Account’s Edit button with a Lightning Flow.",
+		"Override the Account’s Edit button with a Lightning Component.",
+		"Override the Account’s Edit button with a Lightning Page.",
+		"Override the Account’s Edit button with a Lightning Action."
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "Given the following block of code:<code>try {<div class=\"tab\">List<Accounts> retrieveRecords = [SELECT Id FROM Account WHERE Website = null];</div>}<br>catch(Exception e){<div class=\"tab\">//manage exception logic</div>}</code>What should a developer do to ensure the code execution is disrupted if the retrievedRecords list remains empty after the SOQL query?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Check the state of the retrieveRecords variable and throw a custom exception if the variable is empty.",
+		"Check the state of the retrieveRecords variable and use the system.assert(false) if the variable is empty.",
+		"Check the state of the retrieveRecords variable and access the first element of the list if the variable is empty.",  
+		"Replace the retrievedRecords variable declaration from a List of Account to a single account."
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
 	"question": "",
