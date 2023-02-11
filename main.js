@@ -12,7 +12,7 @@ $(document).ready(function(){
         var questionCounter = optionCounter = countQuestions = 
             countSuccess = countErrors = countQuestionsDone = 0;
         response.forEach(element => {
-            console.log(element);
+            //console.log(element);
 
             if(!element.question || !element.options)
                 return;
@@ -132,8 +132,28 @@ $(document).ready(function(){
                 let scrollTop = $nextItem.position().top - $item.height() - 20;
                 $("body").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
                     
-                });
-                
+                });                
+            });
+
+            // Click en el checkbox de la respuesta
+            var $checkboxs = $item.find("input[type=checkbox]");
+            $checkboxs.click(function(){
+                console.log("click option");
+
+                // Validar la cantidad de respuestas
+                if($(this).is(":checked") && element.answers.length < $item.find("input[type=checkbox]:checked").length){
+                    // Si ya se llegó al límite, quitar el check cuando son multiples respuestas
+                    if(element.answers.length > 1){
+                        // Quitar el check
+                        $(this).prop("checked", false);
+                    }
+                    else {
+                        // Si solo es una respuesta => quitar las otras opciones y habilitar la actual
+                        $checkboxs.prop("checked", false);
+                        $(this).prop("checked", true);
+
+                    }
+                }
             });
         });
         

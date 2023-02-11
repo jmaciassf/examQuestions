@@ -11,7 +11,7 @@
 		"The organization has a private sharing model for Certification__c, and Contact is the primary relationship in the Licensed_Professional__c object",
 		"The organization has a private sharing model for Certification__c, and Certification__c is the primary relationship in the Licensed_Professional__c object.x"
 	],
-	"answers": ["B", "D"]
+	"answers": ["A", "D"]
 },
 { 
 	"question": "A visualforce interface is created for Case Management that includes both standard and custom functionality defined in an Apex class called myControllerExtension. The visualforce page should include which &lt;apex:page> attribute(s) to correctly implement controller functionality?", 
@@ -42,16 +42,6 @@
 		"Controller extension"
 	], 
 	"answers": ["C"]
-},
-{ 
-	"question": "A developer has a block of code that omits any statements that indicate whether the code block should execute with or without sharing. What will automatically obey the organization-wide defaults and sharing settings for the user who executes the code in the Salesforce organization?",
-	"options": [
-		"Apex Triggers",
-		"HTTP Callouts",
-		"Apex Controllers",
-		"Anonymous Blocks"
-	],
-	"answers": ["D"]
 },
 { 
 	"question": "A newly hired developer discovers that there are multiple triggers on the case object. What should the developer consider when working with triggers?",
@@ -271,12 +261,12 @@
 { 
 	"question": "Which two queries can a developer use in a visualforce controller to protect against SOQL injection Vulnerabilities? Choose 2 answers",
 	"options": [
-		"String qryName = '%' + String.enforceSecurityChecks(name)+ '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
-		"String qryName = '%' + name '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
-		"String qryName = '%' + String.escpaeSingleQuotes(name)+ '%'; String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);",
-		"String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme'; List queryResults = Database.query(qryString);"
+		"String qryName = '%' + String.enforceSecurityChecks(name)+ '%';<br>String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme';<br>List queryResults = Database.query(qryString);",
+		"String qryName = '%' + name '%';<br>String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme';<br>List queryResults = Database.query(qryString);",
+		"String qryName = '%' + String.escpaeSingleQuotes(name)+ '%';<br>String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme';<br>List queryResults = Database.query(qryString);",
+		"String qryString = 'SELECT Id FROM Contact WHERE Name LIKE :qryNAme';<br>List queryResults = Database.query(qryString);"
 	],
-	"answers": ["C", "D"]
+	"answers": ["B", "C"]
 },
 { 
 	"question": "A developer writes a SOQL query to find child records for a specific parent. How many levels can be returned in a single query?",
@@ -351,10 +341,10 @@
 { 
 	"question": "What is a valid way of loading external JavaScript files into a Visualforce page? (Choose 2)",
 	"options": [
-		"Using an (apex:includeScript)* tag. \\>",
-		"Using an (apex:define)* tag.",
-		"Using a (link)* tag.",
-		"Using a (script)* tag."
+		"Using an &lt;apex:includeScript> tag.",
+		"Using an &lt;apex:define> tag.",
+		"Using a &lt;link> tag.",
+		"Using a &lt;script> tag."
 	],
 	"answers": ["A", "D"]
 },
@@ -414,11 +404,11 @@
 	"options": [
 		"Upload the SVG as a static resource",  
 		"Reference the getter in the HTML template",  
-		"Import the SVG as a content asset file",  
+		"Import the SVG as a content asset file",
 		"Reference the import in HTML Template",
 		"Import the static resource and provide a getter for it in JavaScript"
 	],
-	"answers": ["A", "B", "C"]
+	"answers": ["A", "B", "E"]
 },
 { 
 	"question": "Which process automation should be used to send an outbound message without using Apex code?",
@@ -564,7 +554,7 @@
 	"answers": ["A", "B", "E"]
 },
 { 
-	"question": "Which three are phases in the Salesforce Application Event propagation framework? Choose 2 answers",
+	"question": "Which three are phases in the Salesforce Application Event propagation framework? Choose 3 answers",
 	"options": [
 		"Capture",
 		"Bubble",  
@@ -663,6 +653,259 @@
 		"Time-Based workflow monitor"
 	],
 	"answers": ["A", "B"]
+},
+{ 
+	"question": "Universal Containers recently transitioned from Classic to Lightning Experience. One of its business processes requires certain values from the Opportunity object to be sent via an HTTP REST callout to its external order management system based on a user-initiated action on the Opportunity detail page. Example values are as follows:<br><br>Name<br>Amount<br>Account<br><br>Which two methods should the developer implement to fulfill the business requirement? Choose 2 answers",
+	"options": [
+		"Create a Lightning component that performs the HTTP REST callout, and use a Lightning Action to expose the component on the Opportunity detail page.",
+		"Create a Process Builder on the Opportunity object that executes an Apex immediate action to perform the HTTP REST callout whenever the Opportunity is updated.",
+		"Create an after update trigger on the Opportunity object that calls a helper method using @Future(Callout=true) to perform the HTTP REST callout.",
+		"Create a Visualforce page that performs the HTTP REST callout, and use a Visualforce quick action to expose the component on the Opportunity detail page."
+	],
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "A developer needs to have records with specific field values in order to test a new Apex class. What should the developer do to ensure the data is available to the test?",
+	"options": [
+		"Use Test.loadData() and reference a csv file.",
+		"Use Test.loadData() and reference a static resource.",
+		"Use SOQL to query the org for the required data.",
+		"Use anonymous apex to create the required data."
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "Universal Containers (UC) uses a custom object called Vendor. The Vendor custom object has a Master-Detail relationship with the standard Account object. Based on some internal discussions, the UC administrator tried to change the Master-Detail relationship to a Lookup relationship but was not able to do so. What is a possible reason that this change was not permitted?",
+	"options": [
+		"The Vendor records have existing values in the account object.",
+		"The Account object is included in a workflow on the vendor object.",
+		"The Vendor object must use a master-detail field for reporting.",
+		"The Account records contain Vendor Roll-Up Summary fields."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Which three process automations can immediately send an email notification to the owner of an Opportunity when its amount is changed to be greater than $10,000? Choose 3 answers",
+	"options": [
+		"Process Builder",
+		"Approval Process",
+		"Workflow Rule",
+		"Escalation Rule"
+	],
+	"answers": ["A", "B", "C"]
+},
+{ 
+	"question": "A development team wants to use a deployment script to automatically deploy to a sandbox during their development cycles. Which should they use to deploy to the sandbox?",
+	"options": [
+		"Change Sets",
+		"VSCode",
+		"Developer Console",
+		"Ant Migration Tool"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A developer has to identify a method in an Apex class that performs resource intensive actions in memory by iterating over the result set of a SOQL statement on the Account. The method also performs a DML statement to save the changes to the database. Which two techniques should the developer implement as a best practice to ensure transaction control and avoid exceeding governor limits? Choose 2 answers",
+	"options": [
+		"Use the System.Limit class to monitor the current CPU governor limit consumption.",
+		"Use the @ReadOnly annotation to bypass the number of rows returned by a SOQL.",
+		"Use the Database.Savepoint method to enforce database integrity.",
+		"Use Partial DML statements to ensure only valid data is committed."
+	],
+	"answers": ["A", "C"]
+},
+{ 
+	"question": "Which three data types can a SOQL query return? Choose 3 answers",
+	"options": [
+		"sObject",  
+		"Integer",  
+		"Double",  
+		"Long",
+		"List of sObjects"
+	],
+	"answers": ["A", "B", "E"]
+},
+{ 
+	"question": "Which code should be used to update an existing Visualforce page that uses standard Visualforce components so that the page matches the look and feel of Lightning Experience?",
+	"options": [
+		"<apex:styleSheet value=\"({$URLFOR($Resource.slds,'assets/slds.css')}\">",
+		"<apex:slds/>",
+		"<apex:page lightningStyleSheets=\"true\">",
+		"<apex:includeLightning/>",
+		"<apex:page lightningStyleSheet=\"true\">"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "Which statement generates a list of Leads and Contacts that have a field with the phrase 'ACME'?",
+	"options": [
+		"List<sObject> searchList = (FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead);",
+		"Map<sObject> searchList = (FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead);",
+		"List<List<sObject>> searchList = (select Name, Id from Contact, Lead where Name like '%ACME%');",
+		"List<List<sObject>> searchList = [FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead];"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A developer writes a single trigger on the Account object on the after insert and after update events. A workflow rule modifies a field every time an Account is created or updated. How many times will the trigger fire if a new Account is inserted, assuming no other automation logic is implemented on the Account",
+	"options": [
+		"1",
+		"2",
+		"4",
+		"3"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "A developer has the following requirements: Calculate the total amount on an order. Calculate the line amount for each line item based on quantity selected and price. Move line items to a different order if a line item is not in stock. Which relationship implementation supports these requirements?",
+	"options": [
+		"Line Item has a lookup field to Order and there can be many line items per order.",
+		"Order has a lookup field to Line Item and there can be many line items per order.",  
+		"Order has a Master-Detail field to Line item and there can be many line items per order.",  
+		"Line Item has a Master-Detail field to Order and the Master can be reparented."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Which code in a Visualforce page and /or controller might present a security vulnerability?",
+	"options": [
+		"<apex:outputField value=\"{!ctrl.userInput}\" />",
+		"<apex:outputText escape=\"false\" value=\"{!$CurrentPage.parameters.userInput}\" />",
+		"<apex:outputText value=\"{!£CurrentPage.parameters.userInput}\" />",
+		"<apex:outputField escape=\"false\" value=\"{!ctrl.userInput}\" />"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "A developer wants to get access to the standard price book in the org while writing a test class that covers an OpportunityLineItem trigger. Which method allows access to the price book?",
+	"options": [
+		"Use Test.getStandardPricebookId() to get the standard price book ID.",
+		"Use @IsTest(SeeAllData=true) and delete the existing standard price book.",
+		"Use Test.loadData() and a Static Resource to load a standard price book.",
+		"Use @TestVisible to allow the test method to see the standard price book."
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "Universal Containers (UC) decided it will not send emails to support personnel directly from Salesforce in the event that an unhandled exception occurs. Instead, UC wants an external system to be notified of the error. What is the appropriate publish/subscribe logic to meet these requirements?",
+	"options": [
+		"Have the external system subscribe to the BatchApexError event, no publishing is necessary.",  
+		"Publish the error event using the addError() method and write a trigger to subscribe to the event and notify the external systems.",
+		"Publish the error event using the addError() method and have the external system subscribe to the event using the CometD.",  
+		"Publish the error event using the Eventbus.publish() method and have the external system subscribe to the event using the CometD."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A developer is asked to create a Visualforce page that displays some Account fields as well as fields configured on the page layout for related Contacts. How should the developer implement this request?",
+	"options": [
+		"Use the <apex:relatedList> tag",  
+		"Use the @listRelated annotation",  
+		"Use the <apex:listRelated> tag",  
+		"Use the @related List annotation"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": " The Job_Application__c custom object has a field that is a Master-Detail relationship to the Contact object, where the Contact object is the Master. As part of a feature implementation, a developer needs to retrieve a list containing all Contact records where the related Account Industry is 'Technology' while also retrieving the Contact’s Job_Application__c records. Based on the object’s relationships, what is the most efficient statement to retrieve the list of contacts?",
+	"options": [
+		"(SELECT Id, (SELECT Id FROM Job_Application__r) FROM Contact WHERE Account.Industry = 'Technology');",  
+		"(SELECT Id, (SELECT Id FROM Job_Application__c) FROM Contact WHERE Account.Industry = 'Technology');",  
+		"(SELECT Id, (SELECT Id FROM Job_Applications__r) FROM Contact WHERE Account.Industry = 'Technology');",
+		"(SELECT Id, (SELECT Id FROM Job_Applications__c) FROM Contact WHERE Account.Industry = 'Technology');"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "Universal Containers decides to use exclusively declarative development to build out a new Salesforce application. Which three options should be used to build out the database layer for the application? Choose 3 answers",
+	"options": [
+		"Record Types",  
+		"Relationships",  
+		"Custom Objects and Fields",  
+		"Roll-Up Summaries",  
+		"Apex classes"
+	],
+	"answers": ["B", "C", "D"]
+},
+{ 
+	"question": "A developer creates a new Apex trigger with a helper class, and writes a test class that only exercises 95% coverage of the new Apex helper class. Change set deployment to production fails with the test coverage warning:<code>Test coverage of selected Apex Trigger is 0%, at least 1% test coverage is required.</code>What should the developer do to successfully deploy the new Apex trigger and helper class?",
+	"options": [
+		"Run the tests using “Run All Tests” method.",  
+		"Remove the falling test methods from the test class.",  
+		"Create a test class and methods to cover the Apex trigger.",  
+		"Increase the test class coverage on the helper class."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
 },
 { 
 	"question": "",

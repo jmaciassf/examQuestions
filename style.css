@@ -75,15 +75,17 @@ code .tab, .option .tab {
     border-radius: 10px;
     margin-top: 2px;
     line-height: 23px;
+    user-select: none;
 }
 .showAnswers .options .option:hover { background-color: inherit; }
 .options .option:hover {background-color: #dddddd6e;}
-.option input {/* top: 45px; */width: 16px;height: 25px;/* border: 20px solid; */margin-top: 5px;margin: 0;/* vertical-align: baseline; *//* position: absolute; */display: table;vertical-align: baseline;}
+.option input {/* top: 45px; */width: 16px;height: 25px;/* border: 20px solid; */margin-top: 5px;margin: 0;/* vertical-align: baseline; *//* position: absolute; */display: table;vertical-align: baseline;cursor: pointer;}
 .option .text {
     /* margin-left: 113px; */
     /* display: inline-block; */
     flex: 1;
     margin-left: 10px;
+    overflow-wrap: anywhere;
 }
 .buttons {/* margin-top: 10px; */}
 .flex { display: flex; }
