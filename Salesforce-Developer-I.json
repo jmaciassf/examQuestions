@@ -248,7 +248,7 @@
 	"answers": ["C"]
 },
 { 
-	"question": "What are three ways for a developer to execute tests in an org? Choose 4.",
+	"question": "What are four ways for a developer to execute tests in an org? Choose 4.",
 	"options": [
 		"Bulk API",
 		"Tooling API",
@@ -907,6 +907,168 @@
 		"Public class CheckPaymentProcessor extends PaymentProcessor { Public void pay(Decimal amount); }"
 	],
 	"answers": ["A"]
+},
+{ 
+	"question": "What are three considerations when using the @InvocableMethod annotation in Apex? Choose 3 answers",
+	"options": [
+		"A method using the @InvocableMethod annotation can be declared as Public or Global.",  
+		"Only one method using the @InvocableMethod annotation can be defined per Apex class.",  
+		"A method using the @InvocableMethod annotation must define a return value.",
+		"A method using the @InvocableMethod annotation can have multiple input parameters.",
+		"A method using the @InvocableMethod annotation must be declared as static."
+	],
+	"answers": ["A", "B", "E"]
+},
+{ 
+	"question": "Which two events need to happen when deploying to a production org? Choose 2 answers",
+	"options": [
+		"All test and triggers must have at least 75% test coverage combined.",
+		"All triggers must have at least 1% test coverage.",  
+		"All Apex code must have at least 75% test coverage.",  
+		"All triggers must have at least 75% test coverage."
+	],
+	"answers": ["B", "C"]
+},
+{ 
+	"question": "Application Events follow the traditional publish-subscribe model. Which method is used to fire an event?",
+	"options": [
+		"fire()",  
+		"emit()",  
+		"registerEvent()",  
+		"fireEvent()"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "An org has an existing Visual Flow that creates an Opportunity with an Update Records element. A developer must update the Visual Flow to also create a Contact and store the created Contact ID's on the Opportunity. Which update should the developer make in the Visual Flow?",
+	"options": [
+		"Add a new Create Records element.",
+		"Add a new Get Records element.",
+		"Add a new Update Records element.",
+		"Add a new Quick Action (of type Create) element."
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "When a user edits the Postal Code on an Account, a custom Account text field named “Timezone” must be updated based on the values in a PostalCodeToTimezone__c custom object. How should a developer implement this feature?",
+	"options": [
+		"Build an Account Workflow rule",  
+		"Build an Account custom trigger",
+		"Build an account assignment rule",  
+		"Build an account approval process"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "A Next Best Action strategy uses an Enhance Element that invokes an Apex method to determine a discount level for a Contact, based on a number of factors. What is the correct definition of the Apex method?",
+	"options": [
+		"@InvocableMethod<br>global static ListRecommendation getLevel(List<ContactWrapper> input) { /*implementation*/ }",
+		"@InvocableMethod<br>global static List<List<Recommendation>> getLevel(List<ContactWrapper> input) { /*implementation*/ }",
+		"@InvocableMethod<br>global List<List<Recommendation>> getLevel(List<ContactWrapper> input) { /*implementation*/ }",
+		"@InvocableMethod<br>global Recommendation getLevel (ContactWrapper input) { /*implementation*/ }"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "A developer is writing tests for a class and needs to insert records to validate functionality. Which annotation method should be used to create records for every method in the test class?",
+	"options": [
+		"@StartTest",
+		"@isTest(SeeAllData=true)",
+		"@PreTest", 
+		"@TestSetup"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": " An apex method, getaccounts, that returns a list of accounts given a searchTerm, is available for lightning web components to use. What is the correct definition of a lightning web component property that uses the GetAccounts method?",
+	"options": [
+		"@AuraEnabled(getAccounts, ‘$searchTerm’) accountList;",
+		"@wire(getAccounts, ‘$searchTerm’) accountList;",
+		"@AuraEnabled(getAccounts, {searchTerm: ‘$searchTerm’}) accountList;",
+		"@wire(getAccounts, {searchTerm: ‘$searchTerm’}) accountList;"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Which salesforce feature allows a developer to see when a user last logged into salesforce if real-time notification is not required?",
+	"options": [
+		"Calendar Events",  
+		"Asynchronous Data Capture Events",  
+		"Event Monitoring Log",
+		"Developer Log"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "A developer must create a shippingCalculator class that cannot be instantiated and must include a working default implementation of a calculate method, that sub-classes can override.",
+	"options": [
+		"Public abstract class ShippingCalculator{ Public override calculate() {/*implementation*/} }",
+		"Public abstract class ShippingCalculator{ Public virtual void calculate() {/*implementation*/} }",
+		"Public abstract class ShippingCalculator{ Public abstract calculate() {/*implementation*/} }",
+		"Public abstract class ShippingCalculator{ Public void calculate() {/*implementation*/} }"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "A developer has an integer variable called MaxAttempts. The developer needs to ensure that once maxAttempts is initialized, it preserves its value for the length of the Apex transaction; while being able to share the variable’s state between trigger executions. How should the developer declare maxAttempts to meet these requirements?",
+	"options": [
+		"Declare maxAttempts as a member variable on the trigger definition.",
+		"Declare maxAttempts as a private static variable on a helper class.",
+		"Declare maxAttempts as a constant using the static and final keywords.",
+		"Declare maxAttempts as a variable on a helper class."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "Which salesforce org has a complete duplicate copy of the production org including data and configuration?",
+	"options": [
+		"Partial Copy Sandbox",
+		"Production",
+		"Developer Pro Sand",
+		"Full Sandbox"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Universal Containers stores orders and line Items in SF. For security reasons, financial reps are allowed to see information on the order such as order amount, but they aren’t allowed to see the line items on the order. Which type of relationship should be used?",
+	"options": [
+		"Indirect Lookup",
+		"Master Detail", 
+		"Lookup",
+		"Direct Lookup"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "Which three statements are true regarding custom exceptions in Apex?",
+	"options": [
+		"A custom exception class name must end with “Exception”.",
+		"A custom exception class must extend the system Exception class.",
+		"A custom exception class can extend other classes besides the Exception class.",
+		"A custom exception class cannot contain member variable or methods.",
+		"A custom exception class implement one or many interfaces."
+	],
+	"answers": ["A", "B", "E"]
+},
+{ 
+	"question": "Given the following Apex statement:<code>Account myAccount = [select ID, name from account];</code>What occurs when more than one account is returned by the SOQL query?",
+	"options": [
+		"The variable myAccount is automatically cast to the List data type.",
+		"The first Account returned is assigned to my Account.",
+		"An unhandled exception is thrown and code terminates.",
+		"The query fails and an error is written to the debug log."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "A developer has a VF page and custom controller to save Account records. The developer wants to display any validation rule violation to the user. How can the developer make sure that validation rule violations are displayed?",
+	"options": [
+		"Add custom controller attributes to display the message.",
+		"Include <apex:messages> on the visualforce page.", 
+		"Use a try/catch with custom exception class.",
+		"Perform the DML using the Database.upsert() method."
+	],
+	"answers": ["B"]
 },
 { 
 	"question": "",
