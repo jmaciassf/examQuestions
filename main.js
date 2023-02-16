@@ -40,6 +40,7 @@ function cleanAll(){
     $("#items").html("");
     questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
     reloadStatistics();
+    $("#ckhExpandAll").prop("checked", true);
 }
 
 function reloadStatistics(){
