@@ -95,7 +95,7 @@
 	"answers": ["B", "C", "E"]
 },
 { 
-	"question": "What are two valid options for iterating through each Account in the collection List<Account> named AccountList? (Choose two.)",
+	"question": "What are two valid options for iterating through each Account in the collection List&lt;Account> named AccountList? (Choose two.)",
 	"options": [
 		"for (Account theAccount : AccountList) {...}",
 		"for(AccountList) {...}",
@@ -494,9 +494,9 @@
 { 
 	"question": "Assuming that 'name' is a String obtained by an &lt;apex:inputText> tag on a Visualforce page. Which two SOQL queries performed are safe from SOQL injections? Choose 2 answers",
 	"options": [
-		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + String.escapeSingleQuotes(name) + '%\";<br>List<Account> results = Database.query(query);",
-		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name.noQuotes() + '%\"; <br>List<Account> results = Database.query(query);",
-		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name + '%\";<br>List<Account> results = Database.query(query);",
+		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + String.escapeSingleQuotes(name) + '%\";<br>List&lt;Account> results = Database.query(query);",
+		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name.noQuotes() + '%\"; <br>List&lt;Account> results = Database.query(query);",
+		"String query = 'SELECT Id FROM Account WHERE Name LIKE \"%' + name + '%\";<br>List&lt;Account> results = Database.query(query);",
 		"String query = '%' + name + '%';<br>List<Account> results = [SELECT Id FROM Account WHERE Name LIKE :query];"
 	],
 	"answers": ["A", "D"]

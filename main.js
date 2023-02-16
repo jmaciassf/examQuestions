@@ -1,16 +1,75 @@
+window.onhashchange = getQuestions;
+
 $(document).ready(function(){
     console.log("ready!");
+    let isStart = true;
 
+    // Checkbox shuffle questions
+    let $shuffle = $("#ckhShuffle");
+    $shuffle.click(function(){
+        let setHash = $shuffle.is(":checked") ? "shuffleOn" : "shuffleOff";
+        if(location.hash == "#"+setHash)
+            getQuestions();
+        else 
+            location.hash = setHash;
+    });
+    
+    if(isStart && location.hash == "#shuffleOff")
+        getQuestions();
+    else 
+        $shuffle.click();
+
+    let $expandAll = $("#ckhExpandAll");
+    $expandAll.click(function(){
+        var $items = $("#items .item");
+        if($expandAll.is(":checked")){
+            $items.removeClass("bodyHide").find(".body").show();
+        }
+        else {
+            $items.addClass("bodyHide").find(".body").hide();
+        }
+    });
+    
+    isStart = false;
+});
+
+function cleanAll(){
+    console.log("cleanAll");
+    
+    // Clean questions
+    $("#items").html("");
+    questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
+    reloadStatistics();
+}
+
+function reloadStatistics(){
+    let percentage = 0;
+    if(countQuestionsDone)
+        percentage = Math.round(100 * countSuccess / countQuestionsDone)+"%";
+    
+    console.log(percentage);
+    $(".header .success .number").html(countSuccess);
+    $(".header .errors .number").html(countErrors);
+    $(".header .percentage .number").html(percentage);
+}
+
+var questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
+function getQuestions(){
+    console.log("getQuestions");
+
+    cleanAll();
+    
     fetch("https://raw.githubusercontent.com/jmaciassf/examQuestions/main/Salesforce-Developer-I.json") .then((response) => response.json())
     .then(function(response){
 
-        // Random array order
-        response = response.sort(function () {
-            return Math.random() - 0.5;
-        });
+        // Random questions order
+        let isShuffle = location.hash == "#shuffleOn";
+        if(isShuffle){
+            response = response.sort(function () {
+                return Math.random() - 0.5;
+            });
+        }
 
-        var questionCounter = optionCounter = countQuestions = 
-            countSuccess = countErrors = countQuestionsDone = 0;
         response.forEach(element => {
             //console.log(element);
 
@@ -39,6 +98,7 @@ $(document).ready(function(){
             var options = '';
             arrOptions.forEach(function(option){
                 optionCounter++;
+                option.text = option.text.replace(/</g, '&lt;');
                 var idOption = "option"+optionCounter;
                 options += 
                 `<label class="option" for="${idOption}" answer="${option.answer}">
@@ -115,17 +175,6 @@ $(document).ready(function(){
                 $item.addClass("showAnswers").find(".options input").attr("disabled", true);
             });
 
-            function reloadStatistics(){
-                let percentage = 0;
-                if(countQuestionsDone)
-                    percentage = Math.round(100 * countSuccess / countQuestionsDone)+"%";
-                
-                console.log(percentage);
-                $(".header .success .number").html(countSuccess);
-                $(".header .errors .number").html(countErrors);
-                $(".header .percentage .number").html(percentage);
-            }
-
             // Next question
             var $next = $item.find(".btnNextQuestion");
             $next.click(function(){
@@ -184,11 +233,11 @@ $(document).ready(function(){
         });
         
         // Total questions
-        $(".subtitle").text(countQuestions + " questions");
+        $(".countQuestions").text(countQuestions + " questions");
     }).catch(function(error) {
         console.log('Hubo un problema con la petición Fetch:' + error.message);
     });
-});
+}
 
 // Expandir item de pregunta
 function expandItem($item){
@@ -203,7 +252,8 @@ function expandItem($item){
 }
 
 window.onbeforeunload = function (){ return ""; };
-
 /*
 button to show full screen cards like quizlet
+
+expand/collapse all
 */

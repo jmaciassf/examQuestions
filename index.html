@@ -9,6 +9,7 @@
     </head>
     <body>
         <div class="header">
+            <i class="icoMenu"></i>
             <span class="title">Exam Test v1.0</span>            
             <div class="results">
                 <div class="success">Success: <span class="number">0</span></div>
@@ -16,7 +17,21 @@
                 <div class="percentage">Percentage: <span class="number">0%</span></div>
             </div>
         </div>
-        <div class="subtitle"></div>
+
+        
+        <div class="subtitle">
+            <label id="lblShuffle" for="ckhShuffle">
+                <input type="checkbox" id="ckhShuffle">
+                <span class="text">Shuffle</span>
+            </label>
+            <label id="lblExpandAll" for="ckhExpandAll">
+                <input type="checkbox" id="ckhExpandAll" checked="true">
+                <span class="text">Expand all</span>
+            </label>
+            <div class="countQuestions"></div>
+        </div>
+
+        <!-- List of questions -->
         <div id="items"></div>
     </body>
 </html>
