@@ -96,17 +96,19 @@ function getQuestions(){
                 return Math.random() - 0.5;
             });
 
-            replaceTags(element.question);
+            element.question = replaceTags(element.question);
             function replaceTags(text){
-                text = text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account');
-
+                if(text.includes('static ListRecommendation')){
+                    var x = 1;
+                }
+                text = text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account').replace(/List</g, 'List&lt;');
+                return text;
             }
             
             var options = '';
             arrOptions.forEach(function(option){
                 optionCounter++;
-                //option.text = option.text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account');
-                replaceTags(option.text);
+                option.text = replaceTags(option.text);
                 var idOption = "option"+optionCounter;
                 options += 
                 `<label class="option" for="${idOption}" answer="${option.answer}">

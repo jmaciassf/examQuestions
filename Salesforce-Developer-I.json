@@ -14,7 +14,7 @@
 	"answers": ["A", "D"]
 },
 { 
-	"question": "A visualforce interface is created for Case Management that includes both standard and custom functionality defined in an Apex class called myControllerExtension. The visualforce page should include which &lt;apex:page> attribute(s) to correctly implement controller functionality?", 
+	"question": "A visualforce interface is created for Case Management that includes both standard and custom functionality defined in an Apex class called myControllerExtension. The visualforce page should include which <apex:page> attribute(s) to correctly implement controller functionality?", 
 	"options": [
 		"StandardController = \"case\" and extensions = \"myControllerExtension\"",
 		"Extensions= \"myControllerExtension\"",
@@ -1069,6 +1069,216 @@
 		"Perform the DML using the Database.upsert() method."
 	],
 	"answers": ["B"]
+},
+{ 
+	"question": "A developer observes that an Apex test method fails in the Sandbox. To identify the issue, the developer copies the code inside the test method and executes it via the Execute Anonymous tool in the Developer Console. The code then executes with no exceptions or errors. Why did the test method fail in the sandbox and pass in the Developer Console?",
+	"options": [
+		"The test method has a syntax error in the code.",
+		"The test method does not use System.runAs to execute as a specific user.",
+		"The test method is calling an @future method.",
+		"The test method relies on existing data in the sandbox."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A developer identifies the following triggers on the Expense__c object: deteleExpense, applyDefaultsToExpense, validateExpenseUpdate. The triggers process before delete, before insert, and before update events respectively. Which two techniques should the developer implement to ensure trigger best practices are followed? (Choose two.)",
+	"options": [
+		"Unify the before insert and before update triggers and use Process Builder for the delete action.",
+		"Create helper classes to execute the appropriate logic when a record is saved.",
+		"Maintain all three triggers on the Expense__c object, but move the Apex logic out of the trigger definition.",
+		"Unify all three triggers in a single trigger on the Expense__c object that includes all events."
+	],
+	"answers": ["B", "D"]
+},
+{ 
+	"question": "A developer wants to import 500 opportunity records into a sandbox. Why should the developer choose to use Data loader instead of data import wizard?",
+	"options": [
+		"Data Loader runs from the developer’s browser.",
+		"Data Loader automatically relates Opportunities to Accounts.",
+		"Data Import Wizard does not support Opportunities.",
+		"Data Import Wizard can not import all 500 records."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "A developer is debugging the following code to determine why Accounts are not being created.<br><br>Account a = new Account(Name = ‘A’);<br>Database.insert(a, false);<br><br>How should the code be altered to help debug the issue?",
+	"options": [
+		"Add a System.debug() statement before the insert method.",
+		"Collect the insert method return value in a SaveResult record.",
+		"Set the second insert method parameter to TRUE.",
+		"Add a try/catch around the insert method."
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "In terms of the MVC paradigm, what are two advantages of implementing the layer of a Salesforce application using Aura Component-based development over Visualforce? Choose 2 answers",
+	"options": [
+		"Server-side run-time debugging",
+		"Self-contained and reusable units of an application",
+		"Rich component ecosystem",
+		"Automatic code generation"
+	],
+	"answers": ["B", "C"]
+},
+{ 
+	"question": "Universal containers implemented a private sharing model for the account object. A custom account search tool was developed with apex to help sales reps find accounts that match multiple criteria they specify. Since its release, users of the tool report they can see accounts they do not own. What should the developer use to enforce sharing permissions for the currently logged in user while using the custom search tool?",
+	"options": [
+		"Use the schema describe calls to determine if the logged-in user has access to the Account object.",
+		"Use the UserInfo Apex class to filter all SOQL queries to returned records owned by the logged-in user.",
+		"Use the with sharing keyword on the class declaration.",
+		"Use the without sharing keyword on the class declaration."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
 },
 { 
 	"question": "",
