@@ -95,11 +95,18 @@ function getQuestions(){
             arrOptions = arrOptions.sort(function () {
                 return Math.random() - 0.5;
             });
+
+            replaceTags(element.question);
+            function replaceTags(text){
+                text = text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account');
+
+            }
             
             var options = '';
             arrOptions.forEach(function(option){
                 optionCounter++;
-                option.text = option.text.replace(/</g, '&lt;');
+                //option.text = option.text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account');
+                replaceTags(option.text);
                 var idOption = "option"+optionCounter;
                 options += 
                 `<label class="option" for="${idOption}" answer="${option.answer}">

@@ -95,7 +95,7 @@
 	"answers": ["B", "C", "E"]
 },
 { 
-	"question": "What are two valid options for iterating through each Account in the collection List&lt;Account> named AccountList? (Choose two.)",
+	"question": "What are two valid options for iterating through each Account in the collection List<Account> named AccountList? (Choose two.)",
 	"options": [
 		"for (Account theAccount : AccountList) {...}",
 		"for(AccountList) {...}",
@@ -729,21 +729,21 @@
 { 
 	"question": "Which code should be used to update an existing Visualforce page that uses standard Visualforce components so that the page matches the look and feel of Lightning Experience?",
 	"options": [
-		"<apex:styleSheet value=\"({$URLFOR($Resource.slds,'assets/slds.css')}\">",
-		"<apex:slds/>",
-		"<apex:page lightningStyleSheets=\"true\">",
-		"<apex:includeLightning/>",
-		"<apex:page lightningStyleSheet=\"true\">"
+		"&lt;apex:styleSheet value=\"({$URLFOR($Resource.slds,'assets/slds.css')}\">",
+		"&lt;apex:slds/>",
+		"&lt;apex:page lightningStyleSheets=\"true\">",
+		"&lt;apex:includeLightning/>",
+		"&lt;apex:page lightningStyleSheet=\"true\">"
 	],
 	"answers": ["C"]
 },
 { 
 	"question": "Which statement generates a list of Leads and Contacts that have a field with the phrase 'ACME'?",
 	"options": [
-		"List<sObject> searchList = (FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead);",
-		"Map<sObject> searchList = (FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead);",
-		"List<List<sObject>> searchList = (select Name, Id from Contact, Lead where Name like '%ACME%');",
-		"List<List<sObject>> searchList = [FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead];"
+		"List&lt;sObject> searchList = (FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead);",
+		"Map&lt;sObject> searchList = (FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead);",
+		"List&lt;List&lt;sObject>> searchList = (select Name, Id from Contact, Lead where Name like '%ACME%');",
+		"List&lt;List&lt;sObject>> searchList = [FIND \"*ACME*\" IN ALL FIELDS RETURNING Contact, Lead];"
 	],
 	"answers": ["D"]
 },
