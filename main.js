@@ -56,7 +56,8 @@ function reloadStatistics(){
 
 var questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
 function getQuestions(){
-    console.log("getQuestions");
+    console.log("getQuestions... ");
+    return;
 
     cleanAll();
     
