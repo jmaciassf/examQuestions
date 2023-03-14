@@ -8,4 +8,214 @@
         "ElastiCache"
 	],
 	"answers": ["C"]
+},
+{ 
+	"question": "A company is going to use several EC2 instances to host various reference applications. The applications are expected to receive steady and relatively low traffic. These applications are expected to run for 3 years, at which time the applications will be evaluated for upgrade. What type of EC2 will meet this requirement considering cost as an additional factor?",
+	"options": [
+		"Dedicated Hosts",
+		"On-Demand",
+		"Reserved",
+		"Spot"
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "You have been evaluating the NACLs in your company. Currently, you are looking at the default network ACL. Which statement is true about NACLs?",
+	"options": [
+		"The default configuration of the default NACL is Deny, and the default configuration of a custom NACL is Deny.",
+		"The default configuration of the default NACL is Allow, and the default configuration of a custom NACL is Allow.",
+		"The default configuration of the default NACL is Deny, and the default configuration of a custom NACL is Allow.",
+		"The default configuration of the default NACL is Allow, and the default configuration of a custom NACL is Deny."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "You work for an Australian company, who are currently being audited and need some compliance reports regarding your applications that are hosted on AWS. Specifically, they need a Australian Hosting Certification Framework - Strategic Certification certificate. You need to get this as quickly as possible. What should you do?",
+	"options": [
+		"Use AWS Certificate Manager to generate the certificate",
+		"Use AWS Trusted Advisor to generate the report",
+		"Use Amazon Detective to generate the report",
+		"Use AWS Artifact to download the certificate"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "After being assigned to oversee the data storage within your organization, you begin looking at the monthly billing for S3. You notice that large amounts of data are sitting in S3, and after discussions with team members you find that a large amount of the data is historical data that needs to be kept for audit purposes. You detail the cost savings and get approval to move this data to Amazon Glacier for long-term storage. For what types of data is Glacier best suited?",
+	"options": [
+		"Archival data",
+		"Infrequently accessed data",
+		"Cached data",
+		"Relational table data"
+	],
+	"answers": ["A", "B"]
+},
+{ 
+	"question": "You are managing S3 buckets in your organization. This management of S3 extends to Amazon Glacier. For auditing purposes you would like to be informed if an object is restored to S3 from Glacier. What is the most efficient way you can do this?",
+	"options": [
+		"Create a CloudWatch Event for uploads to S3",
+		"Configure S3 notifications for restore operations from Glacier",
+		"Create a Lambda function which is triggered by restoration of object from Glacier to S3",
+		"Create an SNS notification for any upload to S3"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "Your company has gotten back results from an audit. One of the mandates from the audit is that your application, which is hosted on EC2, must encrypt the data before writing this data to storage. It has been directed internally that you must have the ability to manage dedicated hardware security module instances to generate and store your encryption keys. Which service could you use to meet this requirement?",
+	"options": [
+		"AWS Security Token Service",
+		"AWS CloudHSM",
+		"Amazon EBS encryption",
+		"AWS KMS"
+	],
+	"answers": ["B"]
+},
+{ 
+	"question": "An organization of about 100 employees has performed the initial setup of users in IAM. All users except administrators have the same basic privileges. But now it has been determined that 50 employees will have extra restrictions on EC2. They will be unable to launch new instances or alter the state of existing instances. What will be the quickest way to implement these restrictions?",
+	"options": [
+		"Create an IAM Role for the restrictions. Attach it to the EC2 instances.",
+		"Create the appropriate policy. With only 20 users, attach the policy to each user.",
+		"Create the appropriate policy. Place the restricted users in the new policy.",
+		"Create the appropriate policy. Create a new group for the restricted users. Place the restricted users in the new group and attach the policy to the group."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A new startup company decides to use AWS to host their web application. They configure a VPC as well as two subnets within the VPC. They also attach an internet gateway to the VPC. In the first subnet, they create the EC2 instance which will host their web application. They finish the configuration by making the application accessible from the Internet. The second subnet hosts their database and they don't want the database accessible from the Internet. Which statement best describes this scenario?",
+	"options": [
+		"The web server is in a public subnet, and the database server is in a private subnet. The public subnet has a route to the internet gateway in the route table.",
+		"The web server is in a private subnet, and the database server is in a public subnet. The public subnet has a route to the internet gateway in the route table.",
+		"The web server is in a public subnet, and the database server is in a public subnet. The public subnet has a route to the internet gateway in the route table.",
+		"The web server is in a private subnet, and the database server is in a private subnet. A third subnet has a route to the Internet Gateway, which allows internet access."
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "A company has created a mobile application that is hugely popular. The initial plan was to give each user login credentials to the application. But due to the volume of users, this idea has become impractical. What service can you use to allow outside users to login through a third party such as Facebook, Amazon, Google or Apple?",
+	"options": [
+		"Amazon Cognito",
+		"AWS cross account access",
+		"AWS IAM",
+		"Google Authenticator"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "You have been given an assignment to configure Network ACLs in your VPC. Before configuring the NACLs, you need to understand how the NACLs are evaluated. How are NACL rules evaluated?",
+	"options": [
+		"All NACL rules that you configure are evaluated before traffic is passed through.",
+		"NACL rules are evaluated by rule number from highest to lowest, and executed immediately when a matching rule is found.",
+		"NACL rules are evaluated by rule number from highest to lowest, and all are evaluated before traffic is passed through.",
+		"NACL rules are evaluated by rule number from lowest to highest and executed immediately when a matching rule is found."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "You have been evaluating the NACLs in your company. Most of the NACLs are configured the same:<code>100 All Traffic Allow<br>200 All Traffic Deny<br>* All Traffic Deny</code>If a request comes in, how will it be evaluated?",
+	"options": [
+		"The highest numbered rule will be used, a deny.",
+		"All rules will be evaluated and the end result will be Deny.",
+		"The request will be allowed.",
+		"The default will deny traffic."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
 }]
