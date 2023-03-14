@@ -1,0 +1,11 @@
+[ 
+{ 
+	"question": "An insurance company is creating an application that will perform analytics in near real-time on huge datasets in the terabyte range, and potentially even petabyte. The company is evaluating an AWS data storage option. Which AWS service will allow storage of petabyte-scale data and also allow fast complex queries over a large number of rows?", 	 
+	"options": [
+		"DynamoDB",
+        "RDS",
+        "Redshift",
+        "ElastiCache"
+	],
+	"answers": ["C"]
+}]

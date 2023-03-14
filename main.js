@@ -57,11 +57,25 @@ function reloadStatistics(){
 var questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
 function getQuestions(){
     console.log("getQuestions... ");
-    return;
 
+    let title = getUrlParameter("title"), urlTitle;
+    switch(title){
+        case "SAA":
+            urlTitle = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/AWS-SAA.json";
+            break;
+
+        case "PDI":
+            urlTitle = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/Salesforce-Developer-I.json";
+            break;
+    }
+
+    if(!urlTitle){
+        return;
+    }
+    
     cleanAll();
     
-    fetch("https://raw.githubusercontent.com/jmaciassf/examQuestions/main/Salesforce-Developer-I.json") .then((response) => response.json())
+    fetch(urlTitle) .then((response) => response.json())
     .then(function(response){
 
         // Random questions order
@@ -260,6 +274,19 @@ function expandItem($item){
     
     var $title = $item.find(".title");
     $title.click();
+}
+
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'), sParameterName, i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
 }
 
 window.onbeforeunload = function (){ return ""; };
