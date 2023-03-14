@@ -120,54 +120,54 @@
 	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "You are working for a startup company with a small number of employees. The company expects rapid growth and you have been assigned to configure existing users and onboard new users with IAM privileges and logins. You intend to create IAM groups for the company departments and add new users to the appropriate group when you onboard them. You begin creating policies to assign permissions and attach them to the appropriate group. What is the best practice when giving users permissions in IAM policies?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Use the principle of least privilege.",
+		"Use the principle of top-down privilege.",
+		"Create a policy for each department head granting root access.",
+		"Grant all permissions to each AWS service the user will work with."
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": " You work for a consulting company, which is currently undergoing both a financial and technical audit. You have been asked by the auditors to produce regular reports in regards to your PCI compliance. You need to produce this as fast and as efficiently as possible. Which AWS service should you consider using?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Amazon Audit Automation",
+		"AWS Security Hub",
+		"Amazon Detective",
+		"AWS Audit Manager"
 	],
-	"answers": [""]
+	"answers": ["D"]
 },
 { 
-	"question": "",
+	"question": "Your company needs to deploy an application in the company AWS account. The application will reside on EC2 instances in an Auto Scaling Group fronted by an Application Load Balancer. The company has been using Elastic Beanstalk to deploy the application due to limited AWS experience within the organization. The application now needs upgrades and a small team of subcontractors have been hired to perform these upgrades. Which web service can be used to provide users that you authenticate with short-term security credentials that can control access to your AWS resources?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"IAM user accounts",
+		"AWS STS",
+		"IAM Group",
+		"AWS SSO"
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "You are evaluating the security setting within the main company VPC. There are several NACLs and security groups to evaluate and possibly edit. What is true regarding NACLs and security groups?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Network ACLs are stateless, and security groups are stateful.",
+		"Network ACLs and security groups are both stateless.",
+		"Network ACLs and security groups are both stateful.",
+		"Network ACLs are stateful, and security groups are stateless."
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
-	"question": "",
+	"question": "A small startup company has multiple departments with small teams representing each department. They have hired you to configure Identity and Access Management in their AWS account. The team expects to grow rapidly, and promote from within which could mean promoted team members switching over to a new team fairly often. How can you configure IAM to prepare for this type of growth?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Create the user accounts, create a group for each department, create and attach an appropriate role to each group, and place each user account into their department's group. When new team members are onboarded, create their account and put them in the appropriate group. If an existing team member changes departments, move their account to their new IAM group.",
+		"Create the user accounts, create a group for each department, create and attach an appropriate policy to each group, and place each user account into their department's group. When new team members are onboarded, create their account and put them in the appropriate group. If an existing team member changes departments, delete their account, create a new account and put the account in the appropriate group.",
+		"Create the user accounts, create a group for each department, create and attach an appropriate policy to each group, and place each user account into their department's group. When new team members are onboarded, create their account and put them in the appropriate group. If an existing team member changes departments, move their account to their new IAM group.",
+		"Create the user accounts, create a role for each department, create and attach an appropriate policy to each role, and place each user account into their department's role. When new team members are onboarded, create their account and put them in the appropriate role. If an existing team member changes departments, move their account to their new IAM group."
 	],
-	"answers": [""]
+	"answers": ["C"]
 },
 { 
 	"question": "",
