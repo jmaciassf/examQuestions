@@ -170,34 +170,34 @@
 	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "Several S3 Buckets have been deleted and a few EC2 instances have been terminated. Which AWS service can you use to determine who took these actions?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"AWS CloudWatch",
+		"AWS CloudTrail",
+		"AWS Inspector",
+		"Trusted Advisor"
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "A consultant is hired by a small company to configure an AWS environment. The consultant begins working with the VPC and launching EC2 instances within the VPC. The initial instances will be placed in a public subnet. The consultant begins to create security groups. The consultant has launched several instances, created security groups, and has associated security groups with instances. The consultant wants to change the security groups that are associated with the instance. Which statement is true?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"You can't change the security groups for an instance when the instance is in the running or stopped state.",
+		"You can’t change security groups. Create a new instance and attach the desired security groups.",
+		"You can change the security groups for an instance when the instance is in the running or stopped state.",
+		"You can change the security groups for an instance when the instance is in the pending or stopped state.",
 	],
-	"answers": [""]
+	"answers": ["C"]
 },
 { 
-	"question": "",
+	"question": "You have been put in charge of S3 buckets for your company. The buckets are separated based on the type of data they are holding and the level of security required for that data. You have several buckets that have data you want to safeguard from accidental deletion. Which configuration will meet this requirement?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Archive sensitive data to Amazon Glacier.",
+		"Enable versioning on the bucket and multi-factor authentication delete as well.",
+		"Signed URLs to all users to access the bucket.",
+		"Configure cross-account access with an IAM Role prohibiting object deletion in the bucket."
 	],
-	"answers": [""]
+	"answers": ["B"]
 },
 { 
 	"question": "",
