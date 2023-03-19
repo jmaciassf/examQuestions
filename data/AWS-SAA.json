@@ -183,7 +183,7 @@
 	"question": "A consultant is hired by a small company to configure an AWS environment. The consultant begins working with the VPC and launching EC2 instances within the VPC. The initial instances will be placed in a public subnet. The consultant begins to create security groups. The consultant has launched several instances, created security groups, and has associated security groups with instances. The consultant wants to change the security groups that are associated with the instance. Which statement is true?",
 	"options": [
 		"You can't change the security groups for an instance when the instance is in the running or stopped state.",
-		"You can’t change security groups. Create a new instance and attach the desired security groups.",
+		"You can't change security groups. Create a new instance and attach the desired security groups.",
 		"You can change the security groups for an instance when the instance is in the running or stopped state.",
 		"You can change the security groups for an instance when the instance is in the pending or stopped state.",
 	],
