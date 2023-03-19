@@ -210,6 +210,366 @@
 	"answers": ["A"]
 },
 { 
+	"question": "Currently, you are employed as a solutions architect for a large international shipping company. The company is undergoing an IT transformation and they want to create an immutable database, where they can track packages as they are sent around the world. They will need to track what boxes they go in, what trucks they are sent in, and what aircraft or sea containers they are shipped in. The database needs to be immutable and cryptographically verifiable, and they would like to leverage the AWS cloud to achieve this. What database technology would best suit this requirement?",
+	"options": [
+		"Amazon Quantum Ledger Database (QLDB)",
+		"Aurora",
+		"RDS",
+		"Neptune"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "You are designing a new application for a social media gaming company and they want to be able to use people’s facebook account to login and to sign up to the new app. They’ve asked that you use Cognito to achieve this. However, management wants to know the steps involved for user authentication. Which of the steps below is the correct order to authenticate with Cognito?",
+	"options": [
+		"Step 1 - Exchange tokens and get AWS credentials. Step 2 - Authenticate and get tokens. Step 3 - Access AWS services using credentials.",
+		"Step 1 - Access AWS services using credentials. Step 2 - Exchange tokens and get AWS credentials. Step 3 - Authenticate and get tokens.",
+		"Step 1 - Exchange tokens and get AWS credentials. Step 2 - Access AWS services using credentials. Step 3 - Authenticate and get tokens.",
+		"Step 1 - Authenticate and get tokens. Step 2 - Exchange tokens and get AWS credentials. Step 3 - Access AWS services using credentials."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "You have a typical architecture for an Application Load Balancer fronting an Auto Scaling group of EC2 instances, backed by an RDS MySQL database. Your Application Load Balancer is performing health checks on the EC2 instances. What actions will be taken if an instance fails these health checks?",
+	"options": [
+		"The instance is terminated by the ALB.",
+		"The instance is replaced by the ALB.",
+		"The ALB stops sending traffic to the instance.",
+		"The ALB notifies the Auto Scaling group that the instance is down."
+	],
+	"answers": ["C"]
+},
+{ 
+	"question": "The AWS team in a large company is spending a lot of time monitoring EC2 instances and maintenance when the instances report health check failures. How can you most efficiently automate this monitoring and repair?",
+	"options": [
+		"Create a Lambda function which can be triggered by a failed instance health check. Have the Lambda function deploy a CloudFormation template which can perform the creation of a new instance.",
+		"Create a cron job which monitors the instances periodically and starts a new instance if a health check has failed.",
+		"Create a Lambda function which can be triggered by a failed instance health check. Have the Lambda function destroy the instance and spin up a new instance.",
+		"Create an Amazon CloudWatch alarm that monitors an Amazon EC2 instance and automatically reboots the instance if a health check fails."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
 	"question": "",
 	"options": [
 		"",
