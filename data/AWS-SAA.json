@@ -185,7 +185,7 @@
 		"You can't change the security groups for an instance when the instance is in the running or stopped state.",
 		"You can't change security groups. Create a new instance and attach the desired security groups.",
 		"You can change the security groups for an instance when the instance is in the running or stopped state.",
-		"You can change the security groups for an instance when the instance is in the pending or stopped state.",
+		"You can change the security groups for an instance when the instance is in the pending or stopped state."
 	],
 	"answers": ["C"]
 },
@@ -200,14 +200,14 @@
 	"answers": ["B"]
 },
 { 
-	"question": "",
+	"question": "A financial institution has an application that produces huge amounts of actuary data, which is ultimately expected to be in the terabyte range. There is a need to run complex analytic queries against terabytes of structured data, using sophisticated query optimization, columnar storage on high-performance storage, and massively parallel query execution. Which service will best meet this requirement?",
 	"options": [
-		"",
-		"",
-		"",
-		""
+		"Redshift",
+		"RDS",
+		"DynamoDB",
+		"Elasticache"
 	],
-	"answers": [""]
+	"answers": ["A"]
 },
 { 
 	"question": "",
