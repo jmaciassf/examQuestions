@@ -9,15 +9,15 @@
 	],
 	"answers": ["C"]
 },
-{ 
-	"question": "A company is going to use several EC2 instances to host various reference applications. The applications are expected to receive steady and relatively low traffic. These applications are expected to run for 3 years, at which time the applications will be evaluated for upgrade. What type of EC2 will meet this requirement considering cost as an additional factor?",
-	"options": [
-		"Dedicated Hosts",
-		"On-Demand",
-		"Reserved",
-		"Spot"
-	],
-	"answers": ["C"]
+{
+	"question":"The engineering team at a company wants to use Amazon SQS to decouple components of the underlying application architecture. However, the team is concerned about the VPC-bound components accessing SQS over the public internet. As a solutions architect, which of the following solutions would you recommend to address this use-case?",
+	"options":
+	["Use Internet Gateway to access Amazon SQS",
+	"Use VPN connection to access Amazon SQS",
+	"Use Network Address Translation (NAT) instance to access Amazon SQS",
+	"Use VPC endpoint to access Amazon SQS "],
+	"answers":["D"],
+	"explanation": "AWS customers can access Amazon Simple Queue Service (Amazon SQS) from their Amazon Virtual Private Cloud (Amazon VPC) using VPC endpoints, without using public IPs, and without needing to traverse the public internet. VPC endpoints for Amazon SQS are powered by AWS PrivateLink, a highly available, scalable technology that enables you to privately connect your VPC to supported AWS services."
 },
 { 
 	"question": "You have been evaluating the NACLs in your company. Currently, you are looking at the default network ACL. Which statement is true about NACLs?",
@@ -453,5 +453,50 @@
 	"Use RDS to host your database. Enable the Multi-AZ option for your database. In the event of a failure, cut over to the secondary database.",
 	"Use RDS to host your database. Create a cross-region read replica of your database. In the event of a failure, promote the read replica to be a standalone database. Send new reads and writes to this database."],
 	"answers":["D"]
-}
+},
+{
+	"question":"You are designing an architecture which will house an Auto Scaling Group of EC2 instances. The application hosted on the instances is expected to be extremely popular. Forecasts for traffic to this site expect very high traffic and you will need a load balancer to handle tens of millions of requests per second while maintaining high throughput at ultra low latency. You need to select the type of load balancer to front your Auto Scaling Group to meet this high traffic requirement. Which load balancer will you select?",
+	"options":
+	["You will select a Network Load Balancer to meet this requirement.",
+	"You will need a Classic Load Balancer to meet this requirement.",
+	"You will need an Application Load Balancer to meet this requirement.",
+	"All the AWS load balancers meet the requirement and perform the same."],
+	"answers":["A"]
+},
+{
+	"question":"You have just started working at a company that is migrating from a physical data center into AWS. Currently, you have 25 TB of data that needs to be moved to an S3 bucket. Your company has just finished setting up a 1 GB Direct Connect drop, but you will not have a VPN up and running for 30 days. This data needs to be encrypted during transit and at rest and must be uploaded to the S3 bucket within 21 days. What is the best way to meet these requirements?",
+	"options":
+	["Upload the data using Direct Connect.",
+	"Use a Snowball device to transmit the data.",
+	"Order a Snowcone device to transmit the data.",
+	"Upload the data to S3 using your public internet connection."],
+	"answers":["B"]
+},
+{
+	"question":"A Solutions Architect has been assigned the task of helping the company development optimize the performance of their web application. End users have been complaining about slow response times. The Solutions Architect has determined that improvements can be realized by adding ElastiCache to the solution. What can ElastiCache do to improve performance?",
+	"options":
+	["Offload some of the write traffic to the database.",
+	"Cache frequently accessed data in-memory.",
+	"Delivers up to 10x performance improvement from milliseconds to microseconds or even at millions of requests per second.",
+	"Queue up requests and allow the processor time to catch-up."],
+	"answers":["B"]
+},
+{
+	"question":"A software company has developed a social gaming application that leverages EC2 web servers with Amazon DynamoDB to store player data, session history, and leaderboards for a huge number of concurrent users. The DynamoDB table has pre-configured read and write capacity units. Users have been reporting slowdown issues, and an analysis has revealed that the application requires response times in microseconds for optimal performance. What step can you take to enable this application to handle read-heavy or bursty workloads, while delivering the fastest possible response time for eventually consistent read operations?",
+	"options":
+	["Add a load balancer in front of the EC2 web servers to decouple your application requests synchronously, improving performance for read-heavy and bursty workloads.",
+	"Deploy Amazon CloudFront to your architecture, so you can cache common Amazon DynamoDB queries and reduce response time to microseconds.",
+	"Configure Amazon SQS to queue requests that could be lost and improve the application response time.",
+	"Implement in-memory acceleration with DynamoDB Accelerator (DAX)."],
+	"answers":["D"]
+},
+{
+	"question":"You work for a large online education company that teaches IT using pre-recorded videos. They want to make their website available to the hearing impaired and need to find a way to convert their videos and audio into speech that they can then display as subtitles. Which AWS service should they use?",
+	"options":
+	["Amazon Comprehend",
+	"Amazon Rekognition",
+	"Amazon Transcribe",
+	"Amazon Translate"],
+	"answers":["C"]
+},
 ]
