@@ -453,5 +453,5 @@
 	"Use RDS to host your database. Enable the Multi-AZ option for your database. In the event of a failure, cut over to the secondary database.",
 	"Use RDS to host your database. Create a cross-region read replica of your database. In the event of a failure, promote the read replica to be a standalone database. Send new reads and writes to this database."],
 	"answers":["D"]
-},
+}
 ]
