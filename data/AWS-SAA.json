@@ -318,313 +318,140 @@
 	"RDS Multi-Region"],
 	"answers":["B"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"An online retailer currently runs their application within AWS. Currently, everything is running on Amazon EC2 instances, including all application software. The application is well-written and completes order processes following a specific workflow logic order. The online retailer has begun to explore shifting their entire code base to AWS Lambda for each compute-based portion of the workflow, but they are not sure how best to interconnect the functions. There are three major requirements that need to be met. The first is that they need to implement a 20-minute wait period between certain functions in the application code and process. The second is they want to be able to conditionally handle a few different known scenarios that may occur during the order processing. The last requirement is to have an auditable workflow history. Which AWS service is the best fit for their workflow orchestration needs that has the least operational overhead and is the most cost-efficient?",
+	"options":
+	["Amazon EKS with Amazon RDS",
+	"AWS Lambda with Amazon S3",
+	"AWS Step Functions with AWS Lambda",
+	"AWS Lambda with Amazon SNS"],
+	"answers":["C"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"You have been hired as a Solutions Architect for a company that pairs photos with related story narratives in PDF format. The company needs to be able to store files in several different formats, such as PDF, JPG, PNG, Word, and several others. This storage needs to be highly durable. Which storage type will best meet this requirement?",
+	"options":
+	["Amazon RDS",
+	"S3",
+	"DynamoDB",
+	"EC2 instance store"],
+	"answers":["B"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"Your company has decided to migrate a SQL Server database to a newly-created AWS account. Which service can be used to migrate the database?",
+	"options":
+	["Database Migration Service",
+	"Elasticache",
+	"AWS RDS",
+	"DynamoDB"],
+	"answers":["A"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"Due to strict compliance requirements, your company cannot leverage AWS cloud for hosting their Kubernetes clusters, nor for managing the clusters. However, they do want to try to follow the established best practices and processes that the Amazon EKS service has implemented. How can your company achieve this while running entirely on-premises?",
+	"options":
+	["Run Amazon EKS.",
+	"This cannot be done.",
+	"Run Amazon ECS anywhere.",
+	"Run the clusters on-premises using Amazon EKS Distro."],
+	"answers":["D"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"A financial tech company has decided to begin migrating their applications to the AWS cloud. Currently, they host their entire application using several self-managed Kubernetes clusters. One of their major concerns during this migration is monitoring and collecting system metrics due to the very large-scale deployments that are in place. Your Chief Technology Officer wants to avoid using AWS-proprietary technology-based monitoring services and instead leverage existing, well-known, open-source applications to help meet the monitoring requirements. Which combination of the following AWS services would best fit the company requirements while minimizing operational overhead?",
+	"options":
+	["AWS Managed Service for Prometheus",
+	"AWS Managed Grafana",
+	"Grafana on Auto Scaling EC2 Instances",
+	"Prometheus on Auto Scaling EC2 Instances",
+	"AWS Config"],
+	"answers":["A", "B"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"A data company has implemented a subscription service for storing video files. There are two levels of subscription: personal and professional use. The personal users can upload a total of 5 GB of data, and professional users can upload as much as 5 TB of data. The application can upload files of size up to 1 TB to an S3 Bucket. What is the best way to upload files of this size?",
+	"options":
+	["Multipart upload",
+	"AWS Snowball",
+	"Single-part Upload",
+	"AWS SnowMobile"],
+	"answers":["A"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"A team of architects is designing a new AWS environment for a company which wants to migrate to the Cloud. The architects are considering the use of EC2 instances with instance store volumes. The architects realize that the data on the instance store volumes are ephemeral. Which action will not cause the data to be deleted on an instance store volume?",
+	"options":
+	["Hardware disk failure.",
+	"Reboot",
+	"Instance is stopped",
+	"The underlying disk drive fails."],
+	"answers":["B"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"You work for a large healthcare provider as an AWS lead architect. There is a need to collect data in real-time from devices throughout the organization. The data will include log and event data from sources such as servers, desktops, and mobile devices. The data initially captured will be technical device data, but the goal is to expand the effort to collecting clinical data in real-time from handheld devices used by nurses and doctors. Which AWS service best meets this requirement?",
+	"options":
+	["AWS Lambda",
+	"Kinesis Data Streams",
+	"Kinesis Video Streams",
+	"AWS Redshift"],
+	"answers":["B"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"A gaming company is designing several new games which focus heavily on player-game interaction. The player makes a certain move and the game has to react very quickly to change the environment based on that move and to present the next decision for the player in real-time. A tool is needed to continuously collect data about player-game interactions and feed the data into the gaming platform in real-time. Which AWS service can best meet this need?",
+	"options":
+	["AWS Lambda",
+	"Kinesis Data Analytics",
+	"Kinesis Data Streams",
+	"AWS IoT"],
+	"answers":["C"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"You work for a large online education company that teaches IT using pre-recorded videos. You have converted their online videos into text to be accessible for the hearing impaired. They now want to convert the transcribed text into other languages using artificial intelligence and machine learning. Which AWS service should they use?",
+	"options":
+	["Amazon Transcribe",
+	"Amazon Translate",
+	"Amazon Comprehend",
+	"Amazon Rekognition"],
+	"answers":["B"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"Your application team stores critical data within a third-party SaaS cloud vendor. The data comes from an internal application that runs on Amazon ECS Fargate, which then stores the data within Amazon S3 in a proprietary format. Currently, AWS Lambda functions are triggered via Amazon S3 event notifications to trigger the transfer of data to an SaaS application. Due to resource and time limits, you are exploring other means of completing this workflow of transferring data from AWS to the SaaS solution. Which AWS service offers the most efficiency and has the least operational overhead?",
+	"options":
+	["Amazon EKS",
+	"AWS Step Function Fargate Capacity",
+	"Amazon EventBridge",
+	"Amazon AppFlow"],
+	"answers":["D"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"A small startup company has begun using AWS for all of its IT infrastructure. The company has one AWS Solutions Architect and the demands for their time are overwhelming. The software team has been given permission to deploy their Python and PHP applications on their own. They would like to deploy these applications without having to worry about the underlying infrastructure. Which AWS service would they use for deployments?",
+	"options":
+	["CloudFormation",
+	"CloudFront",
+	"Elastic Beanstalk",
+	"CodeDeploy"],
+	"answers":["C"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"Your team has provisioned Auto Scaling groups in a single Region. The Auto Scaling groups, at max capacity, would total 40 EC2 On-Demand Instances between them. However, you notice that the Auto Scaling groups will only scale out to a portion of that number of instances at any one time. What could be the problem?",
+	"options":
+	["You can have only 20 instances per Availability Zone.",
+	"You can have only 20 instances per Region. This is a hard limit.",
+	"There is a vCPU-based On-Demand Instance limit per Region.",
+	"The associated load balancer can serve only 20 instances at one time."],
+	"answers":["C"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"You work for an advertising company that has a real-time bidding application. You are also using CloudFront on the front end to accommodate a worldwide user base. Your users begin complaining about response times and pauses in real-time bidding. What is the best service that can be used to reduce DynamoDB response times by an order of magnitude (milliseconds to microseconds)?",
+	"options":
+	["Amazon DynamoDB Accelerator (DAX)",
+	"DynamoDB Auto Scaling",
+	"ElastiCache",
+	"CloudFront Edge Caches"],
+	"answers":["A"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
+{
+	"question":"Your company is in the process of creating a multi-region disaster recovery solution for your database, and you have been tasked to implement it. The required recovery time objective (RTO) is 1 hour, and the Recovery Point Objective (RPO) is 15 minutes. What steps can you take to ensure these thresholds are met?",
+	"options":
+	["Take EBS snapshots of the required EC2 instances nightly. In the event of a disaster, restore the snapshots to another region.",
+	"Use Redshift to host your database. Enable \"multi-region\" failover with Redshift. In the event of a failure, do nothing, as Redshift will handle it for you.",
+	"Use RDS to host your database. Enable the Multi-AZ option for your database. In the event of a failure, cut over to the secondary database.",
+	"Use RDS to host your database. Create a cross-region read replica of your database. In the event of a failure, promote the read replica to be a standalone database. Send new reads and writes to this database."],
+	"answers":["D"]
 },
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-},
-{ 
-	"question": "",
-	"options": [
-		"",
-		"",
-		"",
-		""
-	],
-	"answers": [""]
-}]
+]
