@@ -131,8 +131,9 @@ function getQuestions(){
                 </label>`;
             });
 
-            var explanation = '' || element.explanation;
-            //if(element.explanation)
+            var explanation = "";
+            if(element.explanation)
+                explanation = `<div class="explanation">${element.explanation}</div>`;
 
             questionCounter++;
             var $item = 
@@ -141,7 +142,7 @@ function getQuestions(){
                 <div class="body">
                     <div class="question">${element.question}</div>
                     <div class="options">${options}</div>
-                    <div class="explanation">${explanation}</div>
+                    ${explanation}
                     <div class="buttons flex">
                         <input class="btnAnswer" type="button" value="Display answer">
                         <span class="btnReload"></span>

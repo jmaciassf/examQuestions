@@ -498,5 +498,123 @@
 	"Amazon Transcribe",
 	"Amazon Translate"],
 	"answers":["C"]
+},
+{
+	"question":"A company is going to use several EC2 instances to host various reference applications. The applications are expected to receive steady and relatively low traffic. These applications are expected to run for 3 years, at which time the applications will be evaluated for upgrade. What type of EC2 will meet this requirement considering cost as an additional factor?",
+	"options":
+	["Dedicated Hosts",
+	"On-Demand",
+	"Reserved",
+	"Spot"],
+	"answers":["C"]
+},
+{
+	"question":"After an IT Steering Committee meeting, you have been put in charge of configuring a hybrid environment for the company’s compute resources. You weigh the pros and cons of various technologies based on the requirements you are given. The decision you make is to go with Direct Connect. Which option best describes the features Direct Connect provides?",
+	"options":
+	["A private, dedicated network connection between your facilities and AWS",
+	"A cost-effective, private network connection that bypasses the internet",
+	"A connection between on-premises and VPC, using secure and private connection with IPsec and TLS",
+	"A network connection between two VPCs that can route traffic using IPv4 or IPv6"],
+	"answers":["A"]
+},
+{
+	"question":"You have recently migrated your small company to AWS and are looking for some general best practice guidance within the platform. Which AWS service can help you optimize your AWS environment by giving recommendations to reduce cost, increase performance, and improve security?",
+	"options":
+	["AWS Trusted Advisor",
+	"AWS Inspector",
+	"AWS Optimizations",
+	"AWS Organizations"],
+	"answers":["A"]
+},
+{
+	"question":"You are managing data storage for your company, and there are many EBS volumes. Your management team has given you some new requirements. Certain metrics on the EBS volumes need to be monitored, and the database team needs to be notified by email when certain metric thresholds are exceeded. Which AWS services can be configured to meet these requirements?",
+	"options":
+	["SES",
+	"SQS",
+	"SNS",
+	"CloudWatch",
+	"SWF"],
+	"answers":["C", "D"]
+},
+{
+	"question":"Your company has a multi-account AWS environment with over 100 accounts. Each account belongs to a specific application team within the company, and they all fall within the same consolidated billing family. The company has just received funding for the next two years, but they are unsure about anything beyond that. With this in mind, they plan on aggressively deploying applications to AWS during the two years. Recently, there was a massive spike in unplanned Amazon EC2 and AWS Lambda costs, causing significant financial stress. What can an organization administrator do to maximize savings for the entire organization for this first year?",
+	"options":
+	["Purchase a three-year All Upfront Compute Savings Plan.",
+	"Purchase a three-year All Upfront EC2 Instance Savings Plan.",
+	"Purchase a one-year All Upfront EC2 Instance Savings Plan.",
+	"Purchase a one-year All Upfront Compute Savings Plan."],
+	"answers":["D"]
+},
+{
+	"question":"Your team owns three separate AWS accounts: one for production, one for staging, and one for development. Recently, there has been a push from the CEO to begin breaking down costs to the most comprehensive, detailed level. In addition to this level of detail, the team needs to store daily comma-separated value (CSV) reports in Amazon S3 for ingestion into the company’s internal analytics tooling. What would be the most efficient solution for this scenario?",
+	"options":
+	["Use AWS Cost and Usage Reports to generate reports with the required amount of detail. Set up Amazon EventBridge (Amazon CloudWatch Events) to trigger a rule to create and then export CSV reports daily to a centralized Amazon S3 bucket.",
+	"Use AWS Budgets to alert and generate reports on current spend, and use AWS Fargate to pull data, generate CSV reports, and then push them to Amazon S3.",
+	"Use AWS Budgets to alert and generate reports, and use AWS Lambda to pull data, generate CSV reports, and then push them to Amazon S3.",
+	"Use AWS Cost and Usage Reports to generate reports, and have it export CSV reports daily to a centralized Amazon S3 bucket."],
+	"answers":["D"]
+},
+{
+	"question":"Your company needs to shift an application to the cloud. You are looking for a solution to collect, process, gain immediate insight, and then transfer the application data to AWS. Part of this effort also includes moving a large data warehouse into AWS. The warehouse is 50TB, and it would take over a month to migrate the data using the current bandwidth available. What is the best option available to perform this one time migration considering both cost and performance aspects?",
+	"options":
+	["AWS SnowMobile",
+	"AWS Snowball Edge",
+	"AWS Direct Connect",
+	"AWS VPN"],
+	"answers":["B"]
+},
+{
+	"question":"You are working in a large healthcare facility which uses EBS volumes on most of the EC2 instances. The CFO has approached you about some cost savings and it has been decided that some of the EC2 instances and EBS volumes would be deleted. What step can be taken to preserve the data on the EBS volumes and keep the data available on short notice?",
+	"options":
+	["Archive the data to Glacier.",
+	"Store the data in CloudFormation user data.",
+	"Move the data to Amazon S3.",
+	"Take point-in-time snapshots of your Amazon EBS volumes."],
+	"answers":["D"]
+},
+{
+	"question":"You have joined a newly formed software company as a Solutions Architect. It is a small company, and you are the only employee with AWS experience. The owner has asked for your recommendations to ensure that the AWS resources are deployed to proactively remain within budget. Which AWS service can you use to help ensure you don’t have cost overruns for your AWS resources?",
+	"options":
+	["AWS Budgets",
+	"Billing and Cost Management",
+	"Cost Explorer",
+	"Inspector"],
+	"answers":["A"]
+},
+{
+	"question":"You work for a Defense contracting company. The company develops software applications which perform intensive calculations in the area of Mechanical Engineering related to metals for ship building. You have a 3-year contract and decide to purchase reserved EC2 instances for a 3-year duration. You are informed that the particular program has been cancelled abruptly and negotiations have brought the contract to an amicable conclusion one year early. What can you do to stop incurring charges and save money on the EC2 instances?",
+	"options":
+	["Write AWS and ask to terminate the contract.",
+	"Change the instance states from running to stopped.",
+	"Sell the reserved instances on the Reserved Instance Marketplace.",
+	"Convert the instances to Spot Instances and allow them to go away through attrition."],
+	"answers":["C"]
+},
+{
+	"question":"A testing team is using a group of EC2 instances to run batch, automated tests on an application. The tests run overnight, but don’t take all night. The instances sit idle for long periods of time and accrue unnecessary charges. What can you do to stop these instances when they are idle for long periods?",
+	"options":
+	["Write a cron job which queries the instance status. Also write a Lambda function which can be triggered upon a certain status and stop the instance.",
+	"Write a Python script which queries the instance status. Also write a Lambda function which can be triggered upon a certain status and stop the instance.",
+	"Write a cron job which queries the instance status. If a certain status is met, have the cron job kick off CloudFormation to terminate the existing instance, and create a new instance from a template.",
+	"You can create a CloudWatch alarm that is triggered when the average CPU utilization percentage has been lower than 10 percent for 4 hours, and stops the instance."],
+	"answers":["D"]
+},
+{
+	"question":"After an IT Steering Committee meeting, you have been put in charge of configuring a hybrid environment for the company’s compute resources. You weigh the pros and cons of various technologies, such as VPN and Direct Connect, and based on the requirements you have decided to configure a VPN connection. What features and advantages can a VPN connection provide?",
+	"options":
+	["It provides a cost-effective, private network connection that bypasses the internet.",
+	"It provides a connection between an on-premises network and a VPC, using a secure and private connection with IPsec and TLS.",
+	"It provides a network connection between two VPCs that can route traffic using IPv4 or IPv6.",
+	"It provides a private, dedicated network connection between an on-premises network and the VPC."],
+	"answers":["B"]
+},
+{
+	"question":"A company needs to deploy EC2 instances to handle overnight batch processing. This includes media transcoding and some voice to text transcription. This is not high priority work, and it is OK if these batch runs get interrupted. What is the best EC2 instance purchasing option for this work?",
+	"options":
+	["On-Demand",
+	"Spot",
+	"Reserved",
+	"Dedicated Hosts"],
+	"answers":["B"]
 }
 ]
