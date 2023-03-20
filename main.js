@@ -289,9 +289,38 @@ function getUrlParameter(sParam) {
     }
 }
 
+// json format questions getJSONQuestion(`x`)
+function getJSONQuestion(str){
+    var arrStr = str.split('\n');
+    if(!arrStr.length){
+        return "No hay información disponible";
+    }
+    
+    var question = arrStr[0];
+
+    var options = [];
+    for(var i = 1; i < arrStr.length; i++){
+        if(arrStr[i])
+            options.push(arrStr[i]);
+    }
+
+    var result = {
+        question: question,
+        options: options,
+        answers: [""]
+    }
+    var strResult = JSON.stringify(result);
+    strResult = strResult
+                    .replace('"question"', '\n\t"question"')
+                    .replace('"options":[', '\n\t"options":\n\t[')
+                    .replace('"answers"', '\n\t"answers"')
+                    .replace(/","/g, '",\n\t"')
+                    .replace(']}', ']\n},');
+    copy(strResult);
+    //return strResult;
+}
+
 window.onbeforeunload = function (){ return ""; };
 /*
 button to show full screen cards like quizlet
-
-expand/collapse all
 */
