@@ -1,8 +1,10 @@
 window.onhashchange = getQuestions;
+var ctrl = {}
 
 $(document).ready(function(){
     console.log("ready!");
     let isStart = true;
+    var $body = $("body");
 
     // Checkbox shuffle questions
     let $shuffle = $("#ckhShuffle");
@@ -13,20 +15,41 @@ $(document).ready(function(){
         else 
             location.hash = setHash;
     });
+
+    // Expand all
+    let $expandAll = $("#ckhExpandAll");
+    $expandAll.click(function(){
+        console.log("Expand all click");
+        var $items = $("#items .item");
+        if($expandAll.is(":checked")){
+            // Expand all
+            $body.addClass("expandAll");
+            $items.removeClass("bodyHide").addClass("bodyShow");
+            localStorage.expandAll = true;
+        }
+        else {
+            // Collapse all
+            $body.removeClass("expandAll");
+            $items.removeClass("bodyShow").addClass("bodyHide");
+            localStorage.expandAll = false;
+        }
+    });
     
     if(isStart && location.hash == "#shuffleOff")
         getQuestions();
     else 
         $shuffle.click();
 
-    let $expandAll = $("#ckhExpandAll");
-    $expandAll.click(function(){
-        var $items = $("#items .item");
-        if($expandAll.is(":checked")){
-            $items.removeClass("bodyHide").find(".body").show();
+    $body.click(function(){
+        var $target = $(event.target);
+        if($target.parent().attr("id") == "mySidenav"
+          || $target.attr("id") == "mySidenav"
+          || $target.hasClass("icoMenu")){
+            // Clicks aceptables
         }
         else {
-            $items.addClass("bodyHide").find(".body").hide();
+            // Close menu
+            closeNav();
         }
     });
     
@@ -40,7 +63,10 @@ function cleanAll(){
     $("#items").html("");
     questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
     reloadStatistics();
-    $("#ckhExpandAll").prop("checked", true);
+
+    var expandAll = localStorage.expandAll == "true" ? true : false;
+    $("#ckhExpandAll").prop("checked", !expandAll);
+    $("#ckhExpandAll").click();
 }
 
 function reloadStatistics(){
@@ -48,7 +74,6 @@ function reloadStatistics(){
     if(countQuestionsDone)
         percentage = Math.round(100 * countSuccess / countQuestionsDone)+"%";
     
-    console.log(percentage);
     $(".header .success .number").html(countSuccess);
     $(".header .errors .number").html(countErrors);
     $(".header .percentage .number").html(percentage);
@@ -74,10 +99,28 @@ function getQuestions(){
     }
     
     cleanAll();
+
+    // Verificar si hay datos guardados
+    if(localStorage.questions){
+        console.log("Session questions loading..."); 
+        ctrl.questions = JSON.parse(localStorage.questions);
+        setQuestions();
+        return;
+    }
     
     fetch(urlTitle) .then((response) => response.json())
     .then(function(response){
+        ctrl.questions = response;
+        setQuestions();
+        localStorage.questions = JSON.stringify(ctrl.questions);
+    }).catch(function(error) {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+    });
 
+    function setQuestions(){
+        console.log("setQuestions");
+        let response = ctrl.questions;
+        
         // Random questions order
         let isShuffle = location.hash == "#shuffleOn";
         if(isShuffle){
@@ -85,7 +128,7 @@ function getQuestions(){
                 return Math.random() - 0.5;
             });
         }
-
+        
         response.forEach(element => {
             //console.log(element);
 
@@ -137,7 +180,7 @@ function getQuestions(){
 
             questionCounter++;
             var $item = 
-            $(`<div class="item">
+            $(`<div class="item" questionId="${questionCounter-1}">
                 <div class="title">Question ${questionCounter}</div>
                 <div class="body">
                     <div class="question">${element.question}</div>
@@ -159,16 +202,48 @@ function getQuestions(){
             var $title = $item.find(".title");
             $title.click(function(){
                 console.log("title click");
-                $body.slideToggle(function(){
-                    console.log("toggle end");
-                    $body.is(":visible") ? $item.removeClass("bodyHide") : $item.addClass("bodyHide");
-                });
+
+                if($item.hasClass("bodyShow")){
+                    $item.removeClass("bodyShow").addClass("bodyHide");
+                }
+                else {
+                    $item.addClass("bodyShow").removeClass("bodyHide");
+                }
+
+                return;
+                
+                if(!event || !event.pointerId){
+                    // Click emulated
+                    $item.toggleClass("bodyShow");
+                    //$body.is(":visible") ? $item.removeClass("bodyHide") : $item.addClass("bodyHide");
+                    return;
+                    
+                    $body.toggle();
+                }
+                else {
+                    // Click manual
+                    $item.toggleClass("bodyShow");
+                    //$body.is(":visible") ? $item.removeClass("bodyHide") : $item.addClass("bodyHide");
+                    return;
+                    
+                    $body.slideToggle(function(){
+                        console.log("toggle end");
+                        //$body.is(":visible") ? $item.removeClass("bodyHide") : $item.addClass("bodyHide");
+                    }); 
+                }
             });
 
             // Validar la respuesta
             var $btnAnswer = $item.find(".btnAnswer");
             $btnAnswer.click(function(){
                 console.log("answer click");
+                
+                let questionId = $item.attr("questionId");
+                let jQuestion;
+                if(!isNaN(questionId)){
+                    jQuestion = ctrl.questions[questionId];
+                    // ctrl.questions[questionId].answered = "A";
+                }
 
                 let hasErrors = false;
                 $options.each(function(){
@@ -178,6 +253,7 @@ function getQuestions(){
 
                     if(isAnswer && isChecked){
                         // Success
+                        
                     }
                     else if((isAnswer && !isChecked) || (!isAnswer && isChecked)){
                         // Error
@@ -191,10 +267,12 @@ function getQuestions(){
                 if(hasErrors){
                     countErrors++;
                     $item.addClass("error");
+                    jQuestion.answered = 'error';
                 }
                 else {
                     countSuccess++;   
                     $item.addClass("success");
+                    jQuestion.answered = 'success';
                 }
                 countQuestionsDone++;
 
@@ -203,6 +281,11 @@ function getQuestions(){
                 
                 // Disable inputs
                 $item.addClass("showAnswers").find(".options input").attr("disabled", true);
+            
+                // Save result in localStorage
+                if(jQuestion){
+                    localStorage.questions = JSON.stringify(ctrl.questions);
+                }
             });
 
             // Next question
@@ -259,14 +342,46 @@ function getQuestions(){
                 reloadStatistics();
                 
                 $item.removeClass("success error answered showAnswers");
-            })
+            });
+            
+            // Read previous answer
+            let answerError = element.answered == "error",
+                answerSuccess = element.answered == "success";
+            if(answerError || answerSuccess){
+                 $item.addClass("answered");
+                if(answerError){
+                    countErrors++;
+                    $item.addClass("error");
+                }
+                else {
+                    countSuccess++;   
+                    $item.addClass("success");
+                }
+                countQuestionsDone++;
+    
+                // Set statistics
+                reloadStatistics();
+                
+                // Disable inputs
+                $item.addClass("showAnswers").find(".options input").attr("disabled", true);
+            }
         });
+
+        ctrl.questions = response;
         
         // Total questions
         $(".countQuestions").text(countQuestions + " questions");
-    }).catch(function(error) {
-        console.log('Hubo un problema con la petición Fetch:' + error.message);
-    });
+
+        // Set classes of expand all
+        $("#ckhExpandAll").click().click();
+
+        // Expand first question if expandAll is false
+        if(!$("body").hasClass("expandAll")){
+            $("#items .item:first .title").click();
+        }
+        
+        console.log("setQuestions end");
+    }
 }
 
 // Expandir item de pregunta
@@ -292,6 +407,29 @@ function getUrlParameter(sParam) {
             return sParameterName[1] === undefined ? true : sParameterName[1];
         }
     }
+}
+
+
+function reloadQuestions(){
+    console.log("reloadQuestions");
+
+    if(confirm("Do you want to reload the questions?")){
+        localStorage.questions = "";
+        getQuestions();
+    }
+}
+
+function openNav() {
+    if($("body").hasClass("showMenu")){
+        closeNav();
+        return;
+    }
+    
+    $("body").addClass("showMenu");
+}
+
+function closeNav() {
+    $("body").removeClass("showMenu");
 }
 
 // json format questions getJSONQuestion(`x`)
@@ -326,6 +464,18 @@ function getJSONQuestion(str){
 }
 
 window.onbeforeunload = function (){ return ""; };
+
 /*
 button to show full screen cards like quizlet
+
+
+Ya
+    Enumerar los items internamente    
+    Save the questions in session, until click the reset button
+    Only expand the first question
+    
+    Save results in localStorage
+    Read past results
+    
+    Not change with of border at show answer
 */

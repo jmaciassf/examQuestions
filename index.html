@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="header">
-            <i class="icoMenu"></i>
+            <i class="icoMenu" onclick="openNav()"></i>
             <span class="title">Exam Test v1.0</span>            
             <div class="results">
                 <div class="success">Success: <span class="number">0</span></div>
@@ -17,7 +17,6 @@
                 <div class="percentage">Percentage: <span class="number">0%</span></div>
             </div>
         </div>
-
         
         <div class="subtitle">
             <label id="lblShuffle" for="ckhShuffle">
@@ -25,10 +24,15 @@
                 <span class="text">Shuffle</span>
             </label>
             <label id="lblExpandAll" for="ckhExpandAll">
-                <input type="checkbox" id="ckhExpandAll" checked="true">
+                <input type="checkbox" id="ckhExpandAll">
                 <span class="text">Expand all</span>
             </label>
             <div class="countQuestions"></div>
+        </div>
+
+        <!-- Menu -->
+        <div id="mySidenav" class="sidenav">
+            <a onclick="reloadQuestions()">Reload questions</a>
         </div>
 
         <!-- List of questions -->

@@ -616,5 +616,50 @@
 	"Reserved",
 	"Dedicated Hosts"],
 	"answers":["B"]
+},
+{
+	"question":"A media company runs a photo-sharing web application that is accessed across three different countries. The application is deployed on several Amazon EC2 instances running behind an Application Load Balancer. With new government regulations, the company has been asked to block access from two countries and allow access only from the home country of the company.<br>Which configuration should be used to meet this changed requirement?",
+	"options":
+	["Configure the security group on the Application Load Balancer",
+	"Configure AWS WAF on the Application Load Balancer in a VPC",
+	"Use Geo Restriction feature of Amazon CloudFront in a VPC",
+	"Configure the security group for the EC2 instances"],
+	"answers":["B"]
+},
+{
+	"question":"A financial services company recently launched an initiative to improve the security of its AWS resources and it had enabled AWS Shield Advanced across multiple AWS accounts owned by the company. Upon analysis, the company has found that the costs incurred are much higher than expected.<br>Which of the following would you attribute as the underlying reason for the unexpectedly high costs for AWS Shield Advanced service?",
+	"options":
+	["Savings Plans has not been enabled for the AWS Shield Advanced service across all the AWS accounts",
+	"AWS Shield Advanced also covers AWS Shield Standard plan, thereby resulting in increased costs",
+	"AWS Shield Advanced is being used for custom servers, that are not part of AWS Cloud, thereby resulting in increased costs",
+	"Consolidated billing has not been enabled. All the AWS accounts should fall under a single consolidated billing for the monthly fee to be charged only once"],
+	"answers":["D"]
+},{
+	"question":"An audit department generates and accesses the audit reports only twice in a financial year. The department uses AWS Step Functions to orchestrate the report creating process that has failover and retry scenarios built into the solution. The underlying data to create these audit reports is stored on S3, runs into hundreds of Terabytes and should be available with millisecond latency.<br>As a solutions architect, which is the MOST cost-effective storage class that you would recommend to be used for this use-case?",
+	"options":
+	["Amazon S3 Intelligent-Tiering (S3 Intelligent-Tiering)",
+	"Amazon S3 Glacier Deep Archive",
+	"Amazon S3 Standard",
+	"Amazon S3 Standard-Infrequent Access (S3 Standard-IA)"],
+	"answers":["D"]
+},
+{
+	"question":"The IT department at a consulting firm is conducting a training workshop for new developers. As part of an evaluation exercise on Amazon S3, the new developers were asked to identify the invalid storage class lifecycle transitions for objects stored on S3.<br>Can you spot the INVALID lifecycle transitions from the options below? (Select two)",
+	"options":
+	["S3 One Zone-IA => S3 Standard-IA",
+	"S3 Standard-IA => S3 Intelligent-Tiering",
+	"S3 Intelligent-Tiering => S3 Standard",
+	"S3 Standard => S3 Intelligent-Tiering",
+	"S3 Standard-IA => S3 One Zone-IA"],
+	"answers":["A", "C"]
+},
+{
+	"question":"A geological research agency maintains the seismological data for the last 100 years. The data has a velocity of 1GB per minute. You would like to store the data with only the most relevant attributes to build a predictive model for earthquakes.<br>What AWS services would you use to build the most cost-effective solution with the LEAST amount of infrastructure maintenance?",
+	"options":
+	["Ingest the data in Kinesis Data Firehose and use an intermediary Lambda function to filter and transform the incoming stream before the output is dumped on S3",
+	"Ingest the data in Kinesis Data Analytics and use SQL queries to filter and transform the data before writing to S3",
+	"Ingest the data in Kinesis Data Streams and use an intermediary Lambda function to filter and transform the incoming stream before the output is dumped on S3",
+	"Ingest the data in a Spark Streaming Cluster on EMR use Spark Streaming transformations before writing to S3"],
+	"answers":["A"]
 }
 ]
