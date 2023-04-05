@@ -83,14 +83,15 @@ var questionCounter = optionCounter = countQuestions = countSuccess = countError
 function getQuestions(){
     console.log("getQuestions... ");
 
-    let title = getUrlParameter("title"), urlTitle;
+    let title = getUrlParameter("title"), urlTitle,
+        baseURL = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/";
     switch(title){
         case "SAA":
-            urlTitle = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/AWS-SAA.json";
+            urlTitle = baseURL + "AWS-SAA.json";
             break;
 
         case "PDI":
-            urlTitle = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/PDI.json";
+            urlTitle = baseURL + "PDI.json";
             break;
     }
 
