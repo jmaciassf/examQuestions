@@ -1,0 +1,186 @@
+[{ 
+	"question": "A developer in a Salesforce org with 100 Accounts executes the following code using the Developer console: Account myAccount = new Account(Name = 'MyAccount');Insert myAccount;For (Integer x = 0; x < 250; x++) {Account newAccount = new Account (Name='MyAccount' + x);try {Insert newAccount;}catch (Exception ex) {System.debug (ex) ;}}insert new Account (Name='myAccount'); How many accounts are in the org after this code is run?", 
+	"options": ["101", "100", "102", "252"],
+	"answers": ["B"]
+}, 
+{ 
+	"question": "A Licensed_Professional__c custom object exist in the system with two Master-Detail fields for the following objects: Certification__c and Contact. Users with the \"Certification Representative\" role can access the Certification records they own and view the related Licensed Professionals records, however users with the \"Salesforce representative\" role report they cannot view any Licensed professional records even though they own the associated Contact record. What are two likely causes of users in the \"Sales Representative\" role not being able to access the Licensed Professional records? Choose 2 answers", 	 
+	"options": [
+		"The organization's sharing rules for Licensed_Professional__c have not finished their recalculation process.",
+		"The organization recently modified the Sales representative role to restrict Read/Write access to Licensed_Professional__c",
+		"The organization has a private sharing model for Certification__c, and Contact is the primary relationship in the Licensed_Professional__c object",
+		"The organization has a private sharing model for Certification__c, and Certification__c is the primary relationship in the Licensed_Professional__c object.x"
+	],
+	"answers": ["B", "D"]
+},
+{ 
+	"question": "A visualforce interface is created for Case Management that includes both standard and custom functionality defined in an Apex class called myControllerExtension. The visualforce page should include which <apex:page> attribute(s) to correctly implement controller functionality?", 
+	"options": [
+		"StandardController = \"case\" and extensions = \"myControllerExtension\"",
+		"Extensions= \"myControllerExtension\"",
+		"Controller= \"myControllerExtension\"",
+		"Controller = \"case\" and extensions = \"myControllerExtension\""
+	], 
+	"answers": ["A"]
+},
+{ 
+	"question": "Which two describe Heroku Redis? Choose 2 answers.",
+	"options": [
+		"Is an in-memory key-value data store, run by Heroku.",
+		"Is a repository for storing large images.",
+		"Is an option for long-term data storage.",
+		"Is provisioned and managed as an add-on."
+	], 
+	"answers": ["A", "D"]
+},
+{ 
+	"question": "Universal Containers wants a list button to display a Visualforce page that allows users to edit multiple records. Which Visualforce feature supports this requirement?",
+	"options": [
+		"<apex:listButton> tag",
+		"Custom controller",
+		"RecordSetVar page attribute",
+		"Controller extension"
+	], 
+	"answers": ["C"]
+},
+{ 
+	"question": "A developer has a block of code that omits any statements that indicate whether the code block should execute with or without sharing. What will automatically obey the organization-wide defaults and sharing settings for the user who executes the code in the Salesforce organization?",
+	"options": [
+		"Apex Triggers",
+		"HTTP Callouts",
+		"Apex Controllers",
+		"Anonymous Blocks"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A newly hired developer discovers that there are multiple triggers on the case object. What should the developer consider when working with triggers?",
+	"options": [
+		"Developers must dictate the order of trigger execution.",
+		"Trigger execution order is based on creation date and time.",
+		"Unit tests must specify the trigger being tested.",
+		"Trigger execution order is not guaranteed for the same sObject."
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "A developer uses a Test Setup method to create an Account named 'Test'. The first test method deletes the Account record. What must be done in the second test method to use the Account?",
+	"options": [
+		"Use SELECT Id from Account where Name='Test'",
+		"Restore the Account using an undeleted statement",
+		"The Account cannot be used in the second test method",
+		"Call the Test Setup method at the start of the test"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "A company has a custom object named Region. Each account in salesforce can only be related to one region at a time, but this relationship is optional. Which type of relationship should a developer use to relate an account to a region?",
+	"options": [
+		"Parent-child",
+		"Master-detail",
+		"Hierarchical",
+		"Lookup"
+	],
+	"answers": ["D"]
+},
+{ 
+	"question": "Universal Containers requires Service Representatives to update all Cases at least one every three days. To make sure of this policy is obeyed, a developer has been asked to implement a field that displays the number of days since the last Case update. What should the developer use to configure the solution?",
+	"options": [
+		"Formula field",
+		"Workflow rule",
+		"Process Builder",
+		"Scheduled Apex Class"
+	],
+	"answers": ["A"]
+},
+{ 
+	"question": "Which three fields are available in Locale Settings on the User Record? (Choose three.)",
+	"options": [
+		"Email Encoding",
+		"Locale",
+		"Time Zone",
+		"Currency",
+		"Language"
+	],
+	"answers": ["B", "C", "E"]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+},
+{ 
+	"question": "",
+	"options": [
+		"",
+		"",
+		"",
+		""
+	],
+	"answers": [""]
+}]

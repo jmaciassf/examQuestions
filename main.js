@@ -90,7 +90,7 @@ function getQuestions(){
             break;
 
         case "PDI":
-            urlTitle = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/Salesforce-Developer-I.json";
+            urlTitle = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/PDI.json";
             break;
     }
 
@@ -467,6 +467,7 @@ window.onbeforeunload = function (){ return ""; };
 
 /*
 button to show full screen cards like quizlet
+Add questions in mongoDB
 
 
 Ya
