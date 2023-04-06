@@ -114,7 +114,10 @@ span.btnReload, .explanation {display: none;}
 .showAnswers .btnNextQuestion {display: block;background-color: #e4e4e4;color: inherit;}
 .showAnswers .btnReload {display: block;background-color: #e4e4e4;margin-right: 10px;color: inherit;text-align: center;/* width: auto; */flex: none;/* width: min-content; */background-image: url(images/replay.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 7px;}
 .showAnswers .explanation {display: block;margin: 10px 0;}
-.showAnswers .divOption .explanation {font-weight: 400;margin: 0;margin-left: 32px;margin-top: 2px;}
+.showAnswers .divOption .explanation {font-weight: 400;margin: 0;margin-left: 32px;margin-top: -9px;margin-bottom: 5px;}
+.showAnswers .divOption[answer=true] .explanation {
+    margin-top: 2px;
+}
 
 /* Menu */
 body.showMenu #mySidenav {/* left: 0; */width: 100%;}

@@ -181,7 +181,7 @@ function getQuestions(){
                 var idOption = "option"+optionCounter;
                 let explanation = option.explanation ? `<label class="explanation">${option.explanation}</label>` : "";
                 options += 
-                `<div class="divOption">
+                `<div class="divOption" answer="${option.answer}">
                     <label class="option" for="${idOption}" answer="${option.answer}">
                         <input type="checkbox" id="${idOption}"><span class="text">${option.text}</span>
                     </label>
