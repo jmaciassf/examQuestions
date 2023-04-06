@@ -1,0 +1,12 @@
+[
+{
+    "question":"Ursa Major Solar tracks both user issues and customer issues.<br><br>1. A user issue can be logged as: new, waiting for reply, closed<br>2. A customer issue can be logged as: new, working, closed<br><br>An administrator needs to track both case types. Which features should be used?",
+    "options":
+    ["Page Layouts and Record Types",
+    "Page Layouts and Process Builder",
+    { "option": "Record Types and Support Processes", "explanation": "Record types let you offer different business processes, picklist values, and page layouts to different users." },
+    "Workflows and Automated Case Users"
+    ],
+    "answers":["C"]
+}
+]
