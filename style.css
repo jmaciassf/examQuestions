@@ -3,7 +3,7 @@
 }
 
 body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;color: #373737;}
-.header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 18px -2px #000000c7;}
+.header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 18px -2px #000000c7;z-index: 2;}
 .header .icoMenu {display: block;text-align: center;background-image: url(images/menu.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 6px;height: 25px;color: white;position: absolute;cursor: pointer;filter: invert(1);/* display: none; */}
 .header .title {
     padding: 5px;
@@ -114,22 +114,30 @@ span.btnReload, .explanation {display: none;}
 .showAnswers .btnNextQuestion {display: block;background-color: #e4e4e4;color: inherit;}
 .showAnswers .btnReload {display: block;background-color: #e4e4e4;margin-right: 10px;color: inherit;text-align: center;/* width: auto; */flex: none;/* width: min-content; */background-image: url(images/replay.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 7px;}
 .showAnswers .explanation {display: block;margin: 10px 0;}
+.showAnswers .divOption .explanation {font-weight: 400;margin: 0;margin-left: 32px;margin-top: 2px;}
 
 /* Menu */
-body.showMenu #mySidenav {left: 0;}
-#mySidenav {left: -250;width: 250px;}
+body.showMenu #mySidenav {/* left: 0; */width: 100%;}
+body.showMenu #mySidenav a {
+    display: block;
+}
+#mySidenav {/* left: -250; */width: 250px;width: 0;top: 0;padding-top: 65px;}
+#mySidenav a {
+    display: none;
+    transition: 1s;
+}
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 36px; /* Stay at the top */
+    /* top: 36px; */ /* Stay at the top */
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 10px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    /* transition: 0.5s; */ /* 0.5 second transition effect to slide in the sidenav */
   }
   
   /* The navigation menu links */

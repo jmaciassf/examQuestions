@@ -86,6 +86,10 @@ function getQuestions(){
     let title = getUrlParameter("title"), urlTitle,
         baseURL = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/";
     switch(title){
+        case "ADM":
+            urlTitle = baseURL + "ADM.json";
+            break;
+        
         case "SAA":
             urlTitle = baseURL + "AWS-SAA.json";
             break;
@@ -146,8 +150,14 @@ function getQuestions(){
                 if(index == 3 && element.answers.includes('D')) answer = true;
                 if(index == 4 && element.answers.includes('E')) answer = true;
                 if(index == 5 && element.answers.includes('F')) answer = true;
+
+                let text = option, explanation = "";
+                if(typeof option == "object"){
+                    text = option.option;
+                    explanation = option.explanation;
+                }
                 
-                arrOptions.push({ text: option, answer: answer });
+                arrOptions.push({ text: text, answer: answer, explanation: explanation });
             });
 
             // Random array order
@@ -169,10 +179,14 @@ function getQuestions(){
                 optionCounter++;
                 option.text = replaceTags(option.text);
                 var idOption = "option"+optionCounter;
+                let explanation = option.explanation ? `<label class="explanation">${option.explanation}</label>` : "";
                 options += 
-                `<label class="option" for="${idOption}" answer="${option.answer}">
-                    <input type="checkbox" id="${idOption}"><span class="text">${option.text}</span>
-                </label>`;
+                `<div class="divOption">
+                    <label class="option" for="${idOption}" answer="${option.answer}">
+                        <input type="checkbox" id="${idOption}"><span class="text">${option.text}</span>
+                    </label>
+                    ${explanation}
+                </div>`;
             });
 
             var explanation = "";
@@ -299,6 +313,8 @@ function getQuestions(){
                 
                 // Expand next item
                 let $nextItem = $item.next();
+                if(!$nextItem.length) return; // Last question
+                
                 expandItem($nextItem);
 
                 // Scroll en el siguiente item
