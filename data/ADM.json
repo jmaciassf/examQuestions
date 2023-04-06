@@ -1,6 +1,6 @@
 [
 {
-    "question":"Ursa Major Solar tracks both user issues and customer issues.<br><br>1. A user issue can be logged as: new, waiting for reply, closed<br>2. A customer issue can be logged as: new, working, closed<br><br>An administrator needs to track both case types. Which features should be used?",
+    "question":"Ursa Major Solar tracks both user issues and customer issues.<ul><li>A user issue can be logged as: new, waiting for reply, closed</li><li>A customer issue can be logged as: new, working, closed</li></ul>An administrator needs to track both case types. Which features should be used?",
     "options":
     ["Page Layouts and Record Types",
     "Page Layouts and Process Builder",
@@ -8,5 +8,41 @@
     "Workflows and Automated Case Users"
     ],
     "answers":["C"]
+}, {
+    "question":"Salesforce users at Universal Containers complain that global search returns too many records.<br>Which two configurations should a System Administrator perform to help users manage search results? Choose 2 options.",
+    "options":
+    ["Enable Sidebar Search Auto-Complete in the object's search settings.",
+    "Specify the Search Filter Fields for the object's search layout.",
+    "Reduce the number of records displayed for each object in the Search Results page.",
+    "Specify the Keywords and include them into the object's search layout."
+    ],
+    "answers":["B", "C"]
+}, {
+    "question":"Which two objects can be related to Campaign Members? Choose 2 options.",
+    "options":
+    [{ "option": "Leads", "explanation": "Campaign members are contacts or leads associated with campaigns." },
+    "Contact Roles",
+    "Partners",
+    "Contacts"
+    ],
+    "answers":["A", "D"]
+}, {
+    "question":"Ursa Major Solar's administrator created a new account record type, but when marketing users are creating new account records, they are unable to choose the new record type.<br>What are two potential causes of this issue? Choose 2 options.",
+    "options":
+    [{ "option": "The record type is deactivated.", "explanation": "Record types need to be active in order for users to access them." },
+    { "option": "The record type is disassociated from the page layout.", "explanation": "The record type is not populated by the page layout relationship." },
+    { "option": "The record type default setting is disabled.", "explanation": "A record type can be active or inactive." },
+    { "option": "The record type is disabled on the marketing user profile.", "explanation": "Record types need to be assigned to a profile." }
+    ],
+    "answers":["A", "D"]
+}, {
+    "question":"Universal Containers wants to allow potential customers to submit Cases for technical inquiries. They do not have resources to set up a call center and need to make support available through another means.<br>Which two options should they consider? Choose 2 options.",
+    "options":
+    [{ "option": "Implement a Lightning Partner Community with Knowledge.", "explanation": "Partner communities and knowledge articles can't submit cases to support." },
+    { "option": "Generate Web-to-Case HTML code to add to the website.", "explanation": "Gather customer support requests directly from a website and automatically generate new cases with Web-to-Case. Setting up Web-to-Case involves enabling the feature, choosing settings, and adding the Web-to-Case form to your website." },
+    { "option": "Adding a link for Auto-Response Rules for Solutions.", "explanation": "A link and auto-response rules can't submit cases to support." },
+    { "option": "Adding a link to a specified routing address for Email-to-Case.", "explanation": "Set up Email-to-Case to efficiently resolve customer issues. Salesforce automatically creates cases and auto-populates case fields when customers send messages to the specified email addresses." }
+    ],
+    "answers":["B", "D"]
 }
 ]
