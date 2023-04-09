@@ -44,5 +44,99 @@
     { "option": "Adding a link to a specified routing address for Email-to-Case.", "explanation": "Set up Email-to-Case to efficiently resolve customer issues. Salesforce automatically creates cases and auto-populates case fields when customers send messages to the specified email addresses." }
     ],
     "answers":["B", "D"]
+}, {
+    "question":"Universal Containers has a team of Account Managers that requested email alerts any time an Opportunity or Case is created on Accounts that they own.<br>What is the minimum number of workflows needed to accomplish this task?",
+    "options":
+    [{ "option": "One workflow rule with two email alerts", "explanation": "" },
+    { "option": "Four workflow rules for create and update on Opportunities and Accounts", "explanation": "" },
+    { "option": "No workflow rules, but two email alerts", "explanation": "" },
+    { "option": "Two workflow rules with one email alert each", "explanation": "Workflow rules are specific to each object." }
+    ],
+    "answers":["D"]
+}, {
+	"question":"The Password Policy shows that the length of time until passwords expire is 90 days. However, some users find that their passwords expire every 30 days.s2<br>Where should the System Administrator change the password expiration period for these users?",
+	"options":
+	["Roles assigned to the Users",
+	{"option":"Profiles assigned to the Users",
+	"explanation":"Changes to org-wide password policies don't apply to users of a profile that has its own password policies."},
+	"Individual User records",
+	"Permission Sets assigned to the Users"],
+	"answers":["B"]
+}, {
+	"question":"A sales executive at Universal Containers wants to be notified whenever high-value opportunities are created for hot accounts. What should an administrator do to meet this requirement?",
+	"options":
+	["Create an escalation rule based on the opportunity amount.",
+	"Create a validation rule that evaluates the account rating.",
+	"Create an auto-response rule on the opportunity object.",
+	{"option":"Create a workflow rule on the opportunity object.",
+	"explanation":"Automate your organization's standard process by creating a workflow rule."}],
+	"answers":["D"]
+}, {
+	"question":"Ursa Major Solar wants all Sales Users to see a dashboard that displays Total Closed/Won Opportunity Amount by User on a monthly basis. The Opportunity sharing model is private.<br>What should the administrator do to fulfill this request?",
+	"options":
+	[{"option":"Request for the Sales Manager to create the Dashboard from the Opportunities by User Report and save it to her private Dashboards Folder.",
+	"explanation":"Saving to a private folder will not allow access for the Sales users."},
+	{"option":"Create the Dashboard from the Opportunities by User Report, choose the Sales Manager as RunAs User and Save in the private Dashboard Folder.",
+	"explanation":"Saving to a private folder will not allow access for the Sales users."},
+	{"option":"Create the Dashboard from the Opportunities by User Report, then save it in the shared Dashboard Folder as a Dynamic Dashboard.",
+	"explanation":"Dynamic dashboard would only show data the running users has access too."},
+	{"option":"Request for the Sales Manager to create the Dashboard from the Opportunities by User Report, select \"View Dashboard as Me\", and save in the shared Dashboard Folder.",
+	"explanation":"By setting the running user to the Sales Manager and saving in a shared folder the Sales user will see all the records the Sales Manager can see."}],
+	"answers":["D"]
+}, {
+	"question":"A Finance user with the \"View All Data\" permission enabled sees no Opportunities when opening a Sales pipeline report. However, a Sales Rep sees Opportunities as expected.<br>Which two actions should a System Administrator perform to resolve this problem?",
+	"options":
+	[{"option":"Select Save Hierarchy Level on the pipeline report.","explanation":"Show the hierarchy to see your org's role hierarchy above the report results. You can use the role hierarchy to share report data with people at different levels in the hierarchy."},
+	{"option":"Change the Org-Wide Opportunity Sharing Default to Public Read."},
+	{"option":"Update the report filter to show All Opportunities.","explanation":"Use filters to pare down a report until it only shows the data that is needed."},
+	{"option":"Create a Custom Report Type for the user that shows all records."}],
+	"answers":["A","C"]
+}, {
+	"question":"An administrator at Ursa Major Solar is configuring password requirements for the company's users.<br>Which three actions are administrators able to configure? Choose 3 options.",
+	"options":
+	[{"option":"Set maximum invalid login attempts."},
+	{"option":"Set password complexity requirements."},
+	{"option":"Set prohibited password values."},
+	{"option":"Set requirement that passwords must be unique for each user."},
+	{"option":"Set the length of time before passwords expire.","explanation":"The length of time until a user password expires and must be changed defaults to 90 days. An admin is also able to change this setting to an expiration date that's earlier or later than the default expiration date, or set it to never expire."}],
+	"answers":["A","B","E"]
+}, {
+	"question":"The administrator for the Cloud Kicks has a flow that makes several updates to Contacts when they are being created. If the Contact Status is \"New\" and the Contact's email is known, the administrator would also like to send a welcome email.<br>What should the administrator do to complete this requirement?",
+	"options":
+	[{"option":"Create a process builder with email alert to send the email."},
+	{"option":"Create a workflow rule with email alert to send the email."},
+	{"option":"Update the flow with a formula to send the email when needed."},
+	{"option":"Update the flow with a decision to send the email when needed.","explanation":"When a flow executes a Decision element, it evaluates each decision outcome in order."}],
+	"answers":["D"]
+}, {
+	"question":"An administrator for Ursa Major Solar wants to allow internal users to view a dashboard as a Sales Manager within a given sales region.<br>How can this be configured?",
+	"options":
+	[{"option":"Create a dashboard to run as the logged-in user."},
+	{"option":"Create a dashboard for all opportunities in the region."},
+	{"option":"Create a dashboard to run as a specified user.","explanation":"This dashboard would show the specified users information properly."},
+	{"option":"Create a dashboard with multiple components."}],
+	"answers":["C"]
+}, {
+	"question":"A System Administrator wants to implement a feature for call recording to monitor customer service quality using Salesforce Service Cloud.<br>Which two statements regarding call recording should be considered when implementing this requirement? Choose 2 options.",
+	"options":
+	[{"option":"Call recording is a feature of some add-on products from the AppExchange.","explanation":"Use the AppExchange to find solutions for complex processes."},
+	{"option":"Call recording is a native feature available with Salesforce by default."},
+	{"option":"Call recording is a feature that will not work with Salesforce Service Cloud."},
+	{"option":"Call recording is a feature that a developer might create with Salesforce App Cloud.","explanation":"Use a developer to code to create solutions for complex processes."}],
+	"answers":["A","D"]
+},
+
+
+{
+    "question":"",
+    "options":
+    [{ "option": "", "explanation": "" },
+    { "option": "", "explanation": "" },    
+    { "option": "", "explanation": "" },
+    { "option": "", "explanation": "" }
+    ],
+    "answers":[""]
 }
+
+ 
 ]

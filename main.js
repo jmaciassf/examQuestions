@@ -40,18 +40,47 @@ $(document).ready(function(){
     else 
         $shuffle.click();
 
+    // Click in any part of body
     $body.click(function(){
+        if(!event || !event.target) return;
+        
         var $target = $(event.target);
         if($target.parent().attr("id") == "mySidenav"
           || $target.attr("id") == "mySidenav"
           || $target.hasClass("icoMenu")){
             // Clicks aceptables
         }
+        else if($target.hasClass("popup") || $target.hasClass("close")){
+             // Close popup
+            popup_close();
+        }
         else {
             // Close menu
             closeNav();
         }
     });
+
+    $('textarea#tiny').tinymce({ 
+          height: 300,
+          branding: false,
+          menubar: false,
+          setup:function(ed) {
+            ed.on('change', function(e) {
+                //console.log('the event object ', e);
+                //console.log('the editor object ', ed);
+                //console.log('the content ', ed.getContent());
+                showPreview();
+            });
+        },
+        plugins: [
+          'advlist', 'autolink', 'lists', 'image', 'charmap', 'preview',
+          'anchor', 'visualblocks', 
+          'insertdatetime', 'media', 'table', 'code', 'wordcount'
+        ],
+        toolbar: 'blocks | bold italic ' +
+          'bullist numlist outdent indent removeformat'
+
+      });
     
     isStart = false;
 });
@@ -449,6 +478,48 @@ function closeNav() {
     $("body").removeClass("showMenu");
 }
 
+function addQuestion(){
+    console.log("addQuestion");
+
+    popup_open({
+        afterFn: function(){
+              
+        }
+    });
+}
+
+function popup_open(jData){
+    if(!jData) jData = {}
+
+    $(".popup").fadeIn("fast", function(){
+        if(jData.afterFn)
+            jData.afterFn();
+    });
+    $("body").addClass("popupShow");
+}
+
+function popup_close(){
+    console.log("popup_close");
+    $(".popup").fadeOut();
+    $("body").removeClass("popupShow");
+}
+
+function showPreview(){
+    console.log("showPreview");
+
+    var myContent = tinymce.get("tiny").getContent();
+    myContent = getJSONQuestionToPreview(myContent);
+
+    $(".preview").html(myContent);
+    $(".txtPreview").val(myContent);
+    //copy(myContent);
+}
+
+function copyPreview(){
+    let preview = $(".txtPreview").val();
+    navigator.clipboard.writeText(preview);
+}
+
 // json format questions getJSONQuestion(`x`)
 function getJSONQuestion(str){
     var arrStr = str.split('\n');
@@ -479,21 +550,75 @@ function getJSONQuestion(str){
     copy(strResult);
     //return strResult;
 }
+function getJSONQuestionToPreview(str){
+    //console.log(str);
+    str = str.replace(/&ldquo;/g, '"')
+        .replace(/&rdquo;/g, '"')
+        .replace(/&rsquo;/g, "'"); // &ldquo;New&rdquo; and the Contact&rsquo;s
+    var question = str.split("<ul>")[0]
+        .replace(/<br>/, '{{br}}').removeTagsTrim()
+        .replace(/\n/, '{{br}}');
 
-window.onbeforeunload = function (){ return ""; };
+    var options = [], arrAnswers = [];
+    $(str).find("li").each(function(){
+        var strHtml = $(this).html();
+        if(!strHtml) return;
+        if(strHtml.includes("<br>*")){
+            // Has help text
+            var arrSplit = $(this).html().split("<br>*");
+            if(arrSplit.length > 1){
+                var option = arrSplit[0].removeTagsTrim();
+                var explanation = arrSplit[1].removeTagsTrim();
+                var jOption = { "option": option, "explanation": explanation }
+                options.push(jOption);
+            }
+        }
+        else 
+            options.push({ "option": strHtml.removeTagsTrim() });
+        
+        // Is answer?
+        if(strHtml.includes("<strong>")){
+            if(options.length == 1) arrAnswers.push("A");
+            if(options.length == 2) arrAnswers.push("B");
+            if(options.length == 3) arrAnswers.push("C");
+            if(options.length == 4) arrAnswers.push("D");
+            if(options.length == 5) arrAnswers.push("E");
+            if(options.length == 6) arrAnswers.push("F");
+        }
+    });
+    
+    var result = {
+        question: question,
+        options: options,
+        answers: arrAnswers
+    }
+    var strResult = JSON.stringify(result);
+    strResult = strResult
+                    .replace('"question"', '\n\t"question"')
+                    .replace('"options":[', '\n\t"options":\n\t[')
+                    .replace('"answers"', '\n\t"answers"')
+                    //.replace(/","/g, '",\n\t"')
+                    .replace(/",{"/g, '",\n\t{"')
+                    .replace(/"},"/g, '"},\n\t"')
+                    .replace(/"},{"/g, '"},\n\t{"')
+                    .replace(/’/g, '\'')
+                    .replace(']}', ']\n},')
+                    .replace(/{{br}}/g, '<br>');
+    /*
+                    .replace('"question"', '\n"question"')
+                    .replace('"options":[', '\n"options":\n[')
+                    .replace('"answers"', '\n"answers"')
+                    .replace(/"},{"/g, '"},\n{"')
+                    .replace(']}', ']\n},');*/
+    //copy(strResult);
+    return strResult;
+}
+
 
 /*
 button to show full screen cards like quizlet
+Add question popup
 Add questions in mongoDB
 
 
-Ya
-    Enumerar los items internamente    
-    Save the questions in session, until click the reset button
-    Only expand the first question
-    
-    Save results in localStorage
-    Read past results
-    
-    Not change with of border at show answer
 */

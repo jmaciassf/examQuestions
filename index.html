@@ -1,16 +1,21 @@
+<!DOCTYPE HTML>
 <html>
     <head>  
         <meta charset="UTF-8" />
         <title>Exam Test</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="general.js"></script>
         <script src="main.js"></script>
+        <script src="https://cdn.tiny.cloud/1/tnp8fkuq7z8ue9viya0ryvdccqxg5fn6jbok0bf5knqk53m0/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-jquery@2/dist/tinymce-jquery.min.js"></script>
         <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body>
         <div class="header">
             <i class="icoMenu" onclick="openNav()"></i>
-            <span class="title">Exam Test v1.0</span>            
+            <span class="title">Exam Test v1.0</span>          
+            <i class="icoMenu icoAdd" onclick="addQuestion()"></i>  
             <div class="results">
                 <div class="success">Success: <span class="number">0</span></div>
                 <div class="errors">Errors: <span class="number">0</span></div>
@@ -37,5 +42,35 @@
 
         <!-- List of questions -->
         <div id="items"></div>
+
+        <!-- Popup -->
+        <div class="popup">
+            <div class="window">
+                <img src="images/close.png" class="close">
+                <div class="title">Add question</div>
+
+                <div class="body">                    
+                    <div class="question">
+                        <span class="spnTitle">Question</span>
+                        <textarea id="tiny"></textarea>
+                    </div>
+
+                    <div class="options">
+                        <span class="spnTitle">Options</span>
+
+                    </div>
+
+                    <div class="footer">
+                        <button id="btnPreview" onclick="showPreview()">Preview</button>
+                        <button id="btnSave">Save</button>
+                    </div>
+
+                    <code class="preview"></code>
+                    <textarea class="txtPreview" readonly></textarea>
+                    <button id="btnCopy" onclick="copyPreview()">Copy</button>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>
