@@ -157,6 +157,62 @@
 	{"option":"Create Assignment Rules based on the picklist values to move Cases to a Queue.","explanation":"Assignment Rules define conditions that determine how leads or cases are processed. The rules assign leads and cases to the specified user or queue."},
 	{"option":"Create Record Types for each picklist value and assign to each product team's profile."}],
 	"answers":["C"]
+}, {
+	"question":"The marketing team is asked to provide branding and messaging for email templates to be used throughout the customer support process.<br>In which two locations can the System Administrator implement customer-facing email templates with respect to Cases? Choose 2 options.",
+	"options":
+	[{"option":"Support Reps' Send Email options","explanation":"These options let you create email templates for support users."},
+	{"option":"Case Auto-response Rules","explanation":"Auto-response rules let you automatically send email responses to lead or case submissions based on the record's attributes."},
+	{"option":"Case Escalation Notifications"},
+	{"option":"Owner Assignment Notifications"}],
+	"answers":["A","B"]
+}, {
+	"question":"Which two changes are tracked in the Setup Audit Trail? Choose 2 options.",
+	"options":
+	[{"option":"Using the Data Import Wizard"},
+	{"option":"Using the Data Loader"},
+	{"option":"Creating a List View"},
+	{"option":"Resetting a user's password"}],
+	"answers":["A","D"]
+}, {
+	"question":"Ursa Major Solar recently acquired a company whose sales team has a unique sales process, with stages that are different from the current setup of stages in Salesforce.<br>The Chief Technology Officer (CTO) has decided that the new sales team should NOT change their process at all. What should the administrator do to incorporate the new sales team's process?",
+	"options":
+	[{"option":"Create a record type and page layout for the new sales team and a custom field for the new stages."},
+	{"option":"Create new values for the opportunity stage field; create a new sales process assigned to a custom record type for the new sales team.","explanation":"Record types let you offer different business processes, picklist values, and page layouts to different users."},
+	{"option":"Create new values for the opportunity stage field; order them so that the new Sales team's values are at the bottom of the picklist."},
+	{"option":"Create new values for the opportunity stage field and use field-level security to control which teams see which fields."}],
+	"answers":["B"]
+}, {
+	"question":"At Ursa Major Solar, Salesforce users have a session timeout of 12 hours. Management wants the session timeout to be increased to 24 hours. Management also wants inactive users to be logged out at that time. What should the administrator do to fulfill this request?",
+	"options":
+	[{"option":"In session settings, select 24 hours, and check the box for force logout on session timeout."},
+	{"option":"In session settings, select 24 hours, and uncheck the box for force logout on session timeout."},
+	{"option":"In user profiles, type in 24 hours in the timeout section, and uncheck the box for force logout on session timeout."},
+	{"option":"In user profiles, enter 24 hours in the timeout section, and check the box for force logout on session timeout."}],
+	"answers":["A"]
+}, {
+	"question":"How can multiple Campaign records be associated with a single Opportunity?",
+	"options":
+	[{"option":"Campaign Hierarchy"},
+	{"option":"Campaign Influence"},
+	{"option":"Primary Campaign Source","explanation":"Primary campaign source is a picklist."},
+	{"option":"Campaign Members","explanation":"Campaign members are contacts or leads associated with campaigns."}],
+	"answers":["B"]
+}, {
+	"question":"Which two actions should an administrator perform to provide a sales team with an easy solution for gathering customer requirements and sharing presentations with their customers? Choose 2 options.",
+	"options":
+	[{"option":"Ensure opportunity teams are created for customers.","explanation":"Opportunity teams are for internal users."},
+	{"option":"Add customers to libraries.","explanation":"External customers cannot be added to Libraries."},
+	{"option":"Use Salesforce Files to post presentations in Chatter.","explanation":"Post files to a Chatter customer group."},
+	{"option":"Add customers to private Chatter groups.","explanation":"Create a Chatter customer group. Customers can see only the groups they're invited to. They can interact only with members of those groups."}],
+	"answers":["C","D"]
+}, {
+	"question":"Which two levels of access should be set when sharing a document folder with users? Choose 2 options.",
+	"options":
+	[{"option":"Read/Write"},
+	{"option":"Read/Write/Create/Delete","explanation":"An admin would not want users to be able to delete content."},
+	{"option":"Read/Write/Create"},
+	{"option":"Read-only"}],
+	"answers":["A","D"]
 },
 
 
