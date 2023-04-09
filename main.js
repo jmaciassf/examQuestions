@@ -513,6 +513,7 @@ function showPreview(){
     $(".preview").html(myContent);
     $(".txtPreview").val(myContent);
     //copy(myContent);
+    copyPreview();
 }
 
 function copyPreview(){
@@ -560,7 +561,7 @@ function getJSONQuestionToPreview(str){
         .replace(/\n/, '{{br}}');
 
     var options = [], arrAnswers = [];
-    $(str).find("li").each(function(){
+    $("<div>"+str+"</div>").find("ul li").each(function(){
         var strHtml = $(this).html();
         if(!strHtml) return;
         if(strHtml.includes("<br>*")){

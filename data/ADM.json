@@ -124,6 +124,39 @@
 	{"option":"Call recording is a feature that will not work with Salesforce Service Cloud."},
 	{"option":"Call recording is a feature that a developer might create with Salesforce App Cloud.","explanation":"Use a developer to code to create solutions for complex processes."}],
 	"answers":["A","D"]
+}, {
+	"question":"Custom fields in the Lead object can be mapped to which two types of fields? Choose 2 options.",
+	"options":
+	[{"option":"Custom Account","explanation":"Custom lead fields allow custom information to convert to custom fields in accounts, contacts, and opportunities."},
+	{"option":"Standard Contact"},
+	{"option":"Custom Activity"},
+	{"option":"Custom Opportunity"}],
+	"answers":["A","D"]
+}, {
+	"question":"What should a System Administrator configure to provide each Sales Rep a dashboard that shows their current Opportunity pipeline?",
+	"options":
+	[{"option":"Set the Dashboard Running User to the current user.","explanation":"This ensures that the dashboard shows data relevant to only the user viewing it. The dashboard viewer allows the dashboard readers see data as themselves, according to their own access to data. These types of dashboards are often called dynamic dashboards."},
+	{"option":"Set a Dashboard filter to the current user.","explanation":"Setting the dashboard filter to the current user would only show opportunities for that user, not the user running the dashboard."},
+	{"option":"Create a dashboard folder for each user.","explanation":"Creating a dashboard folder for each user would not filter the dashboard for users. A dashboard folder is for storing dashboards, limiting visibility to the dashboards in the folder."},
+	{"option":"Create a dashboard for each user."},
+	{"option":"FILTER THE DASHBOARD WITH A DYNAMIC VIEW SET TO THE VP OF SALES.","explanation":"Dynamic dashboards are limited. The View Dashboard As options are: Me, Another person, Dashboard viewer"}],
+	"answers":["A"]
+}, {
+	"question":"Users at Universal Containers (UC) adhere to the following process for expense reports:<ul><li>Create the expense report.</li><li>Attach receipts in an Expenses app.</li><li>Send the report to the accountant to review and approve.</li></ul>An administrator needs to enable this app for Salesforce Mobile.<br>What should the administrator consider from the User's perspective?",
+	"options":
+	[{"option":"A user can create list views, attach receipts as photos, and submit records for approval."},
+	{"option":"A user can utilize Search, create list views, and receive record push notifications from Chatter."},
+	{"option":"A user can create records, attach receipts as photos, and submit for approval."},
+	{"option":"A user can search Salesforce Records, attach receipts as photos, and approve records from Chatter."}],
+	"answers":["C"]
+}, {
+	"question":"Ursa Major Solar (USM) has a Web-to-Case form on its Lightning Customer Community. USM wants to separate Cases into the following product categories:<ul><li>Residential</li><li>Lots/Land</li><li>Commercial</li></ul>USM has added a picklist field to store this data.<br>How can the Case be automatically placed in the correct queue upon submission?",
+	"options":
+	[{"option":"Create Record Types for each picklist value and a Business Process to move each Case to the correct Queue."},
+	{"option":"Create an Escalation Rule entry for each picklist value and set to zero minutes."},
+	{"option":"Create Assignment Rules based on the picklist values to move Cases to a Queue.","explanation":"Assignment Rules define conditions that determine how leads or cases are processed. The rules assign leads and cases to the specified user or queue."},
+	{"option":"Create Record Types for each picklist value and assign to each product team's profile."}],
+	"answers":["C"]
 },
 
 
