@@ -37,7 +37,10 @@ body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;color: #373737
 #lblShuffle input, #lblExpandAll input {margin-right: 7px;width: 14px;height: 14px;cursor: pointer;}
 .item {border: 2px solid #b8b8b8ad;margin: 20px 10px;border-radius: 0 0 10px 10px;border-radius: 5px;}
 .item.showAnswers .option[answer=true] {
-    background-color: var(--success) !important;
+    /* background-color: var(--success) !important; */
+}
+.item.showAnswers .option[answer=true] .chkOption, .showAnswers .error .chkOption {
+    display: none;
 }
 body.expandAll .item .body { display: block; }
 /*.item.bodyHide .title { border: none; }*/
@@ -113,6 +116,9 @@ code .tab, .option .tab {
 .showAnswers .btnAnswer, .btnNextQuestion {display: none;}
 span.btnReload, .explanation {display: none;}
 .showAnswers .btnNextQuestion {display: block;background-color: #e4e4e4;color: inherit;}
+.showAnswers .error .icoStatus {display: block;background-image: url(images/error.png);}
+.showAnswers .icoStatus {display: none;background-size: cover;width: 16px;height: 16px;margin-top: 5px;}
+.showAnswers .option[answer=true] .icoStatus {display: block;background-image: url(images/success.png);margin-top: 4px;}
 .showAnswers .btnReload {display: block;background-color: #e4e4e4;margin-right: 10px;color: inherit;text-align: center;/* width: auto; */flex: none;/* width: min-content; */background-image: url(images/replay.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 7px;}
 .showAnswers .explanation {display: block;margin: 10px 0;}
 .showAnswers .divOption .explanation {font-weight: 400;margin: 0;margin-left: 32px;margin-top: -9px;margin-bottom: 5px;}

@@ -54,7 +54,7 @@
     ],
     "answers":["D"]
 }, {
-	"question":"The Password Policy shows that the length of time until passwords expire is 90 days. However, some users find that their passwords expire every 30 days.s2<br>Where should the System Administrator change the password expiration period for these users?",
+	"question":"The Password Policy shows that the length of time until passwords expire is 90 days. However, some users find that their passwords expire every 30 days.<br>Where should the System Administrator change the password expiration period for these users?",
 	"options":
 	["Roles assigned to the Users",
 	{"option":"Profiles assigned to the Users",
@@ -213,6 +213,48 @@
 	{"option":"Read/Write/Create"},
 	{"option":"Read-only"}],
 	"answers":["A","D"]
+}, {
+	"question":"Universal Containers wants to create a field to store credit card numbers and needs to make sure the information is protected. <br>Which two actions allow the System Administrator to provide enhanced security for this field? Choose 2 options.",
+	"options":
+	[{"option":"Update Field-Level Security settings."},
+	{"option":"Configure different Page Layouts for users.","explanation":"Page Layouts are primarily used to organize pages."},
+	{"option":"Use different Record Types for users.","explanation":"Record Types determine the field information you see on your page layouts."},
+	{"option":"Create an Encrypted Text field.","explanation":"An encrypted text field restricts other users from seeing custom text fields that should be kept private. Only users with the View Encrypted Data permission can see the data in encrypted text fields."}],
+	"answers":["D"]
+}, {
+	"question":"The support group at Ursa Major Solar has the following requirements:<ul><li>Agents need to capture different information for product support and inquiry cases.</li><li>The lifecycle for inquiry cases should have fewer steps than the lifecycle for product support cases.</li></ul>Which three features should an administrator use to meet these requirements? Choose 3 options.",
+	"options":
+	[{"option":"Support processes","explanation":"After creating a support process, it is associated with a record type. Based on the record type chosen when creating a record (product support or inquiry in this example), the support process associated is used to determine the \"status\" field picklist on the case object."},
+	{"option":"Permission sets","explanation":"Permission sets do not specify page layout assignments, which are tied to record types and ultimately will control the fields and picklist options that a user sees."},
+	{"option":"Page layouts","explanation":"Page layouts control the layout and the organization of buttons, fields, links, etc. on object record pages. The admin is able to use page layouts to customize the content of record pages and make them unique for product support vs. inquiry."},
+	{"option":"Record types","explanation":"Record types determine which page layouts and picklist values users have access to, so creating two different record types for product support vs. inquiry will meet these requirements."},
+	{"option":"Field-level security","explanation":"Field-level security controls access to each field on the field-level, not on the object level."}],
+	"answers":["A", "C", "D"]
+}, {
+	"question":"Ursa Major Solar uses a validation rule to prevent invalid data.<br>What are three conditions where this rule is used? Choose 3 options.",
+	"options":
+	[{"option":"When records are deleted by a user.","explanation":"Deleting a record would not trigger a validation rule."},
+	{"option":"When records are submitted using web-to-lead.","explanation":"Validation rules are triggered by creating a record."},
+	{"option":"When records are imported.","explanation":"Validation rules are triggered by creating a record."},
+	{"option":"When records are edited and saved by a user.","explanation":"Validation rules are triggered by saving or editing a record."},
+	{"option":"When records are updated by a workflow rule.","explanation":"A workflow rule does not trigger a validation rule."}],
+	"answers":["B", "C", "D"]
+}, {
+	"question":"Universal Containers wants to automatically assign a Task to account managers when a customer's agreement is about to expire.<br>How should a System Administrator configure this functionality?",
+	"options":
+	[{"option":"Create a Time-based Workflow on Account with a rule criteria of Agreement End Date &lt; TODAY()."},
+	{"option":"Create a Time-based Workflow on Account with a rule criteria of Agreement End Date &gt; TODAY()."},
+	{"option":"Create a Workflow on Account with a rule criteria of Agreement End Date &gt; TODAY()."},
+	{"option":"Create a Workflow on Account with a rule criteria of Agreement End Date &lt; TODAY()."}],
+	"answers":["B"]
+}, {
+	"question":"Which report should a System Administrator use to display the number of Contacts related to an Account?",
+	"options":
+	[{"option":"Summary report with a Roll-up Summary Account field"},
+	{"option":"Tabular report with a report formula"},
+	{"option":"Tabular report with a Roll-up Summary Account field"},
+	{"option":"Summary report with a report formula","explanation":"Write summary formulas to evaluate a report's group subtotals and grand totals."}],
+	"answers":["D"]
 },
 
 

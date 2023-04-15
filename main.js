@@ -77,7 +77,7 @@ $(document).ready(function(){
           'anchor', 'visualblocks', 
           'insertdatetime', 'media', 'table', 'code', 'wordcount'
         ],
-        toolbar: 'blocks | bold italic ' +
+        toolbar: 'bold italic ' +
           'bullist numlist outdent indent removeformat'
 
       });
@@ -212,7 +212,9 @@ function getQuestions(){
                 options += 
                 `<div class="divOption" answer="${option.answer}">
                     <label class="option" for="${idOption}" answer="${option.answer}">
-                        <input type="checkbox" id="${idOption}"><span class="text">${option.text}</span>
+                        <i class="icoStatus"></i>
+                        <input type="checkbox" id="${idOption}" class="chkOption">
+                        <span class="text">${option.text}</span>
                     </label>
                     ${explanation}
                 </div>`;
@@ -375,7 +377,7 @@ function getQuestions(){
             });
 
             $item.find(".btnReload").click(function(){
-                console.log("reload");
+                console.log("reset question");
                 $checkboxs.prop("checked", false).attr("disabled", false);
 
                 if($item.hasClass("error")){
@@ -461,6 +463,22 @@ function reloadQuestions(){
 
     if(confirm("Do you want to reload the questions?")){
         localStorage.questions = "";
+        getQuestions();
+    }
+}
+
+function resetQuestions(){
+    console.log("resetQuestions");
+
+    if(confirm("Do you want to reset the questions?")){
+        if(localStorage.questions){
+            ctrl.questions = JSON.parse(localStorage.questions);
+
+            // Clean values
+            ctrl.questions.forEach((q)=> delete q.answered);
+            localStorage.questions = JSON.stringify(ctrl.questions);
+        }
+        
         getQuestions();
     }
 }
@@ -617,9 +635,7 @@ function getJSONQuestionToPreview(str){
 
 
 /*
-button to show full screen cards like quizlet
-Add question popup
-Add questions in mongoDB
 
+button to show full screen cards like quizlet
 
 */
