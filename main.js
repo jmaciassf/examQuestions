@@ -119,6 +119,10 @@ function getQuestions(){
             urlTitle = baseURL + "ADM.json";
             break;
         
+        case "ASSOCIATE":
+            urlTitle = "https://angular-2146b-default-rtdb.firebaseio.com/associate.json";
+            break;
+        
         case "SAA":
             urlTitle = baseURL + "AWS-SAA.json";
             break;
@@ -350,7 +354,7 @@ function getQuestions(){
 
                 // Scroll en el siguiente item
                 let scrollTop = $nextItem.position().top - $item.height() - 20;
-                $("body").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
+                $("html").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
                     
                 });                
             });
@@ -631,6 +635,25 @@ function getJSONQuestionToPreview(str){
                     .replace(']}', ']\n},');*/
     //copy(strResult);
     return strResult;
+}
+
+function resetErrors(){
+    console.log("resetErrors");
+
+    if(confirm("Do you want to reset the errors?")){
+        if(localStorage.questions){
+            ctrl.questions = JSON.parse(localStorage.questions);
+
+            // Clean only errors
+            ctrl.questions.forEach((q)=> {
+                if(q.answered == "error")
+                    delete q.answered;
+             });
+            localStorage.questions = JSON.stringify(ctrl.questions);
+        }
+        
+        getQuestions();
+    }
 }
 
 
