@@ -166,6 +166,14 @@ function getQuestions(){
                 return Math.random() - 0.5;
             });
         }
+
+        // Favorites
+        let $body = $("body");
+        if($body.hasClass("favorites")){
+            response = response.filter(function (i) {
+                return i.favorite;
+            });
+        }
         
         response.forEach(element => {
             //console.log(element);
@@ -654,6 +662,23 @@ function resetErrors(){
         
         getQuestions();
     }
+}
+
+function toggleFavorites(){
+    console.log("toggleFavorites");
+
+    let $body = $("body");
+    if($body.hasClass("favorites")){
+        $body.removeClass("favorites");
+    }
+    else {
+        $body.addClass("favorites");
+
+        // Only show favorites
+        
+    }
+
+    getQuestions();
 }
 
 
