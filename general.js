@@ -27,5 +27,8 @@ String.prototype.removeTagsTrim = function(json) {
     return this.removeTags(json).replace(/&nbsp;/g, '').trim();
 };
 
+$.fn.$ = function(selector) {
+    return $(this).find(selector);
+}
 
-window.onbeforeunload = function (){ return ""; };
+//window.onbeforeunload = function (){ return ""; };

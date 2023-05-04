@@ -15,7 +15,7 @@
         <div class="header">
             <i class="icoMenu" onclick="openNav()"></i>
             <span class="title">Exam Test v1.0</span>          
-            <i class="icoMenu icoAdd" onclick="addQuestion()"></i>  
+            <i class="icoMenu icoQuestions" onclick="toggleQuestions()"></i>
             <i class="icoMenu icoStar" onclick="toggleFavorites()"></i>
             <div class="results">
                 <div class="success">Success: <span class="number">0</span></div>
@@ -41,6 +41,7 @@
             <a onclick="resetQuestions()">Reset questions</a>
             <a onclick="resetErrors()">Reset errors</a>
             <a onclick="reloadQuestions()">Reload questions</a>
+            <a onclick="addQuestion()">Add question</a>
         </div>
 
         <!-- List of questions -->
@@ -74,6 +75,12 @@
                 </div>
 
             </div>
+        </div>
+
+        <!-- Minimap -->
+        <div class="minimap">
+            <div class="content"></div>
+
         </div>
     </body>
 </html>

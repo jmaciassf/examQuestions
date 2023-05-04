@@ -85,13 +85,18 @@ $(document).ready(function(){
     isStart = false;
 });
 
-function cleanAll(){
+function cleanAll(data){
     console.log("cleanAll");
+    if(!data) data = {}
     
     // Clean questions
-    $("#items").html("");
+    $("#items").add($(".minimap .content")).html("");
+    //$(".minimap .content").html("");
     questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
     reloadStatistics();
+
+    if(!data.clickFavorites)
+        $("body").removeClass("favorites");
 
     var expandAll = localStorage.expandAll == "true" ? true : false;
     $("#ckhExpandAll").prop("checked", !expandAll);
@@ -109,7 +114,7 @@ function reloadStatistics(){
 }
 
 var questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
-function getQuestions(){
+function getQuestions(data){
     console.log("getQuestions... ");
 
     let title = getUrlParameter("title"), urlTitle,
@@ -136,7 +141,7 @@ function getQuestions(){
         return;
     }
     
-    cleanAll();
+    cleanAll(data);
 
     // Verificar si hay datos guardados
     if(localStorage.questions){
@@ -147,7 +152,12 @@ function getQuestions(){
     }
     
     fetch(urlTitle) .then((response) => response.json())
-    .then(function(response){
+    .then(function(response){        
+        // Add internal id to each question
+        response.forEach((item, index) => {
+            item.id = index;
+        });
+        
         ctrl.questions = response;
         setQuestions();
         localStorage.questions = JSON.stringify(ctrl.questions);
@@ -321,16 +331,21 @@ function getQuestions(){
                 });
 
                 // Calculate percentage of success
+                let $number = $(".minimap .item[questionId="+questionId+"]");
                 $item.addClass("answered");
                 if(hasErrors){
                     countErrors++;
                     $item.addClass("error");
                     jQuestion.answered = 'error';
+
+                    // minimap
+                    $number.addClass("error");
                 }
                 else {
                     countSuccess++;   
                     $item.addClass("success");
                     jQuestion.answered = 'success';
+                    $number.addClass("success");
                 }
                 countQuestionsDone++;
 
@@ -342,7 +357,11 @@ function getQuestions(){
             
                 // Save result in localStorage
                 if(jQuestion){
-                    localStorage.questions = JSON.stringify(ctrl.questions);
+                    // Pendiente
+                    let fullQuestions = JSON.parse(localStorage.questions);
+                    fullQuestions[jQuestion.id] = jQuestion;
+                    localStorage.questions = JSON.stringify(fullQuestions);
+                    //localStorage.questions = JSON.stringify(ctrl.questions);
                 }
             });
 
@@ -357,14 +376,17 @@ function getQuestions(){
                 // Expand next item
                 let $nextItem = $item.next();
                 if(!$nextItem.length) return; // Last question
-                
+
+                goToItem($nextItem);
+
+                /*
                 expandItem($nextItem);
 
                 // Scroll en el siguiente item
                 let scrollTop = $nextItem.position().top - $item.height() - 20;
                 $("html").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
                     
-                });                
+                });   */             
             });
 
             // Click en el checkbox de la respuesta
@@ -392,6 +414,9 @@ function getQuestions(){
                 console.log("reset question");
                 $checkboxs.prop("checked", false).attr("disabled", false);
 
+                let questionId = $item.attr("questionId");
+                let $number = $(".minimap .item[questionId="+questionId+"]");
+                
                 if($item.hasClass("error")){
                     countErrors--;
                 }
@@ -402,7 +427,17 @@ function getQuestions(){
                 reloadStatistics();
                 
                 $item.removeClass("success error answered showAnswers");
+                $item.$(".option").removeClass("error");
+                $number.removeClass("success error");
             });
+
+            // Map of numbers
+            $(".minimap .content").append(
+                '<span class="item" questionId="'+(questionCounter-1)+'" onclick="goToItem('+(questionCounter-1)+')">'
+                    +questionCounter+
+                '</span>'
+            );
+            let $number = $(".minimap .item:last");
             
             // Read previous answer
             let answerError = element.answered == "error",
@@ -411,11 +446,11 @@ function getQuestions(){
                  $item.addClass("answered");
                 if(answerError){
                     countErrors++;
-                    $item.addClass("error");
+                    $item.add($number).addClass("error");
                 }
                 else {
                     countSuccess++;   
-                    $item.addClass("success");
+                    $item.add($number).addClass("success");
                 }
                 countQuestionsDone++;
     
@@ -454,6 +489,23 @@ function expandItem($item){
     
     var $title = $item.find(".title");
     $title.click();
+}
+
+// Go to item, scroll change
+function goToItem($item){     
+    if(!isNaN($item)){
+        $item = $("#items .item[questionId="+$item+"]");
+    }
+
+    if(!$item.length) return;
+    
+    expandItem($item);
+
+    // Scroll en el siguiente item
+    let scrollTop = $item.position().top - 58;
+    $("html").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
+        
+    });   
 }
 
 function getUrlParameter(sParam) {
@@ -516,6 +568,8 @@ function addQuestion(){
               
         }
     });
+
+    closeNav();
 }
 
 function popup_open(jData){
@@ -678,9 +732,20 @@ function toggleFavorites(){
         
     }
 
-    getQuestions();
+    getQuestions({ clickFavorites: true });
 }
 
+function toggleQuestions(){
+    console.log("toggleQuestions");
+
+    let $body = $("body");
+    if($body.hasClass("gridQuestions")){
+        $body.removeClass("gridQuestions");
+    }
+    else {
+        $body.addClass("gridQuestions");
+    }
+}
 
 /*
 

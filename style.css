@@ -3,10 +3,23 @@
 }
 
 body {padding: 0;margin: 0;font-family: system-ui;font-size: 14px;color: #373737;}
+body.gridQuestions {
+    margin-bottom: 180px;
+}
+
+/* Header */
 .header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 18px -2px #000000c7;z-index: 2;}
 .header .icoMenu {display: block;text-align: center;background-image: url(images/menu.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 6px;height: 25px;color: white;position: absolute;cursor: pointer;filter: invert(1);/* display: none; */}
 .header .icoAdd{right: 0;top: 0;background-image: url(images/add.png);}
-.header .icoStar {right: 30px;top: 4px;background-image: url(images/star0.png);width: 17px;height: 17px;}
+.header .icoStar {right: 0px;top: 4px;background-image: url(images/star0.png);width: 17px;height: 17px;}
+.gridQuestions .header .icoQuestions {
+    /* transform: rotateX(180deg); */
+    /* transform: scaleY(-1); */
+    /* -webkit-transform: scale(-1, -1); */
+    filter: invert(-2);
+    /* opacity: 2; */
+}
+.header .icoQuestions {right: 30px;top: 4px;background-image: url(images/flexWrap.png);width: 19px;height: 17px;}
 .favorites .header .icoStar {background-image: url(images/star1.png);filter: none;}
 .header .title {
     padding: 5px;
@@ -291,6 +304,50 @@ body.popupShow {
     margin-top: 10px;
 }
 .tox-tinymce-aux {display: inherit;display: none;}
+
+/* Minimap */
+.gridQuestions .minimap {
+    display: block;
+}
+.minimap {
+    background: #e8e8e8;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    width: 100%;
+}
+.favorites .minimap .content {
+    height: 100px;
+    }
+.minimap .content {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 150px;
+    padding: 5px;
+    justify-content: center;
+    /* width: 100%; */
+    }
+.minimap .item {
+    border-color: #b2b2b2;
+    color: #424242;
+    width: 30px;
+    text-align: center;
+    margin: 5px;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: 500;
+    max-height: 30px;
+}
+.minimap .item.error {
+    background-color: red;
+    color: white;
+}
+.minimap .item.success {
+  background-color: var(--success);
+  color: white;
+}
 
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
