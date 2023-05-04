@@ -1,4 +1,4 @@
-window.onhashchange = getQuestions;
+//window.onhashchange = getQuestions;
 var ctrl = {}
 
 $(document).ready(function(){
@@ -9,11 +9,14 @@ $(document).ready(function(){
     // Checkbox shuffle questions
     let $shuffle = $("#ckhShuffle");
     $shuffle.click(function(){
-        let setHash = $shuffle.is(":checked") ? "shuffleOn" : "shuffleOff";
+  /*      let setHash = $shuffle.is(":checked") ? "shuffleOn" : "shuffleOff";
         if(location.hash == "#"+setHash)
             getQuestions();
         else 
             location.hash = setHash;
+*/
+        localStorage.shuffle = $shuffle.is(":checked");
+        getQuestions();
     });
 
     // Expand all
@@ -35,10 +38,8 @@ $(document).ready(function(){
         }
     });
     
-    if(isStart && location.hash == "#shuffleOff")
+    if(isStart)
         getQuestions();
-    else 
-        $shuffle.click();
 
     // Click in any part of body
     $body.click(function(){
@@ -90,6 +91,7 @@ function cleanAll(data){
     if(!data) data = {}
     
     // Clean questions
+    $("body").removeClass("gridQuestions");
     $("html").scrollTop(0);
     $("#items").add($(".minimap .content")).html("");
     questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
@@ -101,6 +103,12 @@ function cleanAll(data){
     var expandAll = localStorage.expandAll == "true" ? true : false;
     $("#ckhExpandAll").prop("checked", !expandAll);
     $("#ckhExpandAll").click();
+
+    // View gridQuestions
+    let gridQuestions = localStorage.gridQuestions == "true" ? true : false;
+    if(gridQuestions){
+        toggleQuestions();
+    }
 }
 
 function reloadStatistics(){
@@ -170,7 +178,7 @@ function getQuestions(data){
         let response = ctrl.questions;
         
         // Random questions order
-        let isShuffle = location.hash == "#shuffleOn";
+        let isShuffle = localStorage.shuffle == "true"; //location.hash == "#shuffleOn";
         if(isShuffle){
             response = response.sort(function () {
                 return Math.random() - 0.5;
@@ -739,9 +747,11 @@ function toggleQuestions(){
     let $body = $("body");
     if($body.hasClass("gridQuestions")){
         $body.removeClass("gridQuestions");
+        localStorage.gridQuestions = false;
     }
     else {
         $body.addClass("gridQuestions");
+        localStorage.gridQuestions = true;
     }
 }
 
