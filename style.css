@@ -8,10 +8,10 @@ body.gridQuestions {
 }
 
 /* Header */
-.header {background-color: #5f5fff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 18px -2px #000000c7;z-index: 2;}
-.header .icoMenu {display: block;text-align: center;background-image: url(images/menu.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 6px;height: 25px;color: white;position: absolute;cursor: pointer;filter: invert(1);/* display: none; */}
+.header {background-color: #3030ff;text-align: center;font-weight: 500;font-size: 20px;color: white;position: fixed;width: 100%;top: 0;padding-bottom: 0;box-shadow: 0px 0px 18px -2px #000000c7;z-index: 2;}
+.header .icoMenu {display: block;text-align: center;background-image: url(images/menu.png);background-size: cover;width: 25px;background-repeat: no-repeat;background-origin: content-box;padding: 6px;height: 25px;color: white;position: absolute;cursor: pointer;filter: invert(1);/* display: none; */top: -1px;}
 .header .icoAdd{right: 0;top: 0;background-image: url(images/add.png);}
-.header .icoStar {right: 0px;top: 4px;background-image: url(images/star0.png);width: 17px;height: 17px;}
+.header .icoStar {right: 0px;top: 3px;background-image: url(images/star0.png);width: 17px;height: 17px;}
 .gridQuestions .header .icoQuestions {
     /* transform: rotateX(180deg); */
     /* transform: scaleY(-1); */
@@ -19,7 +19,7 @@ body.gridQuestions {
     filter: invert(-2);
     /* opacity: 2; */
 }
-.header .icoQuestions {right: 30px;top: 4px;background-image: url(images/flexWrap.png);width: 19px;height: 17px;}
+.header .icoQuestions {right: 30px;top: 3px;background-image: url(images/flexWrap.png);width: 19px;height: 17px;}
 .favorites .header .icoStar {background-image: url(images/star1.png);filter: none;}
 .header .title {
     padding: 5px;

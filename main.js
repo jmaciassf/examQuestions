@@ -90,8 +90,8 @@ function cleanAll(data){
     if(!data) data = {}
     
     // Clean questions
+    $("html").scrollTop(0);
     $("#items").add($(".minimap .content")).html("");
-    //$(".minimap .content").html("");
     questionCounter = optionCounter = countQuestions = countSuccess = countErrors = countQuestionsDone = 0;
     reloadStatistics();
 
@@ -726,10 +726,8 @@ function toggleFavorites(){
         $body.removeClass("favorites");
     }
     else {
-        $body.addClass("favorites");
-
         // Only show favorites
-        
+        $body.addClass("favorites");
     }
 
     getQuestions({ clickFavorites: true });
