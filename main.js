@@ -100,6 +100,11 @@ function cleanAll(data){
     if(!data.clickFavorites)
         $("body").removeClass("favorites");
 
+    // Shuffle checkbox
+    if(localStorage.shuffle == "true")
+        $("#ckhShuffle").prop("checked", true);
+    
+    // Expand all
     var expandAll = localStorage.expandAll == "true" ? true : false;
     $("#ckhExpandAll").prop("checked", !expandAll);
     $("#ckhExpandAll").click();
@@ -482,6 +487,9 @@ function getQuestions(data){
         if(!$("body").hasClass("expandAll")){
             $("#items .item:first .title").click();
         }
+
+        $("html").scrollTop(0);
+        setTimeout(function(){ $("html").scrollTop(0); }, 350);
         
         console.log("setQuestions end");
     }
@@ -510,7 +518,7 @@ function goToItem($item){
     expandItem($item);
 
     // Scroll en el siguiente item
-    let scrollTop = $item.position().top - 58;
+    let scrollTop = $item.position().top - 52;
     $("html").animate({ scrollTop: scrollTop }, 600, 'swing', function(){
         
     });   
