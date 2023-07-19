@@ -140,13 +140,17 @@ function getQuestions(data){
         case "ASSOCIATE":
             urlTitle = "https://angular-2146b-default-rtdb.firebaseio.com/associate.json";
             break;
-        
-        case "SAA":
-            urlTitle = baseURL + "AWS-SAA.json";
+
+        case "JAVASCRIPT":
+            urlTitle = "https://angular-2146b-default-rtdb.firebaseio.com/javascript.json";
             break;
 
         case "PDI":
             urlTitle = baseURL + "PDI.json";
+            break;
+        
+        case "SAA":
+            urlTitle = baseURL + "AWS-SAA.json";
             break;
     }
 
