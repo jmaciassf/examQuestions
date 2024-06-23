@@ -14,4 +14,56 @@
 	{"option":"Ensures your data doesn't cross regional boundaries."},
 	{"option":"Segregate your data, metadata, and processes by brand, region, or department."}],
 	"answers":[1,4]
+},{
+	"question":"Which of these are valid use cases for Data Cloud's capabilities? Choose three.",
+	"options":
+	[{"option":"Gain insights on data streams in real time and trigger follow-up actions."},
+	{"option":"Build complex segments of unified individuals with related data from multiple platforms."},
+	{"option":"Design, deploy, and deliver campaigns to any region with true 1:1 content recommendations."},
+	{"option":"Aggregate data from multiple systems to understand a customer's true lifetime value across multiple accounts and devices."},
+	{"option":"Build simple segments of hierarchical identities with disparate data from one legacy system."}],
+	"answers":[1,2,4]
+},{
+	"question":"Which of these are key differentiators of Salesforce Data Cloud? Choose three.",
+	"options":
+	[{"option":"Replaces the need to manage data anywhere else in your organization"},
+	{"option":"User-friendly interface and built on Lightning"},
+	{"option":"Focuses primarily on the financial services industry data"},
+	{"option":"Integrates easily with Salesforce products and AppExchange"},
+	{"option":"Uses the Customer 360 Data Model"}],
+	"answers":[2,4,5]
+}, {
+	"question":"What does \"Connect\" mean as a capability?",
+	"options":
+	[{"option":"Identify and match individuals to create a unified profile."},
+	{"option":"Create smart segments and activate them anywhere."},
+	{"option":"Embed data with intelligence and make it available to analytics systems."},
+	{"option":"Synchronize data from Salesforce and external data sources and transform data when needed."}],
+	"answers":[4]
+},{
+	"question":"Which statements are true of Data Cloud platform functionality? Choose three.",
+	"options":
+	[{"option":"It's an open platform that allows you to integrate external systems and data sources."},
+	{"option":"Data is only ingested in batches."},
+	{"option":"Data is transformed, cleaned, and harmonized into the standard data model."},
+	{"option":"Data storage has a maximum threshold."},
+	{"option":"Data can be activated in Sales Cloud, Marketing Cloud Engagement, Service Cloud, and other Salesforce clouds."}],
+	"answers":[1,3,5]
+},{
+	"question":"What does \"Unify\" mean as a capability of Data Cloud?",
+	"options":
+	[{"option":"Consume or activate data to any cloud and any application."},
+	{"option":"Connect, match, and reconcile customer data."},
+	{"option":"Create smart segments and activate them anywhere."},
+	{"option":"Embed data with intelligence and make it available to analytics systems."}],
+	"answers":[2]
+},{
+	"question":"Which are data ethics best practices? Choose three.",
+	"options":
+	[{"option":"Collect and use only what you need."},
+	{"option":"Treat sensitive data carefully."},
+	{"option":"Choose third-party partners carefully."},
+	{"option":"Avoid collecting sensitive data."},
+	{"option":"Collect large amounts of data and determine how to use it later."}],
+	"answers":[1,2,3]
 }]

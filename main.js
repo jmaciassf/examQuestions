@@ -134,7 +134,7 @@ function getQuestions(data){
     title = title ? title.toUpperCase() : "";
 
     let baseURL = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/";
-    if(location.origin.includes("127.0.0."))
+    if(location.origin.includes("127.0.0.") || location.origin.includes("localhost"))
         baseURL = "http://127.0.0.1:5500/data/";
 
     switch(title){
@@ -672,7 +672,8 @@ function getJSONQuestionToPreview(str){
     
     // New version
     let fullResult = "";
-    str.split('<p dir="ltr">&nbsp;</p>').forEach(function(html, index){
+    //str.split('<p dir="ltr">&nbsp;</p>').forEach(function(html, index){
+    str.split('<ol').forEach(function(html, index){
         let question = "";
 
         if(html != "" && html.removeTagsTrim() != ""){
