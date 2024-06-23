@@ -130,11 +130,20 @@ var questionCounter = optionCounter = countQuestions = countSuccess = countError
 function getQuestions(data){
     console.log("getQuestions... ");
 
-    let title = getUrlParameter("title"), urlTitle,
-        baseURL = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/";
+    let title = getUrlParameter("title"), urlTitle;
+    title = title ? title.toUpperCase() : "";
+
+    let baseURL = "https://raw.githubusercontent.com/jmaciassf/examQuestions/main/data/";
+    if(location.origin.includes("127.0.0."))
+        baseURL = "http://127.0.0.1:5500/data/";
+
     switch(title){
         case "ADM":
             urlTitle = baseURL + "ADM.json";
+            break;
+            
+        case "DATACLOUD":
+            urlTitle = baseURL + "DataCloud.json";
             break;
         
         case "ASSOCIATE":
@@ -212,12 +221,12 @@ function getQuestions(data){
             var arrOptions = []
             element.options.forEach(function(option, index){
                 var answer = false
-                if(index == 0 && element.answers.includes('A')) answer = true;
-                if(index == 1 && element.answers.includes('B')) answer = true;
-                if(index == 2 && element.answers.includes('C')) answer = true;
-                if(index == 3 && element.answers.includes('D')) answer = true;
-                if(index == 4 && element.answers.includes('E')) answer = true;
-                if(index == 5 && element.answers.includes('F')) answer = true;
+                if(index == 0 && (element.answers.includes('A') || element.answers.includes(1))) answer = true;
+                if(index == 1 && (element.answers.includes('B') || element.answers.includes(2))) answer = true;
+                if(index == 2 && (element.answers.includes('C') || element.answers.includes(3))) answer = true;
+                if(index == 3 && (element.answers.includes('D') || element.answers.includes(4))) answer = true;
+                if(index == 4 && (element.answers.includes('E') || element.answers.includes(5))) answer = true;
+                if(index == 5 && (element.answers.includes('F') || element.answers.includes(6))) answer = true;
 
                 let text = option, explanation = "";
                 if(typeof option == "object"){
@@ -660,6 +669,90 @@ function getJSONQuestionToPreview(str){
     str = str.replace(/&ldquo;/g, '"')
         .replace(/&rdquo;/g, '"')
         .replace(/&rsquo;/g, "'"); // &ldquo;New&rdquo; and the Contact&rsquo;s
+    
+    // New version
+    let fullResult = "";
+    str.split("<ol").forEach(function(html, index){
+        let question = "";
+
+        if(html != ""){
+            question = $("<div>"+str+"</div>").find("ol").eq(index-1).text() // -1 porque es otro metodo
+            .replace(/<br>/, '{{br}}').removeTagsTrim()
+            .replace(/\n/, '{{br}}');
+            console.log("Q: "+question);
+        }
+
+        if(html != "" && question != ""){
+            var options = [], arrAnswers = [];
+    
+            html = "<div>"+html.replace(/ start="[0-9]+">/, "")+"</div>";
+            if(html.startsWith(">"))
+                html = html.replace(">", "");
+    
+            console.log(html);
+            console.log($(html));
+            console.log($(html).find("ul li"));
+            $(html).find("ul li").each(function(){
+                var strHtml = $(this).html();
+                if(!strHtml) return;
+                if(strHtml.includes("<br>*")){
+                    // Has help text
+                    var arrSplit = $(this).html().split("<br>*");
+                    if(arrSplit.length > 1){
+                        var option = arrSplit[0].removeTagsTrim();
+                        var explanation = arrSplit[1].removeTagsTrim();
+                        var jOption = { "option": option, "explanation": explanation }
+                        options.push(jOption);
+                    }
+                }
+                else 
+                    options.push({ "option": strHtml.removeTagsTrim() });
+                
+                // Is answer?
+                if(strHtml.includes("<strong>")){
+                    if(options.length == 1) arrAnswers.push("A");
+                    if(options.length == 2) arrAnswers.push("B");
+                    if(options.length == 3) arrAnswers.push("C");
+                    if(options.length == 4) arrAnswers.push("D");
+                    if(options.length == 5) arrAnswers.push("E");
+                    if(options.length == 6) arrAnswers.push("F");
+                }
+            });
+            console.log(options);
+            console.log(arrAnswers);
+
+            var result = {
+                question: question,
+                options: options,
+                answers: arrAnswers
+            }
+            var strResult = JSON.stringify(result);
+            strResult = strResult
+                            .replace('"question"', '\n\t"question"')
+                            .replace('"options":[', '\n\t"options":\n\t[')
+                            .replace('"answers"', '\n\t"answers"')
+                            //.replace(/","/g, '",\n\t"')
+                            .replace(/",{"/g, '",\n\t{"')
+                            .replace(/"},"/g, '"},\n\t"')
+                            .replace(/"},{"/g, '"},\n\t{"')
+                            .replace(/’/g, '\'')
+                            .replace(']}', ']\n},')
+                            .replace(/{{br}}/g, '<br>');
+            /*
+                            .replace('"question"', '\n"question"')
+                            .replace('"options":[', '\n"options":\n[')
+                            .replace('"answers"', '\n"answers"')
+                            .replace(/"},{"/g, '"},\n{"')
+                            .replace(']}', ']\n},');*/
+            //copy(strResult);
+            fullResult += strResult;
+        }
+    });
+
+    console.log(fullResult);
+    return fullResult;
+
+
     var question = str.split("<ul>")[0]
         .replace(/<br>/, '{{br}}').removeTagsTrim()
         .replace(/\n/, '{{br}}');

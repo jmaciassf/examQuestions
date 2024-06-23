@@ -1,0 +1,17 @@
+[{
+	"question":"What are the core pillars of Data Cloud capabilities",
+	"options":
+	[{"option":"Connect, Harmonize, Unify, Analyze and Predict, and Act"},
+	{"option":"Import, Export, Query, Copy, Paste"},
+	{"option":"Ingest, Augment, Network, Contain, Broadcast"},
+	{"option":"Connect, Transpose, Unify, Accelerate, Act"}],
+	"answers":[1]
+},{
+	"question":"Which are benefits of using data spaces? Choose two.",
+	"options":
+	[{"option":"Manage user access to designated data spaces using permission sets."},
+	{"option":"Cross-brand unification."},
+	{"option":"Ensures your data doesn't cross regional boundaries."},
+	{"option":"Segregate your data, metadata, and processes by brand, region, or department."}],
+	"answers":[1,4]
+}]
