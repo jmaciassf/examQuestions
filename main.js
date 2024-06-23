@@ -676,10 +676,13 @@ function getJSONQuestionToPreview(str){
         let question = "";
 
         if(html != ""){
-            question = $("<div>"+str+"</div>").find("ol").eq(index-1).text() // -1 porque es otro metodo
-            .replace(/<br>/, '{{br}}').removeTagsTrim()
-            .replace(/\n/, '{{br}}');
-            console.log("Q: "+question);
+            let $ol = $("<div>"+str+"</div>").find("ol").eq(index-1); // -1 porque es otro metodo
+            if($ol.find("ol").length == 0) {
+                question = $ol.text() 
+                .replace(/<br>/, '{{br}}').removeTagsTrim()
+                .replace(/\n/, '{{br}}');
+                console.log("Q: "+question);
+            }
         }
 
         if(html != "" && question != ""){
