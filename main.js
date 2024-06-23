@@ -675,7 +675,7 @@ function getJSONQuestionToPreview(str){
     str.split("<ol").forEach(function(html, index){
         let question = "";
 
-        if(html != ""){
+        if(html != "" && html.removeTagsTrim() != ""){
             let $ol = $("<div>"+str+"</div>").find("ol").eq(index-1); // -1 porque es otro metodo
             if($ol.find("ol").length == 0) {
                 question = $ol.text() 
