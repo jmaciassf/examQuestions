@@ -672,7 +672,7 @@ function getJSONQuestionToPreview(str){
     
     // New version
     let fullResult = "";
-    str.split("<ol").forEach(function(html, index){
+    str.split('<p dir="ltr">&nbsp;</p>').forEach(function(html, index){
         let question = "";
 
         if(html != "" && html.removeTagsTrim() != ""){
