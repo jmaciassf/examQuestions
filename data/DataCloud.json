@@ -605,4 +605,167 @@
 	{"option":"It is not possible to see details on Segment Membership"},
 	{"option":"View the Segment Membership DMO data via Data Explorer"}],
 	"answers":[4]
+}, {
+	"question":"Use this at ingestion time to perform operations on row-based data.",
+	"options":
+	[{"option":"Calculate Insights"},
+	{"option":"Formula"},
+	{"option":"Operators"}],
+	"answers":[2]
+},{
+	"question":"Use this to make sense of large-scale behavioral data.",
+	"options":
+	[{"option":"Calculate Insights"},
+	{"option":"Formula"},
+	{"option":"Operators"}],
+	"answers":[1]
+},{
+	"question":"Use this to create audiences at segmentation time.",
+	"options":
+	[{"option":"Calculate Insights"},
+	{"option":"Formula"},
+	{"option":"Operators"}],
+	"answers":[3]
+},{
+	"question":"Which Data Cloud feature helps calculate reusable attributes like Customer Lifetime Value and Customer Satisfaction Score?",
+	"options":
+	[{"option":"Segments"},
+	{"option":"Calculated Insights"},
+	{"option":"Einstein Score"},
+	{"option":"Tableau Connector"}],
+	"answers":[2]
+},{
+	"question":"Which type of insight is best suited to analyze clickstream data every five minutes?",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Streaming Insights"},
+	{"option":"Einstein Insights"},
+	{"option":"Insightful Insights"}],
+	"answers":[2]
+},{
+	"question":"Created when a Streaming Insight is obtained, making Streaming Insights usable",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Calculated Insight SQL"},
+	{"option":"Data Action"},
+	{"option":"Streaming Insights"},
+	{"option":"Visual Insights Builder"}],
+	"answers":[3]
+},{
+	"question":"A no code user-friendly insight authoring tool for Calculated and Streaming Insights",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Calculated Insight SQL"},
+	{"option":"Data Action"},
+	{"option":"Streaming Insights"},
+	{"option":"Visual Insights Builder"}],
+	"answers":[5]
+},{
+	"question":"Lets you define and calculate multidimensional metrics from Data Cloud",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Calculated Insight SQL"},
+	{"option":"Data Action"},
+	{"option":"Streaming Insights"},
+	{"option":"Visual Insights Builder"}],
+	"answers":[1]
+},{
+	"question":"Creates both Calculated Insights and Streaming Insights using the power of SQL",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Calculated Insight SQL"},
+	{"option":"Data Action"},
+	{"option":"Streaming Insights"},
+	{"option":"Visual Insights Builder"}],
+	"answers":[2]
+},{
+	"question":"Creates metrics on streaming data coming from real-time data sources",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Calculated Insight SQL"},
+	{"option":"Data Action"},
+	{"option":"Streaming Insights"},
+	{"option":"Visual Insights Builder"}],
+	"answers":[4]
+}, {
+	"question":"When are Activation Targets created?",
+	"options":
+	[{"option":"Before setting up an activation"},
+	{"option":"Before creating a segment"},
+	{"option":"After setting up an activation"},
+	{"option":"After publishing a segment"}],
+	"answers":[1]
+},{
+	"question":"What are the types of activations in Data Cloud? Choose two.",
+	"options":
+	[{"option":"Enablement activations"},
+	{"option":"Segment activations"},
+	{"option":"Connector activations"},
+	{"option":"Data actions"}],
+	"answers":[2,4]
+},{
+	"question":"Where do you define the location where you want to use your segment?",
+	"options":
+	[{"option":"Calculated Insights"},
+	{"option":"Segment"},
+	{"option":"Activation Target"},
+	{"option":"Activation"}],
+	"answers":[3]
+},{
+	"question":"How are Calculated Insights added to an Activation?",
+	"options":
+	[{"option":"As an activation target"},
+	{"option":"As an additional attribute"},
+	{"option":"As a contact point"},
+	{"option":"When you set the activation membership"}],
+	"answers":[2]
+},{
+	"question":"Complete this statement: Cloud File Storage Activation Target lets you publish segments ____",
+	"options":
+	[{"option":"directly from Data Cloud to Marketing Cloud Business Units."},
+	{"option":"so Salesforce Core apps can query."},
+	{"option":"from Data Cloud to Amazon S3."}],
+	"answers":[3]
+},{
+	"question":"Which are Activation best practices? Choose two.",
+	"options":
+	[{"option":"If you have data from multiple data sources in Data Cloud, default to using the Unified Individual as the Activation Membership."},
+	{"option":"Always share your data with a third-party partner."},
+	{"option":"If you have a large number of Data Cloud audiences, publish at the same time each day."},
+	{"option":"If you have a large number of Data Cloud audiences, stagger your scheduled publish times."}],
+	"answers":[1,4]
+},{
+	"question":"What is the difference between filtering in a segment and an activation?",
+	"options":
+	[{"option":"In a segment, filters narrow your audience. In an activation, filters narrow down relevant values with related attributes that personalize messages."},
+	{"option":"In an activation, filters broaden your audience. In a segment, filters provide more relevant values with related attributes that personalize messages."},
+	{"option":"In an activation, filters narrow your audience. In a segment, filters narrow down relevant values with related attributes that personalize messages."},
+	{"option":"In a segment, filters narrow your audience. In an activation, filters broaden relevant values with related attributes that personalize messages."}],
+	"answers":[1]
+},{
+	"question":"Put the steps to access Data Cloud data from a third-party partner in the correct order.",
+	"options":
+	[{"option":"Build your data shares, Plan your data strategy, View your Data Cloud objects from the third-party partner, Create data share targets and set connectivity with the third-party partner, Set up your credentials, Link your data share with your data share target."},
+	{"option":"Plan your data strategy, Create data share targets and set connectivity with the third-party partner, Set up your credentials, View your Data Cloud objects from the third-party partner, Link your data share with your data share target, Build your data shares."},
+	{"option":"Plan your data strategy, Build your data shares, Create data share targets and set connectivity with the third-party partner, Set up your credentials, Link your data share with your data share target, View your Data Cloud objects from the third-party partner."},
+	{"option":"Plan your data strategy, Set up your credentials, Build your data shares, Create data share targets and set connectivity with the third-party partner, Link your data share with your data share target, View your Data Cloud objects from the third-party partner."}],
+	"answers":[4]
+},{
+	"question":"A collection of data objects that lets you make queries without moving any data.",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Bring Your Own Lake (BYOL) Data Sharing"},
+	{"option":"Data actions"},
+	{"option":"Data share"},
+	{"option":"Publish"}],
+	"answers":[4]
+},{
+	"question":"Allows you to share objects in Data Cloud with third-party data ecosystems like external data warehouses and data lakes.",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Bring Your Own Lake (BYOL) Data Sharing"},
+	{"option":"Data actions"},
+	{"option":"Data share"},
+	{"option":"Publish"}],
+	"answers":[2]
 }]
