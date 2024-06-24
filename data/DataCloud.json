@@ -560,7 +560,7 @@
 	{"option":"Population"},
 	{"option":"Rule Builder"},
 	{"option":"Segment"}],
-	"answers":[4]
+	"answers":[5]
 },{
 	"question":"Contains select data that has been mapped and ingested",
 	"options":
@@ -578,7 +578,7 @@
 	{"option":"Population"},
 	{"option":"Rule Builder"},
 	{"option":"Segment"}],
-	"answers":[3]
+	"answers":[4]
 },{
 	"question":"Identifies the number of targets in a segment",
 	"options":
