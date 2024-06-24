@@ -455,4 +455,154 @@
 	{"option":"Unified profile"},
 	{"option":"Match rules"}],
 	"answers":[4]
+}, {
+	"question":"Which aggregation would you use if you are looking for a total lifetime purchase value over a certain amount?",
+	"options":
+	[{"option":"Average"},
+	{"option":"Min"},
+	{"option":"Max"},
+	{"option":"Sum"}],
+	"answers":[4]
+},{
+	"question":"Where do you go to activate a segment in Data Cloud?",
+	"options":
+	[{"option":"Journey Builder"},
+	{"option":"Activations"},
+	{"option":"Activation Target"},
+	{"option":"Segment"}],
+	"answers":[2]
+},{
+	"question":"What option is not available in the interface for streaming insights?",
+	"options":
+	[{"option":"Existing insights"},
+	{"option":"Fields"},
+	{"option":"Functions"},
+	{"option":"Examples"}],
+	"answers":[1]
+},{
+	"question":"Where can a user spot check the data in a created insight?",
+	"options":
+	[{"option":"Journey Builder"},
+	{"option":"Insights Builder"},
+	{"option":"Data Explorer"},
+	{"option":"Profile Explorer"}],
+	"answers":[3]
+},{
+	"question":"If a statement includes GROUP BY customer_id__c , what does it do?",
+	"options":
+	[{"option":"Organize the data based on customer ID."},
+	{"option":"Search for matches based on customer ID."},
+	{"option":"Include outside data based on customer ID."},
+	{"option":"Find customers interested in joining a group."}],
+	"answers":[1]
+},{
+	"question":"How do you ensure the accuracy of Calculated Insights when some Data Lake Object records may have similar Primary Key values?",
+	"options":
+	[{"option":"Use the Sum function"},
+	{"option":"Temporarily disable the Data Lake Object"},
+	{"option":"Add the Key Qualifier fields to the JOIN statement"},
+	{"option":"Delete duplicate data from Data Cloud"}],
+	"answers":[3]
+},{
+	"question":"What node option in Insights Builder performs a calculation and returns a single value?",
+	"options":
+	[{"option":"Join"},
+	{"option":"Transform"},
+	{"option":"Case"},
+	{"option":"Aggregate"}],
+	"answers":[4]
+},{
+	"question":"Which node option allows you to create calculations that can be used in segmentation?",
+	"options":
+	[{"option":"Filters"},
+	{"option":"Transform"},
+	{"option":"Case"},
+	{"option":"Arithmetic expression"}],
+	"answers":[4]
+},{
+	"question":"Which step in a segment configuration defines the target entity on which the segment builds?",
+	"options":
+	[{"option":"Publish Schedule"},
+	{"option":"Segment On"},
+	{"option":"Population"},
+	{"option":"Containers"}],
+	"answers":[2]
+},{
+	"question":"Which attributes in the attribute library have a one-to-many relationship with the segment target?",
+	"options":
+	[{"option":"Related attributes"},
+	{"option":"Direct attributes"},
+	{"option":"Profile attributes"},
+	{"option":"Engagement attributes"}],
+	"answers":[1]
+},{
+	"question":"Attributes with what data type support Value Suggestion?",
+	"options":
+	[{"option":"Number"},
+	{"option":"Text"},
+	{"option":"Date"},
+	{"option":"All types"}],
+	"answers":[2]
+},{
+	"question":"What Entity type can be used to \"Segment On\" in Segmentation?",
+	"options":
+	[{"option":"Profile"},
+	{"option":"Engagement"},
+	{"option":"Other"},
+	{"option":"Profile and Engagement"},
+	{"option":"Profile and Engagement and Other"}],
+	"answers":[1]
+},{
+	"question":"Contains the basic properties where a query is built",
+	"options":
+	[{"option":"Attribute Library"},
+	{"option":"Count Segment"},
+	{"option":"Population"},
+	{"option":"Rule Builder"},
+	{"option":"Segment"}],
+	"answers":[4]
+},{
+	"question":"Contains select data that has been mapped and ingested",
+	"options":
+	[{"option":"Attribute Library"},
+	{"option":"Count Segment"},
+	{"option":"Population"},
+	{"option":"Rule Builder"},
+	{"option":"Segment"}],
+	"answers":[1]
+},{
+	"question":"Defines the target audience using criteria",
+	"options":
+	[{"option":"Attribute Library"},
+	{"option":"Count Segment"},
+	{"option":"Population"},
+	{"option":"Rule Builder"},
+	{"option":"Segment"}],
+	"answers":[3]
+},{
+	"question":"Identifies the number of targets in a segment",
+	"options":
+	[{"option":"Attribute Library"},
+	{"option":"Count Segment"},
+	{"option":"Population"},
+	{"option":"Rule Builder"},
+	{"option":"Segment"}],
+	"answers":[2]
+},{
+	"question":"The number of records within your current segment",
+	"options":
+	[{"option":"Attribute Library"},
+	{"option":"Count Segment"},
+	{"option":"Population"},
+	{"option":"Rule Builder"},
+	{"option":"Segment"}],
+	"answers":[3]
+},{
+	"question":"How can you view details on Segment Membership and who are all in a specific segment?",
+	"options":
+	[{"option":"Open the Segmentation Canvas and see details on who is in a specific Segment"},
+	{"option":"Download the Segment Membership data via the ‘Download' feature"},
+	{"option":"It is not possible to see details on Segment Membership"},
+	{"option":"View the Segment Membership DMO data via Data Explorer"}],
+	"answers":[4]
 }]

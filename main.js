@@ -227,6 +227,7 @@ function getQuestions(data){
                 if(index == 3 && (element.answers.includes('D') || element.answers.includes(4))) answer = true;
                 if(index == 4 && (element.answers.includes('E') || element.answers.includes(5))) answer = true;
                 if(index == 5 && (element.answers.includes('F') || element.answers.includes(6))) answer = true;
+                if(index == 6 && (element.answers.includes('G') || element.answers.includes(7))) answer = true;
 
                 let text = option, explanation = "";
                 if(typeof option == "object"){
