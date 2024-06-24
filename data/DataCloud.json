@@ -66,4 +66,393 @@
 	{"option":"Avoid collecting sensitive data."},
 	{"option":"Collect large amounts of data and determine how to use it later."}],
 	"answers":[1,2,3]
+}, {
+	"question":"Which Permission Set can map data to the data model and create data streams, identity resolution rulesets, and calculated insights?",
+	"options":
+	[{"option":"IT manager"},
+	{"option":"Marketing Manager"},
+	{"option":"Data Cloud Data-Aware Specialist"},
+	{"option":"Data Cloud User"}],
+	"answers":[3]
+},{
+	"question":"Which tab in the navigation manages the data coming into Data Cloud?",
+	"options":
+	[{"option":"Segments"},
+	{"option":"Data Streams"},
+	{"option":"Activation"},
+	{"option":"Data Model"}],
+	"answers":[2]
+},{
+	"question":"When creating a data stream, what are the categories you must select from? Choose three.",
+	"options":
+	[{"option":"Profile"},
+	{"option":"Engagement"},
+	{"option":"First Name"},
+	{"option":"Other"}],
+	"answers":[1,2,4]
+},{
+	"question":"What best practices lead to success when determining which data to initially bring in to Data Cloud? Choose two.",
+	"options":
+	[{"option":"Complete a thorough data discovery phase."},
+	{"option":"Consider only data necessary to accomplish current use cases."},
+	{"option":"Bring in all of your data and sort it later."},
+	{"option":"Bring in data that overlaps first."}],
+	"answers":[2,4]
+},{
+	"question":"An inventory of all data sources.",
+	"options":
+	[{"option":"Package"},
+	{"option":"Data Discovery"},
+	{"option":"Data Stream"},
+	{"option":"Data Dictionary"},
+	{"option":"Data Kit"},
+	{"option":"Data Explorer"}],
+	"answers":[4]
+},{
+	"question":"Identifying sources of data that are relevant to what you want to accomplish.",
+	"options":
+	[{"option":"Package"},
+	{"option":"Data Discovery"},
+	{"option":"Data Stream"},
+	{"option":"Data Dictionary"},
+	{"option":"Data Kit"},
+	{"option":"Data Explorer"}],
+	"answers":[2]
+},{
+	"question":"View and validate the data that exists in your DMO's DLO's and Calculated Insights.",
+	"options":
+	[{"option":"Package"},
+	{"option":"Data Discovery"},
+	{"option":"Data Stream"},
+	{"option":"Data Dictionary"},
+	{"option":"Data Kit"},
+	{"option":"Data Explorer"}],
+	"answers":[6]
+},{
+	"question":"A portable and customized bundle of packagable metadata, created with Data Cloud.",
+	"options":
+	[{"option":"Package"},
+	{"option":"Data Discovery"},
+	{"option":"Data Stream"},
+	{"option":"Data Dictionary"},
+	{"option":"Data Kit"},
+	{"option":"Data Explorer"}],
+	"answers":[5]
+},{
+	"question":"A container for custom objects and metadata created with Package Manager.",
+	"options":
+	[{"option":"Package"},
+	{"option":"Data Discovery"},
+	{"option":"Data Stream"},
+	{"option":"Data Dictionary"},
+	{"option":"Data Kit"},
+	{"option":"Data Explorer"}],
+	"answers":[1]
+},{
+	"question":"The connections and associated data ingested into Data Cloud.",
+	"options":
+	[{"option":"Package"},
+	{"option":"Data Discovery"},
+	{"option":"Data Stream"},
+	{"option":"Data Dictionary"},
+	{"option":"Data Kit"},
+	{"option":"Data Explorer"}],
+	"answers":[3]
+},{
+	"question":"What is used to customize and organize Data Cloud Unified Individual Record Pages for surfacing insights?",
+	"options":
+	[{"option":"Salesforce Metadata API"},
+	{"option":"Sharing Rules"},
+	{"option":"Lightning App Builder"},
+	{"option":"Lightning Report Builder"},
+	{"option":"Salesforce Flow"}],
+	"answers":[3]
+},{
+	"question":"Select three features for Managed Packages",
+	"options":
+	[{"option":"Typically used by ISVs on AppExchange"},
+	{"option":"Not upgradeable or supported"},
+	{"option":"Commonly used for one-time migration of metadata"},
+	{"option":"Upgradeable and supported"},
+	{"option":"Developer has no control over the components once installed"},
+	{"option":"Contains a namespace"}],
+	"answers":[1,4,6]
+},{
+	"question":"Identify a typical use case for customizing and organizing the Data Cloud Unified Individual Record Page.",
+	"options":
+	[{"option":"You want only specific teams to view a specific record page."},
+	{"option":"You need to quickly surface insights relevant to your team."},
+	{"option":"You want to reduce potential metadata duplications."},
+	{"option":"You want to trigger an action when a change is made."}],
+	"answers":[2]
+},{
+	"question":"Which Data Cloud actions are available via Flow? Choose three.",
+	"options":
+	[{"option":"Publish Calculated Insights"},
+	{"option":"Map Data Model Object Fields"},
+	{"option":"Publish Segments"},
+	{"option":"Trigger Identity Resolution Job"},
+	{"option":"Publish Streaming Insights"}],
+	"answers":[1,3,4]
+},{
+	"question":"Which is a benefit of using a starter data bundle?",
+	"options":
+	[{"option":"It bundles up all of your data into a managed package."},
+	{"option":"The data is pre-mapped to the Customer 360 Data Model and can be customized."},
+	{"option":"It automatically assigns permission sets to your users."},
+	{"option":"It identifies relevant data sources that you should consider using."}],
+	"answers":[2]
+},{
+	"question":"Data modeling occurs after which step when establishing the data model in the Data Cloud platform?",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Ingestion"},
+	{"option":"Segmentation"},
+	{"option":"Identity Resolution"}],
+	"answers":[2]
+},{
+	"question":"Put the data modeling steps in the correct order:",
+	"options":
+	[{"option":"Create an inventory of all data streams, Map to the data model, Configure the DMO relationships of the data model, Assess how data should be normalized."},
+	{"option":"Configure the DMO relationships of the data model, Create an inventory of all data streams, Assess how data should be normalized, Map to the data model, Create an inventory of all data streams,"},
+	{"option":"Create an inventory of all data streams, Assess how data should be normalized, Map to the data model, Configure the DMO relationships of the data model."},
+	{"option":"Assess how data should be normalized, Map to the data model, Create an inventory of all data streams, Configure the DMO relationships of the data model."}],
+	"answers":[3]
+},{
+	"question":"The object that underpins the data stream.",
+	"options":
+	[{"option":"DMO"},
+	{"option":"DLO"},
+	{"option":"DSO"},
+	{"option":"MDM"}],
+	"answers":[3]
+},{
+	"question":"The target destination for records from the data streams.",
+	"options":
+	[{"option":"DMO"},
+	{"option":"DLO"},
+	{"option":"DSO"},
+	{"option":"MDM"}],
+	"answers":[2]
+},{
+	"question":"The system that provides data stewardship and governance across the enterprise.",
+	"options":
+	[{"option":"DMO"},
+	{"option":"DLO"},
+	{"option":"DSO"},
+	{"option":"MDM"}],
+	"answers":[4]
+},{
+	"question":"Consolidates data from data sources through data lake objects.",
+	"options":
+	[{"option":"DMO"},
+	{"option":"DLO"},
+	{"option":"DSO"},
+	{"option":"MDM"}],
+	"answers":[1]
+},{
+	"question":"How is the Individual Object referenced in other DMOs within a data model?",
+	"options":
+	[{"option":"Via Individual.Id Attribute"},
+	{"option":"Via Contact Point Identifier"},
+	{"option":"Via Party Identification Object"},
+	{"option":"Via Party Attribute"}],
+	"answers":[4]
+},{
+	"question":"What do you do when datasets have fields that align to one DMO and another portion aligns to another DMO?",
+	"options":
+	[{"option":"Denormalize the data"},
+	{"option":"Create formula fields"},
+	{"option":"Use a subscriber key value"},
+	{"option":"Transpose the single records to multiple records"}],
+	"answers":[2]
+},{
+	"question":"What are some of the supported ways that data from CRM can be brought into Data Cloud? Choose three.",
+	"options":
+	[{"option":"CRM Objects"},
+	{"option":"Data Bundles"},
+	{"option":"CRM Reports"},
+	{"option":"Data Kits"},
+	{"option":"Big Objects"}],
+	"answers":[1,2,4]
+},{
+	"question":"When setting up the data source object or schema corresponding to the data set that you're importing, which category would you select when bringing sales order data?",
+	"options":
+	[{"option":"Profile Data"},
+	{"option":"Party Data"},
+	{"option":"Other Data"},
+	{"option":"Engagement Data"}],
+	"answers":[4]
+},{
+	"question":"How frequently can CRM data be refreshed in Data Cloud?",
+	"options":
+	[{"option":"Every 12 hours"},
+	{"option":"Every 24 hours"},
+	{"option":"Every hour"},
+	{"option":"Every 15 minutes"}],
+	"answers":[3]
+},{
+	"question":"Can an object be ingested more than once?",
+	"options":
+	[{"option":"Yes"},
+	{"option":"No"}],
+	"answers":[2]
+}, {
+	"question":"Which type of data model is ideal for ingesting into Data Cloud?",
+	"options":
+	[{"option":"Normalized Data Model"},
+	{"option":"Fragmented Data Model"},
+	{"option":"Denormalized Data Model"},
+	{"option":"Standardized Data Model"}],
+	"answers":[1]
+},{
+	"question":"What reconciliation rule specifies that the value from the most recently updated record must be selected for inclusion in the unified profile?",
+	"options":
+	[{"option":"Last updated"},
+	{"option":"Source sequence"},
+	{"option":"Most occurring"},
+	{"option":"Oldest record"}],
+	"answers":[1]
+},{
+	"question":"When using match rules with Individual Attributes and contact points, you risk creating combinations of records when the same contact point (such as a shared business phone number) is used across several individuals. What should you do to prevent this from happening?",
+	"options":
+	[{"option":"Include many attributes and contact points."},
+	{"option":"Avoid using match rules with Individual Attributes and contact points, since this is not a recommended practice."},
+	{"option":"Set up match rules with a single connected contact point."},
+	{"option":"Ensure names are included into the rules."}],
+	"answers":[4]
+},{
+	"question":"After the Identity Resolution process completes, what should you examine to validate the Identity Resolution ruleset outcome?",
+	"options":
+	[{"option":"Last Modified Date attribute"},
+	{"option":"Bi-directional ruleset"},
+	{"option":"Resolution Summary"},
+	{"option":"Known Unified Profiles figure"}],
+	"answers":[3]
+},{
+	"question":"Select the steps of the Identity Resolution process into the correct order",
+	"options":
+	[{"option":"Configure match rules, Configure reconciliation rules, Profile data across data sources, Validate results."},
+	{"option":"Configure match rules, Profile data across data sources, Configure reconciliation rules, Validate results."},
+	{"option":"Profile data across data sources, Configure match rules, Configure reconciliation rules, Validate results."},
+	{"option":"Profile data across data sources, Configure reconciliation rules, Configure match rules, Validate results."}],
+	"answers":[3]
+},{
+	"question":"The unification process recognizes and matches data belonging to individual humans. Which of the following is the end result of this process?",
+	"options":
+	[{"option":"The matched data appears as records mapped to Individual Data Model Objects (DMO)."},
+	{"option":"This data produces a map allowing your organization to pinpoint all its customers' locations."},
+	{"option":"This data produces a map allowing your organization to pinpoint all its customers' locations at any given point in time."},
+	{"option":"The matched data creates within Marketing Cloud a separate object for each piece of data from customers."}],
+	"answers":[1]
+},{
+	"question":"Which match rules are available to link multiple records into a unified customer profile? Choose three.",
+	"options":
+	[{"option":"Exact Device and Name"},
+	{"option":"Exact org ID"},
+	{"option":"Exact name and email"},
+	{"option":"Exact email"},
+	{"option":"Exact phone number"}],
+	"answers":[3,4,5]
+},{
+	"question":"Which of the following are true of match rules? Choose three.",
+	"options":
+	[{"option":"They establish criteria for relating source Individual records to each other."},
+	{"option":"They produce a record called Unified Individual."},
+	{"option":"They make use of most standard and custom attributes mapped to the data model."},
+	{"option":"They can only be used with standard attributes mapped to the data model."}],
+	"answers":[1,2,3]
+},{
+	"question":"Which of the following are true of anonymous profiles? Choose two.",
+	"options":
+	[{"option":"Once at least one known individual profile is matched with an anonymous record, that record will be marked as known going forward."},
+	{"option":"A source profile without the Is Anonymous field mapped on the Individual DMO is always considered anonymous."},
+	{"option":"For anonymous profiles to be counted correctly, the value of the Is Anonymous field must be set to 0."},
+	{"option":"They're excluded from the known profile utilization consumption."}],
+	"answers":[1,4]
+},{
+	"question":"Fuzzy match methods are not available for fields from which object?",
+	"options":
+	[{"option":"Individual"},
+	{"option":"Account"},
+	{"option":"Contact Point Phone"},
+	{"option":"Contact Point Address"}],
+	"answers":[2]
+},{
+	"question":"Records from your source data streams that Data Cloud reviews to identify matching profiles.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[5]
+},{
+	"question":"Stores information related to unified profiles and can be related to many unified contact points.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[3]
+},{
+	"question":"Contains match and reconciliation rules that tell identity resolution how to match and reconcile your source profiles.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[1]
+},{
+	"question":"Customer data that has been reconciled across multiple sources as a single record using identity resolution rulesets.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[6]
+},{
+	"question":"How data is processed and reviewed during matching.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[2]
+},{
+	"question":"Tells Data cloud which profiles to unify during the identity resolution process.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[7]
+},{
+	"question":"A metric that shows how source profiles are grouped from unified profiles.",
+	"options":
+	[{"option":"Ruleset"},
+	{"option":"Match method"},
+	{"option":"Unified contact objects"},
+	{"option":"Consolidation Rate (CR)"},
+	{"option":"Source profile"},
+	{"option":"Unified profile"},
+	{"option":"Match rules"}],
+	"answers":[4]
 }]
