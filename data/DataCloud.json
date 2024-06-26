@@ -107,7 +107,8 @@
 	{"option":"Data Dictionary"},
 	{"option":"Data Kit"},
 	{"option":"Data Explorer"}],
-	"answers":[4]
+	"answers":[4],
+    "favorite": true
 },{
 	"question":"Identifying sources of data that are relevant to what you want to accomplish.",
 	"options":
@@ -137,7 +138,8 @@
 	{"option":"Data Dictionary"},
 	{"option":"Data Kit"},
 	{"option":"Data Explorer"}],
-	"answers":[5]
+	"answers":[5],
+    "favorite": true
 },{
 	"question":"A container for custom objects and metadata created with Package Manager.",
 	"options":
@@ -147,7 +149,8 @@
 	{"option":"Data Dictionary"},
 	{"option":"Data Kit"},
 	{"option":"Data Explorer"}],
-	"answers":[1]
+	"answers":[1],
+    "favorite": true
 },{
 	"question":"The connections and associated data ingested into Data Cloud.",
 	"options":
@@ -184,7 +187,8 @@
 	{"option":"You need to quickly surface insights relevant to your team."},
 	{"option":"You want to reduce potential metadata duplications."},
 	{"option":"You want to trigger an action when a change is made."}],
-	"answers":[2]
+	"answers":[2],
+    "favorite": true
 },{
 	"question":"Which Data Cloud actions are available via Flow? Choose three.",
 	"options":
@@ -257,7 +261,8 @@
 	{"option":"Via Contact Point Identifier"},
 	{"option":"Via Party Identification Object"},
 	{"option":"Via Party Attribute"}],
-	"answers":[4]
+	"answers":[4],
+    "favorite": true
 },{
 	"question":"What do you do when datasets have fields that align to one DMO and another portion aligns to another DMO?",
 	"options":
@@ -369,7 +374,8 @@
 	{"option":"A source profile without the Is Anonymous field mapped on the Individual DMO is always considered anonymous."},
 	{"option":"For anonymous profiles to be counted correctly, the value of the Is Anonymous field must be set to 0."},
 	{"option":"They're excluded from the known profile utilization consumption."}],
-	"answers":[1,4]
+	"answers":[1,4],
+    "favorite": true
 },{
 	"question":"Fuzzy match methods are not available for fields from which object?",
 	"options":
@@ -388,7 +394,8 @@
 	{"option":"Source profile"},
 	{"option":"Unified profile"},
 	{"option":"Match rules"}],
-	"answers":[5]
+	"answers":[5],
+    "favorite": true
 },{
 	"question":"Stores information related to unified profiles and can be related to many unified contact points.",
 	"options":
@@ -551,7 +558,8 @@
 	{"option":"Other"},
 	{"option":"Profile and Engagement"},
 	{"option":"Profile and Engagement and Other"}],
-	"answers":[1]
+	"answers":[1],
+    "favorite": true
 },{
 	"question":"Contains the basic properties where a query is built",
 	"options":
@@ -560,7 +568,8 @@
 	{"option":"Population"},
 	{"option":"Rule Builder"},
 	{"option":"Segment"}],
-	"answers":[5]
+	"answers":[5],
+    "favorite": true
 },{
 	"question":"Contains select data that has been mapped and ingested",
 	"options":
@@ -569,7 +578,8 @@
 	{"option":"Population"},
 	{"option":"Rule Builder"},
 	{"option":"Segment"}],
-	"answers":[1]
+	"answers":[1],
+    "favorite": true
 },{
 	"question":"Defines the target audience using criteria",
 	"options":
@@ -578,7 +588,8 @@
 	{"option":"Population"},
 	{"option":"Rule Builder"},
 	{"option":"Segment"}],
-	"answers":[4]
+	"answers":[4],
+    "favorite": true
 },{
 	"question":"Identifies the number of targets in a segment",
 	"options":
@@ -650,7 +661,8 @@
 	{"option":"Data Action"},
 	{"option":"Streaming Insights"},
 	{"option":"Visual Insights Builder"}],
-	"answers":[3]
+	"answers":[3],
+    "favorite": true
 },{
 	"question":"A no code user-friendly insight authoring tool for Calculated and Streaming Insights",
 	"options":
@@ -694,7 +706,8 @@
 	{"option":"Before creating a segment"},
 	{"option":"After setting up an activation"},
 	{"option":"After publishing a segment"}],
-	"answers":[1]
+	"answers":[1],
+    "favorite": true
 },{
 	"question":"What are the types of activations in Data Cloud? Choose two.",
 	"options":
@@ -710,7 +723,8 @@
 	{"option":"Segment"},
 	{"option":"Activation Target"},
 	{"option":"Activation"}],
-	"answers":[3]
+	"answers":[3],
+    "favorite": true
 },{
 	"question":"How are Calculated Insights added to an Activation?",
 	"options":
@@ -741,7 +755,8 @@
 	{"option":"In an activation, filters broaden your audience. In a segment, filters provide more relevant values with related attributes that personalize messages."},
 	{"option":"In an activation, filters narrow your audience. In a segment, filters narrow down relevant values with related attributes that personalize messages."},
 	{"option":"In a segment, filters narrow your audience. In an activation, filters broaden relevant values with related attributes that personalize messages."}],
-	"answers":[1]
+	"answers":[1],
+    "favorite": true
 },{
 	"question":"Put the steps to access Data Cloud data from a third-party partner in the correct order.",
 	"options":
@@ -758,7 +773,8 @@
 	{"option":"Data actions"},
 	{"option":"Data share"},
 	{"option":"Publish"}],
-	"answers":[4]
+	"answers":[4],
+    "favorite": true
 },{
 	"question":"Allows you to share objects in Data Cloud with third-party data ecosystems like external data warehouses and data lakes.",
 	"options":
@@ -768,4 +784,445 @@
 	{"option":"Data share"},
 	{"option":"Publish"}],
 	"answers":[2]
+}, {
+	"question":"Based on real-time insights and are focused on event-specific automations and data integration.",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Bring Your Own Lake (BYOL) Data Sharing"},
+	{"option":"Data actions"},
+	{"option":"Data share"},
+	{"option":"Publish"}],
+	"answers":[3]
+},{
+	"question":"Makes a segment available to an activation target.",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Bring Your Own Lake (BYOL) Data Sharing"},
+	{"option":"Data actions"},
+	{"option":"Data share"},
+	{"option":"Publish"}],
+	"answers":[5]
+},{
+	"question":"The process of moving audience segments to an activation target.",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Bring Your Own Lake (BYOL) Data Sharing"},
+	{"option":"Data actions"},
+	{"option":"Data share"},
+	{"option":"Publish"}],
+	"answers":[1]
+},{
+	"question":"Which are examples of Data Cloud objects you can share via data shares? Choose three.",
+	"options":
+	[{"option":"Data lake object"},
+	{"option":"Data model object"},
+	{"option":"Zero Copy object"},
+	{"option":"Permission sets object"},
+	{"option":"Calculated insight object"}],
+	"answers":[1,2,5]
+},{
+	"question":"Which of the following terms refers to a repository of all types of enterprise data, including raw copies of source system data and transformed data?",
+	"options":
+	[{"option":"Database"},
+	{"option":"Data lake","explanation":"A data lake uses all types of enterprise data for tasks such as reporting, visualization, analytics, and machine learning."},
+	{"option":"Metadata"}],
+	"answers":[2]
+},{
+	"question":"Which of the following use cases is intended for Data Cloud?",
+	"options":
+	[{"option":"Sending marketing communications"},
+	{"option":"Personalizing website experiences"},
+	{"option":"Building smarter audience segments","explanation":"Insights and filtering capabilities within Data Cloud can be used to build smarter audience segments."}],
+	"answers":[3]
+},{
+	"question":"Which of the following Data Cloud use cases is most applicable when tracking and following a customer's communication preferences?",
+	"options":
+	[{"option":"Consent Management","explanation":"Consent Management helps deliver communications based on channel-specific consent and customer preference."},
+	{"option":"Data Unification","explanation":"This use case focuses on unifying marketing, commerce, and service data to extend marketing abilities."},
+	{"option":"Delivery Management"}],
+	"answers":[1]
+},{
+	"question":"Which of the following ethical best practices refers to limiting your use of data, especially when it comes to demographic, socioeconomic, behavioral, and transactional data?",
+	"options":
+	[{"option":"Treat sensitive data carefully."},
+	{"option":"Collect and use only what you need.","explanation":"Limit the use of your data to only what is needed in order to create more personalized experiences for your customers."},
+	{"option":"Use and collect individual information appropriately."}],
+	"answers":[2]
+},{
+	"question":"The process of mapping ingested data into the Customer 360 Data Model",
+	"options":
+	[{"option":"Activation Target"},
+	{"option":"Data Stream"},
+	{"option":"Harmonization"},
+	{"option":"Segmentation"}],
+	"answers":[3]
+},{
+	"question":"The location where a segment's data is being sent during activation",
+	"options":
+	[{"option":"Activation Target"},
+	{"option":"Data Stream"},
+	{"option":"Harmonization"},
+	{"option":"Segmentation"}],
+	"answers":[1]
+}, {
+	"question":"The connections and associated data ingested into Data Cloud",
+	"options":
+	[{"option":"Activation Target"},
+	{"option":"Data Stream"},
+	{"option":"Harmonization"},
+	{"option":"Segmentation"}],
+	"answers":[2]
+},{
+	"question":"The ability to query data and split it out into groups based on different attributes or characteristics",
+	"options":
+	[{"option":"Activation Target"},
+	{"option":"Data Stream"},
+	{"option":"Harmonization"},
+	{"option":"Segmentation"}],
+	"answers":[4]
+},{
+	"question":"Which three permission sets allow a user to manage and set up data streams?",
+	"options":
+	[{"option":"Data Cloud Marketing Admin, Data Cloud Marketing Manager, Data Cloud Marketing Specialist"},
+	{"option":"Data Cloud Admin, Data Cloud Marketing Admin, Data Cloud Data Aware Specialist"},
+	{"option":"Data Cloud User, Data Cloud Admin, Data Cloud Marketing Manager"}],
+	"answers":[2]
+},{
+	"question":"What categories can a user configure for a data stream?",
+	"options":
+	[{"option":"Profile, Engagement, Other"},
+	{"option":"First Party, Third Party"},
+	{"option":"Contact Point, Individual, Party"}],
+	"answers":[1]
+},{
+	"question":"Which of the following is a valid use of implementing multiple Data Spaces?",
+	"options":
+	[{"option":"Your data has residency requirements, and you need to ensure data does not cross regional boundaries."},
+	{"option":"Your business has multiple brands and users need to work on data only in the context of their brand."},
+	{"option":"Your goal is to run analytics across multiple brands and unify segmentation."}],
+	"answers":[2]
+},{
+	"question":"What can be packaged using data kits in Data Cloud?",
+	"options":
+	[{"option":"Test data, sample data"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Data Streams, Data Models, Calculated Insights"}],
+	"answers":[3]
+},{
+	"question":"A logical partitioning of data within a single Data Cloud Instance",
+	"options":
+	[{"option":"Data Cloud Admin"},
+	{"option":"Data Kit"},
+	{"option":"Data Space"}],
+	"answers":[3]
+},{
+	"question":"Used to package data streams, model objects and insights. Used to package and redeploy assets",
+	"options":
+	[{"option":"Data Cloud Admin"},
+	{"option":"Data Kit"},
+	{"option":"Data Space"}],
+	"answers":[2]
+},{
+	"question":"Contains all functionality with Data Cloud. Requires Salesforce administrator role to be able to access Data Cloud Setup.",
+	"options":
+	[{"option":"Data Cloud Admin"},
+	{"option":"Data Kit"},
+	{"option":"Data Space"}],
+	"answers":[1]
+},{
+	"question":"A data specialist wishes to aggregate data from a data lake object and then split the results into two separate data lake objects. What tool should they use?",
+	"options":
+    [{"option":"Streaming Insight","explanation":"A streaming insight will only work on a single record and will be unable to aggregate data."},
+	{"option":"Calculated Insight","explanation":"A calculated insight cannot split the result into two separate data lake objects."},
+	{"option":"Batch Data Transform","explanation":"A batch data transform has the ability to perform batch calculations and output the results in multiple objects."}],
+	"answers":[3]
+}, {
+	"question":"A data specialist, from a large retail brand that operates in 80 countries worldwide, wishes to take their customer's country data and derive the region from it. What action should they take?",
+	"options":
+	[{"option":"Create a data stream with a mapping of the country with its region, and create a relationship with the individual via the country.","explanation":"This approach is feasible because it does not require multiple if or case statements to account for all 80 countries."},
+	{"option":"Use formula fields to automatically classify a country to its region.","explanation":"This approach isn't feasible since there are 80 countries that must be accounted for in the streaming data transform logic."},
+	{"option":"Create a streaming data transform to automatically calculate the region of the country when the data is ingested."}],
+	"answers":[1]
+},{
+	"question":"Which of the following attributes are valid to map to party identification as a unique identifier?",
+	"options":
+	[{"option":"Order number","explanation":"While an order number may be unique, it does not uniquely identify a person."},
+	{"option":"Birthdate","explanation":"While birthdate can help identify a person, it is not unique to an individual."},
+	{"option":"Driver's license number","explanation":"A driver's license number can uniquely identify a person."}],
+	"answers":[3]
+},{
+	"question":"Which of the following identity resolution functions can be adjusted if the number of unified profiles is much higher than originally anticipated?",
+	"options":
+	[{"option":"Reconciliation rules","explanation":"Reconciliation rules do not impact how many profiles get unified by identity resolution."},
+	{"option":"Match rules","explanation":"Adjusting match rules can increase or decrease the match rate. For example, to increase match rates, a data specialist may choose to use a fuzzy first name match instead of an exact first name match."},
+	{"option":"Create a new ruleset","explanation":"A ruleset creates a brand new set of identity resolution objects and will not impact the existing unified profile."}],
+	"answers":[2]
+},{
+	"question":"Used when the data corresponds to a list of consumers, businesses, or employees which you intend to segment.",
+	"options":
+	[{"option":"Engagement"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Other"},
+	{"option":"Profile"}],
+	"answers":[4]
+},{
+	"question":"Used when the data is time-series-oriented. When set, an event time field needs to be specified.",
+	"options":
+	[{"option":"Engagement"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Other"},
+	{"option":"Profile"}],
+	"answers":[1]
+},{
+	"question":"Used for any data that does not fit as a profile or engagement, such as product data or store data.",
+	"options":
+	[{"option":"Engagement"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Other"},
+	{"option":"Profile"}],
+	"answers":[3]
+},{
+	"question":"Each one contains its own match and reconciliation rules.",
+	"options":
+	[{"option":"Engagement"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Other"},
+	{"option":"Profile"}],
+	"answers":[2]
+},{
+	"question":"Which of the following serves as the connection between the source data and unified objects?",
+	"options":
+	[{"option":"Unified Individuals","explanation":"The Unified Individual object is the output of Identity Resolution on Individuals."},
+	{"option":"Unified Link Objects","explanation":"Unified link objects allow you to view source data of each unified profile and are required for creating calculated insights for unified profiles."},
+	{"option":"Identity Resolution Rulesets","explanation":"Rulesets contain match and reconciliation rules that tell the customer data platform how to link multiple sources of data into a unified profile."}],
+	"answers":[2]
+},{
+	"question":"Which feature contains match and reconciliation rules that specify how to link multiple sources of data into a unified profile?",
+	"options":
+	[{"option":"Rulesets"},
+	{"option":"Ruleset Jobs","explanation":"Ruleset job processes source profiles according to the map, match, and reconciliation rules you configure to create and update your unified profiles."},
+	{"option":"Unified Profiles","explanation":"Identity resolution consolidates all field values from multiple data sources into unified profiles that can be used in processes such as segmentation and activation, calculated insights, reporting, and more."}],
+	"answers":[1]
+},{
+	"question":"Which metric is most helpful in determining the cleanliness of your data sources when using Identity Resolution?",
+	"options":
+	[{"option":"Summary by Source","explanation":"The Summary by Source Calculated Insight determines if the number of source records consolidated in identity resolution matches your expectations."},
+	{"option":"Consolidation Rate","explanation":"Check the consolidation rate for your ruleset against what you know about how clean your data sources are."},
+	{"option":"Profile Explorer","explanation":"Profile Explorer reviews unified profiles for accurate values."}],
+	"answers":[2]
+}, {
+	"question":"Identity Resolution requires which type of relationship in the data model for Contact Point objects?",
+	"options":
+	[{"option":"1:1"},
+	{"option":"Many:1"},
+	{"option":"Many:Many"}],
+	"answers":[2]
+},{
+	"question":"Contain match and reconciliation rules",
+	"options":
+	[{"option":"Identity Resolution Ruleset Jobs"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Unified Link Objects"},
+	{"option":"Unified Profile Objects"}],
+	"answers":[2]
+},{
+	"question":"Process source profiles according to map, match, and reconciliation rules",
+	"options":
+	[{"option":"Identity Resolution Ruleset Jobs"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Unified Link Objects"},
+	{"option":"Unified Profile Objects"}],
+	"answers":[1]
+},{
+	"question":"Store consolidated field values from multiple data sources",
+	"options":
+	[{"option":"Identity Resolution Ruleset Jobs"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Unified Link Objects"},
+	{"option":"Unified Profile Objects"}],
+	"answers":[4]
+},{
+	"question":"Serve as the link between the source data and unified objects",
+	"options":
+	[{"option":"Identity Resolution Ruleset Jobs"},
+	{"option":"Identity Resolution Rulesets"},
+	{"option":"Unified Link Objects"},
+	{"option":"Unified Profile Objects"}],
+	"answers":[3]
+},{
+	"question":"Your company uses Salesforce Data Cloud for identity resolution. When creating a segment to target high-value customers, which of the following is the most appropriate segment target object?",
+	"options":
+	[{"option":"Account","explanation":"It represents business entities, not individual customer data needed for segment analysis."},
+	{"option":"Unified Individual","explanation":"It provides a comprehensive view of individual data across datasets, ideal for targeting high-value customers."},
+	{"option":"Individual","explanation":"It lacks the consolidated insights available through Unified Individual, which are crucial for detailed segment analysis."}],
+	"answers":[2]
+},{
+	"question":"Which data model object (DMO) is most relevant for analyzing the historical membership of a segment in Salesforce Data Cloud?",
+	"options":
+	[{"option":"The Latest Segment Membership DMO","explanation":"It focuses on current membership status, not historical data which tracks changes over time."},
+	{"option":"A custom data model object you created for the segment","explanation":"It may not specifically track historical changes, unlike a predefined DMO designed for this purpose."},
+	{"option":"The Historical Segment Membership DMO","explanation":"It is specifically designed to track and analyze changes in segment membership over time."}],
+	"answers":[3]
+},{
+	"question":"You want to target a new audience similar to your existing customers who frequently buy camping equipment. Which type of Salesforce Data Cloud segment is best suited for this purpose?",
+	"options":
+	[{"option":"Einstein Segment","explanation":"It is typically used for more general segmentation and not specifically for finding lookalikes."},
+	{"option":"Standard Segment","explanation":"It does not utilize predictive analytics to identify users similar to a current customer base."},
+	{"option":"Einstein Lookalike Segment","explanation":"It uses machine learning to identify new potential customers who resemble existing customers, suitable for targeting a specific buyer profile."}],
+	"answers":[3]
+},{
+	"question":"While building a segment on the Data Cloud canvas, you want to filter based on a customer's recent purchase history. What type of attribute is most appropriate to use?",
+	"options":
+	[{"option":"Related Attribute","explanation":"A related attribute allows you to use linked information from different data sources or related tables, ideal for accessing detailed transactional data like recent purchases."},
+	{"option":"Direct Attribute","explanation":"Direct attribute typically refers to attributes directly associated with a primary entity and may not sufficiently capture detailed transaction histories."},
+	{"option":"Calculated Insight","explanation":"In this context, it is used for deriving new data points through calculations rather than directly filtering existing transaction data."}],
+	"answers":[1]
+}, {
+	"question":"Stores that are included in a segment",
+	"options":
+	[{"option":"Foreign Key"},
+	{"option":"Primary Key"},
+	{"option":"Related Attribute"},
+	{"option":"Segment Membership DMO"},
+	{"option":"Segment Publish Schedule"}],
+	"answers":[4]
+},{
+	"question":"Unique record identifier (for example, email)",
+	"options":
+	[{"option":"Foreign Key"},
+	{"option":"Primary Key"},
+	{"option":"Related Attribute"},
+	{"option":"Segment Membership DMO"},
+	{"option":"Segment Publish Schedule"}],
+	"answers":[2]
+},{
+	"question":"Links tables based on a data point (for example, customer ID)",
+	"options":
+	[{"option":"Foreign Key"},
+	{"option":"Primary Key"},
+	{"option":"Related Attribute"},
+	{"option":"Segment Membership DMO"},
+	{"option":"Segment Publish Schedule"}],
+	"answers":[1]
+},{
+	"question":"Behavioral/engagement data point (for example, purchase)",
+	"options":
+	[{"option":"Foreign Key"},
+	{"option":"Primary Key"},
+	{"option":"Related Attribute"},
+	{"option":"Segment Membership DMO"},
+	{"option":"Segment Publish Schedule"}],
+	"answers":[3]
+},{
+	"question":"Defines when and how often a segment updates targets",
+	"options":
+	[{"option":"Foreign Key"},
+	{"option":"Primary Key"},
+	{"option":"Related Attribute"},
+	{"option":"Segment Membership DMO"},
+	{"option":"Segment Publish Schedule"}],
+	"answers":[5]
+},{
+	"question":"A business wants to improve service by alerting support when a customer visits multiple troubleshooting pages within a specific time frame. Which Data Cloud target should they use to automate creating a support case?",
+	"options":
+	[{"option":"Data Model Object","explanation":"Data model objects are used for structuring data, not for triggering workflows or case creations."},
+	{"option":"Webhook","explanation":"Webhooks are used for external API integrations, not ideal for internal case management processes."},
+	{"option":"Salesforce Platform Event","explanation":"A Salesforce platform event is suited for triggering internal Salesforce workflows, including automatic case creation based on customer actions."}],
+	"answers":[3]
+},{
+	"question":"If a customer searches for an \"installation manual\" after a purchase, how should a company configure Data Cloud to automatically send installation instructions?",
+	"options":
+	[{"option":"Salesforce CRM Enrichment","explanation":"Salesforce CRM enrichment is more about enhancing CRM records, not sending direct customer communications."},
+	{"option":"Marketing Cloud Data Action Target","explanation":"Marketing Cloud data action targets are designed to send transactional emails based on user actions, fitting for sending installation instructions."},
+	{"option":"Data Action with Flow Builder","explanation":"While Flow Builder is powerful, it is not specifically optimized for direct email communications like Marketing Cloud."}],
+	"answers":[2]
+},{
+	"question":"A company wants to automate a process when data records change in Data Cloud. What should they create in Salesforce to achieve this automation?",
+	"options":
+	[{"option":"Flow in Data Cloud","explanation":"Building a flow in Data Cloud automates business processes when a data record changes, aligning with the objective."},
+	{"option":"Custom Field","explanation":"Custom fields are for capturing unique business data, not for automation triggers."},
+	{"option":"Custom Object","explanation":"Creating a custom object is for storing specific information, not for automating processes directly."}],
+	"answers":[1]
+},{
+	"question":"To resolve webhook data action target errors where events aren't coming through, what is the first thing you should check?",
+	"options":
+	[{"option":"Confirm a secret key is present.","explanation":"A missing secret key for signature validation is a common issue for webhook target errors."},
+	{"option":"Generate a new API name for the webhook."},
+	{"option":"Check the data record change event selection."}],
+	"answers":[1]
+},{
+	"question":"Automates processes when a data change event message is received",
+	"options":
+	[{"option":"Data Action"},
+	{"option":"Data Action Error"},
+	{"option":"Data Action Target"},
+	{"option":"Platform Event-Triggered Flow"}],
+	"answers":[4]
+},{
+	"question":"Triggers automations and sends alerts/events based on DMOs or insights",
+	"options":
+	[{"option":"Data Action"},
+	{"option":"Data Action Error"},
+	{"option":"Data Action Target"},
+	{"option":"Platform Event-Triggered Flow"}],
+	"answers":[1]
+}, {
+	"question":"Receives results from a Data Action (for example, platform event, webhook)",
+	"options":
+	[{"option":"Data Action"},
+	{"option":"Data Action Error"},
+	{"option":"Data Action Target"},
+	{"option":"Platform Event-Triggered Flow"}],
+	"answers":[3]
+},{
+	"question":"Displays issues with target setup, data format, or attribute names preventing an event flow",
+	"options":
+	[{"option":"Data Action"},
+	{"option":"Data Action Error"},
+	{"option":"Data Action Target"},
+	{"option":"Platform Event-Triggered Flow"}],
+	"answers":[2]
+},{
+	"question":"Which three connectors are available out-of-the-box for data ingestion?",
+	"options":
+	[{"option":"Marketing Cloud"},
+	{"option":"Sales and Service Cloud"},
+	{"option":"Unica"},
+	{"option":"Slack"},
+	{"option":"AWS S3"}],
+	"answers":[1,2,5]
+},{
+	"question":"What are three starter data bundles available in the Data Cloud CRM Connector?",
+	"options":
+	[{"option":"Loyalty Management Bundle"},
+	{"option":"Net Zero Cloud Bundle"},
+	{"option":"Sales Cloud Bundle"},
+	{"option":"Analytics Cloud Bundle"},
+	{"option":"Service Cloud Bundle"}],
+	"answers":[1,3,5]
+},{
+	"question":"Which two permissions are required to expose a Salesforce object to Data Cloud?",
+	"options":
+	[{"option":"Modify all"},
+	{"option":"Read"},
+	{"option":"Edit"},
+	{"option":"Create"},
+	{"option":"View All"}],
+	"answers":[2,5]
+},{
+	"question":"Which connection can a data-aware specialist set up to ingest data without needing the admin to explicitly set up the",
+	"options":
+	[{"option":"Google Cloud Storage"},
+	{"option":"B2C Commerce"},
+	{"option":"Amazon S3"},
+	{"option":"Salesforce CRM"}],
+	"answers":[3]
+},{
+	"question":"In what two scenarios would you recommend provisioning Data Cloud in an existing CRM data org?",
+	"options":
+	[{"option":"Existing CRM data org was highly customized"},
+	{"option":"Customer data is housed in a single Salesforce org"},
+	{"option":"Customer is using Loyalty Management and Promotions"},
+	{"option":"Customer has a need to connect multiple CRM orgs"}],
+	"answers":[2,3]
 }]
