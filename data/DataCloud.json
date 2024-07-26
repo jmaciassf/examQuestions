@@ -1225,4 +1225,1107 @@
 	{"option":"Customer is using Loyalty Management and Promotions"},
 	{"option":"Customer has a need to connect multiple CRM orgs"}],
 	"answers":[2,3]
+},{
+	"question":"What are three functions of Data Explorer?",
+	"options":
+	[{"option":"To view over 250 records and 25 attributes"},
+	{"option":"To inspect initial values and validate formula fields for data source objects"},
+	{"option":"To inspect calculated insights"},
+	{"option":"To inspect only data model objects and data stream"},
+	{"option":"To enable validation of the configured mappings for data model objects"}],
+	"answers":[2,3,5]
+},{
+	"question":"What reconciliation rule is defined by default when selecting profile attributes in the Unified Individual?<br>\n\n\nLast updated\n\n\nSource sequence\n\n\nMost occuring\n\n\nOldest record",
+	"options":
+	[{"option":"Last updated"},
+	{"option":"Source sequence"},
+	{"option":"Most occuring"},
+	{"option":"Oldest record"}],
+	"answers":[1]
+},{
+	"question":"Which objects must be mapped to the individual data model object to enable the unification and activation process?",
+	"options":
+	[{"option":"Contact point"},
+	{"option":"Unified individual"},
+	{"option":"Purchase order"},
+	{"option":"Party identification"},
+	{"option":"Customer profile"}],
+	"answers":[1,4,5]
+},
+{
+	"question":"What data points can be retrieved from Calculated Insights when activating a segment?",
+	"options":
+	[{"option":"Metrics"},
+	{"option":"Dimensions"},
+	{"option":"Metrics and Dimensions"},
+	{"option":"Related Attributes"}],
+	"answers":[1]
+},{
+	"question":"Which two statements are true for Value Suggestions?",
+	"options":
+	[{"option":"\"Enable Value Suggestion\" needs to be enabled."},
+	{"option":"A value with more than 15 characters isn't possible."},
+	{"option":"Attribute values are displayed in date order with the most recent displaying first."},
+	{"option":"Only text attributes can be enabled."}],
+	"answers":[1,4]
+},{
+	"question":"When authoring streaming insights via structured query language (SQL), which activities do you perform?",
+	"options":
+	[{"option":"Using data actions"},
+	{"option":"Mapping to real-time sources"},
+	{"option":"Creating timestamps in Data Cloud"}],
+	"answers":[1,2]
+},{
+	"question":"When activating an unified individual to Marketing Cloud, which three attributes are automatically included? Select three.",
+	"options":
+	[{"option":"Email subscriber key"},
+	{"option":"Contact email address"},
+	{"option":"Contact phone number"},
+	{"option":"Contact address"},
+	{"option":"Contact ID"}],
+	"answers":[1,2,3]
+},{
+	"question":"What are three supported data-action targets for Salesforce Data Cloud streaming insights?",
+	"options":
+	[{"option":"Salesforce Marketing Cloud"},
+	{"option":"Webhook"},
+	{"option":"Salesforce Platform Event"},
+	{"option":"Salesforce Commerce Cloud"},
+	{"option":"Slack"}],
+	"answers":[1,2,3]
+},{
+	"question":"How can you view details on segment membership, including which users are in a specific segment?",
+	"options":
+	[{"option":"It's not possible to access details on segment membership."},
+	{"option":"Open the segmentation canvas and review details on who is in a specific segment."},
+	{"option":"View the segment membership data model object data via Data Explorer."},
+	{"option":"Download the segment membership data via the download feature."}],
+	"answers":[3]
+},{
+	"question":"Which three types of usages are Calculated Insights best suited for?",
+	"options":
+	[{"option":"Nontrivial calculation"},
+	{"option":"Complex queries across multiple objects"},
+	{"option":"Reusability purposes"},
+	{"option":"Data collected in batches"},
+	{"option":"High volume of data processing"}],
+	"answers":[1,2,3]
+},{
+	"question":"Which entity type(s) can be used to \"Segment On\" in Segmentation?",
+	"options":
+	[{"option":"Profile"},
+	{"option":"Engagement"},
+	{"option":"Profile and Engagement"},
+	{"option":"Profile, Engagement, and Other"}],
+	"answers":[1]
+}, {
+	"question":"A customer is interested in updating the CRM contact lead based on streaming data that's coming to Data Cloud. Which two features would meet this requirement?",
+	"options":
+	[{"option":"Data actions"},
+	{"option":"Activate to CRM"},
+	{"option":"CRM Connector"},
+	{"option":"Copy fields"}],
+	"answers":[1,4]
+},{
+	"question":"What are the different ways to create a Calculated Insight?",
+	"options":
+	[{"option":"Using Insights Builder"},
+	{"option":"Import query activity from Marketing Cloud"},
+	{"option":"Using structured query language"},
+	{"option":"Import Salesforce object query language from developer console"}],
+	"answers":[1,3]
+},{
+	"question":"If you want to use the same criteria in multiple segments, which feature would you recommend?",
+	"options":
+	[{"option":"Segment membership data model object"},
+	{"option":"Nested segments"},
+	{"option":"Segment exclusions"},
+	{"option":"Segmentation API"}],
+	"answers":[2]
+},{
+	"question":"What makes segments available only to certain groups based on their role?",
+	"options":
+	[{"option":"Salesforce Metadata API"},
+	{"option":"Sharing Rules"},
+	{"option":"Lightning App Builder"},
+	{"option":"Lightning Report Builder"}],
+	"answers":[2]
+},{
+	"question":"What receives notifications about the latest status of Data Cloud usage without users viewing records?",
+	"options":
+	[{"option":"Salesforce Metadata API"},
+	{"option":"Sharing Rules"},
+	{"option":"Lightning Report Builder"},
+	{"option":"Salesforce Flow"}],
+	"answers":[4]
+},{
+	"question":"What can be used to import AWS Data Streams into Salesforce without using the Data Cloud Product interface?",
+	"options":
+	[{"option":"Salesforce Metadata API"},
+	{"option":"Lightning App Builder"},
+	{"option":"Lightning Report Builder"},
+	{"option":"Salesforce Flow"}],
+	"answers":[1]
+},{
+	"question":"Which three types of Data Cloud metadata can be accessed via Salesforce Flow for orchestration?",
+	"options":
+	[{"option":"Data stream ingestion"},
+	{"option":"Data model mapping"},
+	{"option":"Calculated insights publish"},
+	{"option":"Publish identity resolution job"},
+	{"option":"Initiate a streaming transform"}],
+	"answers":[1,3,4]
+},{
+	"question":"How can a user ensure that their Data Cloud dashboards are refreshed on a daily basis?",
+	"options":
+	[{"option":"Select Subscribe and set a refresh window for after the data streams are refreshed."},
+	{"option":"Configure the Dashboard settings in the org setup screen."},
+	{"option":"Disable and republish the dashboard."},
+	{"option":"Schedule a refresh window for each report individually."}],
+	"answers":[1]
+},{
+	"question":"Which of the following attributes describe a package? Choose three.",
+	"options":
+	[{"option":"A container that's distributed"},
+	{"option":"A framework to custom-tie metadata"},
+	{"option":"If managed, then used by an independent software vendor on AppExchange"},
+	{"option":"Allows more control in the package content"},
+	{"option":"May include data streams (S3), data models, and calculated insights"}],
+	"answers":[1,3,5]
+},{
+	"question":"Which of the following terms align to the following: use out of the box connectors to bring all data sources together (Salesforce Clouds, Amazon, Google, streaming data from web and mobile, APIs, ERP)",
+	"options":
+	[{"option":"Harmonize"},
+	{"option":"Connect"},
+	{"option":"Unify"},
+	{"option":"Analyze and Predict"}],
+	"answers":[2]
+},{
+	"question":"You can collect as much data as you want in order to get the best Customer 360 picture",
+	"options":
+	[{"option":"True"},
+	{"option":"False"}],
+	"answers":[2]
+},{
+	"question":"Data cloud can be used for?",
+	"options":
+	[{"option":"Harmonizing data into a Standard Data Model"},
+	{"option":"Backup and Disaster Recovery"},
+	{"option":"Generating a 'Golden Record'"},
+	{"option":"Unifying Profiles"}],
+	"answers":[1,4]
+}, {
+	"question":"Which standard profiles can generate segments and activate data in Data Cloud?",
+	"options":
+	[{"option":"Data Cloud User"},
+	{"option":"Data Cloud for Marketing Admin"},
+	{"option":"Data Cloud for Marketing Data Aware Specialist"},
+	{"option":"Data Cloud for Marketing Manager"}],
+	"answers":[2,4]
+},{
+	"question":"It is possible to connect multiple MC instances with one Data Cloud instance",
+	"options":
+	[{"option":"True"},
+	{"option":"False"}],
+	"answers":[2]
+},{
+	"question":"You can extend the Customer 360 Data Model with …",
+	"options":
+	[{"option":"Only custom fields"},
+	{"option":"Only custom objects"},
+	{"option":"Both custom objects and custom fields"},
+	{"option":"You can't extend the Customer 360 Data Model"}],
+	"answers":[3]
+},{
+	"question":"Which DMO provides for ways to identify a party, such as a driver's license or a birth certificate?",
+	"options":
+	[{"option":"Party Identification"},
+	{"option":"Contact Point Identification"},
+	{"option":"Individual"},
+	{"option":"Profile Identification"}],
+	"answers":[1]
+},{
+	"question":"The system can only unify profiles if they are mapped correctly to the individual object and one other element",
+	"options":
+	[{"option":"A Contact point object or a Party Identification object"},
+	{"option":"Contact point object"},
+	{"option":"Party identifier object"},
+	{"option":"Contact unification object"}],
+	"answers":[1]
+},{
+	"question":"Identity Resolution Rulesets include",
+	"options":
+	[{"option":"Match Rule and Unification Rule"},
+	{"option":"Match Rule and Field Selection Rule"},
+	{"option":"Duplicate Rule and Match Rule"},
+	{"option":"Match Rule and Reconciliation Rule"}],
+	"answers":[4]
+},{
+	"question":"Describe the two best approaches to take at the start of the discovery phase of a Data Cloud implementation.",
+	"options":
+	[{"option":"Focus on technology over desired outcomes."},
+	{"option":"Focus on desired outcomes over technology."},
+	{"option":"Begin with the end in mind."},
+	{"option":"Begin with customer challenges."},
+	{"option":"Determine what data to unify."},
+	{"option":""}],
+	"answers":[2,3]
+},{
+	"question":"True or false: The purpose of the preparation phase is to align on a vision and strategy with the business.",
+	"options":
+	[{"option":"True"},
+	{"option":"False"}],
+	"answers":[1]
+},{
+	"question":"Data Cloud product features and capabilities apply to use cases for __. Choose the best answer.",
+	"options":
+	[{"option":"Marketing"},
+	{"option":"Sales and service"},
+	{"option":"Marketing, sales, service, commerce, and analytics"},
+	{"option":"Industry and commerce"}],
+	"answers":[3]
+},{
+	"question":"To determine if Data Cloud is the right solution for a customer, do which two things?",
+	"options":
+	[{"option":"Fully understand the customer's needs"},
+	{"option":"Analyze external data sources"},
+	{"option":"Understand what Data Cloud can do"},
+	{"option":"Determine if the customer has Marketing Cloud"}],
+	"answers":[1,3]
+},{
+	"question":"Which of these can Data Cloud do? Choose three.",
+	"options":
+	[{"option":"Resolve identities from multiple sources to build a single source of truth and present data in a uniform way."},
+	{"option":"Provide a survivorship data model that allows duplicate records to be automatically merged or removed from connected systems."},
+	{"option":"Identify and utilize groups of individuals to personalize experiences across all touch points."},
+	{"option":"Improve operation and data efficiency with the added benefit of digital sustainability."},
+	{"option":"Create real-time personalized content experiences over web, mobile, and email channels."}],
+	"answers":[1,3,4]
+},{
+	"question":"Select the three primary reasons businesses choose Data Cloud:",
+	"options":
+	[{"option":"Innovate faster with an open and extensible platform."},
+	{"option":"Create a complete Unified Customer Profile."},
+	{"option":"Bring actionable data and AI insights into the flow of work."},
+	{"option":"Provide version archives for all critical business systems."},
+	{"option":"Establish a seamless API integration framework across all critical business systems."}],
+	"answers":[1,2,3]
+},{
+	"question":"Data cloud is",
+	"options":
+	[{"option":"Data Lake"},
+	{"option":"Data Lakehouse"},
+	{"option":"Data Warehouse"},
+	{"option":"CRM"}],
+	"answers":[2]
+},{
+	"question":"The starter data bundle can be ingested multiple times",
+	"options":
+	[{"option":"True"},
+	{"option":"False"}],
+	"answers":[2]
+},{
+	"question":"Which type of data extraction setting is best for when the data changes frequently, but the majority of the data stays the same?",
+	"options":
+	[{"option":"Delta Extract by Number"},
+	{"option":"Upsert"},
+	{"option":"Delta Extract by Date"},
+	{"option":"Full Refresh"}],
+	"answers":[2]
+},{
+	"question":"Which Data Object Type Category you will use to ingest Purchase Order Details?",
+	"options":
+	[{"option":"Profile"},
+	{"option":"Sales Order"},
+	{"option":"Engagement"},
+	{"option":"Other"}],
+	"answers":[3]
+},{
+	"question":"How does Data Cloud solve the problem of data in various formats coming in from different systems?",
+	"options":
+	[{"option":"It translates the data into a common language using a modeler."},
+	{"option":"It harmonizes all the data into a common data model to make it more uniform."},
+	{"option":"It uses a GIT structure during setup to convert varying formats."},
+	{"option":"Triggers in preconfigured workflows identify and categorize each format."}],
+	"answers":[2]
+},{
+	"question":"Understanding a customer's use case comes from answering what three primary questions?",
+	"options":
+	[{"option":"What data needs to be brought into Data Cloud?"},
+	{"option":"What technology will solve the immediate challenge?"},
+	{"option":"How long will it take to complete?"},
+	{"option":"What insights need to be calculated with that data?"},
+	{"option":"What action needs to be taken and why?"}],
+	"answers":[1,4,5]
+},{
+	"question":"A customer's company includes three brands. They have two Salesforce CRM instances, one Salesforce Marketing Cloud account, one Marketing Automation tool, and two mobile applications. How many Data Cloud instances do they need?",
+	"options":
+	[{"option":"One instance"},
+	{"option":"Two instances"},
+	{"option":"Three instances"},
+	{"option":"Four instances"}],
+	"answers":[1]
+},{
+	"question":"You just received a Purchase Order nightly feed that includes these DateTime attributes: Order date, Shipment date, Modified date, File extracted date. What two dates would you use as the EventTime field to ingest data for the engagement category?",
+	"options":
+	[{"option":"Order date"},
+	{"option":"Order shipment date","explanation":"A date for an EventTime field should be immutable, meaning it doesn't change. The field you pick also comes down to how you plan to use those dates"},
+	{"option":"Order modified date"},
+	{"option":"File extracted date"}],
+	"answers":[1,2]
+}, {
+	"question":"Suppose you receive the same feed, but order and shipment dates are not available. Instead,  you have these fields: Order modified date, File extracted date. What can you use for the EventTime field?",
+	"options":
+	[{"option":"Order modified date"},
+	{"option":"File extracted date"},
+	{"option":"Create a DateTime field with the timestamp using formula field"},
+	{"option":"None of the above","explanation":"None of these fields would be suitable for event time, as the field needs to be immutable and should represent engagement across several dates. Reconnect with the client to get a field that can be used for EventTime."}],
+	"answers":[4]
+},{
+	"question":"I want to show my service agent a list of unified cases and two calculated insights for a unified individual on the Contact Records in my Service Cloud instance. Which option would you recommend?",
+	"options":
+	[{"option":"Create a segment of unified individuals with related cases and CI metrics and activate to CRM.","explanation":"There would be no way to activate records from unified individuals to CRM."},
+	{"option":"Access unified individuals and their related cases and CI metrics in CRM via LWCs or APIs."},
+	{"option":"Create a segment of unified individuals with related cases and CI metrics, activate to cloud file storage, and import it back to CRM.","explanation":"Really? I didn't think having the data in CRM would be the most ideal option."}],
+	"answers":[2]
+},{
+	"question":"Which of these qualities best describes a Data Cloud Consultant? Select four.",
+	"options":
+	[{"option":"Ethical"},
+	{"option":"Curious"},
+	{"option":"Partial"},
+	{"option":"Creative"},
+	{"option":"Helpful"},
+	{"option":"Dogmatic"},
+	{"option":""}],
+	"answers":[1,2,4,5]
+},{
+	"question":"Which of these team members typically deals with platform setup, configuring use cases, administration, and verification?",
+	"options":
+	[{"option":"Solution Architect"},
+	{"option":"Administrator"},
+	{"option":"Business Analyst"},
+	{"option":"QA Specialist"}],
+	"answers":[2]
+},{
+	"question":"Which project management methodology works best for the first implementation of Data Cloud?",
+	"options":
+	[{"option":"Waterfall"},
+	{"option":"Scrum"},
+	{"option":"Agile"},
+	{"option":"Kanban"},
+	{"option":"Six Sigma"}],
+	"answers":[1]
+},{
+	"question":"Which implementation stage involves connecting data sources, configuring calculated insights, and developing a quality assurance (QA) plan?",
+	"options":
+	[{"option":"Deploy"},
+	{"option":"Validate"},
+	{"option":"Construct"},
+	{"option":"Architect"}],
+	"answers":[3]
+},{
+	"question":"Most of the implementation time and effort is spent in the plan and architect stages.",
+	"options":
+	[{"option":"True"},
+	{"option":"False"}],
+	"answers":[1]
+},{
+	"question":"Which of the following is not a technique used in Reconciliation Rules?",
+	"options":
+	[{"option":"Most Frequent"},
+	{"option":"Last Updated"},
+	{"option":"Most Common"},
+	{"option":"Source Sequence"}],
+	"answers":[3]
+},{
+	"question":"What are the two minimum requirements needed when using the Visual Insights Builder to create a Calculated Insight?",
+	"options":
+	[{"option":"WHERE clause is required"},
+	{"option":"At least two objects to join"},
+	{"option":"At least one dimension"},
+	{"option":"At least one measure"}],
+	"answers":[3,4]
+},{
+	"question":"An administrator wants to be able to create a multi-dimensional metric to identify unified individual lifetime value (LTV). Which sequence of DMO joins are necessary within the Calculated Insight to enable this calculation?",
+	"options":
+	[{"option":"Unified Individual &gt; Individual &gt; Sales Order"},
+	{"option":"Unified Individual &gt; Unified Link Individual &gt; Sales Order"},
+	{"option":"Sales Order &gt; Unified Individual"},
+	{"option":"Sales Order &gt; Individual &gt; Unified Individual"}],
+	"answers":[2]
+},{
+	"question":"Customer is experiencing over-grouping or too-much consolidation of profiles. Which of the below could reduce consolidation rate?",
+	"options":
+	[{"option":"Reduce the number of DLO's"},
+	{"option":"Reduce the number of Match Rules"},
+	{"option":"Increase the number of Match Rules"},
+	{"option":"Reduce the number of Match Criteria in a Match Rules"}],
+	"answers":[2]
+},{
+	"question":"Which DMO can you create a segment on?",
+	"options":
+	[{"option":"Any DMO of type Profile"},
+	{"option":"Any DMO of type Engagement"},
+	{"option":"Any DMO of type"},
+	{"option":"All DMOs"},
+	{"option":"Only Unified Individual"}],
+	"answers":[1]
+},{
+	"question":"Once you enable value suggestion, how long can it take for it appear in the Segmentation Canvas?",
+	"options":
+	[{"option":"Up to 10 minutes"},
+	{"option":"Up to 1 hour"},
+	{"option":"Up to 12 hours"},
+	{"option":"Up to 24 hours"},
+	{"option":"It's enabled instantaneously"}],
+	"answers":[4]
+},{
+	"question":"What file types are created when activating a segment to Amazon S3",
+	"options":
+	[{"option":"CSV"},
+	{"option":"TXT"},
+	{"option":"JSON"},
+	{"option":"ZIP"},
+	{"option":"Parquet"}],
+	"answers":[1,3]
+},{
+	"question":"Which three features can be used to validate the data in the unified profile object?",
+	"options":
+	[{"option":"Data Actions"},
+	{"option":"Data Explorer"},
+	{"option":"Query API"},
+	{"option":"Profile Explorer"},
+	{"option":"Identity Reconciliation"}],
+	"answers":[2,3,4]
+},{
+	"question":"Which data model subject area defines the revenue or quantity for an opportunity by product family?",
+	"options":
+	[{"option":"Engagement"},
+	{"option":"Product"},
+	{"option":"Party"},
+	{"option":"Sales Order"}],
+	"answers":[4]
+},{
+	"question":"Which two statements about Data Cloud's Web and Mobile App connector are true?",
+	"options":
+	[{"option":"Any Data Streams associated with Web or Mobile connector app will be automatically deleted upon deleting the app from Data Cloud Setup"},
+	{"option":"Data Cloud administrators can see the status of a Web or Mobile connector app on the app details page"},
+	{"option":"Tenant Specific Endpoint is auto-generated in Data Cloud when setting up a Mobile or Web app connection"},
+	{"option":"Mobile and Web SDK schema can be updated to delete an existing field"}],
+	"answers":[2,3]
+},{
+	"question":"Which two characteristics describe the Customer 360 data model?",
+	"options":
+	[{"option":"A Conceptual Model"},
+	{"option":"A Static Model"},
+	{"option":"A Product Sold By Salesforce"},
+	{"option":"A Canonical Model"}],
+	"answers":[1,4]
+},{
+	"question":"When can the data types be changed during ingestion?",
+	"options":
+	[{"option":"After the DSO is created"},
+	{"option":"Before DSO is created"},
+	{"option":"Data type can never be changed"},
+	{"option":"Data type can be changed at any time"}],
+	"answers":[2]
+},{
+	"question":"Which of the following cannot be used in Segmentation? (Choose 2)",
+	"options":
+	[{"option":"Numeric Measures"},
+	{"option":"Text Measures"},
+	{"option":"Aggregate Functions"},
+	{"option":"Date Time Measures"}],
+	"answers":[2,4]
+}, {
+	"question":"What does the Ignore Empty Value option do in Identity Resolution?",
+	"options":
+	[{"option":"Ignores Individual object records with empty fields when running Identity Resolution rules"},
+	{"option":"Ignores empty fields when running any custom match rules"},
+	{"option":"Ignores empty fields when running reconciliation rules"},
+	{"option":"Ignores empty fields when running the standard match rules"}],
+	"answers":[3]
+},{
+	"question":"An administrator has configured the Salesforce CRM connector and set up a data stream for the Case object. A new custom field called \"Business Priority\" was created on the Case object. However, that field is not available when trying to add it in the data stream. What could be causing this issue?",
+	"options":
+	[{"option":"Custom fields on the Case objects are not supported for ingesting into Data Cloud"},
+	{"option":"Utilize the Salesforce Dataloader application to perform a bulk upload from a desktop"},
+	{"option":"The Data Cloud administrator does not need to do anything. After 24 hours when the data stream refreshes, it will automatically include any new fields that were added to CRM"},
+	{"option":"The Salesforce Integration User is missing \"Read\" permissions on the newly created field"}],
+	"answers":[4]
+},{
+	"question":"Which data stream category should be assigned to use the data for time-based operations in segmentation and calculated insights?",
+	"options":
+	[{"option":"Transaction"},
+	{"option":"Individual"},
+	{"option":"Sales Order"},
+	{"option":"Engagement"}],
+	"answers":[4]
+},{
+	"question":"What is allowed when editing a Calculated Insight?",
+	"options":
+	[{"option":"Removing existing measures"},
+	{"option":"Adding new measures"},
+	{"option":"Adding new dimensions"},
+	{"option":"Removing existing dimensions}"}],
+	"answers":[2]
+},{
+	"question":"Northern Trail Outfitters uploads new customer data to an Amazon S3 Bucket on a daily basis to be ingested in Data Cloud. In what order should each process be run to ensure that freshly imported data is ready and available to use for any segment?",
+	"options":
+	[{"option":"Refresh Data Stream &gt; Calculated Insight &gt; Identity Resolution"},
+	{"option":"Identity Resolution &gt; Calculated Insight &gt; Refresh Data Stream"},
+	{"option":"Calculated Insight &gt; Identity Resolution &gt; Refresh Data Stream"},
+	{"option":"Refresh Data Stream &gt; Identity Resolution &gt; Calculated Insight"}],
+	"answers":[4]
+},{
+	"question":"Cumulus Financial wants to be able to track the daily transaction volume for of each of its customers in real time and send out a notification as soon it detects volume outside a customer's normal range. How should an administrator accommodate this request?",
+	"options":
+	[{"option":"Use Streaming Data Transformations with a Flow"},
+	{"option":"Use a Streaming Insight paired with a Data Action","explanation":"A Streaming Insight is a metric that is calculated on streaming data as it is ingested into Data Cloud, allowing near-real-time analysis of customer behavior. A Data Action is an action that is triggered by a Streaming Insight, such as sending an email, updating a record, or calling an API. By using these features, the administrator can monitor and respond to customer transactions in real time."},
+	{"option":"Use Streaming Data Transformations combined with a Data Action"},
+	{"option":"Use a Calculated Insight paired with a Flow"}],
+	"answers":[2]
+},{
+	"question":"What is a unique requirement of a Streaming Insight query?",
+	"options":
+	[{"option":"A dimension"},
+	{"option":"A measurement"},
+	{"option":"A window function"},
+	{"option":"A WHERE clause"}],
+	"answers":[3]
+},{
+	"question":"An organization wants to enable users with the ability to identify and select text attributes from a picklist of options. Which Data Cloud feature can help with this use case?",
+	"options":
+	[{"option":"Transformation Formulas"},
+	{"option":"Data Harmonization"},
+	{"option":"Value Suggestion"},
+	{"option":"Global Picklists"}],
+	"answers":[3]
+},{
+	"question":"Which of the following are characteristics of Formulas? (Choose 2)",
+	"options":
+	[{"option":"Simple logic on a row-based operation"},
+	{"option":"Ease of use, self-service"},
+	{"option":"Highly reusable content"},
+	{"option":"Attribute updated regularly"}],
+	"answers":[1,2]
+},{
+	"question":"An administrator is setting up a data stream with transactional data. What field type should the administrator choose to ensure that leading zeros in the purchase order number are preserved?",
+	"options":
+	[{"option":"Number"},
+	{"option":"Decimal"},
+	{"option":"Text"},
+	{"option":"Serial"}],
+	"answers":[3]
+},{
+	"question":"Which two statements are true about using consent API and exercising right to be forgotten?",
+	"options":
+	[{"option":"Data Deletion requests are processed within 1 hour"},
+	{"option":"Data Deletion requests are reprocessed at 30, 60, and 90 days"},
+	{"option":"Data Deletion requests are submitted for Individual profiles"},
+	{"option":"Data deletion requests submitted to Data Cloud are passed to all connected Salesforce Clouds"}],
+	"answers":[2,3]
+},{
+	"question":"Which authentication type is supported for a Cloud File Storage activation target?",
+	"options":
+	[{"option":"Using a private key certificate"},
+	{"option":"Using access and secret keys"},
+	{"option":"Using encrypted username and password"},
+	{"option":"Using JWT token"}],
+	"answers":[2]
+},{
+	"question":"How does Identity Resolution select attributes for Unified Individuals when there is conflicting information in the Data Model?",
+	"options":
+	[{"option":"Create additional Rule Sets"},
+	{"option":"Leverage Reconciliation Rules"},
+	{"option":"Create additional Contact Points"},
+	{"option":"Leverage Match Rules"}],
+	"answers":[2]
+},{
+	"question":"To which Data Model entity should the Email field from a CRM Contact object be mapped?",
+	"options":
+	[{"option":"Lead"},
+	{"option":"Account Contact"},
+	{"option":"Individual"},
+	{"option":"Contact Point Email"}],
+	"answers":[4]
+},{
+	"question":"Which two features are impacted by the timezone setting in the org Data Cloud is provisioned in?",
+	"options":
+	[{"option":"Segment Schedule"},
+	{"option":"Identity Resolution"},
+	{"option":"Ingestion Schedule"},
+	{"option":"Activation Schedule"}],
+	"answers":[1,4]
+},{
+	"question":"Which two steps are required when configuring a Marketing Cloud activation?",
+	"options":
+	[{"option":"Set an Activation Schedule"},
+	{"option":"Select an Activation Target"},
+	{"option":"Add Additional Attributes"},
+	{"option":"Select Contact Points","explanation":"These two steps are required when configuring a Marketing Cloud activation. You need to select an activation target that represents a Marketing Cloud business unit and a contact point that represents a Marketing Cloud data extension."}],
+	"answers":[2,4]
+},{
+	"question":"A retail customer wants to bring customer data from different sources and wants to take advantage of Identity Resolution so that it can be used in Segmentation. On which entity should this be segmented for activation membership?",
+	"options":
+	[{"option":"Subscriber"},
+	{"option":"Unified Contact"},
+	{"option":"Unified Individual","explanation":"The Unified Individual entity represents the result of Identity Resolution, which links together multiple records of an individual from different sources into a single profile4. This entity can be used for Segmentation and Activation, as it provides a complete and accurate view of each customer."},
+	{"option":"Individual"}],
+	"answers":[3]
+},{
+	"question":"Northern Trail Outfitters wants to be able to calculate each customer's lifetime value (LTV) but also create breakdowns of the revenue sourced by website, mobile app, and retail channels. How should this use case be addressed in Data Cloud?",
+	"options":
+	[{"option":"Nested segments"},
+	{"option":"Flow orchestration"},
+	{"option":"Streaming data transformations"},
+	{"option":"Metrics on metrics"}],
+	"answers":[3]
+},{
+	"question":"A customer wants to create segments of users based on their Customer Lifetime Value. The source data that will be brought into the Data Cloud does not include that KPI. What process should be followed to achieve this outcome?",
+	"options":
+	[{"option":"Map Data to Data Model &gt; Create Calculated Insight &gt; Use in Segmentation"},
+	{"option":"Ingest Data &gt; Map Data to Data Model &gt; Create Calculated Insight &gt; Use in Segmentation"},
+	{"option":"Ingest Data &gt; Create Calculated Insight &gt; Use in Segmentation"},
+	{"option":"Create Calculated Insight &gt; Map Data to Data Model &gt; Use in Segmentation"}],
+	"answers":[2]
+},{
+	"question":"When performing Segmentation or Activation, which timezone is used to publish and refresh data?",
+	"options":
+	[{"option":"Timezone of the Data Cloud Admin user"},
+	{"option":"Timezone is explicitly specified when creating a segment or activation"},
+	{"option":"Timezone set by the Salesforce Data Cloud org"},
+	{"option":"Timezone of the user defining the activity"}],
+	"answers":[3]
+}, {
+	"question":"Which two applications automatically create activation targets at the time the application is connected to Data Cloud?",
+	"options":
+	[{"option":"Personalization powered by Interaction Studio"},
+	{"option":"Amazon S3"},
+	{"option":"B2C Commerce"},
+	{"option":"Marketing Cloud Engagement"}],
+	"answers":[1,3]
+},{
+	"question":"Which method should an administrator use when performing aggregations in windows of 15 minutes on data collected via the Interactions SDK and Mobile SDK?",
+	"options":
+	[{"option":"Activation"},
+	{"option":"Segment"},
+	{"option":"Streaming Insight"},
+	{"option":"Calculated Insight"}],
+	"answers":[3]
+},{
+	"question":"Which data model subject area should be used for any Organization, Individual, or Member in the Customer 360 data model?",
+	"options":
+	[{"option":"Individual"},
+	{"option":"Global Account"},
+	{"option":"Party"},
+	{"option":"Membership"}],
+	"answers":[3]
+},{
+	"question":"A customer has requested that their personal data be deleted. Which action should be performed to accommodate this request in Data Cloud?",
+	"options":
+	[{"option":"Manually delete customer and related records using the Profile Explorer"},
+	{"option":"Use Consent API to request deletion of the customer's information"},
+	{"option":"Utilize the Data Rights Subject Request tool to request deletion of the customer's information"},
+	{"option":"Use Ingestion API to request deletion of the customer's information"}],
+	"answers":[2]
+},{
+	"question":"What should an administrator do to pause a segment activation but with the intent of using that segment again?",
+	"options":
+	[{"option":"Inactivate the segment"},
+	{"option":"Delete the segment"},
+	{"option":"Stop the Publish Schedule"},
+	{"option":"Skip the Activation"}],
+	"answers":[3]
+},{
+	"question":"Which three options can be used to build a filter in the Segmentation Canvas?",
+	"options":
+	[{"option":"Data Lake Objects"},
+	{"option":"Streaming Insights"},
+	{"option":"Calculated Insights"},
+	{"option":"Related Attributes"},
+	{"option":"Direct Attributes"}],
+	"answers":[2,3,5]
+},{
+	"question":"What happens if no file name is specified in AWS S3 data stream during ingestion?",
+	"options":
+	[{"option":"The system does not fetch any file and the data stream shows an error."},
+	{"option":"The system chooses the first file found in the S3 bucket"},
+	{"option":"The ingestion setup can't be completed without specifying the filename."},
+	{"option":"The ingestion setup is completed but the data stream shows 0 records"}],
+	"answers":[1]
+},{
+	"question":"A segment fails to refresh with the error \"Segment references too many Data Lake Objects (DLOs)\". What are two remedies for this issue?",
+	"options":
+	[{"option":"Space out the segment schedules to reduce Data Lake Object load"},
+	{"option":"Refine segmentation criteria to limit up to 5 custom DMOs"},
+	{"option":"Split the segment into smaller segments"},
+	{"option":"Use Calculated Insights in order to reduce the complexity of the segmentation query"}],
+	"answers":[1,3]
+},{
+	"question":"What should be the type of the Event Time Field while ingesting Engagement data?",
+	"options":
+	[{"option":"Mutable"},
+	{"option":"Inconsistent"},
+	{"option":"Immutable"},
+	{"option":"None of the above"}],
+	"answers":[3]
+},{
+	"question":"How many Metrics can be present in 1 segment container?",
+	"options":
+	[{"option":"1"},
+	{"option":"5"},
+	{"option":"10"},
+	{"option":"100"}],
+	"answers":[1]
+},{
+	"question":"How do the Data streams that use the Marketing Cloud Connector refresh data?",
+	"options":
+	[{"option":"Manually refreshed by CDP Admin"},
+	{"option":"Marketing Cloud's Automation Studio handles this process."},
+	{"option":"APIs are used for refresh"},
+	{"option":"None of the above"}],
+	"answers":[2]
+},{
+	"question":"What is Data Cloud's primary value to customers?",
+	"options":
+	[{"option":"A single source of truth for all anonymous data"},
+	{"option":"A platform that can update all connected systems with a golden record in real-time"},
+	{"option":"A platform that provides a unified view of a customer and their related data"},
+	{"option":"A platform that can create personalized campaigns by listening, understanding, and acting on customer behavior"}],
+	"answers":[3]
+},{
+	"question":"Which data model object category can a Data Cloud user create segments on?",
+	"options":
+	[{"option":"Profile"},
+	{"option":"Unified Individual"},
+	{"option":"Engagement"},
+	{"option":"Other"}],
+	"answers":[2]
+},{
+	"question":"What can be customized in the Data Cloud canonical model?",
+	"options":
+	[{"option":"Fields"},
+	{"option":"Objects, Fields, and Relationships"},
+	{"option":"Objects and Fields"},
+	{"option":"Objects"}],
+	"answers":[2]
+},{
+	"question":"What are two benefits Data Cloud provides a company in relation to managing customer data?",
+	"options":
+	[{"option":"Unified Identity Resolution"},
+	{"option":"Data Harmonization"},
+	{"option":"Data Governance"},
+	{"option":"Data Marketplace"}],
+	"answers":[1,2]
+},{
+	"question":"Which option allows an organization an easy way to ingest Marketing Cloud subscriber profile attributes into Data Cloud on a daily basis?",
+	"options":
+	[{"option":"Marketing Cloud Connect API"},
+	{"option":"Email Studio Starter Data Bundle"},
+	{"option":"Profile attributes are not yet supported"},
+	{"option":"Automation Studio and Profile API"}],
+	"answers":[4]
+},{
+	"question":"Which three actions can be applied to a previously created segment?",
+	"options":
+	[{"option":"Reactivate"},
+	{"option":"Export"},
+	{"option":"Delete"},
+	{"option":"Copy"},
+	{"option":"Inactivate"}],
+	"answers":[2,3,4]
+},{
+	"question":"What does the Source Sequence reconciliation rule do in Identity Resolution?",
+	"options":
+	[{"option":"Sets the priority of specific data sources when building attributes in a unified profile such as a first or last name"},
+	{"option":"Identifies which data sources should be used in the process of reconciliation by prioritizing the most recently updated data source"},
+	{"option":"Includes data from sources where the data is alphanumerically sequenced"},
+	{"option":"Identifies which individual records should be merged into a unified profile by setting a priority for specific data sources"}],
+	"answers":[1]
+},{
+	"question":"Every day, Northern Trail Outfitters (NTO) uploads a summary of the last 24 hours of store transactions to a new file in an Amazon S3 bucket, and files older than 7 days are automatically deleted. Each file contains a timestamp in a standardized naming convention. What should a consultant consider when ingesting this data stream?",
+	"options":
+	[{"option":"Ensure the refresh mode is set to \"Upsert\" and Refresh only new files\" is selected"},
+	{"option":"Ensure the refresh mode is set to \"Full Refresh\" and the filename contains a wildcard to accommodate the timestamp"},
+	{"option":"Ensure the refresh mode is set to \"Full Refresh\" and \"Refresh only new files' is selected"},
+	{"option":"Advise NTO to change their processes: this configuration is not supported"}],
+	"answers":[1]
+},{
+	"question":"How many calculated insights can be created per tenant?",
+	"options":
+	[{"option":"5"},
+	{"option":"10"},
+	{"option":"50"},
+	{"option":"100"}],
+	"answers":[4]
+},{
+	"question":"What type of Calculated Insights can be added as additional attributes in an activation? (Choose 1)",
+	"options":
+	[{"option":"Metrics &amp; Dimensions"},
+	{"option":"Metrics"},
+	{"option":"Dimensions"},
+	{"option":"Filters"}],
+	"answers":[1]
+},{
+	"question":"What is the first thing a business stakeholder should focus on when considering a Data Cloud implementation?",
+	"options":
+	[{"option":"Review consent and privacy management policies"},
+	{"option":"Obtain cross-organizational buy-in"},
+	{"option":"Identify activation targets"},
+	{"option":"Identify data sources"}],
+	"answers":[2]
+},{
+	"question":"Which feature determines the attribute value in the file when activating on the Unified Individual?",
+	"options":
+	[{"option":"Einstein Activation"},
+	{"option":"Reconciliation Rules"},
+	{"option":"Data Stream Sequence"},
+	{"option":"Random Selection"}],
+	"answers":[2]
+},{
+	"question":"Which operator can be used to check if an attribute value in blank?",
+	"options":
+	[{"option":"Is Not Null"},
+	{"option":"Has No Value"},
+	{"option":"Is Null"},
+	{"option":"Is Empty"}],
+	"answers":[2]
+},{
+	"question":"Which Salesforce CDP use case merges customer information from various systems to create a singleId, a single record for a customer?",
+	"options":
+	[{"option":"Audience Segmentation"},
+	{"option":"Consent Management"},
+	{"option":"Data Unification"},
+	{"option":"Identity Resolution"}],
+	"answers":[4]
+},{
+	"question":"What is the Salesforce CRM connector full refresh frequency for data streams?",
+	"options":
+	[{"option":"One time only"},
+	{"option":"Weekly"},
+	{"option":"Daily"},
+	{"option":"Hourly"}],
+	"answers":[2]
+},{
+	"question":"Which CDP objects are available as tables via the Tableau connector to discover new insights about customers?",
+	"options":
+	[{"option":"Calculated insights"},
+	{"option":"Data Model Objects"},
+	{"option":"All Objects"},
+	{"option":"Unified Profile"}],
+	"answers":[3]
+},{
+	"question":"What is the maximum number of filter criteria a segment can have?",
+	"options":
+	[{"option":"10"},
+	{"option":"50"},
+	{"option":"500"},
+	{"option":"99"}],
+	"answers":[2]
+},{
+	"question":"In which two areas can an administrator verify a segment publishing status?",
+	"options":
+	[{"option":"In segment Publish Summary dashboard"},
+	{"option":"In Segment Publish History report"},
+	{"option":"In Publish History related list of Activation record"},
+	{"option":"In Publish History related list of Segment record"}],
+	"answers":[3,4]
+},{
+	"question":"What are the two refresh models available for a cloud storage data stream?",
+	"options":
+	[{"option":"Update"},
+	{"option":"Upsert"},
+	{"option":"Append"},
+	{"option":"Full Refresh"}],
+	"answers":[2,4]
+}, {
+	"question":"What should a Marketer do first when implementing Salesforce CDP?",
+	"options":
+	[{"option":"Manage Consent"},
+	{"option":"Identify Data Sources"},
+	{"option":"Obtain Cross-organizational buy-in"},
+	{"option":"Identify Activation Targets"}],
+	"answers":[2]
+},{
+	"question":"How is Restriction of Processing request handled in segmentation?",
+	"options":
+	[{"option":"Restricts data processing on all entities"},
+	{"option":"Restricts data processing while saving the segment"},
+	{"option":"Restricts data processing for individual and unified individual profile"},
+	{"option":"Restricts data processing during activation"}],
+	"answers":[3]
+},{
+	"question":"What is the different between direct & related attributes?",
+	"options":
+	[{"option":"Direct attributes have one to one relationship while Related attributes are one to many relationships"},
+	{"option":"Direct attributes have one to many relationships while Related attributes are one to one relationship"},
+	{"option":"Direct Attributes are Text based only and Related Attributes are Date and Number based"},
+	{"option":"Direct attributes are attributes on the individual and related attributes are attributes on the unified individual"}],
+	"answers":[1]
+},{
+	"question":"What is the first step to setup and configure a marketing cloud customer data platform instance?",
+	"options":
+	[{"option":"Connect to the Marketing Cloud Account CDP is provisioned in"},
+	{"option":"Complete the Salesforce CDP provisioning process"},
+	{"option":"Connect to the Salesforce CRM Org CDP is provisioned in"},
+	{"option":"Enable Salesforce CDP Admin permission set to the Salesforce CRM Org"},
+	{"option":"CDP Admin has already configured the Salesforce CRM connector and setup data"}],
+	"answers":[4]
+},{
+	"question":"Which two types of data can be ingested from Interaction Studio using the connector?",
+	"options":
+	[{"option":"Product Catalog"},
+	{"option":"Behavioral Events"},
+	{"option":"User Profile"},
+	{"option":"Segment Membership"}],
+	"answers":[2,3]
+},{
+	"question":"What must CDP admin user do first when setting up users in CDP?",
+	"options":
+	[{"option":"Creates profile for each CDP user role"},
+	{"option":"Assign permission sets"},
+	{"option":"Configure Data Source"},
+	{"option":"Set up each use as admin"}],
+	"answers":[1]
+},{
+	"question":"Which Steps should an administrator take if a successfully configured cloud storage data stream fails to refresh with a NO FILE FOUND error message?",
+	"options":
+	[{"option":"Check permissions are configured for the CDP user"},
+	{"option":"Check if the Cloud Storage data source is enabled in CDP setup"},
+	{"option":"Check permissions are configured for the S3 user"},
+	{"option":"Check if the file exists in a specific S3 bucket"}],
+	"answers":[1,4]
+},{
+	"question":"Which API would you use to surface additional information from the CDP into Service Cloud?",
+	"options":
+	[{"option":"Query API"},
+	{"option":"Unified Profile API"},
+	{"option":"Calculated Insights API"},
+	{"option":"Profile API"}],
+	"answers":[4]
+},{
+	"question":"What does the source sequence reconciliation rule do in Identity Resolution?",
+	"options":
+	[{"option":"Source data from disparate systems across the enterprise."},
+	{"option":"Reconcile data by data that's most frequent acrossrecords."},
+	{"option":"Sort data sources in order of most to least preferred for inclusion in Unified Profile."},
+	{"option":"Includes data from sources where the data is alphanumerically sequenced."}],
+	"answers":[3]
+},{
+	"question":"Which formula function should a Data Specialist use to create composite key if the primary key is not available in the data stream?",
+	"options":
+	[{"option":"COALESCE"},
+	{"option":"UUID"},
+	{"option":"CONCATE"},
+	{"option":"SUBTITUTE"}],
+	"answers":[3]
+},{
+	"question":"What are the three available data related APIs in CDP?",
+	"options":
+	[{"option":"Transactional API"},
+	{"option":"Profile API"},
+	{"option":"Unified Profile API"},
+	{"option":"Data Query API"},
+	{"option":"Calculated Insights API"}],
+	"answers":[2,4,5]
+},{
+	"question":"Which two permission sets will allow users to access Salesforce CDP Data Explorer?",
+	"options":
+	[{"option":"Salesforce CDP admin"},
+	{"option":"Salesforce CDP Marketing Manager"},
+	{"option":"Salesforce CDP Marketing Specialist"},
+	{"option":"Salesforce CDP Data Aware Specialist"}],
+	"answers":[1,4]
+}, {
+	"question":"Which three Data Model objects do Reconciliation Rules operate across?",
+	"options":
+	[{"option":"Individual"},
+	{"option":"Party Identification"},
+	{"option":"Contact Point Email"},
+	{"option":"Contact"},
+	{"option":"Lead"}],
+	"answers":[1,2,3]
+},{
+	"question":"How does an administrator increase the consolidation rate for Identity Resolution?",
+	"options":
+	[{"option":"Change all reconciliation rules to Source Sequence"},
+	{"option":"Add more matching rules to broaden the search for matches"},
+	{"option":"Change the Ignore Empty Value option"},
+	{"option":"Reduce the number of matching rules"}],
+	"answers":[4]
+},{
+	"question":"An organization is looking to use Data Cloud to unify data across 5 Salesforce orgs, 2 Marketing Cloud accounts, 6 Amazon S3 Buckets, and 4 Personalization datasets. As far as connection limits are concerned, which platform is going to present a challenge?",
+	"options":
+	[{"option":"Amazon S3 Bucket"},
+	{"option":"Personalization"},
+	{"option":"Marketing Cloud"},
+	{"option":"Salesforce CRM"}],
+	"answers":[3]
+},{
+	"question":"Which three components of Data Cloud can be bundled within a Data Kit?",
+	"options":
+	[{"option":"Data Models"},
+	{"option":"Calculated Insights"},
+	{"option":"Segments"},
+	{"option":"Data Streams"},
+	{"option":"Identity Resolution Rulesets"}],
+	"answers":[1,3,4]
+},{
+	"question":"A user needs permissions to access Data Cloud to create, manage, and publish segments. However, the user should not be allowed to create reports or manage data sources. Which permission set should an administrator assign?",
+	"options":
+	[{"option":"Customer Data Cloud for Marketing Admin"},
+	{"option":"Customer Data Cloud for Marketing Specialist"},
+	{"option":"Customer Data Cloud for Marketing Data Aware Specialist"},
+	{"option":"Customer Data Cloud for Marketing Manager"}],
+	"answers":[2]
+},{
+	"question":"Which configuration can support separate Amazon S3 buckets for data ingestion and activation?",
+	"options":
+	[{"option":"Dedicated S3 data sources in activation setup"},
+	{"option":"Dedicated S3 data sources in Data Cloud setup"},
+	{"option":"Separate user credentials for data stream and activation"},
+	{"option":"Separate user credentials for data stream and activation target"}],
+	"answers":[2]
+},{
+	"question":"How many salesforce orgs can an administrator connect to salesforce cdp?",
+	"options":
+	[{"option":"1"},
+	{"option":"2"},
+	{"option":"No hard limit"},
+	{"option":"10"}],
+	"answers":[3]
+},{
+	"question":"What is the process of merging, cleaning and deduplicating data to a single ID mapped back to a person?",
+	"options":
+	[{"option":"Data Visualization"},
+	{"option":"Data Unification"},
+	{"option":"Data Cleansing"},
+	{"option":"Data Mining"}],
+	"answers":[2]
+},{
+	"question":"When using the Cloud Storage data stream ingestion where does Salesforce CDP ingest from?",
+	"options":
+	[{"option":"Customer provided S3 bucket"},
+	{"option":"Salesforce provided S3 bucket"},
+	{"option":"Salesforce Information Model"},
+	{"option":"Any external cloud storage with a restful API"}],
+	"answers":[1]
+},{
+	"question":"What are the two steps of data setup process in Salesforce CDP?",
+	"options":
+	[{"option":"Map ingested data to existing ingested data objects"},
+	{"option":"Map ingested data to the Data Model"},
+	{"option":"Establish a connection with the source data via Rest API"},
+	{"option":"Preserve data with ingestion to data lake"}],
+	"answers":[2,4]
+},{
+	"question":"Which data model in Salesforce CDP defines interactions with a Party?",
+	"options":
+	[{"option":"Sales order"},
+	{"option":"Engagement"},
+	{"option":"Transaction"},
+	{"option":"Individual"}],
+	"answers":[2]
 }]
