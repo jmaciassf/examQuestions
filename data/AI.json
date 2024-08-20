@@ -1,0 +1,287 @@
+[{ 
+
+    "question":"María, líder del centro de contacto del banco ABC, desea automatizar la resolución de los casos más recurrentes y solo derivar a los agentes casos más complejos. ¿Qué capacidad del CRM puede utilizar?", 
+
+    "options": 
+
+    [{"option":"Einstein Forecasting"}, 
+
+    {"option":"Einstein Bots"}, 
+
+    {"option":"Einstein Agent"}, 
+
+    {"option":"Einstein Activity Capture"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"¿Cuál de los siguientes es un Salesforce's Trusted AI Principles?", 
+
+    "options": 
+
+    [{"option":"Accuracy"}, 
+
+    {"option":"Accountable"}, 
+
+    {"option":"Sustainable"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"¿Cuáles de los siguientes son guidelines que usamos para guiar al desarrollo de Trusted Generative AI? Seleccione 2 respuestas.", 
+
+    "options": 
+
+    [{"option":"Accurate"}, 
+
+    {"option":"Accountable"}, 
+
+    {"option":"Transparent"}, 
+
+    {"option":"Honest"}], 
+
+    "answers":[1,4] 
+
+},{ 
+
+    "question":"¿Cuál es el principal objetivo de integrar AI en un CRM para Ventas y Marketing?", 
+
+    "options": 
+
+    [{"option":"To confuse customers with incomprehensible respones."}, 
+
+    {"option":"To improve customer engagement and increases sales"}, 
+
+    {"option":"To replace the sales team with AI-generated sales pitches"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"How can you assess the age dimension of data quality?", 
+
+    "options": 
+
+    [{"option":"By running a report on the Last Modified Date records"}, 
+
+    {"option":"By checking for duplicate records"}, 
+
+    {"option":"By reviewing data completeness"}, 
+
+    {"option":"By assessing data accuracy"}], 
+
+    "answers":[1] 
+
+},{ 
+
+    "question":"What does the duplication dimension of data quality primarily address?", 
+
+    "options": 
+
+    [{"option":"Data completeness"}, 
+
+    {"option":"Data consistency"}, 
+
+    {"option":"Data accuracy"}, 
+
+    {"option":"Whether records and data are duplicated in your org"}], 
+
+    "answers":[4] 
+
+},{ 
+
+    "question":"Which of the following is a factor that can determine data quality?", 
+
+    "options": 
+
+    [{"option":"Data Compatibility"}, 
+
+    {"option":"Duplicate Records"}, 
+
+    {"option":"Data Volume"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"What is one of the key factors to consider when aiming for accuracy in AI models, as per Salesforce's AI Development Guidelines?", 
+
+    "options": 
+
+    [{"option":"Balancing accuracy, precision, and recall"}, 
+
+    {"option":"Ignoring the need for verifiable results"}, 
+
+    {"option":"Focusing solely on recall in AI models"}], 
+
+    "answers":[1] 
+
+},{ 
+
+    "question":"What are some of the ethical challenges associated with AI development?", 
+
+    "options": 
+
+    [{"option":"Potential for human bias in machine learning algorithms and the lack of transparency in AI decision-making processes"}, 
+
+    {"option":"Implicit transparency of AI systems, which makes it easy for users to understand and trust their decisions"}, 
+
+    {"option":"Inherent neutrality of AI systems, which eliminates any potential for human bias in decision-making"}], 
+
+    "answers":[1] 
+
+},{ 
+
+    "question":"Select the qualitative options", 
+
+    "options": 
+
+    [{"option":"Flavor"}, 
+
+    {"option":"Price"}, 
+
+    {"option":"Calories"}, 
+
+    {"option":"Political Party"}, 
+
+    {"option":"Vote Count"}, 
+
+    {"option":"Colour"}, 
+
+    {"option":"Species"}], 
+
+    "answers":[1,4,6,7] 
+
+},{ 
+
+    "question":"What are the three commonly used examples of AI in CRM?", 
+
+    "options": 
+
+    [{"option":"Predictive scoring, reporting, Image classification"}, 
+
+    {"option":"Predictive scoring, forecasting, recommendations"}, 
+
+    {"option":"Einstein Bots, face recognition, recommendations"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"A business analyst (BA) is looking to boost their company's performance by making improvements in their sales procedures and customer service. What AI tools could the BA employ to address these requirements?", 
+
+    "options": 
+
+    [{"option":"Lead Scoring, Opportunity forecasting, and Case Classification"}, 
+
+    {"option":"Cleaning up sales data and ensuring proper governance of customer support data"}, 
+
+    {"option":"Utilizing machine learning models and predicting chatbot behavior"}], 
+
+    "answers":[1] 
+
+},{ 
+
+    "question":"What type of machine learning doesn't rely on labeled data and instead finds patterns and associations on its own?", 
+
+    "options": 
+
+    [{"option":"Self-guided learning"}, 
+
+    {"option":"Unsupervised learning"}, 
+
+    {"option":"Autonomous learning"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"What does NLP stand for in the field of Artificial Intelligence?", 
+
+    "options": 
+
+    [{"option":"Neural Learning Platform"}, 
+
+    {"option":"Natural Language Processing"}, 
+
+    {"option":"Numeric Logic Processing"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"How is natural language processing (NLP) used in the context of AI capabilities?", 
+
+    "options": 
+
+    [{"option":"To cleanse and prepare data for AI implementations"}, 
+
+    {"option":"To interpret and understand programming language"}, 
+
+    {"option":"To understand and generate human language"}], 
+
+    "answers":[3] 
+
+},{ 
+
+    "question":"When should AI developers be transparent about AI-generated content, according to Salesforce's guidelines?", 
+
+    "options": 
+
+    [{"option":"When AI delivers content"}, 
+
+    {"option":"Only in specific use cases"}, 
+
+    {"option":"Only when requested by users"}], 
+
+    "answers":[1] 
+
+},{ 
+
+    "question":"What does Salesforce's Trusted AI Principle of \"Responsible\" emphasize in relation to AI usage?", 
+
+    "options": 
+
+    [{"option":"Ignoring data protection and security"}, 
+
+    {"option":"Safeguarding human rights, protecting data, observing scientific standards, and enforcing policies against abuse"}, 
+
+    {"option":"Encouraging the misuse of AI technologies"}, 
+
+    {"option":"Promoting AI without any ethical considerations"}], 
+
+    "answers":[2] 
+
+},{ 
+
+    "question":"A healthcare company implements an algorithm to analyze patient data and assist in medical diagnosis. Which primary role does data Quality play in this AI application?", 
+
+    "options": 
+
+    [{"option":"Enhanced accuracy and reliability of medical predictions and diagnoses"}, 
+
+    {"option":"Ensured compatibility of AI algorithms with the system's Infrastructure"}, 
+
+    {"option":"Reduced need for healthcare expertise in interpreting AI outputs"}], 
+
+    "answers":[1] 
+
+},{ 
+
+    "question":"Cloud Kicks discovered multiple variations of state and country values in contact records. Which data quality dimension is affected by this issue?", 
+
+    "options": 
+
+    [{"option":"Usage"}, 
+
+    {"option":"Accuracy"}, 
+
+    {"option":"Consistency"}], 
+
+    "answers":[3] 
+
+}] 
+
+ 

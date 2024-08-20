@@ -142,6 +142,10 @@ function getQuestions(data){
             urlTitle = baseURL + "ADM.json";
             break;
             
+        case "AI":
+            urlTitle = baseURL + "AI.json";
+            break;
+            
         case "DATACLOUD":
             urlTitle = baseURL + "DataCloud.json";
             break;
