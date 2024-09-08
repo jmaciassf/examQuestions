@@ -3,7 +3,7 @@
 "question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>01 document.cookie;<br>02 document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"},
 
 {
-	"question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {<br>\t02 const parsedSearchString = searchString && searchString.toLowerCase();<br>03 document.querySelectorAll('.account').forEach(account => {<br>04 const accountName = account.innerHTML.toLowerCase();<br>05 account.style.display = accountName.includes(parsedSearchString) ? <br>06 /* Insert code here */;<br>07 });<br>08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",
+	"question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {<br>02 \tconst parsedSearchString = searchString && searchString.toLowerCase();<br>03 \tdocument.querySelectorAll('.account').forEach(account => {<br>04 \t\tconst accountName = account.innerHTML.toLowerCase();<br>05 \t\taccount.style.display = accountName.includes(parsedSearchString) ? <br>06 /* Insert code here */;<br>07 \t});<br>08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",
 	"options":
 	[{"option":"'None' : 'block'"},
 	{"option":"'Visible : 'hidden'"},

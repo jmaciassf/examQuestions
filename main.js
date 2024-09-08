@@ -255,7 +255,7 @@ function getQuestions(data){
                 if(text.includes('static ListRecommendation')){
                     var x = 1;
                 }
-                text = text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account').replace(/List</g, 'List&lt;');
+                text = text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account').replace(/List</g, 'List&lt;').replaceAll("\t", "&emsp;")
                 return text;
             }
             
