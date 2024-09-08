@@ -155,6 +155,7 @@ function getQuestions(data){
             break;
 
         case "JAVASCRIPT":
+        case "JS":
             urlTitle = "https://angular-2146b-default-rtdb.firebaseio.com/javascript.json";
             break;
 
@@ -173,8 +174,8 @@ function getQuestions(data){
     
     cleanAll(data);
 
-    // Verificar si hay datos guardados
-    if(localStorage.questions){
+    // Verificar si hay datos guardados del mismo examen, si cambia el examen => reload questions
+    if(localStorage.examTitle == title && localStorage.questions){
         console.log("Session questions loading..."); 
         ctrl.questions = JSON.parse(localStorage.questions);
         setQuestions();
@@ -191,6 +192,7 @@ function getQuestions(data){
         ctrl.questions = response;
         setQuestions();
         localStorage.questions = JSON.stringify(ctrl.questions);
+        localStorage.examTitle = title;
     }).catch(function(error) {
         console.log('Hubo un problema con la petición Fetch:' + error.message);
     });

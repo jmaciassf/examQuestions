@@ -1,0 +1,13 @@
+[{"answers":["C"],
+"options":[{"option":"Cookies are read, but the key value is not set because the value is not URL encoded."},{"option":"Cookies are not read because line 01 should be document, cookies, but the key value is set and all cookies are wiped."},{"option":"Cookies are read and the key value is set, the remaining cookies are unaffected."},{"option":"Cookies are read and the key value is set, and all cookies are wiped."}],
+"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>01 document.cookie;<br>02 document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"},
+
+{
+	"question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {02 const parsedSearchString = searchString && searchString.toLowerCase();03 document.querySelectorAll('.account').forEach(account => {04 const accountName = account.innerHTML.toLowerCase();05 account.style.display = accountName.includes(parsedSearchString) ? 06 /* Insert code here */;07 });08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",
+	"options":
+	[{"option":"'None' : 'block'"},
+	{"option":"'Visible : 'hidden'"},
+	{"option":"'Hidden, visible"},
+	{"option":"'Block' : 'none'"}],
+	"answers":[]
+}]
