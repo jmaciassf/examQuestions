@@ -20,6 +20,7 @@ body.gridQuestions {
     /* opacity: 2; */
 }
 .header .icoQuestions {right: 30px;top: 3px;background-image: url(images/flexWrap.png);width: 19px;height: 17px;}
+.header .icoRefresh {right: 65px;top: 0px;width: 19px;height: 17px; background: none; filter: invert(0);}
 .favorites .header .icoStar {background-image: url(images/star1.png);filter: none;}
 .header .title {
     padding: 5px;
