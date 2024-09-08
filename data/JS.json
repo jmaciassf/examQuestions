@@ -106,7 +106,7 @@
 	"question":"A developer is setting up a new Node.js server with a client library that is built using events and callbacks.\n\nThe library:\n* Will establish a web socket connection and handle receipt of messages to the server.\n* Will be imported with require, and made available with a variable called ws.\n\nThe developer also wants to add error logging if a connection fails. Given this info, which code segment shows the correct way to set up a client with two events that listen at execution time?",
 	"options":
 	[{"option":"ws.on ('connect', () =&gt; {\n\tconsole.log('connected to client');\n\tws.on('error', (error) =&gt; { console.log('ERROR' , error); });\n});"},
-	{"option":"ws.on ('connect', () =&gt; {console.log('connected to client'); }};\nws.on('error', (error) =&gt; { console.log('ERROR' , error); \n}};"},
+	{"option":"ws.on ('connect', () =&gt; {console.log('connected to client'); }};\nws.on('error', (error) =&gt; { console.log('ERROR' , error); }};"},
 	{"option":"ws.connect (() =&gt; { console.log('connected to client'); })\n.catch((error) =&gt; { console.log('ERROR' , error); }};"},
 	{"option":"try {\n\tws.connect (() =&gt; { console.log('connected to client'); }); \n}"}],
 	"answers":[2]
