@@ -110,4 +110,13 @@
 	{"option":"ws.connect (() =&gt; { console.log('connected to client'); })\n.catch((error) =&gt; { console.log('ERROR' , error); }};"},
 	{"option":"try {\n\tws.connect (() =&gt; { console.log('connected to client'); }); \n}"}],
 	"answers":[2]
+},
+{
+	"question":"A developer wrote a fizzbuzz function that when passed in a number, returns the following:<ul><li>'fizz' if the number is divisible by 3.</li><li>'buzz' if the number is divisible by 5.</li><li>'fizzbuzz' if the number is divisible by both 3 and 5.</li><li>Empty string if the number is divisible by neither 3 or 5.</li></ul>Which two test cases will properly test scenarios for the fizzbuzz function? Choose 2 answers",
+	"options":
+	[{"option":"let res = fizzbuzz(5);\nconsole.assert (res === '');"},
+	{"option":"let res = fizzbuzz(3);\nconsole.assert (res === 'buzz')"},
+	{"option":"let res = fizzbuzz(Infinity);\nconsole.assert (res === '')"},
+	{"option":"let res = fizzbuzz(15);\nconsole.assert (res === 'fizzbuzz')"}],
+	"answers":[3,4]
 }]
