@@ -40,11 +40,29 @@
 	"answers":[1,4,5]
 },
 {
-	"question":"A developer receives a comment from the Tech Lead that the code given below has error:<code>const monthName = 'July';<br>const year = 2019;\nif(year === 2019) {\nmonthName = 'June';\n}</code>Which line edit should be made to make this code run?",
+	"question":"A developer receives a comment from the Tech Lead that the code given below has error:<code>const monthName = 'July';<br>const year = 2019;\nif(year === 2019) {\n\tmonthName = 'June';\n}</code>Which line edit should be made to make this code run?",
 	"options":
 	[{"option":"01 let monthName ='July';"},
 	{"option":"02 let year =2019;"},
 	{"option":"02 const year = 2020;"},
 	{"option":"03 if (year == 2019) {"}],
 	"answers":[1]
+},
+{
+	"question":"Given the following code:<code>let x = null;\nconsole.log(typeof x);</code>What is the output?",
+	"options":
+	[{"option":"\"object\""},
+	{"option":"\"undefined\""},
+	{"option":"\"null\""},
+	{"option":"\"x\""}],
+	"answers":[1]
+},
+{
+	"question":"Refer to the code below:<code>function execute(){\n\treturn new Promise((resolve, reject) => reject())\n}\n\nlet promise = execute();\npromise\n\t.then(() => console.log('Resolved1'))\n\t.then(() => console.log('Resolved2'))\n\t.then(() => console.log('Resolved3'))\n\t.catch(() => console.log('Rejected'))\n\t.then(() => console.log('Resolved4'));</code>What is the result when the Promise in the execute function is rejected?",
+	"options":
+	[{"option":"Resolved1 Resolved2 Resolved3 Resolved4"},
+	{"option":"Rejected"},
+	{"option":"Rejected Resolved4"},
+	{"option":"Rejected1 Rejected2 Rejected3 Rejected Rejected Rejected4"}],
+	"answers":[3]
 }]
