@@ -35,7 +35,16 @@
 	[{"option":"sampleText.includes('fox');"},
 	{"option":"sampleText.includes('quick', 4);"},
 	{"option":"sampleText.includes('Fox', 3)"},
-	{"option":"sampleText.includes('fox');"},
+	{"option":"sampleText.includes(' fox ');"},
 	{"option":"sampleText.includes('quick') !== -1;"}],
 	"answers":[1,4,5]
+},
+{
+	"question":"A developer receives a comment from the Tech Lead that the code given below has error:<code>const monthName = 'July';<br>const year = 2019;\nif(year === 2019) {\nmonthName = 'June';\n}</code>Which line edit should be made to make this code run?",
+	"options":
+	[{"option":"01 let monthName ='July';"},
+	{"option":"02 let year =2019;"},
+	{"option":"02 const year = 2020;"},
+	{"option":"03 if (year == 2019) {"}],
+	"answers":[1]
 }]
