@@ -156,7 +156,8 @@ function getQuestions(data){
 
         case "JAVASCRIPT":
         case "JS":
-            urlTitle = "https://angular-2146b-default-rtdb.firebaseio.com/javascript.json";
+            //urlTitle = "https://angular-2146b-default-rtdb.firebaseio.com/javascript.json";
+            urlTitle = baseURL + "JS.json";
             break;
 
         case "PDI":
