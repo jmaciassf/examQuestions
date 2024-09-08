@@ -65,4 +65,13 @@
 	{"option":"Rejected Resolved4"},
 	{"option":"Rejected1 Rejected2 Rejected3 Rejected Rejected Rejected4"}],
 	"answers":[3]
+},
+{
+	"question":"A developer wants to create an object from a function in the browser using the code below:<code>01 function Monster() { this.name = 'hello' };<br>02 const z = Monster();</code>What happens due to lack of the new keyword on line 02?",
+	"options":
+	[{"option":"The z variable is assigned the correct object but this.name remains undefined."},
+	{"option":"window.m is assigned the correct object."},
+	{"option":"The z variable is assigned the correct object."},
+	{"option":"window.name is assigned to 'hello' and the variable z remains undefined."}],
+	"answers":[4]
 }]
