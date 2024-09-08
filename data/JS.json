@@ -21,7 +21,7 @@
 	"answers":[2]
 }, 
 {
-	"question":"Refer to the code snippet:<code> \nfunction getAvailabilityMessage(item){\n    if(getAvailability(item)){\n        var msg = \"Username available\";\n    }\n    return msg;\n}</code>A developer writes this code to return a message to a user attempting to register a new username. If the username is available, variable. What is the return value of msg when getAvailabilityMessage (\"newUserName\" ) is executed and getAvailability(\"newUserName\") returns false?",
+	"question":"Refer to the code snippet:<code>function getAvailabilityMessage(item){\n    if(getAvailability(item)){\n        var msg = \"Username available\";\n    }\n    return msg;\n}</code>A developer writes this code to return a message to a user attempting to register a new username. If the username is available, variable. What is the return value of msg when getAvailabilityMessage (\"newUserName\" ) is executed and getAvailability(\"newUserName\") returns false?",
 	"options":
 	[{"option":"\"Username available\""},
 	{"option":"\"newUserName\""},
