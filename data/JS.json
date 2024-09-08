@@ -5,18 +5,27 @@
 {
 	"question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {<br>02 \tconst parsedSearchString = searchString && searchString.toLowerCase();<br>03 \tdocument.querySelectorAll('.account').forEach(account => {<br>04 \t\tconst accountName = account.innerHTML.toLowerCase();<br>05 \t\taccount.style.display = accountName.includes(parsedSearchString) ? <br>06 \t\t/* Insert code here */;<br>07 \t});<br>08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",
 	"options":
-	[{"option":"'None' : 'block'"},
-	{"option":"'Visible : 'hidden'"},
-	{"option":"'Hidden, visible"},
-	{"option":"'Block' : 'none'"}],
+	[{"option":"'none' : 'block'"},
+	{"option":"'visible : 'hidden'"},
+	{"option":"'hidden, visible"},
+	{"option":"'block' : 'none'"}],
 	"answers":[4]
 }, 
 {
-	"question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br><script><br>\t\tfunction printMessage(event) {<br>\t\t\tconsole.log('Row log');<br>\t\t}<br><br>\t\tlet elem = document.getElementById('row1');<br>\t\telem.addEventListener('click', printMessage, false);<br></script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?",
+	"question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br>\t<script><br>\t\tfunction printMessage(event) {<br>\t\t\tconsole.log('Row log');<br>\t\t}<br><br>\t\tlet elem = document.getElementById('row1');<br>\t\telem.addEventListener('click', printMessage, false);<br>\t</script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?",
 	"options":
 	[{"option":"Add.event.stopPropagation(); to window.onLoad event handler."},
 	{"option":"Add event.stopPropagation(); to printMessage function."},
 	{"option":"Add event.removeEventListener(); to window.onLoad event handler."},
-	{"option":"Addevent.removeEventListener(); toprintMessage function."}],
+	{"option":"Add event.removeEventListener(); to printMessage function."}],
 	"answers":[2]
+}, 
+{
+	"question":"Refer to the code snippet:<code> \nfunction getAvailabilityMessage(item){\n    if(getAvailability(item)){\n        var msg = \"Username available\";\n    }\n    return msg;\n}</code>A developer writes this code to return a message to a user attempting to register a new username. If the username is available, variable. What is the return value of msg when getAvailabilityMessage (\"newUserName\" ) is executed and getAvailability(\"newUserName\") returns false?",
+	"options":
+	[{"option":"\"Username available\""},
+	{"option":"\"newUserName\""},
+	{"option":"\"Msg is not defined\""},
+	{"option":"undefined"}],
+	"answers":[4]
 }]
