@@ -12,7 +12,7 @@
 	"answers":[]
 }, 
 {
-	"question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br><script><br>\tfunction printMessage(event) {<br>\t\tconsole.log('Row log');<br>\t}<br><br>let elem = document.getElementById('row1');<br>elem.addEventListener('click', printMessage, false);<br></script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?",
+	"question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br><script><br>\t\tfunction printMessage(event) {<br>\t\t\tconsole.log('Row log');<br>\t\t}<br><br>\t\tlet elem = document.getElementById('row1');<br>\t\telem.addEventListener('click', printMessage, false);<br></script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?",
 	"options":
 	[{"option":"Add.event.stopPropagation(); to window.onLoad event handler."},
 	{"option":"Add event.stopPropagation(); to printMessage function."},
