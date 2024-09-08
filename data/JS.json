@@ -9,7 +9,7 @@
 	{"option":"'Visible : 'hidden'"},
 	{"option":"'Hidden, visible"},
 	{"option":"'Block' : 'none'"}],
-	"answers":[]
+	"answers":[4]
 }, 
 {
 	"question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br><script><br>\t\tfunction printMessage(event) {<br>\t\t\tconsole.log('Row log');<br>\t\t}<br><br>\t\tlet elem = document.getElementById('row1');<br>\t\telem.addEventListener('click', printMessage, false);<br></script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?",
@@ -18,5 +18,5 @@
 	{"option":"Add event.stopPropagation(); to printMessage function."},
 	{"option":"Add event.removeEventListener(); to window.onLoad event handler."},
 	{"option":"Addevent.removeEventListener(); toprintMessage function."}],
-	"answers":[]
+	"answers":[2]
 }]
