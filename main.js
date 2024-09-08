@@ -256,7 +256,7 @@ function getQuestions(data){
                     var x = 1;
                 }
                 text = text.replace(/<apex/g, '&lt;apex').replace(/<Account/g, '&lt;Account').replace(/List</g, 'List&lt;')
-                .replaceAll("\t", "&emsp;&emsp;").replace(/<html</g, '&lt;html');
+                .replaceAll("\t", "&emsp;&emsp;").replace(/<html</g, '&lt;html').replace(/<table</g, '&lt;table ');
                 return text;
             }
             
