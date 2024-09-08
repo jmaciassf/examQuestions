@@ -74,4 +74,40 @@
 	{"option":"The z variable is assigned the correct object."},
 	{"option":"window.name is assigned to 'hello' and the variable z remains undefined."}],
 	"answers":[4]
+},
+{
+	"question":"Given the code below<code>setCurrentUrl();\nconsole.log('The current URL is: ' +url );\nfunction setCurrentUrl() {\n\turl = window.location.href;\n}</code>What happens when the code executes?",
+	"options":
+	[{"option":"The url variable has local scope and line 02 throws an error."},
+	{"option":"The url variable has local scope and line 02 executes correctly."},
+	{"option":"The url variable has global scope and line 02 throws an error."},
+	{"option":"The url variable has global scope and line 02 executes correctly."}],
+	"answers":[4]
+},
+{
+	"question":"Given the following code, what is the value of x?<code>let x = '15' + (10 * 2);</code>",
+	"options":
+	[{"option":"50"},
+	{"option":"3020"},
+	{"option":"35"},
+	{"option":"1520"}],
+	"answers":[4]
+},
+{
+	"question":"Which two console logs outputs NaN? Choose 2 answers",
+	"options":
+	[{"option":"console.log(10/ Number('5'));"},
+	{"option":"console.log(10/0);"},
+	{"option":"console.log(parseInt('two'));"},
+	{"option":"console.log(10/ 'five');"}],
+	"answers":[3,4]
+},
+{
+	"question":"A developer is setting up a new Node.js server with a client library that is built using events and callbacks.\n\nThe library:\n* Will establish a web socket connection and handle receipt of messages to the server.\n* Will be imported with require, and made available with a variable called ws.\n\nThe developer also wants to add error logging if a connection fails. Given this info, which code segment shows the correct way to set up a client with two events that listen at execution time?",
+	"options":
+	[{"option":"ws.on ('connect', () =&gt; {\n\tconsole.log('connected to client');\nws.on('error', (error) =&gt; { console.log('ERROR' , error); });\n});"},
+	{"option":"ws.on ('connect', () =&gt; {\n\tconsole.log('connected to client'); }};\nws.on('error', (error) =&gt; { console.log('ERROR' , error); \n}};"},
+	{"option":"ws.connect (() =&gt; { console.log('connected to client'); })\n.catch((error) =&gt; { console.log('ERROR' , error); }};"},
+	{"option":"try {\n\tws.connect (() =&gt; { console.log('connected to client'); }); \n}"}],
+	"answers":[2]
 }]
