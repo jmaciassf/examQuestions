@@ -1,122 +1,423 @@
-[{"answers":["C"],
-"options":[{"option":"Cookies are read, but the key value is not set because the value is not URL encoded."},{"option":"Cookies are not read because line 01 should be document, cookies, but the key value is set and all cookies are wiped."},{"option":"Cookies are read and the key value is set, the remaining cookies are unaffected."},{"option":"Cookies are read and the key value is set, and all cookies are wiped."}],
-"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>01 document.cookie;<br>02 document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"},
 
-{
-	"question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {<br>02 \tconst parsedSearchString = searchString && searchString.toLowerCase();<br>03 \tdocument.querySelectorAll('.account').forEach(account => {<br>04 \t\tconst accountName = account.innerHTML.toLowerCase();<br>05 \t\taccount.style.display = accountName.includes(parsedSearchString) ? <br>06 \t\t/* Insert code here */;<br>07 \t});<br>08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",
-	"options":
-	[{"option":"'none' : 'block'"},
-	{"option":"'visible : 'hidden'"},
-	{"option":"'hidden, visible"},
-	{"option":"'block' : 'none'"}],
-	"answers":[4]
+[{"answers":["C"], 
+
+"options":[{"option":"Cookies are read, but the key value is not set because the value is not URL encoded."},{"option":"Cookies are not read because line 01 should be document, cookies, but the key value is set and all cookies are wiped."},{"option":"Cookies are read and the key value is set, the remaining cookies are unaffected."},{"option":"Cookies are read and the key value is set, and all cookies are wiped."}], 
+
+"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>01 document.cookie;<br>02 document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"}, 
+
+ 
+ 
+
+{ 
+
+    "question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {<br>02 \tconst parsedSearchString = searchString && searchString.toLowerCase();<br>03 \tdocument.querySelectorAll('.account').forEach(account => {<br>04 \t\tconst accountName = account.innerHTML.toLowerCase();<br>05 \t\taccount.style.display = accountName.includes(parsedSearchString) ? <br>06 \t\t/* Insert code here */;<br>07 \t});<br>08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?", 
+
+    "options": 
+
+    [{"option":"'none' : 'block'"}, 
+
+    {"option":"'visible : 'hidden'"}, 
+
+    {"option":"'hidden, visible"}, 
+
+    {"option":"'block' : 'none'"}], 
+
+    "answers":[4] 
+
+},  
+
+{ 
+
+    "question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br>\t<script><br>\t\tfunction printMessage(event) {<br>\t\t\tconsole.log('Row log');<br>\t\t}<br><br>\t\tlet elem = document.getElementById('row1');<br>\t\telem.addEventListener('click', printMessage, false);<br>\t</script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?", 
+
+    "options": 
+
+    [{"option":"Add.event.stopPropagation(); to window.onLoad event handler."}, 
+
+    {"option":"Add event.stopPropagation(); to printMessage function."}, 
+
+    {"option":"Add event.removeEventListener(); to window.onLoad event handler."}, 
+
+    {"option":"Add event.removeEventListener(); to printMessage function."}], 
+
+    "answers":[2] 
+
+},  
+
+{ 
+
+    "question":"Refer to the code snippet:<code>function getAvailabilityMessage(item){\n    if(getAvailability(item)){\n        var msg = \"Username available\";\n    }\n    return msg;\n}</code>A developer writes this code to return a message to a user attempting to register a new username. If the username is available, variable. What is the return value of msg when getAvailabilityMessage (\"newUserName\" ) is executed and getAvailability(\"newUserName\") returns false?", 
+
+    "options": 
+
+    [{"option":"\"Username available\""}, 
+
+    {"option":"\"newUserName\""}, 
+
+    {"option":"\"Msg is not defined\""}, 
+
+    {"option":"undefined"}], 
+
+    "answers":[4] 
+
 }, 
-{
-	"question":"Refer to the code below:<code><html lang='en'><br>\t<table onclick=\"console.log('Table log');\"><br>\t\t<tr id='row1'><br>\t\t\t<td>Click me!</td><br>\t\t</tr><br>\t</table><br><br>\t<script><br>\t\tfunction printMessage(event) {<br>\t\t\tconsole.log('Row log');<br>\t\t}<br><br>\t\tlet elem = document.getElementById('row1');<br>\t\telem.addEventListener('click', printMessage, false);<br>\t</script><br></html></code>Which code change should be made for the console to log only Rowlog when 'Click me!' is clicked?",
-	"options":
-	[{"option":"Add.event.stopPropagation(); to window.onLoad event handler."},
-	{"option":"Add event.stopPropagation(); to printMessage function."},
-	{"option":"Add event.removeEventListener(); to window.onLoad event handler."},
-	{"option":"Add event.removeEventListener(); to printMessage function."}],
-	"answers":[2]
+
+{ 
+
+    "question":"Refer to the following code: <code>let sampleText = 'The quick brown fox jumps';</code> A developer needs to determine if a certain substring is part of a string. Which three expressions return true for the given substring ? Choose 3 answers", 
+
+    "options": 
+
+    [{"option":"sampleText.includes('fox');"}, 
+
+    {"option":"sampleText.includes('quick', 4);"}, 
+
+    {"option":"sampleText.includes('Fox', 3)"}, 
+
+    {"option":"sampleText.includes(' fox ');"}, 
+
+    {"option":"sampleText.includes('quick') !== -1;"}], 
+
+    "answers":[1,4,5] 
+
 }, 
-{
-	"question":"Refer to the code snippet:<code>function getAvailabilityMessage(item){\n    if(getAvailability(item)){\n        var msg = \"Username available\";\n    }\n    return msg;\n}</code>A developer writes this code to return a message to a user attempting to register a new username. If the username is available, variable. What is the return value of msg when getAvailabilityMessage (\"newUserName\" ) is executed and getAvailability(\"newUserName\") returns false?",
-	"options":
-	[{"option":"\"Username available\""},
-	{"option":"\"newUserName\""},
-	{"option":"\"Msg is not defined\""},
-	{"option":"undefined"}],
-	"answers":[4]
-},
-{
-	"question":"Refer to the following code: <code>let sampleText = 'The quick brown fox jumps';</code> A developer needs to determine if a certain substring is part of a string. Which three expressions return true for the given substring ? Choose 3 answers",
-	"options":
-	[{"option":"sampleText.includes('fox');"},
-	{"option":"sampleText.includes('quick', 4);"},
-	{"option":"sampleText.includes('Fox', 3)"},
-	{"option":"sampleText.includes(' fox ');"},
-	{"option":"sampleText.includes('quick') !== -1;"}],
-	"answers":[1,4,5]
-},
-{
-	"question":"A developer receives a comment from the Tech Lead that the code given below has error:<code>const monthName = 'July';<br>const year = 2019;\nif(year === 2019) {\n\tmonthName = 'June';\n}</code>Which line edit should be made to make this code run?",
-	"options":
-	[{"option":"01 let monthName ='July';"},
-	{"option":"02 let year =2019;"},
-	{"option":"02 const year = 2020;"},
-	{"option":"03 if (year == 2019) {"}],
-	"answers":[1]
-},
-{
-	"question":"Given the following code:<code>let x = null;\nconsole.log(typeof x);</code>What is the output?",
-	"options":
-	[{"option":"\"object\""},
-	{"option":"\"undefined\""},
-	{"option":"\"null\""},
-	{"option":"\"x\""}],
-	"answers":[1]
-},
-{
-	"question":"Refer to the code below:<code>function execute(){\n\treturn new Promise((resolve, reject) => reject())\n}\n\nlet promise = execute();\npromise\n\t.then(() => console.log('Resolved1'))\n\t.then(() => console.log('Resolved2'))\n\t.then(() => console.log('Resolved3'))\n\t.catch(() => console.log('Rejected'))\n\t.then(() => console.log('Resolved4'));</code>What is the result when the Promise in the execute function is rejected?",
-	"options":
-	[{"option":"Resolved1 Resolved2 Resolved3 Resolved4"},
-	{"option":"Rejected"},
-	{"option":"Rejected Resolved4"},
-	{"option":"Rejected1 Rejected2 Rejected3 Rejected Rejected Rejected4"}],
-	"answers":[3]
-},
-{
-	"question":"A developer wants to create an object from a function in the browser using the code below:<code>01 function Monster() { this.name = 'hello' };<br>02 const z = Monster();</code>What happens due to lack of the new keyword on line 02?",
-	"options":
-	[{"option":"The z variable is assigned the correct object but this.name remains undefined."},
-	{"option":"window.m is assigned the correct object."},
-	{"option":"The z variable is assigned the correct object."},
-	{"option":"window.name is assigned to 'hello' and the variable z remains undefined."}],
-	"answers":[4]
-},
-{
-	"question":"Given the code below<code>setCurrentUrl();\nconsole.log('The current URL is: ' +url );\nfunction setCurrentUrl() {\n\turl = window.location.href;\n}</code>What happens when the code executes?",
-	"options":
-	[{"option":"The url variable has local scope and line 02 throws an error."},
-	{"option":"The url variable has local scope and line 02 executes correctly."},
-	{"option":"The url variable has global scope and line 02 throws an error."},
-	{"option":"The url variable has global scope and line 02 executes correctly."}],
-	"answers":[4]
-},
-{
-	"question":"Given the following code, what is the value of x?<code>let x = '15' + (10 * 2);</code>",
-	"options":
-	[{"option":"50"},
-	{"option":"3020"},
-	{"option":"35"},
-	{"option":"1520"}],
-	"answers":[4]
-},
-{
-	"question":"Which two console logs outputs NaN? Choose 2 answers",
-	"options":
-	[{"option":"console.log(10/ Number('5'));"},
-	{"option":"console.log(10/0);"},
-	{"option":"console.log(parseInt('two'));"},
-	{"option":"console.log(10/ 'five');"}],
-	"answers":[3,4]
-},
-{
-	"question":"A developer is setting up a new Node.js server with a client library that is built using events and callbacks.\n\nThe library:\n* Will establish a web socket connection and handle receipt of messages to the server.\n* Will be imported with require, and made available with a variable called ws.\n\nThe developer also wants to add error logging if a connection fails. Given this info, which code segment shows the correct way to set up a client with two events that listen at execution time?",
-	"options":
-	[{"option":"ws.on ('connect', () =&gt; {\n\tconsole.log('connected to client');\n\tws.on('error', (error) =&gt; { console.log('ERROR' , error); });\n});"},
-	{"option":"ws.on ('connect', () =&gt; {console.log('connected to client'); }};\nws.on('error', (error) =&gt; { console.log('ERROR' , error); }};"},
-	{"option":"ws.connect (() =&gt; { console.log('connected to client'); })\n.catch((error) =&gt; { console.log('ERROR' , error); }};"},
-	{"option":"try {\n\tws.connect (() =&gt; { console.log('connected to client'); }); \n}"}],
-	"answers":[2]
-},
-{
-	"question":"A developer wrote a fizzbuzz function that when passed in a number, returns the following:<ul><li>'fizz' if the number is divisible by 3.</li><li>'buzz' if the number is divisible by 5.</li><li>'fizzbuzz' if the number is divisible by both 3 and 5.</li><li>Empty string if the number is divisible by neither 3 or 5.</li></ul>Which two test cases will properly test scenarios for the fizzbuzz function? Choose 2 answers",
-	"options":
-	[{"option":"let res = fizzbuzz(5);\nconsole.assert (res === '');"},
-	{"option":"let res = fizzbuzz(3);\nconsole.assert (res === 'buzz')"},
-	{"option":"let res = fizzbuzz(Infinity);\nconsole.assert (res === '')"},
-	{"option":"let res = fizzbuzz(15);\nconsole.assert (res === 'fizzbuzz')"}],
-	"answers":[3,4]
-}]
+
+{ 
+
+    "question":"A developer receives a comment from the Tech Lead that the code given below has error:<code>const monthName = 'July';<br>const year = 2019;\nif(year === 2019) {\n\tmonthName = 'June';\n}</code>Which line edit should be made to make this code run?", 
+
+    "options": 
+
+    [{"option":"01 let monthName ='July';"}, 
+
+    {"option":"02 let year =2019;"}, 
+
+    {"option":"02 const year = 2020;"}, 
+
+    {"option":"03 if (year == 2019) {"}], 
+
+    "answers":[1] 
+
+}, 
+
+{ 
+
+    "question":"Given the following code:<code>let x = null;\nconsole.log(typeof x);</code>What is the output?", 
+
+    "options": 
+
+    [{"option":"\"object\""}, 
+
+    {"option":"\"undefined\""}, 
+
+    {"option":"\"null\""}, 
+
+    {"option":"\"x\""}], 
+
+    "answers":[1] 
+
+}, 
+
+{ 
+
+    "question":"Refer to the code below:<code>function execute(){\n\treturn new Promise((resolve, reject) => reject())\n}\n\nlet promise = execute();\npromise\n\t.then(() => console.log('Resolved1'))\n\t.then(() => console.log('Resolved2'))\n\t.then(() => console.log('Resolved3'))\n\t.catch(() => console.log('Rejected'))\n\t.then(() => console.log('Resolved4'));</code>What is the result when the Promise in the execute function is rejected?", 
+
+    "options": 
+
+    [{"option":"Resolved1 Resolved2 Resolved3 Resolved4"}, 
+
+    {"option":"Rejected"}, 
+
+    {"option":"Rejected Resolved4"}, 
+
+    {"option":"Rejected1 Rejected2 Rejected3 Rejected Rejected Rejected4"}], 
+
+    "answers":[3] 
+
+}, 
+
+{ 
+
+    "question":"A developer wants to create an object from a function in the browser using the code below:<code>01 function Monster() { this.name = 'hello' };<br>02 const z = Monster();</code>What happens due to lack of the new keyword on line 02?", 
+
+    "options": 
+
+    [{"option":"The z variable is assigned the correct object but this.name remains undefined."}, 
+
+    {"option":"window.m is assigned the correct object."}, 
+
+    {"option":"The z variable is assigned the correct object."}, 
+
+    {"option":"window.name is assigned to 'hello' and the variable z remains undefined."}], 
+
+    "answers":[4] 
+
+}, 
+
+{ 
+
+    "question":"Given the code below<code>setCurrentUrl();\nconsole.log('The current URL is: ' +url );\nfunction setCurrentUrl() {\n\turl = window.location.href;\n}</code>What happens when the code executes?", 
+
+    "options": 
+
+    [{"option":"The url variable has local scope and line 02 throws an error."}, 
+
+    {"option":"The url variable has local scope and line 02 executes correctly."}, 
+
+    {"option":"The url variable has global scope and line 02 throws an error."}, 
+
+    {"option":"The url variable has global scope and line 02 executes correctly."}], 
+
+    "answers":[4] 
+
+}, 
+
+{ 
+
+    "question":"Given the following code, what is the value of x?<code>let x = '15' + (10 * 2);</code>", 
+
+    "options": 
+
+    [{"option":"50"}, 
+
+    {"option":"3020"}, 
+
+    {"option":"35"}, 
+
+    {"option":"1520"}], 
+
+    "answers":[4] 
+
+}, 
+
+{ 
+
+    "question":"Which two console logs outputs NaN? Choose 2 answers", 
+
+    "options": 
+
+    [{"option":"console.log(10/ Number('5'));"}, 
+
+    {"option":"console.log(10/0);"}, 
+
+    {"option":"console.log(parseInt('two'));"}, 
+
+    {"option":"console.log(10/ 'five');"}], 
+
+    "answers":[3,4] 
+
+}, 
+
+{ 
+
+    "question":"A developer is setting up a new Node.js server with a client library that is built using events and callbacks.\n\nThe library:\n* Will establish a web socket connection and handle receipt of messages to the server.\n* Will be imported with require, and made available with a variable called ws.\n\nThe developer also wants to add error logging if a connection fails. Given this info, which code segment shows the correct way to set up a client with two events that listen at execution time?", 
+
+    "options": 
+
+    [{"option":"ws.on ('connect', () =&gt; {\n\tconsole.log('connected to client');\n\tws.on('error', (error) =&gt; { console.log('ERROR' , error); });\n});"}, 
+
+    {"option":"ws.on ('connect', () =&gt; {console.log('connected to client'); }};\nws.on('error', (error) =&gt; { console.log('ERROR' , error); }};"}, 
+
+    {"option":"ws.connect (() =&gt; { console.log('connected to client'); })\n.catch((error) =&gt; { console.log('ERROR' , error); }};"}, 
+
+    {"option":"try {\n\tws.connect (() =&gt; { console.log('connected to client'); }); \n}"}], 
+
+    "answers":[2] 
+
+}, 
+
+{ 
+
+    "question":"A developer wrote a fizzbuzz function that when passed in a number, returns the following:<ul><li>'fizz' if the number is divisible by 3.</li><li>'buzz' if the number is divisible by 5.</li><li>'fizzbuzz' if the number is divisible by both 3 and 5.</li><li>Empty string if the number is divisible by neither 3 or 5.</li></ul>Which two test cases will properly test scenarios for the fizzbuzz function? Choose 2 answers", 
+
+    "options": 
+
+    [{"option":"let res = fizzbuzz(5);\nconsole.assert (res === '');"}, 
+
+    {"option":"let res = fizzbuzz(3);\nconsole.assert (res === 'buzz')"}, 
+
+    {"option":"let res = fizzbuzz(Infinity);\nconsole.assert (res === '')"}, 
+
+    {"option":"let res = fizzbuzz(15);\nconsole.assert (res === 'fizzbuzz')"}], 
+
+    "answers":[3,4] 
+
+}, { 
+
+    "question":"A developer is creating a simple webpage with a button. When a user clicks this button for the first time, a message is displayed. The developer wrote the JavaScript code below, but something is missing. The message gets displayed every time a user clicks the button, instead of just the first time.<code>01 function listen(event) {\n02\n03\talert('Hey! I am John Doe');\n04\n05 }\n06 button.addEventListener('click', listen);</code>Which two code lines make this code work as required? Choose 2 answers", 
+
+    "options": 
+
+    [{"option":"On line 02, use event.first to test if it is the first execution."}, 
+
+    {"option":"On line 04, use button.removeEventListener(' click\" , listen);"}, 
+
+    {"option":"On line 06, add an option called once to button.addEventListener();"}, 
+
+    {"option":"On line 04, use event.stopPropagation();"}], 
+
+    "answers":[2,3] 
+
+}, { 
+
+    "question":"Given the code below:<code>01 function myFunction(){\n02\ta = 5;\n03\tvar b =1;\n04 }\n05\n06\n07 myFunction();\n08 console.log(a);\n09 console.log(b);</code>What is the expected output?", 
+
+    "options": 
+
+    [{"option":"Both lines 08 and 09 are executed, but values outputted are undefined."}, 
+
+    {"option":"Line 08 thrones an error, therefore line 09 is never executed."}, 
+
+    {"option":"Line 08 outputs the variable, but line 09 throws an error."}, 
+
+    {"option":"Both lines 08 and 09 are executed, and the variables are outputted."}], 
+
+    "answers":[3] 
+
+}, { 
+
+    "question":"A developer has two ways to write a function:\nOptionA:<code>function Monster() {\n\tthis.growl = () => {\n\t\tconsole.log('Grr!');\n\t}\n}</code>\nOption B:<code>function Monster() {};\nMonster.prototype.growl =() => {\n\tconsole.log('Grr!');\n}</code>After deciding on an option, the developer creates 1000 monster objects. How many growl methods are created with Option A and Option B?", 
+
+    "options": 
+
+    [{"option":"1000 growl method is created for Option A. 1 growl methods are created for Option B."}, 
+
+    {"option":"1 growl method is created regardless of which option is used."}, 
+
+    {"option":"1 growl method is created for Option A. 1000 growl methods are created for Option B."}, 
+
+    {"option":"1000 growl methods are created regardless of which option is used."}], 
+
+    "answers":[1] 
+
+}, { 
+
+    "question":"A developer needs to debug a Node.js web server because a runtime error keeps occurring at one of the endpoints. The developer wants to test the endpoint on a local machine and make the request against a local server to look at the behavior. In the source code, the server.js file will start the server. the developer wants to debug the Node.js server only using the terminal. Which command can the developer use to open the CLI debugger in their current terminal window?", 
+
+    "options": 
+
+    [{"option":"node start inspect server,js"}, 
+
+    {"option":"node inspect server,js"}, 
+
+    {"option":"node -i server.js"}, 
+
+    {"option":"node server,js inspect"}], 
+
+    "answers":[2] 
+
+}, { 
+
+    "question":"Refer to the following code block:<code>class Animal{\n\tconstructor(name){\n\t\tthis.name = name;\n\t}\n\tmakeSound(){\n\t\tconsole.log(`${this.name} is making a sound.`);\n\t}\n}\n\nclass Dog extends Animal{\n\tconstructor(name){\n\t\tsuper(name);\n\t\tthis.name = name;\n\t}\n\tmakeSound(){\n\t\tconsole.log(`${this.name} is barking.`)\n\t}\n}\n\nlet myDog = new Dog('Puppy');\nmyDog.makeSound();</code>What is the console output?", 
+
+    "options": 
+
+    [{"option":"Puppy is making a sound."}, 
+
+    {"option":"Puppy is barking."}, 
+
+    {"option":"null"}, 
+
+    {"option":"''"}], 
+
+    "answers":[2] 
+
+}, { 
+
+    "question":"Refer to the following array:<code>let arr1 = [ 1, 2, 3, 4, 5 ];</code>Which two lines of code result in a second array, arr2 being created such that arr2 is not a reference to arr1?", 
+
+    "options": 
+
+    [{"option":"let arr2 = arr1.slice(0, 5);"}, 
+
+    {"option":"let arr2 = Array.from(arr1);"}, 
+
+    {"option":"let arr2 = arr1;"}, 
+
+    {"option":"let arr2 = arr1.sort();"}], 
+
+    "answers":[1,2] 
+
+}, { 
+
+    "question":"At Universal Containers, every team has its own way of copying JavaScript objects. The code Snippet shows an implementation from one team: <code>function Person() {\n\tthis.firstName = \"John\";\n\tthis.lastName = 'Doe';\n\tthis.name = () => {\n\t\tconsole.log(`Hello ${this.firstName} ${this.firstName}`);\n\t}\n}\n\nconst john = new Person();\nconst dan = JSON.parse(JSON.stringify(john));\ndan.firstName = 'Dan';\ndan.name();</code>What is the Output of the code execution?", 
+
+    "options": 
+
+    [{"option":"TypeError: dan.name is not a function"}, 
+
+    {"option":"Hello John DOe"}, 
+
+    {"option":"Hello Dan Doe"}, 
+
+    {"option":"TypeError: Assignment to constant variable."}], 
+
+    "answers":[1] 
+
+}, { 
+
+    "question":"The developer wants to test this code:<code>const toNumber =(strOrNum) => strOrNum;</code>Which two tests are most accurate for this code? Choose 2 answers", 
+
+    "options": 
+
+    [{"option":"console.assert(Number.isNaN(toNumber()));"}, 
+
+    {"option":"console.assert(toNumber () === NaN);"}, 
+
+    {"option":"console.assert(toNumber('2') === 2);"}, 
+
+    {"option":"console.assert(toNumber('-3') &lt; 0);"}], 
+
+    "answers":[3,4] 
+
+}, { 
+
+    "question":"Given the HTML below:<code><div id=\"row-uc\">Universal Containers</div></code>Which statement adds the priority-account CSS class to the Universal Containers row?", 
+
+    "options": 
+
+    [{"option":"document.queryselector('#row-uc').classList.add('priority-account');"}, 
+
+    {"option":"document.querySelector(#row-uc').classes-push('priority-account');"}, 
+
+    {"option":"document.querySelectorAll('#row-uc').classList.add(\"priority-accour');"}, 
+
+    {"option":"document.getElementByid('row-uc').addClass('priority-account*);"}], 
+
+    "answers":[1] 
+
+}, { 
+
+    "question":"Refer to code below:<code>function Person() {\n\ntthis.firstName = 'John';\n}\nPerson.prototype ={\n\tjob: x => 'Developer'\n};\nconst myFather = new Person();\nconst result = myFather.firstName + ' ' + myFather.job();</code>What is the value of the result after line 10 executes?", 
+
+    "options": 
+
+    [{"option":"Undefined Developer"}, 
+
+    {"option":"John undefined"}, 
+
+    {"option":"John Developer"}, 
+
+    {"option":"Error: myFather.job is not a function"}], 
+
+    "answers":[3] 
+
+}, { 
+
+    "question":"Given the following code:<code>01 document.body.addEventListener('click', (event) => {\n02\tif (/* CODE REPLACEMENT HERE */) {\n03\t\tconsole.log('button clicked!');\n04\t}\n05 });</code>Which replacement for the conditional statement on line 02 allows a developer to correctly determine that a button on page is clicked?", 
+
+    "options": 
+
+    [{"option":"Event.clicked"}, 
+
+    {"option":"e.nodeTarget == this"}, 
+
+    {"option":"event.target.nodeName == 'BUTTON'"}, 
+
+    {"option":"button.addEventListener('click')"}], 
+
+    "answers":[3] 
+
+}] 
+
+ 
