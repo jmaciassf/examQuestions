@@ -388,7 +388,7 @@
 
 }, { 
 
-    "question":"Refer to code below:<code>function Person() {\n\ntthis.firstName = 'John';\n}\nPerson.prototype ={\n\tjob: x => 'Developer'\n};\nconst myFather = new Person();\nconst result = myFather.firstName + ' ' + myFather.job();</code>What is the value of the result after line 10 executes?", 
+    "question":"Refer to code below:<code>function Person() {\n\n\tthis.firstName = 'John';\n}\nPerson.prototype ={\n\tjob: x => 'Developer'\n};\nconst myFather = new Person();\nconst result = myFather.firstName + ' ' + myFather.job();</code>What is the value of the result after line 10 executes?", 
 
     "options": 
 
