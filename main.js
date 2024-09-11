@@ -259,7 +259,7 @@ function getQuestions(data){
                 .replaceAll("    ", "\t").replaceAll("\n", "<br>")
                 .replaceAll("\t", "&emsp;&emsp;").replace(/<html/g, '&lt;html').replace(/<tr/g, '&lt;tr')
                 .replace(/<td/g, '&lt;td').replace(/<table/g, '&lt;table ').replace(/<\/t/g, '&lt;\/t').replace(/<\/h/g, '&lt;\/h')
-                .replace(/<\/s/g, '&lt;\/s').replace(/<s/g, '&lt;s');
+                .replace(/<\/s/g, '&lt;\/s').replace(/<s/g, '&lt;s').replace(/<\/di/g, '&lt;\/di').replace(/<di/g, '&lt;di');
                 return text;
             }
             
