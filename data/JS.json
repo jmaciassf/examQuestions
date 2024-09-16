@@ -2130,7 +2130,7 @@
 
 }, { 
 
-"question":"Refer to the code below: <code>new Promise((resolve, reject) => {\n\tconst fraction = Math.random();\n\tif(fraction > 0.5) reject(\"fraction > 0.5, \" + fraction);\n\tresolve(fraction);\n})\n.then(() => console.log(\"resolved\"))\n.catch((error) => console.error(error))\n.finally(() => console.log(\" when am I called?\"));</code>When does Promise.finally on line 08 get called?", 
+"question":"Refer to the code below: <code>var x = 'test';new Promise((resolve, reject) => {const fraction = Math.random();if(fraction > 0.5) reject(\"fraction > 0.5, \" + fraction);resolve(fraction);}).then(() => console.log(\"resolved\"))\n.catch((error) => console.error(error))\n.finally(() => console.log(\" when am I called?\"));</code>When does Promise.finally on line 08 get called?", 
 
 "options": 
 
