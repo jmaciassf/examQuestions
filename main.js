@@ -251,6 +251,7 @@ function getQuestions(data){
             });
 
             element.question = replaceTags(element.question);
+            
             function replaceTags(text){
                 if(text.includes('static ListRecommendation')){
                     var x = 1;
@@ -504,6 +505,8 @@ function getQuestions(data){
         
         // Total questions
         $(".countQuestions").text(countQuestions + " questions");
+
+        $('code').lineLine();
 
         // Set classes of expand all
         $("#ckhExpandAll").click().click();

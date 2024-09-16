@@ -355,3 +355,43 @@ body.popupShow {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+
+
+  .lineline {
+    max-height: 300px;
+    width: 700px;
+    width: 100%;
+    margin: 50px auto 0;
+    background: #ececec;
+    padding: 20px;
+    overflow: auto;
+    text-align: left;
+    width: 90%;
+    margin: 15px auto;
+}
+  }
+  
+  .lineline-numbers {
+    width: 20px;
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+    color: #777;
+  }
+  
+  .lineline-lines {
+    padding-left: 20px;
+    white-space: pre;
+    white-space: -moz-pre;
+    white-space: -pre;
+    white-space: -o-pre;
+    word-wrap: break-word;
+  }
+  
+  .lineline-code {
+    font-family: 'Consolas';
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    white-space: nowrap;
+  }
