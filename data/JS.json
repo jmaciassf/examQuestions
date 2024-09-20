@@ -1,3 +1,7 @@
+ 
+
+ 
+
 [{"answers":["C"],  
 
  
@@ -1682,22 +1686,6 @@
 
 }, { 
 
-"question":"Refer to the code below:<code>let sayHello = () => {\n\tconsole.log ('Hello, world!');\n};</code>Which code executes sayHello once, two minutes from now?", 
-
-"options": 
-
-[{"option":"setTimeout(sayHello, 12000);"}, 
-
-{"option":"setInterval(sayHello, 12000);"}, 
-
-{"option":"setTimeout(sayHello(), 12000);"}, 
-
-{"option":"delay(sayHello, 12000);"}], 
-
-"answers":[1] 
-
-}, { 
-
 "question":"Refer to the following code:<code>let obj = {\n\tfoo: 1,\n\tbar: 2\n}\nlet output = [];\nfor(let something in obj){\n\toutput.push(something);\n}\nconsole.log(output);</code>What is the output?", 
 
 "options": 
@@ -1734,7 +1722,7 @@
 
 "options": 
 
-[{"option":"[title: \"javaScript\"] [title: \"javaScript\"]"}, 
+[{"option":"[title: \"javaScript\"] [title: \"javaScript\"]", "explanation": "An object is extensible if new properties can be added to it. Object.preventExtensions() marks an object as no longer extensible, so that it will never have properties beyond the ones it had at the time it was marked as non-extensible."}, 
 
 {"option":"{author: \"Robert\", title: \"javaScript} undefined"}, 
 
@@ -2130,7 +2118,7 @@
 
 }, { 
 
-"question":"Refer to the code below: <code>var x = 'test';new Promise((resolve, reject) => {const fraction = Math.random();if(fraction > 0.5) reject(\"fraction > 0.5, \" + fraction);resolve(fraction);}).then(() => console.log(\"resolved\"))\n.catch((error) => console.error(error))\n.finally(() => console.log(\" when am I called?\"));</code>When does Promise.finally on line 08 get called?", 
+"question":"Refer to the code below: <code>new Promise((resolve, reject) => {\n\tconst fraction = Math.random();\n\tif(fraction > 0.5) reject(\"fraction > 0.5, \" + fraction);\n\tresolve(fraction);\n})\n.then(() => console.log(\"resolved\"))\n.catch((error) => console.error(error))\n.finally(() => console.log(\" when am I called?\"));</code>When does Promise.finally on line 08 get called?", 
 
 "options": 
 
@@ -2811,5 +2799,927 @@
 {"option":"No error appears"}], 
 
 "answers":[1,2,4] 
+
+}, { 
+
+"question":"Refer to the code below:<code>console.log('Start');\nPromise.resolve('Success').then(function(value){\n\tconsole.log('Success');\n});\nconsole.log('End');</code>What is the output after the code executes successfully?", 
+
+"options": 
+
+[{"option":"Success\nStart\nEnd"}, 
+
+{"option":"Start\nEnd\nSuccess"}, 
+
+{"option":"End\nStart\nSuccess"}, 
+
+{"option":"Start\nSuccess\nEnd"}], 
+
+"answers":[2] 
+
+}, { 
+
+"question":"Refer to code below:<code>let productSKU = '8675309';</code>A developer has a requirement to generate SKU numbers that are always 19 characters long, starting with 'sku', and padded with zeros. Which statement assigns the values sku0000000008675309?", 
+
+"options": 
+
+[{"option":"productSKU = productSKU.padStart(19, '0').padstart('sku');"}, 
+
+{"option":"productSKU = productSKU.padEnd(16, '0').padstart('sku');"}, 
+
+{"option":"productSKU = productSKU.padEnd(16, '0').padstart(19, 'sku');"}, 
+
+{"option":"productSKU = productSKU.padStart (16, '0').padStart(19, 'sku');"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Refer to the HTML below:<code><ul><li>Leo</li><li>Tony</li><li>Tiger</li></ul></code>Which JavaScript statement results in changing 'Tony' to 'Mr. T.'?", 
+
+"options": 
+
+[{"option":"document.querySelectorAll('$main $TONY').innerHTML = 'Mr. T.';"}, 
+
+{"option":"document.querySelector('$main li:second-child').innerHTML = 'Mr. T.';"}, 
+
+{"option":"document.querySelector('$main li.Tony').innerHTML = 'Mr. T.';"}, 
+
+{"option":"document.querySelector('$main li:nth-child(2)'),innerHTML = 'Mr. T.';"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"<code><html>\n\t<table onclick=\"console.log('Table log');\">\n\t\t<tr id='row1'>\n\t\t\t<td>Click me!</td>\n\t\t</tr>\n\t</table>\n\t<script>\n\tfunction printMessage(event){\n\t\tconsole.log('Row log');\n\t\tevent.stopPropagation();\n\t}\n\n\tlet elem = document.getElementById(\"row1\");\n\telem.addEventListener('click', printMessage, false);\n\t</script>\n</html></code>Which code change should be done for the console to log the following when 'Click me!' is clicked'<code>> Row log\n> Table log</code>", 
+
+"options": 
+
+[{"option":"Remove lines 13 and 14"}, 
+
+{"option":"Change line 10 to event.stopPropagation(false);"}, 
+
+{"option":"Change line 14 to elem.addEventListener('click', printMessage, true);"}, 
+
+{"option":"Remove line 10"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"A developer copied a JavaScript object:<code>function Person() {\n\tthis.firstName = \"John\";\n\tthis.lastName = 'Doe';\n\tthis.name = () => `${this.firstName}, ${this.lastName}`;\n}\n\nconst john = new Person();\nconst dan = Object.assign(john);\ndan.firstName = 'Dan';</code>How does the developer access dan's firstName & lastName? Choose 2 answers", 
+
+"options": 
+
+[{"option":"dan.name"}, 
+
+{"option":"dan,firstname() + dan.lastName()"}, 
+
+{"option":"dan.firstName + dan.lastName"}, 
+
+{"option":"dan.name()"}], 
+
+"answers":[3,4] 
+
+}, { 
+
+"question":"Refer to the following code:<code>function Tiger(){\n\tthis.Type = 'Cat';\n\tthis.size = 'large';\n}\n\nlet tony = new Tiger();\ntony.roar = () =>{\n\tconsole.log('They're great1');\n};\n\nfunction Lion(){\n\tthis.type = 'Cat';\n\tthis.size = 'large';\n}\n\nlet leo = new Lion();\n//Insert code here\nleo.roar();</code>Which two statements could be inserted at line 17 to enable the function call on line 18? Choose 2 answers.", 
+
+"options": 
+
+[{"option":"leo.roar = () =&gt; { console.log('They're pretty good:'); };"}, 
+
+{"option":"Object.assign(leo,Tiger);"}, 
+
+{"option":"Object.assign(leo,tony);"}, 
+
+{"option":"leo.prototype.roar = () =&gt; { console.log('They're pretty good:'); };"}], 
+
+"answers":[1,3] 
+
+}, { 
+
+"question":"Given the JavaScript below:<code>function filterDOM(searchString) {\n\tconst parsedSearchString = searchString && searchString.toLowerCase();\n\tdocument.querySelectorAll('.account').forEach(account => {\n\t\tconst accountName = account.innerHTML.toLowerCase();\n\t\taccount.style.backgroundColor = accountName.includes(parsedSearchString) ?\n\t\t/* Insert code here */;\n\t});\n}</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?", 
+
+"options": 
+
+[{"option":"'yellow: null"}, 
+
+{"option":"null : 'yellow'"}, 
+
+{"option":"'none' : 'yellow'"}, 
+
+{"option":"'yellow' : 'none'"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Which three code segments result in a correct conversion from number to string? Choose 3 answers", 
+
+"options": 
+
+[{"option":"let strValue = numValue.toString();"}, 
+
+{"option":"let strValue = \"\" + numValue;"}, 
+
+{"option":"let strValue = numValue.toText();"}, 
+
+{"option":"let strValue = String(numValue);"}, 
+
+{"option":"let strValue = (String)numValue;"}], 
+
+"answers":[1,2,4] 
+
+}, { 
+
+"question":"Refer to the code snippet:<code>function getAvailabilityMessage(item){\n\tif(getAvailability(item)){\n\t\tvar msg = 'Username available';\n\t}\n\treturn msg;\n}</code>A developer writes this code to return a message to a user attempting to register a new username. If the username is available, variable. What is the return value of msg when getAvailabilityMessage('newUserName') is executed and getAvailability('newUserName') returns true?", 
+
+"options": 
+
+[{"option":"\"Username available\""}, 
+
+{"option":"\"newUserName\""}, 
+
+{"option":"\"Msg is not defined\""}, 
+
+{"option":"Undefined"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"<code>function Person(firstName, lastName, eyeColor) {\n\tthis.firstName =firstName;\n\tthis.lastName = lastName;\n\tthis.eyeColor = eyeColor;\n}\n\nPerson.job = 'Developer';\nconst myFather = new Person('John', 'Doe');\nconsole.log(myFather.job);</code>What is the output after the code executes?", 
+
+"options": 
+
+[{"option":"ReferenceError: eyeColor is not defined"}, 
+
+{"option":"ReferenceError: assignment to undeclared variable \"Person\""}, 
+
+{"option":"Developer"}, 
+
+{"option":"Undefined"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"A developer wants to use a try...catch statement to catch any error that countSheep() may throw and pass it to a handleError () function. What is the correct implementation of the try...catch?", 
+
+"options": 
+
+[{"option":"try {\n\tsetTimeout(function(){\n\t\tcountSheep();\n\t}, 1000);\n} catch(e) {\n\thandleError(e);\n}"}, 
+
+{"option":"try {\n\tcountSheep();\n} finally {\n\thandleError(e);\n}"}, 
+
+{"option":"setTimeout(function(){\n\ttry {\n\t\tcountSheep();\n\t} catch(e) {\n\t\thandleError(e);\n\t}\n}, 1000);"}, 
+
+{"option":"try {\n\tcountSheep();\n} handleError(e) {\n\tcatch(e);\n}"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"A developer removes the HTML class attribute from the checkout button, so now it is simply: <button>Checkout</button>. There is a test to verify the existence of the checkout button, however it looks for a button with class= \"blue\". The test fails because no such button is found. Which type of test category describes this test?", 
+
+"options": 
+
+[{"option":"True positive","explanation":"the code is correct and the test passes"}, 
+
+{"option":"True negative","explanation":"the code fails and the test fails"}, 
+
+{"option":"False positive","explanation":"code is broken but the test passes"}, 
+
+{"option":"False negative","explanation":"code is correct but the test fails"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Which three statements are true about promises? Choose 3 answers.", 
+
+"options": 
+
+[{"option":"The executor of a new Promise runs automatically."}, 
+
+{"option":"A Promise has a .then() method."}, 
+
+{"option":"A fulfilled or rejected promise will not change states."}, 
+
+{"option":"A settled promise can become resolved."}, 
+
+{"option":"A pending promise can become fulfilled, settled, or rejected."}], 
+
+"answers":[2,3,5] 
+
+}, { 
+
+"question":"A developer wrote the following code:<code>let X = object.value;\ntry {\n\thandleObjectValue(X);\n} catch (error) {\n\thandleError(error);\n}</code>The developer has a getNextValue function to execute after handleObjectValue(), but does not want to execute getNextValue() if an error occurs. How can the developer change the code to ensure this behavior?", 
+
+"options": 
+
+[{"option":"try {\n\thandleObjectValue(X);\n\tgetNextValue();\n} catch (error) {\n\thandleError(error);\n}"}, 
+
+{"option":"try {\n\thandleObjectValue(X);\n} catch (error) {\n\thandleError(error);\n}\ngetNextValue();"}, 
+
+{"option":"try {\n\thandleObjectValue(X);\n} catch (error) {\n\thandleError(error);\n}\nfinally {\n\tgetNextValue();\n}"}, 
+
+{"option":"try {\n\thandleObjectValue(X);\n} catch (error) {\n\thandleError(error);\n}\nthen {\n\tgetNextValue();\n}"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"Given the requirement to refactor the code above to JavaScript class format, which class definition is correct?<code>function Vehicle(name, price) {\n\tthis.name = name;\n\tthis.price = price;\n}\nVehicle.prototype.priceInfo = function(){\n\treturn 'Cost of the $(this.name) is $(this.price)$';\n}\nvar ford = new Vehicle('Ford Fiesta', '20,000');</code>A)<code>class Vehicle {constructor(name, price) {\n\tthis.name = name;\n\tthis.price = price;\n}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>B)<code>class Vehicle {\n\tvehicle(name, price) {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>C)<code>class Vehicle {\n\tconstructor(name, price) {\n\t\tname = name;\n\t\tprice = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>D)<code>class Vehicle {\n\tconstructor() {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>", 
+
+"options": 
+
+[{"option":"Option A"}, 
+
+{"option":"Option B"}, 
+
+{"option":"Option C"}, 
+
+{"option":"Option D"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"Refer to the code below:<code>let country = {\n\tget capital() {\n\t\tlet city = Number('London');\n\t\treturn {\n\t\t\tcityString: city.toString()\n\t\t}\n\t}\n}</code>Which value can a developer expect when referencing country.capital.cityString?", 
+
+"options": 
+
+[{"option":"'London'"}, 
+
+{"option":"undefined"}, 
+
+{"option":"An error"}, 
+
+{"option":"'NaN'"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Given the following code:<code>counter = 0;\nconst logCounter = () => { console.log(counter); };\nlogCounter();\nsetTimeout(logCounter, 2100);\nsetInterval(()=> {\n\tcounter++;\n\tlogCounter();\n}, 1000);</code>What will be the first four numbers logged?", 
+
+"options": 
+
+[{"option":"0012"}, 
+
+{"option":"0112"}, 
+
+{"option":"0122"}, 
+
+{"option":"0123"}], 
+
+"answers":[3] 
+
+}, { 
+
+"question":"A developer wants to create a simple image upload in the browser using the File API. The HTML is below:<code><input type='file' onchange='previewFile()'>\n<img src='' height='200' alt='Image Preview...'/></code>The JavaScript portion is:<code>function previewFile(){\n\tconst preview = document.querySelector('img');\n\tconst file = document.querySelector('input[type=file]').files[0];\n\t//line 4 code\n\treader.addEventListener(\"load\", () => {\n\t\tpreview.src = reader.result;\n\t},false);\n\t//line 8 code\n}</code>In lines 04 and 08, which code allows the user to select an image from their local computer, and to display the image in the browser?", 
+
+"options": 
+
+[{"option":"04 const reader = new File();\n08 if (file) URL.createObjectURL(file);"}, 
+
+{"option":"04 const reader = new FileReader();\n08 if (file) URL. createObjectURL(file);"}, 
+
+{"option":"04 const reader = new File();\n08 if (file) reader.readAsDataURL(file);"}, 
+
+{"option":"04 const reader = new FileReader();\n08 if (file) reader.readAsDataURL(file);"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Given the following code, what is the value of x?<code>let x = ('15' + 10) * 2;</code>", 
+
+"options": 
+
+[{"option":"50"}, 
+
+{"option":"3020"}, 
+
+{"option":"35"}, 
+
+{"option":"1520"}], 
+
+"answers":[2] 
+
+}, { 
+
+"question":"Refer to the following code block:<code>class Student {\n\tconstructor(name) {\n\t\tthis.name = name;\n\t}\n\n\ttakeTest(){\n\t\tconsole.log(`$(this.name) got 70% on test.`);\n\t}\n}\n\nclass BetterStudent extends Student {\n\tconstructor(name) {\n\t\tsuper(name);\n\t\tthis.name = 'Better student ' + name;\n\t}\n\n\ttakeTest(){\n\t\tconsole.log(`$(this.name) got 100% on test.`);\n\t}\n}\n\nlet student = new BetterStudent('Jackie');\nstudent.takeTest();</code>What is the console output?", 
+
+"options": 
+
+[{"option":"Better student Jackie got 70% on test."}, 
+
+{"option":"Jackie got 70% on test."}, 
+
+{"option":"Uncaught Reference Error"}, 
+
+{"option":"Better student Jackie got 100% on test."}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"A developer creates a generic function to log custom messages in the console. To do this, the function below is implemented.<code>function logStatus(status){\n\tconsole./*Answer goes here*/(\"Item status is: %s\", status);\n}</code>Which three console logging methods allow the use of string substitution in line 02?", 
+
+"options": 
+
+[{"option":"assert"}, 
+
+{"option":"log"}, 
+
+{"option":"message"}, 
+
+{"option":"info"}, 
+
+{"option":"error"}], 
+
+"answers":[2,4,5] 
+
+}, { 
+
+"question":"Which two code snippets show working examples of a recursive function? Choose 2 answers", 
+
+"options": 
+
+[{"option":"let countingDown = function(startNumber) {\n\tif(startNumber > 0) {\n\t\tconsole.log(startNumber);\n\t\treturn countingDown(startNumber);\n\t} else {\n\t\treturn startNumber;\n\t}\n};"}, 
+
+{"option":"const factorial = numVar => {\n\tif (numVar < 0) return;\n\tif (numVar === 0) return 1;\n\treturn numVar * factorial ( numVar - 1 );\n};"}, 
+
+{"option":"function factorial ( numVar ) {\n\tif (numVar < 0) return;\n\tif(numVar === 0) return 1;\n\treturn numVar -1;\n}"}, 
+
+{"option":"const sumToTen = numVar => {\n\tif (numVar < 0)\n\t\treturn;\n\treturn sumToTen(numVar + 1);\n};"}], 
+
+"answers":[1,2] 
+
+}, { 
+
+"question":"Refer to the code declarations below:<code>let str1 = 'Java';\nlet str2 = 'Script';</code>Which three expressions return the string JavaScript? Choose 3 answers", 
+
+"options": 
+
+[{"option":"str1.join(str2);"}, 
+
+{"option":"str1.concat(str2);"}, 
+
+{"option":"concat(str1, str2);"}, 
+
+{"option":"`$(str1) $(str2}`;"}, 
+
+{"option":"str1 + str2;"}], 
+
+"answers":[2,4,5] 
+
+}, { 
+
+"question":"Refer to the code:<code>function Animal(size, type){\n\tthis.size = size || 'small';\n\tthis.type = type || 'Animal';\n\tthis.canTalk = false;\n}\n\nlet Pet = function(size, type, name, owner) {\n\tAnimal.call(this, size, type);\n\tthis.name = name;\n\tthis.owner = owner;\n}\n\nPet.prototype = Object.create(Animal.prototype);\nlet pet1 = new Pet();\nconsole.log(pet1);</code>Given the code above, which three properties are set for pet1? Choose 3 answers", 
+
+"options": 
+
+[{"option":"name"}, 
+
+{"option":"owner"}, 
+
+{"option":"type"}, 
+
+{"option":"canTalk"}, 
+
+{"option":"size"}], 
+
+"answers":[3,4,5] 
+
+}, { 
+
+"question":"Which code statement correctly retrieves and returns an object from localStorage?", 
+
+"options": 
+
+[{"option":"const retrieveFromLocalStorage = (storageKey) => {\n\treturn JSON.parse(window.localStorage.getItem(storageKey));\n}"}, 
+
+{"option":"const retrieveFromLocalStorage = (storageKey) => {\n\treturn JSON.stringify(window.localStorage.getItem(storageKey));\n}"}, 
+
+{"option":"const retrieveFromLocalStorage = (storageKey) => {\n\treturn window.localStorage.getItem(storageKey);\n}"}, 
+
+{"option":"const retrieveFromLocalStorage = (storageKey) => {\n\treturn window.localStorage[storageKey];\n}"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"Consider type coercion, what does the following expression evaluate to?<code>true + 3 + \"100\" + null</code>", 
+
+"options": 
+
+[{"option":"104"}, 
+
+{"option":"4100"}, 
+
+{"option":"'3100null'"}, 
+
+{"option":"'4100null'"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Refer to code below:<code>console.log(0);\nsetTimeout(() => {\n\tconsole.log(1);\n});\n\nconsole.log(2);\n\nsetTimeout(() => {\n\tconsole.log(3);\n}, 0);\n\nconsole.log(4);</code>In which sequence will the numbers be logged?", 
+
+"options": 
+
+[{"option":"01234"}, 
+
+{"option":"02431"}, 
+
+{"option":"02413"}, 
+
+{"option":"13024"}], 
+
+"answers":[3] 
+
+}, { 
+
+"question":"In the browser, the window object is often used to assign variables that require the broadest scope in an application Node.js application does not have access to the window object by default. Which two methods are used to address this? Choose 2 answers", 
+
+"options": 
+
+[{"option":"Use the document object instead of the window object."}, 
+
+{"option":"Assign variables to the global object."}, 
+
+{"option":"Create a new window object in the root file."}, 
+
+{"option":"Assign variables to module.exports and require them as needed."}], 
+
+"answers":[2,4] 
+
+}, { 
+
+"question":"Refer to the code below:<code>const resolveAfterMilliseconds = (ms) => Promise.resolve( setTimeout ( () => console.log(ms), ms ));\nconst aPromise = await resolveAfterMilliseconds(500);\nconst bPromise = await resolveAfterMilliseconds(500);\nawait aPromise, wait bPromise;</code>What is the result of running line 05?", 
+
+"options": 
+
+[{"option":"aPromise and bPromise run sequentially."}, 
+
+{"option":"Neither aPromise or bPromise runs."}, 
+
+{"option":"aPromise and bPromise run in parallel."}, 
+
+{"option":"Only aPromise runs."}], 
+
+"answers":[2] 
+
+}, { 
+
+"question":"A developer implements a function that adds a few values.<code>function sum(num) {\n\tif(num == undefined) {\n\t\tnum = 0;\n\t}\n\n\treturn function( num2, num3){\n\t\tif(num3 === undefined) {\n\t\t\tnum3 = 0;\n\t\t}\n\t\treturn num + num2 + num3;\n\t}\n}</code>Which three options can the developer invoke for this function to get a return value of 10? Choose 3 answers", 
+
+"options": 
+
+[{"option":"sum()(10)"}, 
+
+{"option":"sum(5, 5)()"}, 
+
+{"option":"sum()(5, 5)"}, 
+
+{"option":"sum(5)(5)"}, 
+
+{"option":"sum(10)()"}], 
+
+"answers":[1,3,4] 
+
+}, { 
+
+"question":"A developer creates a simple webpage with an input field. When a user enters text in the input field and clicks the button, the actual value of the field must be displayed in the console. Here is the HTML file content:<code><input type=\"text\" value=\"Hello\" name=\"input\">\n<button type=\"button\">Display</button></code>The developer wrote the javascript code below:<code>const button = document.querySelector(\"button\");\nbutton.addEventListener(\"click\", () => {\n\tconst input = document.querySelector(\"input\");\n\tconsole.log(input.getAttribute(value));\n});</code>When the user clicks the button, the output is always Hello. What needs to be done to make this code work as expected?", 
+
+"options": 
+
+[{"option":"Replace line 04 with console.log(input.value);"}, 
+
+{"option":"Replace line 03 with const input = document.getElementByName('input');","explanation":"The correct method is getElementsByName (plural), which returns a NodeList, not a single element."}, 
+
+{"option":"Replace line 02 with button.addCallback(\"click\", function() {","explanation":"addCallback is not a valid method in JavaScript for attaching event listeners."}, 
+
+{"option":"Replace line 02 with button.addEventListener(\"onclick\", function() {","explanation":"The correct event name is \"click\", not \"onclick\"."}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"What are two unique features of functions defined with a fat arrow as compared to normal function definition? Choose 2 answers", 
+
+"options": 
+
+[{"option":"The function receives an argument that is always in scope, called parentThis, which is the enclosing lexical scope."}, 
+
+{"option":"The function uses the this from the enclosing scope."}, 
+
+{"option":"The function generated its own this making it useful for separating the function's scope from its enclosing scope."}, 
+
+{"option":"If the function has a single expression in the function body, the expression will be evaluated and implicit returned."}], 
+
+"answers":[2,4] 
+
+}, { 
+
+"question":"Refer to HTML below:<code><p>The current status of an Order: <span id=\"status\">In Progress</span></p></code>Which JavaScript statement changes the text In Progress to Completed?", 
+
+"options": 
+
+[{"option":"document.getElementById(\"status\").value = 'Completed';"}, 
+
+{"option":"document.getElementById(\"#status\").innerHTML = 'Completed';"}, 
+
+{"option":"document.getElementById(\"status\").innerHTML = 'Completed';"}, 
+
+{"option":"document.getElementById(\".status\").innerHTML = 'Completed';"}], 
+
+"answers":[3] 
+
+}, { 
+
+"question":"Refer to the code below:<code>let foodMenu1 = ['pizza', 'burger', 'French fries'];\nlet finalMenu = foodMenu1;\nfinalMenu.push('Garlic bread');</code>What is the value of foodMenu1 after the code executes?", 
+
+"options": 
+
+[{"option":"['pizza','Burger', 'French fires', 'Garlic bread']"}, 
+
+{"option":"['pizza','Burger', 'French fires']"}, 
+
+{"option":"['Garlic bread']"}, 
+
+{"option":"['Garlic bread', 'pizza', 'Burger', 'French fires']"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"Refer to the code below:<code>let inArray =[ [1, 2], [3, 4, 5] ];</code>Which two statements result in the array [1, 2, 3, 4, 5]? Choose 2 answers", 
+
+"options": 
+
+[{"option":"[].concat.apply([], inArray);"}, 
+
+{"option":"[].concat(...inArray);"}, 
+
+{"option":"[].concat.apply(inArray, []);"}, 
+
+{"option":"[].concat([...inArray]);"}], 
+
+"answers":[1,2] 
+
+}, { 
+
+"question":"Refer to following code block:<code>let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\nlet output =0;\nfor(let num of array){\n\tif (output > 10) {\n\t\tbreak;\n\t}\n\tif(num % 2 == 0){\n\t\tcontinue;\n\t}\n\toutput +=num;\n}</code>What is the value of output after the code executes?", 
+
+"options": 
+
+[{"option":"16"}, 
+
+{"option":"36"}, 
+
+{"option":"11"}, 
+
+{"option":"25"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"A Developer wrote the following code to test a sum3 function that takes in an array of numbers and returns the sum of the first three number in the array, the test passes:<code>let res = sum3([1, 2, 3]);\nconsole.assert(res === 6);\n\nres = sum3([1, 2, 3, 4]);\nconsole.assert(res=== 6);</code>A different developer made changes to the behavior of sum3 to instead sum all of the numbers present in the array, the test passes. Which two results occur when running the test on the updated sum3 function?", 
+
+"options": 
+
+[{"option":"The line 02 assertion fails"}, 
+
+{"option":"The line 02 assertion passes."}, 
+
+{"option":"The line 05 assertion fails."}, 
+
+{"option":"The line 05 assertion passes."}], 
+
+"answers":[2,3] 
+
+}, { 
+
+"question":"Refer to the following code:<code><html lang=\"en\">\n\t<body>\n\t\t<div onclick=\"console.log('Outer message');\">\n\t\t\t<button id=\"myButton\">Click me<button>\n\t\t</div>\n\t</body>\n\n\t<script>\n\tfunction displayMessage(ev) {\n\t\tev.stopPropagation();\n\t\tconsole.log('Inner message.');\n\t}\n\tconst elem = document.getElementById('myButton');\n\telem.addEventListener('click', displayMessage);\n\t</script>\n</html></code>What will the console show when the button is clicked?", 
+
+"options": 
+
+[{"option":"Inner message Outer message"}, 
+
+{"option":"Inner message"}, 
+
+{"option":"Outer message"}, 
+
+{"option":"Outer message Inner message"}], 
+
+"answers":[2] 
+
+}, { 
+
+"question":"Refer to the code below:<code>document.body.addEventListener('click', (event) => {\n\tif(/* answer here*/){\n\t\tconsole.log('myElement clicked');\n\t}\n});</code>Which replacement for the conditional statement on line 02 allows a developer to correctly determine that a specific element, myElement on the page had been clicked?", 
+
+"options": 
+
+[{"option":"event.target.id == 'myElement'"}, 
+
+{"option":"event.target == 'myElement'"}, 
+
+{"option":"event.id == 'myElement'"}, 
+
+{"option":"event.target.name == 'myElement'"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"A developer creates a new web server that uses Node.js. It imports a server library that uses events and callbacks for handling server functionality. The server library is imported with require and is made available to the code by a variable named server. The developer wants to log any issues that the server has while booting up. Given the code and the information the developer has, which code logs an error at boost with an event?", 
+
+"options": 
+
+[{"option":"try {\n\tserver.start();\n} catch(error) {\n\tconsole.log('ERROR', error); \n}"}, 
+
+{"option":"server.catch((server) =&gt; {\n\tconsole.log('ERROR', error); \n});"}, 
+
+{"option":"server.on('error', (error) =&gt; {\n\tconsole.log('ERROR', error); \n});"}, 
+
+{"option":"server.error((server) =&gt; {\n\tconsole.log('ERROR', error); \n});"}], 
+
+"answers":[3] 
+
+}, { 
+
+"question":"A developer creates a class that represents a blog post based on the requirement that a Post should have a body author and view count. The Code shown below:<code>class Post {\n\t// Insert code here\n\t\tthis.body = body;\n\t\tthis.author = author;\n\t\tthis.viewCount = viewCount;\n\t}\n}</code>Which statement should be inserted in the placeholder on line 02 to allow for a variable to be set to a new instanceof a Post with the three attributes correctly populated?", 
+
+"options": 
+
+[{"option":"super (body, author, viewCount) {"}, 
+
+{"option":"Function Post (body, author, viewCount) {"}, 
+
+{"option":"constructor (body, author, viewCount) {"}, 
+
+{"option":"constructor() {"}], 
+
+"answers":[3] 
+
+}, { 
+
+"question":"Refer to the code below:<code>const addBy = ?\nconst addByEight = addBy(8);\nconst sum = addBYEight(50);</code>Which two functions can replace line 01 and return 58 to sum? Choose 2 answers", 
+
+"options": 
+
+[{"option":"const addBy = function(num1){ return function(num2){ return num1 + num2; }"}, 
+
+{"option":"const addBy = function(num1){ return num1 + num2; }"}, 
+
+{"option":"const addBy = (num1) =&gt; num1 + num2 ;"}, 
+
+{"option":"const addBY = (num1) =&gt; (num2) =&gt; num1 + num2;"}], 
+
+"answers":[1, 4] 
+
+}, { 
+
+"question":"A developer is required to write a function that calculates the sum of elements in an array but is getting undefined every time the code is executed.The developer needs to find what is missing in the code below.<code>const sumFunction = arr => {\n\treturn arr.reduce((result, current) => {\n\t\t//\n\t\tresult += current;\n\t\t//\n\t}, 10);\n};</code>Which option makes the code work as expected?", 
+
+"options": 
+
+[{"option":"Replace line 02 with return arr.map(( result, current) =&gt; ("}, 
+
+{"option":"Replace line 04 with result = result +current;"}, 
+
+{"option":"Replace line 03 with if(arr.length == 0 ) ( return 0; )"}, 
+
+{"option":"Replace line 05 with return result;"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"The developer has a function that prints \"Hello\" to an input name. To test this, the developer created a function that returns \"World\". However the following snippet does not print \"Hello World\".<code>const sayHello = (name) => {\n\tconsole.log('Hello', name);\n}\n\nconst world = () => {\n\treturn 'world';\n}\n\nsayHello(world);</code>What can the developer do to change the code to print 'Hello World'?", 
+
+"options": 
+
+[{"option":"Change line 7 to )();"}, 
+
+{"option":"Change line 2 to console.log('Hello', name());"}, 
+
+{"option":"Change line 9 to sayHello(world)();"}, 
+
+{"option":"Change line 5 to function world() {"}], 
+
+"answers":[2] 
+
+}, { 
+
+"question":"A developer is setting up a Node,js server and is creating a script at the root of the source code, index,js, that will start the server when executed. The developer declares a variable that needs the folder location that the code executes from. Which global variable can be used in the script?", 
+
+"options": 
+
+[{"option":"window.location"}, 
+
+{"option":"_filename"}, 
+
+{"option":"_dirname"}, 
+
+{"option":"this.path"}], 
+
+"answers":[3] 
+
+}, { 
+
+"question":"Refer to the code below:<code>const event = new CustomEvent(\n\t// Missing Code\n);\nobj.dispatchEvent(event);</code>A developer needs to dispatch a custom event called update to send information about recordId. Which two options could a developer insert at the placeholder in line 02 to achieve this? Choose 2 answers", 
+
+"options": 
+
+[{"option":"'Update' , '123abc'"}, 
+
+{"option":"{ type : 'update', recordId : '123abc' }"}, 
+
+{"option":"'Update' , { recordId : '123abc' }"}, 
+
+{"option":"'Update' , {  Details: { recordId: '123abc' } }"}], 
+
+"answers":[3,4] 
+
+}, { 
+
+"question":"Refer to the following object.<code>const dog = {\n\tfirstName: 'Beau',\n\tlastName: 'Boo',\n\tget fullName(){\n\t\treturn this.firstName + ' ' + this.lastName;\n\t}\n}</code>How can a developer access the fullName property for dog?", 
+
+"options": 
+
+[{"option":"Dog.fullName"}, 
+
+{"option":"Dog.fullName()"}, 
+
+{"option":"Dog, get, fullName"}, 
+
+{"option":"Dog, function, fullName"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"Refer to the string below:<code>const str = 'Salesforce';</code>Which two statements result in the word 'Sales'? Choose 2 answers", 
+
+"options": 
+
+[{"option":"str.substr(1, 5);"}, 
+
+{"option":"str.substr(0, 5);"}, 
+
+{"option":"str.substring(1, 5);"}, 
+
+{"option":"str.substring(0, 5);"}], 
+
+"answers":[2,4] 
+
+}, { 
+
+"question":"Cloud Kicks has a class to represent items for sale in an online store, as shown below:<code>class Item{\n\tconstructor (name, price){\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\n\tformattedPrice(){\n\t\treturn 's' + String(this.price);\n\t}\n}</code>A new business requirement comes in that requests a ClothingItem class that should have all of the properties and methods of the Item class but will also have properties that are specific to clothes.Which line of code properly declares the clothingItem class such that it inherits from Item?", 
+
+"options": 
+
+[{"option":"class ClothingItem implements Item{"}, 
+
+{"option":"class ClothingItem {"}, 
+
+{"option":"class ClothingItem super Item {"}, 
+
+{"option":"class ClothingItem extends Item {"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Refer to code below: <code>let first = \"who\";\nlet second = \"what\";\ntry{\n\ttry{\n\t\tthrow new error(\"Sad trombone\");\n\t} catch (err){\n\t\tfirst = \"why\";\n\t}finally {\n\t\tsecond = \"when\";\n\t}\n} catch (err) {\n\tsecond = \"where\";\n}</code>What are the values for first and second once the code executes?", 
+
+"options": 
+
+[{"option":"first is who and second is when"}, 
+
+{"option":"first is why and second is where"}, 
+
+{"option":"first is who and second is where"}, 
+
+{"option":"first is why and second is when"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Teams at Universal Containers (UC) work on multiple JavaScript projects at the same time. UC is thinking about reusability and how each team can benefit from the work of others. Going open-source or public is not an option at this time. Which option is available to UC with npm?", 
+
+"options": 
+
+[{"option":"Private packages can be scored, and scopes can be associated to a private registries."}, 
+
+{"option":"Private registries are not supported by npm, but packages can be installed via URL."}, 
+
+{"option":"Private packages are not supported, but they can use another package manager like yarn."}, 
+
+{"option":"Private registries are not supported by npm, but packages can be installed via git."}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"Which option is true about the strict mode in imported modules?", 
+
+"options": 
+
+[{"option":"Add the statement use non-strict, before any other statements in the module to enable not-strict mode."}, 
+
+{"option":"You can only reference notStrict() functions from the imported module."}, 
+
+{"option":"Imported modules are in strict mode whether you declare them as such or not."}, 
+
+{"option":"Add the statement use strict =false; before any other statements in the module to enable not- strict mode."}], 
+
+"answers":[2] 
+
+}, { 
+
+"question":"Refer to HTML below:<code><div id='main'>\n\t<div id='card-00'>This card is smaller.</div>\n\t<div id = card-01>The width and height of this card is determined by its contents.</div>\n</div></code>Which expression outputs the screen width of the element with the ID card-01?", 
+
+"options": 
+
+[{"option":"document.getElementById('card-01').getBoundingClientRect().width"}, 
+
+{"option":"document.getElementById('card-01').style.width"}, 
+
+{"option":"document.getElementById('card-01').width"}, 
+
+{"option":"document.getElementById('card-01').innerHTML.lenght * e"}], 
+
+"answers":[1] 
+
+}, { 
+
+"question":"A team that works on a big project uses npm to deal with projects dependencies. A developer added a dependency does not get downloaded when they execute npm install. Which two reasons could be possible explanations for this? Choose 2 answers.", 
+
+"options": 
+
+[{"option":"The developer missed the option --add when adding the dependency."}, 
+
+{"option":"The developer added the dependency as a dev dependency, and NODE_ENVIs set to production."}, 
+
+{"option":"The developer missed the option --save when adding the dependency."}], 
+
+"answers":[2,3] 
+
+}, { 
+
+"question":"A developer publishes a new version of a package with new features that do not break backward compatibility. The previous version number was 1.1.3. Following semantic versioning format, what should the new package version number be? <br>\n\n\n2.0.0 \n\n\n1.2.3 \n\n\n1.1.4 \n\n\n1.2.0", 
+
+"options": 
+
+[{"option":"2.0.0"}, 
+
+{"option":"1.2.3"}, 
+
+{"option":"1.1.4"}, 
+
+{"option":"1.2.0"}], 
+
+"answers":[4] 
+
+}, { 
+
+"question":"Refer to the code below?<code>let searchString = ' look for this ';</code>Which two options remove the whitespace from the beginning of searchString? Choose 2 answers.", 
+
+"options": 
+
+[{"option":"searchString.trimEnd();"}, 
+
+{"option":"searchString.trimStart();"}, 
+
+{"option":"trimStart(searchString);"}, 
+
+{"option":"searchString.replace(/*\\s\\s*/, ‘');"}], 
+
+"answers":[2,4] 
+
+}, { 
+
+"question":"Given code below:<code>setTimeout (() => ( console.log(1); ). 0);\nconsole.log(2);\nnew Promise ((resolve, reject )) = > ( setTimeout(() => ( reject(console.log(3)); ). 1000); ))\n.catch(() => ( console.log(4); ));\nconsole.log(5);</code>What is logged to the console?", 
+
+"options": 
+
+[{"option":"2 1 4 3 5"}, 
+
+{"option":"2 5 1 3 4"}, 
+
+{"option":"1 2 4 3 5"}, 
+
+{"option":"1 2 5 3 4"}], 
+
+"answers":[2] 
 
 }] 
