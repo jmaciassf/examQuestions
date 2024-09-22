@@ -360,7 +360,7 @@ body.popupShow {
 
 
   .lineline {
-    max-height: 300px;
+    /* max-height: 300px; */
     width: 700px;
     width: 100%;
     margin: 50px auto 0;
