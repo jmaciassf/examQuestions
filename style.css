@@ -340,6 +340,7 @@ body.popupShow {
     background-color: white;
     font-weight: 500;
     max-height: 30px;
+    user-select: none;
 }
 .minimap .item.error {
     background-color: red;
