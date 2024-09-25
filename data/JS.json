@@ -782,7 +782,7 @@
 
  
 
-    "question":"Given the code below:<code>01 function myFunction(){\n02\ta = 5;\n03\tvar b =1;\n04 }\n05\n06\n07 myFunction();\n08 console.log(a);\n09 console.log(b);</code>What is the expected output?",  
+    "question":"Given the code below:<code>function myFunction(){\n\ta = 5;\n\tvar b =1;\n}\n\n\nmyFunction();\nconsole.log(a);\nconsole.log(b);</code>What is the expected output?",  
 
  
 
@@ -1554,7 +1554,7 @@
 
 }, { 
 
-"question":"A developer wants to define a function log to be used a few times on a single-file JavaScript script.<code>01 // Line 1 replacement\n02\tconsole.log('LOG: ', logInput);\n03 }</code>Which two options can correctly replace line 01 and declare the function for use? Choose 2 answers", 
+"question":"A developer wants to define a function log to be used a few times on a single-file JavaScript script.<code>// Line 1 replacement\n\tconsole.log('LOG: ', logInput);\n}</code>Which two options can correctly replace line 01 and declare the function for use? Choose 2 answers", 
 
 "options": 
 
