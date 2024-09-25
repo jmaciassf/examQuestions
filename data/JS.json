@@ -1,7 +1,5 @@
  
 
- 
-
 [{"answers":["C"],  
 
  
@@ -214,7 +212,7 @@
 
  
 
-    {"option":"sampleText.includes('quick', 4);"},  
+    {"option":"sampleText.includes(' quick ', 4);"},  
 
  
 
@@ -1168,7 +1166,7 @@
 
  
 
-    "question":"Refer to code below:<code>function Person() {\n\n\tthis.firstName = 'John';\n}\nPerson.prototype ={\n\tjob: x => 'Developer'\n};\nconst myFather = new Person();\nconst result = myFather.firstName + ' ' + myFather.job();</code>What is the value of the result after line 10 executes?",  
+    "question":"Refer to code below:<code>function Person() {\n\tthis.firstName = 'John';\n}\n\nPerson.prototype ={\n\tjob: x => 'Developer'\n};\n\nconst myFather = new Person();\nconst result = myFather.firstName + ' ' + myFather.job();</code>What is the value of the result after line 10 executes?",  
 
  
 
@@ -1308,24 +1306,6 @@
 
 }, { 
 
-"question":"Given a value, which three options can a developer use to detect if the value is NaN?", 
-
-"options": 
-
-[{"option":"value == NaN"}, 
-
-{"option":"Object.is(value, NaN)"}, 
-
-{"option":"value === Number.NaN"}, 
-
-{"option":"value ! == value"}, 
-
-{"option":"Number.isNaN(value)"}], 
-
-"answers":[1,5] 
-
-}, { 
-
 "question":"Which option is a core Node.js module?", 
 
 "options": 
@@ -1341,26 +1321,6 @@
 "answers":[1] 
 
 }, 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
 { 
 
@@ -1396,22 +1356,6 @@
 
 },{ 
 
-"question":"A developer has a web server running with Node.js. The command to start the web server is node server,js. The web server started having latency issues. Instead of a one second turn around for web requests, the developer now sees a five second turnaround.", 
-
-"options": 
-
-[{"option":"DEBUG=http, https node server.js"}, 
-
-{"option":"NODE_DEBUG=http, https node server.js"}, 
-
-{"option":"DEBUG=true node server.js"}, 
-
-{"option":"NODE_DEBUG=true node server.js"}], 
-
-"answers":[3] 
-
-},{ 
-
 "question":"Which three options show valid methods for creating a fat arrow function? Choose 3 answers", 
 
 "options": 
@@ -1442,151 +1386,9 @@
 
 {"option":"const paragraphs = element.shadowRoot.querySelector('p');"}], 
 
-"answers":[3] 
+"answers":[3], 
 
-},{ 
-
-"question":"Which statement is accurate regarding how Jest tests use jsdom?", 
-
-"options": 
-
-[{"option":"Each test file shares a single instance of jsdom and changes are not reset between tests inside the file"}, 
-
-{"option":"Each test file shares a single instance of jsdom and changes are reset for each describe block"}, 
-
-{"option":"Each test suite shares a single instance of jsdom and changes are reset for each test suite"}, 
-
-{"option":"Each test block has its own instance of jsdom and changes are reset for each test block"}], 
-
-"answers":[1] 
-
-},{ 
-
-"question":"Which sequence allows for testing a property without waiting for an asynchronous update?", 
-
-"options": 
-
-[{"option":"The property is set prior to the renderedCallback() call."}, 
-
-{"option":"The property is set prior to the appendChild() call."}, 
-
-{"option":"The property is set after the renderedCallback() call."}, 
-
-{"option":"The property is set after the appendChild() call."}], 
-
-"answers":[2] 
-
-},{ 
-
-"question":"Which import is required and only available in Lightning Web Component Jest tests?", 
-
-"options": 
-
-[{"option":"import { createElements } from 'lwc';"}, 
-
-{"option":"import { testElement } from 'lwc';"}, 
-
-{"option":"import { createElement } from 'lwc';"}, 
-
-{"option":"import { testElements } from 'lwc';"}], 
-
-"answers":[3] 
-
-},{ 
-
-"question":"Which statement must be used to set fake timers before all the tests in a Jest JavaScript file?", 
-
-"options": 
-
-[{"option":"jest.useFakeTimers() inside the beforeAll() function"}, 
-
-{"option":"jest.useFakeTimers() inside the beforeTests() function"}, 
-
-{"option":"jest.useMockTimers() inside the beforeAll() function"}, 
-
-{"option":"jest.useMockTimers() inside the beforeTests() function"}], 
-
-"answers":[1] 
-
-},{ 
-
-"question":"Which function must be used for Apex Wire adapters in Jest tests?", 
-
-"options": 
-
-[{"option":"createTestWireAdapter() from \"@salesforce/sfdx-lwc-jest\";"}, 
-
-{"option":"createApexWireAdapter() from \"@salesforce/wire-service-jest-utils\";"}, 
-
-{"option":"createApexWireAdapter() from \"@salesforce/sfdx-lwc-jest\";"}, 
-
-{"option":"createApexTestWireAdapter() from \"@salesforce/wire-service-jest-utils\";"}], 
-
-"answers":[4] 
-
-},{ 
-
-"question":"Which statement is true about testing Base Lightning Components?", 
-
-"options": 
-
-[{"option":"All properties from Base Lightning components are reflected in the DOM."}, 
-
-{"option":"Base Lightning components have some properties that are not reflected as attributes in the DOM."}, 
-
-{"option":"The order in which slots are rendered will follow the order established in your HTML file."}, 
-
-{"option":"Events can be fired from mocked Base Lightning components natively."}], 
-
-"answers":[2] 
-
-},{ 
-
-"question":"What must be done to Jest tests to cause a module import statement inside a JavaScript file to resolve to the mocked version of this module?", 
-
-"options": 
-
-[{"option":"Add the mocked module file to the scripts folder in the root folder of the project"}, 
-
-{"option":"Add the mocked module file to the moduleNameMapper settings in the jest.config file"}, 
-
-{"option":"Enable mocked modules by using the function require() inside the test"}, 
-
-{"option":"Use the function emit() from a wired adapter that invoked the mocked module"}], 
-
-"answers":[2] 
-
-},{ 
-
-"question":"Given a registered Apex wire adapter named findRecordsAdapter and a mocked @wire named mockRecords, which statement causes a Jest test to use the mocked records once the Apex method is called?", 
-
-"options": 
-
-[{"option":"jest.mockRecords.emit(findRecordsAdapter);"}, 
-
-{"option":"jest.findRecordsAdapter(mockRecords);"}, 
-
-{"option":"findRecordsAdapter.emit(mockRecords);"}, 
-
-{"option":"mockRecords.emit(findRecordsAdapter);"}], 
-
-"answers":[3] 
-
-},{ 
-
-"question":"Which statement allows the Jest test to catch a mock handler for a toast event?", 
-
-"options": 
-
-[{"option":"const handler = jest.fn(); element.addEventListener(ShowToastEventName, handler);"}, 
-
-{"option":"const handler = jest.fn(); element.dispatchEvent(ShowToastEventName, handler);"}, 
-
-{"option":"const showToastEventName = jest.fn();"}, 
-
-{"option":"const handler = jest.fn(); handler.dispatchEvent(ShowToastEventName);"}], 
-
-"answers":[1] 
+"favorite": true 
 
 },{ 
 
@@ -1610,15 +1412,17 @@
 
 "options": 
 
-[{"option":"arr.sort(); The sort() function sorts values as strings, which will sort this as [10, 3, 400, 7]."}, 
+[{"option":"arr.sort();", "explanation": "The sort() function sorts values as strings, which will sort this as [10, 3, 400, 7]."}, 
 
-{"option":"arr.sort((a, b) =&gt; a - b);  The compare function passed in sort() defines an alternative sort order."}, 
+{"option":"arr.sort((a, b) =&gt; a - b);", "explanation": "The compare function passed in sort() defines an alternative sort order."}, 
 
-{"option":"arr.sort((a, b) =&gt; a &lt; b); The compare function expects a positive, negative, or 0 to be returned."}, 
+{"option":"arr.sort((a, b) =&gt; a &lt; b);", "explanation": "The compare function expects a positive, negative, or 0 to be returned."}, 
 
-{"option":"arr.sort((a, b) =&gt; b - a); The compare function will actually reverse the order of the numbers."}], 
+{"option":"arr.sort((a, b) =&gt; b - a);", "explanation": "The compare function will actually reverse the order of the numbers."}], 
 
-"answers":[2] 
+"answers":[2], 
+
+"favorite": true 
 
 }, { 
 
@@ -1954,7 +1758,7 @@
 
 {"option":"async function getBookInfo() {\n\tconst Id = getId;\n\tconst result = getBook(id);\n}\nawait getBookInfo();","explanation":"Wrong use of await and async to get info. The await expression is always inside an async function."}], 
 
-"answers":[] 
+"answers":[1] 
 
 }, { 
 
@@ -2018,7 +1822,9 @@
 
 {"option":"breakpoint","explanation":"Breakpoint is not a command."}], 
 
-"answers":[2] 
+"answers":[2], 
+
+"favorite":true 
 
 }, { 
 
@@ -2324,7 +2130,9 @@
 
 {"option":"Race is canceled."}], 
 
-"answers":[3] 
+"answers":[3], 
+
+"favorite":true 
 
 }, { 
 
@@ -2454,7 +2262,9 @@
 
 {"option":"User non blocking functionality for performant request handling."}], 
 
-"answers":[1,3,5] 
+"answers":[1,3,5], 
+
+"favorite":true 
 
 },{ 
 
@@ -2522,9 +2332,7 @@
 
 }, { 
 
-"email" : "user01@universalcontainers.demo", 
-
-"question":"A developer uses a parsed JSON string to work with userInformation as in the block below:<code>const userInformation = {\n\t\"id\": \"user-01\",\n\t\"email\" : \"user01@universalcontainers.demo\",\"age\" : 25\n}</code>Which two options access the email attribute in the object? Choose 2 answers", 
+"question":"A developer uses a parsed JSON string to work with userInformation as in the block below:<code>const userInformation = {\n\t\"id\": \"user-01\",\n\t\"email\" : \"user01@universalcontainers.demo\",\n\t\"age\" : 25\n}</code>Which two options access the email attribute in the object? Choose 2 answers", 
 
 "options": 
 
@@ -2652,7 +2460,7 @@
 
 }, { 
 
-"question":"Given the code below:<code>const copy = JSON.stringify([new String('false'), new Bollean(false), undefined]);</code>What is the value of copy?", 
+"question":"Given the code below:<code>const copy = JSON.stringify([new String('false'), new Boolean(false), undefined]);</code>What is the value of copy?", 
 
 "options": 
 
@@ -2672,7 +2480,7 @@
 
 "options": 
 
-[{"option":"50\nUncaught TypeError: saleItem,description is not a function\n50\n80"}, 
+[{"option":"50\nUncaught TypeError: saleItem.description is not a function\n50\n80"}, 
 
 {"option":"50\n80\n50\n72"}, 
 
@@ -2704,19 +2512,19 @@
 
 "options": 
 
-[{"option":"let x = (1' + '2') == (6 + 2);"}, 
+[{"option":"let x = ('1' + '2') == (6 * 2);"}, 
 
-{"option":"let x = (1' + '2') === (6 + 2);"}, 
+{"option":"let x = ('1' + '2') === (6 * 2);"}, 
 
-{"option":"let x = (1' + '2') == ('6' / 2);"}, 
+{"option":"let x = (1 + 2) == ('6' / 2);"}, 
 
-{"option":"let x = (1' + '2') === (6 / 2);"}], 
+{"option":"let x = (1 + 2) === (6 / 2);"}], 
 
 "answers":[2] 
 
 },{ 
 
-"question":"A developer implements and calls the following code when an application state change occurs:<code>const onStateChange =(innerPageState) => {\n\twindow.history.pushState(newPageState, ' ', null);\n}</code>If the back button is clicked after this method is executed, what can a developer expect?", 
+"question":"A developer implements and calls the following code when an application state change occurs:<code>const onStateChange = (innerPageState) => {\n\twindow.history.pushState(newPageState, ' ', null);\n}</code>If the back button is clicked after this method is executed, what can a developer expect?", 
 
 "options": 
 
@@ -2728,7 +2536,9 @@
 
 {"option":"A popstate event is fired with a state property that details the application's last state."}], 
 
-"answers":[2] 
+"answers":[2], 
+
+"favorite":true 
 
 }, { 
 
@@ -2784,7 +2594,7 @@
 
 },{ 
 
-"question":"Refer the code below:<code>x=3.14;\nfunction myfunction() {\n\t\"use strict\";\n\ty=x;\n}\nz=x;\nmyFunction();</code>", 
+"question":"Refer the code below:<code>x=3.14;\n\nfunction myFunction() {\n\t\"use strict\";\n\ty=x;\n}\nz=x;\nmyFunction();</code>", 
 
 "options": 
 
@@ -2872,7 +2682,7 @@
 
 [{"option":"dan.name"}, 
 
-{"option":"dan,firstname() + dan.lastName()"}, 
+{"option":"dan.firstname() + dan.lastName()"}, 
 
 {"option":"dan.firstName + dan.lastName"}, 
 
@@ -2894,7 +2704,9 @@
 
 {"option":"leo.prototype.roar = () =&gt; { console.log('They're pretty good:'); };"}], 
 
-"answers":[1,3] 
+"answers":[1,3], 
+
+"favorite": true 
 
 }, { 
 
@@ -2948,7 +2760,7 @@
 
 }, { 
 
-"question":"<code>function Person(firstName, lastName, eyeColor) {\n\tthis.firstName =firstName;\n\tthis.lastName = lastName;\n\tthis.eyeColor = eyeColor;\n}\n\nPerson.job = 'Developer';\nconst myFather = new Person('John', 'Doe');\nconsole.log(myFather.job);</code>What is the output after the code executes?", 
+"question":"<code>function Person(firstName, lastName, eyeColor) {\n\tthis.firstName = firstName;\n\tthis.lastName = lastName;\n\tthis.eyeColor = eyeColor;\n}\n\nPerson.job = 'Developer';\nconst myFather = new Person('John', 'Doe');\nconsole.log(myFather.job);</code>What is the output after the code executes?", 
 
 "options": 
 
@@ -2960,7 +2772,9 @@
 
 {"option":"Undefined"}], 
 
-"answers":[4] 
+"answers":[4], 
+
+"favorite": true 
 
 }, { 
 
@@ -2976,7 +2790,9 @@
 
 {"option":"try {\n\tcountSheep();\n} handleError(e) {\n\tcatch(e);\n}"}], 
 
-"answers":[1] 
+"answers":[1], 
+
+"favorite": true 
 
 }, { 
 
@@ -3010,7 +2826,9 @@
 
 {"option":"A pending promise can become fulfilled, settled, or rejected."}], 
 
-"answers":[2,3,5] 
+"answers":[2,3,5], 
+
+"favorite": true 
 
 }, { 
 
@@ -3030,7 +2848,7 @@
 
 }, { 
 
-"question":"Given the requirement to refactor the code above to JavaScript class format, which class definition is correct?<code>function Vehicle(name, price) {\n\tthis.name = name;\n\tthis.price = price;\n}\nVehicle.prototype.priceInfo = function(){\n\treturn 'Cost of the $(this.name) is $(this.price)$';\n}\nvar ford = new Vehicle('Ford Fiesta', '20,000');</code>A)<code>class Vehicle {constructor(name, price) {\n\tthis.name = name;\n\tthis.price = price;\n}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>B)<code>class Vehicle {\n\tvehicle(name, price) {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>C)<code>class Vehicle {\n\tconstructor(name, price) {\n\t\tname = name;\n\t\tprice = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>D)<code>class Vehicle {\n\tconstructor() {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>", 
+"question":"Given the requirement to refactor the code above to JavaScript class format, which class definition is correct?<code>function Vehicle(name, price) {\n\tthis.name = name;\n\tthis.price = price;\n}\nVehicle.prototype.priceInfo = function(){\n\treturn 'Cost of the $(this.name) is $(this.price)$';\n}\nvar ford = new Vehicle('Ford Fiesta', '20,000');</code>A)<code>class Vehicle {\n\tconstructor(name, price) {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>B)<code>class Vehicle {\n\tvehicle(name, price) {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>C)<code>class Vehicle {\n\tconstructor(name, price) {\n\t\tname = name;\n\t\tprice = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>D)<code>class Vehicle {\n\tconstructor() {\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\tpriceInfo() {\n\t\treturn 'Cost of the $(this.name) is $(this.price)$';\n\t}\n}</code>", 
 
 "options": 
 
@@ -3074,7 +2892,9 @@
 
 {"option":"0123"}], 
 
-"answers":[3] 
+"answers":[3], 
+
+"favorite": true 
 
 }, { 
 
@@ -3260,7 +3080,7 @@
 
 }, { 
 
-"question":"Refer to the code below:<code>const resolveAfterMilliseconds = (ms) => Promise.resolve( setTimeout ( () => console.log(ms), ms ));\nconst aPromise = await resolveAfterMilliseconds(500);\nconst bPromise = await resolveAfterMilliseconds(500);\nawait aPromise, wait bPromise;</code>What is the result of running line 05?", 
+"question":"Refer to the code below:<code>const resolveAfterMilliseconds = (ms) => Promise.resolve( setTimeout ( () => console.log(ms), ms ));\nconst aPromise = await resolveAfterMilliseconds(500);\nconst bPromise = await resolveAfterMilliseconds(500);\n\nawait aPromise, wait bPromise;</code>What is the result of running line 05?", 
 
 "options": 
 
@@ -3276,7 +3096,7 @@
 
 }, { 
 
-"question":"A developer implements a function that adds a few values.<code>function sum(num) {\n\tif(num == undefined) {\n\t\tnum = 0;\n\t}\n\n\treturn function( num2, num3){\n\t\tif(num3 === undefined) {\n\t\t\tnum3 = 0;\n\t\t}\n\t\treturn num + num2 + num3;\n\t}\n}</code>Which three options can the developer invoke for this function to get a return value of 10? Choose 3 answers", 
+"question":"A developer implements a function that adds a few values.<code>function sum(num) {\n\tif(num == undefined) {\n\t\tnum = 0;\n\t}\n\n\treturn function(num2, num3){\n\t\tif(num3 === undefined) {\n\t\t\tnum3 = 0;\n\t\t}\n\t\treturn num + num2 + num3;\n\t}\n}</code>Which three options can the developer invoke for this function to get a return value of 10? Choose 3 answers", 
 
 "options": 
 
@@ -3322,7 +3142,9 @@
 
 {"option":"If the function has a single expression in the function body, the expression will be evaluated and implicit returned."}], 
 
-"answers":[2,4] 
+"answers":[2,4], 
+
+"favorite": true 
 
 }, { 
 
@@ -3370,11 +3192,13 @@
 
 {"option":"[].concat([...inArray]);"}], 
 
-"answers":[1,2] 
+"answers":[1,2], 
+
+"favorite": true 
 
 }, { 
 
-"question":"Refer to following code block:<code>let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\nlet output =0;\nfor(let num of array){\n\tif (output > 10) {\n\t\tbreak;\n\t}\n\tif(num % 2 == 0){\n\t\tcontinue;\n\t}\n\toutput +=num;\n}</code>What is the value of output after the code executes?", 
+"question":"Refer to following code block:<code>let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];\nlet output = 0;\nfor(let num of array){\n\tif (output > 10) {\n\t\tbreak;\n\t}\n\tif(num % 2 == 0){\n\t\tcontinue;\n\t}\n\toutput += num;\n}</code>What is the value of output after the code executes?", 
 
 "options": 
 
@@ -3386,11 +3210,13 @@
 
 {"option":"25"}], 
 
-"answers":[1] 
+"answers":[1], 
+
+"favorite": true 
 
 }, { 
 
-"question":"A Developer wrote the following code to test a sum3 function that takes in an array of numbers and returns the sum of the first three number in the array, the test passes:<code>let res = sum3([1, 2, 3]);\nconsole.assert(res === 6);\n\nres = sum3([1, 2, 3, 4]);\nconsole.assert(res=== 6);</code>A different developer made changes to the behavior of sum3 to instead sum all of the numbers present in the array, the test passes. Which two results occur when running the test on the updated sum3 function?", 
+"question":"A Developer wrote the following code to test a sum3 function that takes in an array of numbers and returns the sum of the first three number in the array, the test passes:<code>let res = sum3([1, 2, 3]);\nconsole.assert(res === 6);\n\nres = sum3([1, 2, 3, 4]);\nconsole.assert(res === 6);</code>A different developer made changes to the behavior of sum3 to instead sum all of the numbers present in the array, the test passes. Which two results occur when running the test on the updated sum3 function?", 
 
 "options": 
 
@@ -3460,7 +3286,7 @@
 
 [{"option":"super (body, author, viewCount) {"}, 
 
-{"option":"Function Post (body, author, viewCount) {"}, 
+{"option":"function Post (body, author, viewCount) {"}, 
 
 {"option":"constructor (body, author, viewCount) {"}, 
 
@@ -3554,13 +3380,13 @@
 
 "options": 
 
-[{"option":"Dog.fullName"}, 
+[{"option":"dog.fullName"}, 
 
-{"option":"Dog.fullName()"}, 
+{"option":"dog.fullName()"}, 
 
-{"option":"Dog, get, fullName"}, 
+{"option":"dog.get.fullName"}, 
 
-{"option":"Dog, function, fullName"}], 
+{"option":"dog.function.fullName"}], 
 
 "answers":[1] 
 
@@ -3582,7 +3408,7 @@
 
 }, { 
 
-"question":"Cloud Kicks has a class to represent items for sale in an online store, as shown below:<code>class Item{\n\tconstructor (name, price){\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\n\tformattedPrice(){\n\t\treturn 's' + String(this.price);\n\t}\n}</code>A new business requirement comes in that requests a ClothingItem class that should have all of the properties and methods of the Item class but will also have properties that are specific to clothes.Which line of code properly declares the clothingItem class such that it inherits from Item?", 
+"question":"Cloud Kicks has a class to represent items for sale in an online store, as shown below:<code>class Item {\n\tconstructor (name, price){\n\t\tthis.name = name;\n\t\tthis.price = price;\n\t}\n\n\tformattedPrice(){\n\t\treturn 's' + String(this.price);\n\t}\n}</code>A new business requirement comes in that requests a ClothingItem class that should have all of the properties and methods of the Item class but will also have properties that are specific to clothes. Which line of code properly declares the clothingItem class such that it inherits from Item?", 
 
 "options": 
 
@@ -3598,7 +3424,7 @@
 
 }, { 
 
-"question":"Refer to code below: <code>let first = \"who\";\nlet second = \"what\";\ntry{\n\ttry{\n\t\tthrow new error(\"Sad trombone\");\n\t} catch (err){\n\t\tfirst = \"why\";\n\t}finally {\n\t\tsecond = \"when\";\n\t}\n} catch (err) {\n\tsecond = \"where\";\n}</code>What are the values for first and second once the code executes?", 
+"question":"Refer to code below: <code>let first = \"who\";\nlet second = \"what\";\ntry{\n\ttry{\n\t\tthrow new error(\"Sad trombone\");\n\t} catch (err){\n\t\tfirst = \"why\";\n\t} finally {\n\t\tsecond = \"when\";\n\t}\n} catch (err) {\n\tsecond = \"where\";\n}</code>What are the values for first and second once the code executes?", 
 
 "options": 
 
@@ -3640,13 +3466,13 @@
 
 {"option":"Imported modules are in strict mode whether you declare them as such or not."}, 
 
-{"option":"Add the statement use strict =false; before any other statements in the module to enable not- strict mode."}], 
+{"option":"Add the statement use strict = false; before any other statements in the module to enable not- strict mode."}], 
 
 "answers":[2] 
 
 }, { 
 
-"question":"Refer to HTML below:<code><div id='main'>\n\t<div id='card-00'>This card is smaller.</div>\n\t<div id = card-01>The width and height of this card is determined by its contents.</div>\n</div></code>Which expression outputs the screen width of the element with the ID card-01?", 
+"question":"Refer to HTML below:<code><div id='main'>\n\t<div id='card-00'>This card is smaller.</div>\n\t<div id='card-01'>The width and height of this card is determined by its contents.</div>\n</div></code>Which expression outputs the screen width of the element with the ID card-01?", 
 
 "options": 
 
@@ -3676,7 +3502,7 @@
 
 }, { 
 
-"question":"A developer publishes a new version of a package with new features that do not break backward compatibility. The previous version number was 1.1.3. Following semantic versioning format, what should the new package version number be? <br>\n\n\n2.0.0 \n\n\n1.2.3 \n\n\n1.1.4 \n\n\n1.2.0", 
+"question":"A developer publishes a new version of a package with new features that do not break backward compatibility. The previous version number was 1.1.3. Following semantic versioning format, what should the new package version number be?\n\n2.0.0\n1.2.3\n1.1.4\n1.2.0", 
 
 "options": 
 
@@ -3708,7 +3534,7 @@
 
 }, { 
 
-"question":"Given code below:<code>setTimeout (() => ( console.log(1); ). 0);\nconsole.log(2);\nnew Promise ((resolve, reject )) = > ( setTimeout(() => ( reject(console.log(3)); ). 1000); ))\n.catch(() => ( console.log(4); ));\nconsole.log(5);</code>What is logged to the console?", 
+"question":"Given code below:<code>setTimeout (() => ( console.log(1); ). 0);\nconsole.log(2);\nnew Promise ((resolve, reject )) = > ( setTimeout(() => ( reject(console.log(3)); ), 1000); ))\n.catch(() => ( console.log(4); ));\nconsole.log(5);</code>What is logged to the console?", 
 
 "options": 
 
@@ -3721,5 +3547,321 @@
 {"option":"1 2 5 3 4"}], 
 
 "answers":[2] 
+
+},  
+
+ 
+
+ 
+
+{ 
+
+"question":"A developer uses the code below to format a date: <code>const date = new Date(2020, 05, 10);\n\nconst dateDisplayOptions = {\n\tyear: 'numeric',\n\tmonth: 'long',\n\tday: 'numeric'\n};\n\nconst formattedDate = date.toLocaleDateString('en', dateDisplayOptions);</code>After executing, what is the value of formattedDate?", 
+
+"options": 
+
+[{"option":"June 10, 2020"}, 
+
+{"option":"May 10, 2020"}, 
+
+{"option":"November 05, 2020"}, 
+
+{"option":"October 05, 2020"}], 
+
+"answers":[1], 
+
+"favorite":true 
+
+}, 
+
+{ 
+
+"question":"Refer to the following code:<code>function test (val) {\n\tif(val === undefined) {\n\t\treturn 'Undefined values!';\n\t}\n\n\tif (val === null) {\n\t\treturn 'Null value!';\n\t}\n\n\treturn val;\n}\n\nlet x;\ntest(x);</code>What is returned by the function call on line 13?", 
+
+"options": 
+
+[{"option":"Undefined"}, 
+
+{"option":"'Null value!'"}, 
+
+{"option":"Line 13 throws an error."}, 
+
+{"option":"'Undefined values!'"}], 
+
+"answers":[4] 
+
+}, 
+
+{ 
+
+"question":"Given the expressions var1 and var2, what are two valid ways to return the concatenation of the two expressions and ensure it is string? Choose 2 answers", 
+
+"options": 
+
+[{"option":"String(var1).concat(var2)"}, 
+
+{"option":"var1 + var2"}, 
+
+{"option":"var1.toString() + var2.toString()"}, 
+
+{"option":"String.concat(var1 +var2)"}], 
+
+"answers":[1,3] 
+
+}, 
+
+{ 
+
+"question":"Given two expressions var1 and var2. What are two valid ways to return the logical AND of the two expressions and ensure it is data type Boolean? Choose 2 answers", 
+
+"options": 
+
+[{"option":"Boolean(var1 &amp;&amp; var2)"}, 
+
+{"option":"var1 &amp;&amp; var2"}, 
+
+{"option":"var1.toBoolean() &amp;&amp; var2toBoolean()"}, 
+
+{"option":"Boolean(var1) &amp;&amp; Boolean(var2)"}], 
+
+"answers":[1,4], 
+
+"favorite":true 
+
+}, 
+
+{ 
+
+"question":"A developer has the function, shown below, that is called when a page loads.<code>function onload() {\n\tconsole.log(\"Page has loaded!\");\n}</code>Where can the developer see the log statement after loading the page in the browser?", 
+
+"options": 
+
+[{"option":"Browser javaScript console"}, 
+
+{"option":"Terminal running the web server."}, 
+
+{"option":"Browser performance toots"}, 
+
+{"option":"On the webpage."}], 
+
+"answers":[1] 
+
+}, 
+
+{ 
+
+"question":"Refer to the code below:<code>async funct on functionUnderTest(isOK) {\n\tif (isOK) return 'OK';\n\tthrow new Error('not OK');\n}</code>Which assertion accuretely tests the above code?", 
+
+"options": 
+
+[{"option":"console.assert(await functionUnderTest(true), ' not OK ')"}, 
+
+{"option":"console.assert(await functionUnderTest(true), ' OK ')"}, 
+
+{"option":"console.assert(await functionUnderTest(true), ' not OK ')"}, 
+
+{"option":"console.assert(await functionUnderTest(true), 'OK')"}], 
+
+"answers":[4] 
+
+}, 
+
+{ 
+
+"question":"Refer to the code below:<code>const server = require('server');\n/* Insert code here */</code>A developer imports a library that creates a web server. The imported library uses events and callbacks to start the servers. Which code should be inserted at the line 02 to set up an event and start the web server?", 
+
+"options": 
+
+[{"option":"server()"}, 
+
+{"option":"server.on('connect', (port) =&gt; { console.log('Listening on ' , port); })"}, 
+
+{"option":"server.start();"}, 
+
+{"option":"console.log('Listening on ', port) ;"}, 
+
+{"option":"serve((port) =&gt; {"}], 
+
+"answers":[2] 
+
+}, 
+
+{ 
+
+"question":"Refer to the following code that imports a module named utils:<code>import (foo, bar) from '/path/Utils.js';\nfoo();\nbar();</code>Which two implementations of Utils.js export foo and bar such that the code above runs without error? Choose 2 answers", 
+
+"options": 
+
+[{"option":"const foo = () =&gt; { return 'foo'; }\nconst bar = () => { return 'bar'; }\nexport { bar, foo }"}, 
+
+{"option":"// FooUtils.js and BarUtils.js exist\nimport (foo) from '/path/FooUtils.js';\nimport (boo) from '/path/NarUtils.js'"}, 
+
+{"option":"export default class {\n\tfoo() { return 'foo'; }\n\tbar() { return 'bar'; }\n}"}, 
+
+{"option":"const foo = () =&gt; { return 'foo';}\nconst bar = () => { return 'bar'; }\nexport default foo, bar;"}], 
+
+"answers":[1,3] 
+
+}, 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+{ 
+
+"question":"Which statement is accurate regarding how Jest tests use jsdom?", 
+
+"options": 
+
+[{"option":"Each test file shares a single instance of jsdom and changes are not reset between tests inside the file"}, 
+
+{"option":"Each test file shares a single instance of jsdom and changes are reset for each describe block"}, 
+
+{"option":"Each test suite shares a single instance of jsdom and changes are reset for each test suite"}, 
+
+{"option":"Each test block has its own instance of jsdom and changes are reset for each test block"}], 
+
+"answers":[1] 
+
+},{ 
+
+"question":"Which sequence allows for testing a property without waiting for an asynchronous update?", 
+
+"options": 
+
+[{"option":"The property is set prior to the renderedCallback() call."}, 
+
+{"option":"The property is set prior to the appendChild() call."}, 
+
+{"option":"The property is set after the renderedCallback() call."}, 
+
+{"option":"The property is set after the appendChild() call."}], 
+
+"answers":[2] 
+
+},{ 
+
+"question":"Which import is required and only available in Lightning Web Component Jest tests?", 
+
+"options": 
+
+[{"option":"import { createElements } from 'lwc';"}, 
+
+{"option":"import { testElement } from 'lwc';"}, 
+
+{"option":"import { createElement } from 'lwc';"}, 
+
+{"option":"import { testElements } from 'lwc';"}], 
+
+"answers":[3] 
+
+},{ 
+
+"question":"Which statement must be used to set fake timers before all the tests in a Jest JavaScript file?", 
+
+"options": 
+
+[{"option":"jest.useFakeTimers() inside the beforeAll() function"}, 
+
+{"option":"jest.useFakeTimers() inside the beforeTests() function"}, 
+
+{"option":"jest.useMockTimers() inside the beforeAll() function"}, 
+
+{"option":"jest.useMockTimers() inside the beforeTests() function"}], 
+
+"answers":[1] 
+
+},{ 
+
+"question":"Which function must be used for Apex Wire adapters in Jest tests?", 
+
+"options": 
+
+[{"option":"createTestWireAdapter() from \"@salesforce/sfdx-lwc-jest\";"}, 
+
+{"option":"createApexWireAdapter() from \"@salesforce/wire-service-jest-utils\";"}, 
+
+{"option":"createApexWireAdapter() from \"@salesforce/sfdx-lwc-jest\";"}, 
+
+{"option":"createApexTestWireAdapter() from \"@salesforce/wire-service-jest-utils\";"}], 
+
+"answers":[4] 
+
+},{ 
+
+"question":"Which statement is true about testing Base Lightning Components?", 
+
+"options": 
+
+[{"option":"All properties from Base Lightning components are reflected in the DOM."}, 
+
+{"option":"Base Lightning components have some properties that are not reflected as attributes in the DOM."}, 
+
+{"option":"The order in which slots are rendered will follow the order established in your HTML file."}, 
+
+{"option":"Events can be fired from mocked Base Lightning components natively."}], 
+
+"answers":[2] 
+
+},{ 
+
+"question":"What must be done to Jest tests to cause a module import statement inside a JavaScript file to resolve to the mocked version of this module?", 
+
+"options": 
+
+[{"option":"Add the mocked module file to the scripts folder in the root folder of the project"}, 
+
+{"option":"Add the mocked module file to the moduleNameMapper settings in the jest.config file"}, 
+
+{"option":"Enable mocked modules by using the function require() inside the test"}, 
+
+{"option":"Use the function emit() from a wired adapter that invoked the mocked module"}], 
+
+"answers":[2] 
+
+},{ 
+
+"question":"Given a registered Apex wire adapter named findRecordsAdapter and a mocked @wire named mockRecords, which statement causes a Jest test to use the mocked records once the Apex method is called?", 
+
+"options": 
+
+[{"option":"jest.mockRecords.emit(findRecordsAdapter);"}, 
+
+{"option":"jest.findRecordsAdapter(mockRecords);"}, 
+
+{"option":"findRecordsAdapter.emit(mockRecords);"}, 
+
+{"option":"mockRecords.emit(findRecordsAdapter);"}], 
+
+"answers":[3] 
+
+},{ 
+
+"question":"Which statement allows the Jest test to catch a mock handler for a toast event?", 
+
+"options": 
+
+[{"option":"const handler = jest.fn(); element.addEventListener(ShowToastEventName, handler);"}, 
+
+{"option":"const handler = jest.fn(); element.dispatchEvent(ShowToastEventName, handler);"}, 
+
+{"option":"const showToastEventName = jest.fn();"}, 
+
+{"option":"const handler = jest.fn(); handler.dispatchEvent(ShowToastEventName);"}], 
+
+"answers":[1] 
 
 }] 
