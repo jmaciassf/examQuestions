@@ -12,7 +12,7 @@
 
  
 
-"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>01 document.cookie;<br>02 document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"},  
+"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>document.cookie;<br>document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"},  
 
  
 
@@ -32,7 +32,7 @@
 
  
 
-    "question":"Given the JavaScript below:<code>01 function filterDOM(searchString) {<br>02 \tconst parsedSearchString = searchString && searchString.toLowerCase();<br>03 \tdocument.querySelectorAll('.account').forEach(account => {<br>04 \t\tconst accountName = account.innerHTML.toLowerCase();<br>05 \t\taccount.style.display = accountName.includes(parsedSearchString) ? <br>06 \t\t/* Insert code here */;<br>07 \t});<br>08 }</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",  
+    "question":"Given the JavaScript below:<code>function filterDOM(searchString) {<br>\tconst parsedSearchString = searchString && searchString.toLowerCase();<br>\tdocument.querySelectorAll('.account').forEach(account => {<br>\t\tconst accountName = account.innerHTML.toLowerCase();<br>\t\taccount.style.display = accountName.includes(parsedSearchString) ? <br>\t\t/* Insert code here */;<br>\t});<br>}</code>Which code should replace the placeholder comment on line 06 to hide accounts that do not match the search string?",  
 
  
 
@@ -416,7 +416,7 @@
 
  
 
-    "question":"A developer wants to create an object from a function in the browser using the code below:<code>01 function Monster() { this.name = 'hello' };<br>02 const z = Monster();</code>What happens due to lack of the new keyword on line 02?",  
+    "question":"A developer wants to create an object from a function in the browser using the code below:<code>function Monster() { this.name = 'hello' };<br>const z = Monster();</code>What happens due to lack of the new keyword on line 02?",  
 
  
 
@@ -734,7 +734,7 @@
 
  
 
-    "question":"A developer is creating a simple webpage with a button. When a user clicks this button for the first time, a message is displayed. The developer wrote the JavaScript code below, but something is missing. The message gets displayed every time a user clicks the button, instead of just the first time.<code>01 function listen(event) {\n02\n03\talert('Hey! I am John Doe');\n04\n05 }\n06 button.addEventListener('click', listen);</code>Which two code lines make this code work as required? Choose 2 answers",  
+    "question":"A developer is creating a simple webpage with a button. When a user clicks this button for the first time, a message is displayed. The developer wrote the JavaScript code below, but something is missing. The message gets displayed every time a user clicks the button, instead of just the first time.<code>function listen(event) {\n\n\talert('Hey! I am John Doe');\n\n}\nbutton.addEventListener('click', listen);</code>Which two code lines make this code work as required? Choose 2 answers",  
 
  
 
@@ -1214,7 +1214,7 @@
 
  
 
-    "question":"Given the following code:<code>01 document.body.addEventListener('click', (event) => {\n02\tif (/* CODE REPLACEMENT HERE */) {\n03\t\tconsole.log('button clicked!');\n04\t}\n05 });</code>Which replacement for the conditional statement on line 02 allows a developer to correctly determine that a button on page is clicked?",  
+    "question":"Given the following code:<code>document.body.addEventListener('click', (event) => {\n\tif (/* CODE REPLACEMENT HERE */) {\n\t\tconsole.log('button clicked!');\n04\t}\n05 });</code>Which replacement for the conditional statement on line 02 allows a developer to correctly determine that a button on page is clicked?",  
 
  
 
@@ -1538,7 +1538,7 @@
 
 }, { 
 
-"question":"A developer wants to iterate through an array of objects and count the objects and count the objects whose property value, name, starts with the letter N.<code>const arrObj = [{\"name\" : \"Zach\"} , {\"name\" : \"Kate\"},{\"name\" : \"Alise\"},{\"name\" :\n\"Bob\"},{\"name\" : \"Natham\"},{\"name\" : \"nathaniel\"}]</code>Refer to the code snippet below:<code>01 arrObj.reduce(( acc, curr) => {\n02\t// missing line 02\n03 \t// missing line 03\n04 }, 0);</code>Which missing lines 02 and 03 return the correct count?", 
+"question":"A developer wants to iterate through an array of objects and count the objects and count the objects whose property value, name, starts with the letter N.<code>const arrObj = [{\"name\" : \"Zach\"} , {\"name\" : \"Kate\"},{\"name\" : \"Alise\"},{\"name\" :\n\"Bob\"},{\"name\" : \"Natham\"},{\"name\" : \"nathaniel\"}]</code>Refer to the code snippet below:<code>arrObj.reduce((acc, curr) => {\n\t// missing line 02\n\t// missing line 03\n}, 0);</code>Which missing lines 02 and 03 return the correct count?", 
 
 "options": 
 
@@ -1762,7 +1762,7 @@
 
 }, { 
 
-"question":"Which code does the developer need to add to line 03 to receive incoming request data?<code>01 const https = require('https');\n02 const server = https.createServer((req, res) => {\n03\t// code goes here\n04\t\tlet reqData = JSON.parse(chunk);\n05\t\tconsole.log(reqData);\n06\t});\n07\tres.end('OK');\n08 });\n09 server.listen(8000);</code>", 
+"question":"Which code does the developer need to add to line 03 to receive incoming request data?<code>const https = require('https');\nconst server = https.createServer((req, res) => {\n\t// code goes here\n\t\tlet reqData = JSON.parse(chunk);\n\t\tconsole.log(reqData);\n\t});\n\tres.end('OK');\n});\nserver.listen(8000);</code>", 
 
 "options": 
 
@@ -1844,7 +1844,7 @@
 
 }, { 
 
-"question":"Given the code below:<code>01 let res = sum3([1, 2, 3]);\n02 console.assert(res === 6);</code>The sum3 method gets updated to multiply the numbers instead of adding them. Line 02 is now a falsepositive assertion. How can the test be changed to fix it?", 
+"question":"Given the code below:<code>let res = sum3([1, 2, 3]);\nconsole.assert(res === 6);</code>The sum3 method gets updated to multiply the numbers instead of adding them. Line 02 is now a falsepositive assertion. How can the test be changed to fix it?", 
 
 "options": 
 
