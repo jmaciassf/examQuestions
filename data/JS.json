@@ -890,13 +890,13 @@
 
  
 
-    [{"option":"node start inspect server,js"},  
+    [{"option":"node start inspect server.js"},  
 
  
 
  
 
-    {"option":"node inspect server,js"},  
+    {"option":"node inspect server.js"},  
 
  
 
@@ -908,7 +908,7 @@
 
  
 
-    {"option":"node server,js inspect"}],  
+    {"option":"node server.js inspect"}],  
 
  
 
@@ -1070,54 +1070,6 @@
 
  
 
-    "question":"The developer wants to test this code:<code>const toNumber =(strOrNum) => strOrNum;</code>Which two tests are most accurate for this code? Choose 2 answers",  
-
- 
-
- 
-
-    "options":  
-
- 
-
- 
-
-    [{"option":"console.assert(Number.isNaN(toNumber()));"},  
-
- 
-
- 
-
-    {"option":"console.assert(toNumber () === NaN);"},  
-
- 
-
- 
-
-    {"option":"console.assert(toNumber('2') === 2);"},  
-
- 
-
- 
-
-    {"option":"console.assert(toNumber('-3') &lt; 0);"}],  
-
- 
-
- 
-
-    "answers":[3,4]  
-
- 
-
- 
-
-}, {  
-
- 
-
- 
-
     "question":"Given the HTML below:<code><div id=\"row-uc\">Universal Containers</div></code>Which statement adds the priority-account CSS class to the Universal Containers row?",  
 
  
@@ -1258,13 +1210,13 @@
 
 }, { 
 
-"question":"A developer initiates a server with the file server,js and adds dependencies in the source codes package.json that are required to run the server. Which command should the developer run to start the server locally?", 
+"question":"A developer initiates a server with the file server.js and adds dependencies in the source codes package.json that are required to run the server. Which command should the developer run to start the server locally?", 
 
 "options": 
 
-[{"option":"start server,js"}, 
+[{"option":"start server.js"}, 
 
-{"option":"npm start server,js"}, 
+{"option":"npm start server.js"}, 
 
 {"option":"npm start"}, 
 
@@ -2488,7 +2440,8 @@
 
 {"option":"50\n80\nUncaught Reference Error: this.discount is undefined\n72"}], 
 
-"answers":[2] 
+"answers":[2],
+"favorite":true
 
 }, { 
 
@@ -2554,7 +2507,8 @@
 
 {"option":"import * as lib from '/path/universalContainersLib.js';\nlib.foo();\nlib.bar();"}], 
 
-"answers":[4] 
+"answers":[4],
+"favorite":true
 
 },{ 
 
@@ -2960,7 +2914,8 @@
 
 {"option":"error"}], 
 
-"answers":[2,4,5] 
+"answers":[2,4,5],
+"favorite":true
 
 }, { 
 
@@ -2976,7 +2931,8 @@
 
 {"option":"const sumToTen = numVar => {\n\tif (numVar < 0)\n\t\treturn;\n\treturn sumToTen(numVar + 1);\n};"}], 
 
-"answers":[1,2] 
+"answers":[1,2],
+"favorite":true
 
 }, { 
 
@@ -3276,7 +3232,8 @@
 
 {"option":"server.error((server) =&gt; {\n\tconsole.log('ERROR', error); \n});"}], 
 
-"answers":[3] 
+"answers":[3],
+"favorite":true
 
 }, { 
 
@@ -3502,7 +3459,7 @@
 
 }, { 
 
-"question":"A developer publishes a new version of a package with new features that do not break backward compatibility. The previous version number was 1.1.3. Following semantic versioning format, what should the new package version number be?\n\n2.0.0\n1.2.3\n1.1.4\n1.2.0", 
+"question":"A developer publishes a new version of a package with new features that do not break backward compatibility. The previous version number was 1.1.3. Following semantic versioning format, what should the new package version number be?", 
 
 "options": 
 
@@ -3534,7 +3491,7 @@
 
 }, { 
 
-"question":"Given code below:<code>setTimeout (() => ( console.log(1); ). 0);\nconsole.log(2);\nnew Promise ((resolve, reject )) = > ( setTimeout(() => ( reject(console.log(3)); ), 1000); ))\n.catch(() => ( console.log(4); ));\nconsole.log(5);</code>What is logged to the console?", 
+"question":"Given code below:<code>setTimeout (() => { console.log(1); }, 0);\nconsole.log(2);\nnew Promise ((resolve, reject )) = > ( setTimeout(() => { reject(console.log(3)); }, 1000); ))\n.catch(() => { console.log(4); });\nconsole.log(5);</code>What is logged to the console?", 
 
 "options": 
 
@@ -3750,7 +3707,8 @@
 
 {"option":"The property is set after the appendChild() call."}], 
 
-"answers":[2] 
+"answers":[2],
+"favorite":true
 
 },{ 
 
