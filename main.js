@@ -320,6 +320,13 @@ function getQuestions(data){
                     $item.addClass("bodyShow").removeClass("bodyHide");
                 }
 
+                if(!$item.hasClass("opened")){
+                    $item.addClass("opened");
+
+                    // Remove checkboxes checked
+                    $item.find("input[type=checkbox]").attr("checked", false);
+                }
+
                 return;
                 
                 if(!event || !event.pointerId){

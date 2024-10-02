@@ -2548,7 +2548,7 @@
 
 },{ 
 
-"question":"Refer the code below:<code>x=3.14;\n\nfunction myFunction() {\n\t\"use strict\";\n\ty=x;\n}\nz=x;\nmyFunction();</code>", 
+"question":"Refer the code below:<code>x=3.14;\n\nfunction myFunction() {\n\t\"use strict\";\n\ty=x;\n}\nz=x;\nmyFunction();</code>Choose 3 answers", 
 
 "options": 
 
