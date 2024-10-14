@@ -516,7 +516,12 @@ function getQuestions(data){
         // Total questions
         $(".countQuestions").text(countQuestions + " questions");
 
-        $('code').lineLine();
+        //$('code').lineLine();
+        $('code').each(function(this){
+            if($(this).html().includes("<br>")){
+                $(this).lineLine();
+            }
+        });
 
         // Set classes of expand all
         $("#ckhExpandAll").click().click();

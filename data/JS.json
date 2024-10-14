@@ -12,7 +12,7 @@
 
  
 
-"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>document.cookie;<br>document.cookie = &lsquo;key=John Smith';</code>\nWhat is the behavior?"},  
+"question":"A developer tries to retrieve all cookies, then sets a certain key value pair in the cookie. These statements are used:<code>document.cookie;<br>document.cookie = 'key=John Smith';</code>\nWhat is the behavior?"},  
 
  
 
@@ -398,7 +398,8 @@
 
  
 
-    "answers":[3]  
+    "answers":[3],
+    "favorite":true
 
  
 
@@ -752,7 +753,7 @@
 
  
 
-    {"option":"On line 04, use button.removeEventListener(' click\" , listen);"},  
+    {"option":"On line 04, use button.removeEventListener(\"click\" , listen);"},  
 
  
 
@@ -1238,7 +1239,8 @@
 
 {"option":"myArray.flat(Infinity);"}], 
 
-"answers":[1] 
+"answers":[1],
+"favorite":true
 
 }, { 
 
@@ -1406,7 +1408,8 @@
 
 {"option":"change","explanation":"The change event is fired for changes to &lt;input&gt;, &lt;select&gt;, and &lt;textarea&gt;"}], 
 
-"answers":[1] 
+"answers":[1],
+"favorite":true
 
 },{ 
 
@@ -1490,17 +1493,16 @@
 
 }, { 
 
-"question":"A developer wants to iterate through an array of objects and count the objects and count the objects whose property value, name, starts with the letter N.<code>const arrObj = [{\"name\" : \"Zach\"} , {\"name\" : \"Kate\"},{\"name\" : \"Alise\"},{\"name\" :\n\"Bob\"},{\"name\" : \"Natham\"},{\"name\" : \"nathaniel\"}]</code>Refer to the code snippet below:<code>arrObj.reduce((acc, curr) => {\n\t// missing line 02\n\t// missing line 03\n}, 0);</code>Which missing lines 02 and 03 return the correct count?", 
 
 "options": 
 
-[{"option":"const sum = curr.startsWith('N')? 1: 0; return acc + sum"}, 
+[{"option":"const sum = curr.startsWith('N')? 1: 0;\nreturn acc + sum"}, 
 
-{"option":"const sum = curr.name.startsWith('N')? 1: 0; return acc + sum"}, 
+{"option":"const sum = curr.name.startsWith('N')? 1: 0;\nreturn acc + sum"}, 
 
-{"option":"const sum = curr.startsWIth('N')? 1: 0; return curr + sum"}, 
+{"option":"const sum = curr.startsWIth('N')? 1: 0;\nreturn curr + sum"}, 
 
-{"option":"const sum = curr.name.startsWIth('N')? 1: 0; return curr + sum"}], 
+{"option":"const sum = curr.name.startsWIth('N')? 1: 0;\nreturn curr + sum"}], 
 
 "answers":[2] 
 
@@ -1840,7 +1842,8 @@
 
 {"option":"default"}], 
 
-"answers":[2] 
+"answers":[2],
+"favorite":true
 
 }, { 
 
@@ -1920,7 +1923,8 @@
 
 {"option":"runParallel().then(function(data){\n\treturn data;\n});"}], 
 
-"answers":[2,4] 
+"answers":[2,4],
+"favorite":true
 
 }, { 
 
@@ -2050,7 +2054,8 @@
 
 {"option":"let x = arr.slice(2,3);"}], 
 
-"answers":[2,3,4] 
+"answers":[2,3,4],
+"favorite":true
 
 }, { 
 
@@ -2694,7 +2699,8 @@
 
 {"option":"let strValue = (String)numValue;"}], 
 
-"answers":[1,2,4] 
+"answers":[1,2,4],
+"favorite":true
 
 }, { 
 
@@ -2762,7 +2768,8 @@
 
 {"option":"False negative","explanation":"code is correct but the test fails"}], 
 
-"answers":[4] 
+"answers":[4],
+"favorite":true
 
 }, { 
 
@@ -2968,7 +2975,8 @@
 
 {"option":"size"}], 
 
-"answers":[3,4,5] 
+"answers":[3,4,5],
+"favorite":true
 
 }, { 
 
