@@ -97,6 +97,7 @@ code {
     font-size: 12px;
     border-radius: 3px;
     overflow-wrap: anywhere;
+    padding: 20px;
 }
 code .tab, .option .tab {
     margin-left: 20px;

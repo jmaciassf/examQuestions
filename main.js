@@ -517,7 +517,7 @@ function getQuestions(data){
         $(".countQuestions").text(countQuestions + " questions");
 
         //$('code').lineLine();
-        $('code').each(function(this){
+        $('code').each(function(){
             if($(this).html().includes("<br>")){
                 $(this).lineLine();
             }
