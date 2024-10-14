@@ -783,7 +783,7 @@
 
  
 
-    "question":"Given the code below:<code>function myFunction(){\n\ta = 5;\n\tvar b =1;\n}\n\n\nmyFunction();\nconsole.log(a);\nconsole.log(b);</code>What is the expected output?",  
+    "question":"Given the code below:<code>function myFunction(){\n\ta = 5;\n\tvar b = 1;\n}\n\n\nmyFunction();\nconsole.log(a);\nconsole.log(b);</code>What is the expected output?",  
 
  
 
@@ -819,7 +819,8 @@
 
  
 
-    "answers":[3]  
+    "answers":[3],
+    "favorite":true
 
  
 
@@ -1306,7 +1307,8 @@
 
 {"option":"It should be bundled when the package is published."}], 
 
-"answers":[2] 
+"answers":[2],
+"favorite":true
 
 },{ 
 
@@ -1425,7 +1427,8 @@
 
 {"option":"It should be bundled with other packages when the package is published.","explanation":"Peer dependencies are added to your package.json"}], 
 
-"answers":[3] 
+"answers":[3],
+"favorite":true
 
 }, { 
 
@@ -1600,7 +1603,8 @@
 
 {"option":"[1, 2, 3, 5]"}], 
 
-"answers":[3] 
+"answers":[3],
+"favorite":true
 
 }, { 
 
@@ -2036,7 +2040,8 @@
 
 {"option":"Vehicle.plate = plate;"}], 
 
-"answers":[2] 
+"answers":[2],
+"favorite":true
 
 }, { 
 
@@ -2365,7 +2370,8 @@
 
 {"option":"console.assert(arr[0] === 0 &amp;&amp; arr[ arr.length] === 0);"}], 
 
-"answers":[1,2] 
+"answers":[1,2],
+"favorite":true
 
 },{ 
 
