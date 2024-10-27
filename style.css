@@ -78,6 +78,11 @@ body.expandAll .item .body { display: block; }
     padding: 7px 10px;
     cursor: pointer;
 }
+.item[isFavorite] .title {
+    background-color: #ffb752;
+    color: white;
+    font-weight: 500;
+}
 .item .body {
     display: none;
     padding: 10px;

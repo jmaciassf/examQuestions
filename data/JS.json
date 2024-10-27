@@ -976,7 +976,7 @@
 
  
 
-    "question":"Refer to the following array:<code>let arr1 = [ 1, 2, 3, 4, 5 ];</code>Which two lines of code result in a second array, arr2 being created such that arr2 is not a reference to arr1?",  
+    "question":"Refer to the following array:<code>let arr1 = [1, 2, 3, 4, 5];</code>Which two lines of code result in a second array, arr2 being created such that arr2 is not a reference to arr1?",  
 
  
 
@@ -1232,7 +1232,7 @@
 
 "options": 
 
-[{"option":"myArray.reduce((prev, curr) =&gt; prev.concat(curr) [ ]);"}, 
+[{"option":"myArray.reduce((prev, curr) =&gt; prev.concat(curr));"}, 
 
 {"option":"myArray.join(\",\").split (\",\");"}, 
 
@@ -2045,17 +2045,17 @@
 
 }, { 
 
-"question":"Refer to the following array:<code>let arr = [ 1, 2, 3, 4, 5];</code>Which three options result in x evaluating as [3, 4, 5]? Choose 3 answers.", 
+"question":"Refer to the following array:<code>let arr = [1, 2, 3, 4, 5];</code>Which three options result in x evaluating as [3, 4, 5]? Choose 3 answers.", 
 
 "options": 
 
-[{"option":"let x = arr.filter (( a) =&gt; (a&lt;2));"}, 
+[{"option":"let x = arr.filter ((a) =&gt; (a &lt; 2));"}, 
 
 {"option":"let x = arr.splice(2,3);"}, 
 
 {"option":"let x = arr.slice(2);"}, 
 
-{"option":"let x = arr.filter((a) =&gt; ( return a&gt;2 ));"}, 
+{"option":"let x = arr.filter((a) =&gt; ( return a &gt; 2 ));"}, 
 
 {"option":"let x = arr.slice(2,3);"}], 
 
@@ -2744,7 +2744,7 @@
 
 }, { 
 
-"question":"A developer wants to use a try...catch statement to catch any error that countSheep() may throw and pass it to a handleError () function. What is the correct implementation of the try...catch?", 
+"question":"A developer wants to use a try...catch statement to catch any error that countSheep() may throw and pass it to a handleError() function. What is the correct implementation of the try...catch?", 
 
 "options": 
 
@@ -3591,7 +3591,7 @@
 
 {"option":"var1 &amp;&amp; var2"}, 
 
-{"option":"var1.toBoolean() &amp;&amp; var2toBoolean()"}, 
+{"option":"var1.toBoolean() &amp;&amp; var2.toBoolean()"}, 
 
 {"option":"Boolean(var1) &amp;&amp; Boolean(var2)"}], 
 
@@ -3671,7 +3671,8 @@
 
 {"option":"const foo = () =&gt; { return 'foo';}\nconst bar = () => { return 'bar'; }\nexport default foo, bar;"}], 
 
-"answers":[1,3] 
+"answers":[1,3],
+"favorite":true
 
 }, 
 

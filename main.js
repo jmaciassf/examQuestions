@@ -288,9 +288,11 @@ function getQuestions(data){
             if(element.explanation)
                 explanation = `<div class="explanation">${element.explanation}</div>`;
 
+            var isFavorite = element.favorite ? " isFavorite " : "";
+
             questionCounter++;
             var $item = 
-            $(`<div class="item" questionId="${questionCounter-1}">
+            $(`<div class="item" questionId="${questionCounter-1}" ${isFavorite}>
                 <div class="title">Question ${questionCounter}</div>
                 <div class="body">
                     <div class="question">${element.question}</div>
@@ -423,9 +425,20 @@ function getQuestions(data){
                 $title.click();
                 
                 // Expand next item
-                let $nextItem = $item.next();
-                if(!$nextItem.length) return; // Last question
+                //let $nextItem = $item.next();
+                //if(!$nextItem.length) return; // Last question
 
+                // Next question not answered
+                let $nextItem = $item.next();
+                if(!$nextItem.length) return;
+                if($nextItem.hasClass("answered")){
+                    $nextItem = $item.nextUntil(":not(.answered)");
+                    if(!$nextItem.length) return;
+                    $nextItem = $nextItem.last();
+                    if(!$nextItem.length) return;
+                    $nextItem = $nextItem.next();
+                }
+                
                 goToItem($nextItem);
 
                 /*
