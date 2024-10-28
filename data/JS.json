@@ -882,10 +882,6 @@
 
     "question":"A developer needs to debug a Node.js web server because a runtime error keeps occurring at one of the endpoints. The developer wants to test the endpoint on a local machine and make the request against a local server to look at the behavior. In the source code, the server.js file will start the server. the developer wants to debug the Node.js server only using the terminal. Which command can the developer use to open the CLI debugger in their current terminal window?",  
 
- 
-
- 
-
     "options":  
 
  
@@ -1280,7 +1276,6 @@
 { 
 
 "question":"A developer is wondering whether to use Promise.then or Promise.catch, especially when a Promise throws an error? Which two promises are rejected?", 
-
 "options": 
 
 [{"option":"Promise.reject(\"cool error here\").then(error =&gt; console.error(error));"}, 
@@ -1291,8 +1286,8 @@
 
 {"option":"new Promise(() =&gt; {throw \"cool error here\"}).then(null, error =&gt; console.error(error));"}], 
 
-"answers":[2,3] 
-
+"answers":[2,3],
+"favorite":true
 },{ 
 
 "question":"Why would a developer specify a package.json as a developed forge instead of a dependency?", 
