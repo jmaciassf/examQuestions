@@ -1516,7 +1516,7 @@
 
 }, { 
 
-"question":"bar, awesome is a popular JavaScript module. the versions publish to npm are:<code>1.2\n1.3.1\n1.3.5\n1.4.0</code>Teams at Universal Containers use this module in a number of projects. A particular project has the package, json definition below.<code>{\n\t\"name\": \"UC Project Extra\",\n\t\"version\": \"0.0.5\",\n\t\"dependencies\": {\n\t\t\"bar.awesome\": \"~1.3.0\"\n\t}\n}</code>A developer runs this command: npm install.Which version of bar .awesome is installed?", 
+"question":"bar, awesome is a popular JavaScript module. the versions publish to npm are:\n\n1.2\n1.3.1\n1.3.5\n1.4.0\n\nTeams at Universal Containers use this module in a number of projects. A particular project has the package, json definition below.<code>{\n\t\"name\": \"UC Project Extra\",\n\t\"version\": \"0.0.5\",\n\t\"dependencies\": {\n\t\t\"bar.awesome\": \"~1.3.0\"\n\t}\n}</code>A developer runs this command: npm install.Which version of bar .awesome is installed?", 
 
 "options": 
 
@@ -1528,8 +1528,8 @@
 
 {"option":"1.4.0"}], 
 
-"answers":[2] 
-
+"answers":[2],
+"favorite": true
 }, { 
 
 "question":"Refer to the code below:<code>function changeValue(obj) {\n\tobj.value = obj.value/2;\n}\n\nconst objA = (value: 10);\nconst objB = objA;\nchangeValue(objB);\nconst result = objA.value;</code>What is the value of the result after the code executes?", 
@@ -1642,7 +1642,7 @@
 
 {"option":"&gt; 5 &gt; 0"}], 
 
-"answers":[4],
+"answers":[3],
 "favorite": true
 
 },{ 
