@@ -1548,22 +1548,6 @@
 
 }, { 
 
-"question":"Universal Containers (UC) just launched a new landing page, but users complain that the website is slow. A developer found some functions any that might cause this problem. To verify this, the developer decides to execute everything and log the time each of these three suspicious functions consumes. Which function can the developer use to obtain the time spent by every one of the three functions?<code>console.time('Performance');\nmaybeAHeavyFunction();\nthisCouldTakeTooLong();\norMaybeThisOne();\nconsole.endTime('Performance');</code>", 
-
-"options": 
-
-[{"option":"console.timeStamp()"}, 
-
-{"option":"console.trace()"}, 
-
-{"option":"console.getTime()"}, 
-
-{"option":"console.timeLog()"}], 
-
-"answers":[4] 
-
-}, { 
-
 "question":"Refer to the code below:<code>var str = \"javascript\";\nstr[0] = \"J\";\nstr[4] = \"S\";</code>After changing the string index values, the value of str is \"javascript\" .What is the reason for this value:", 
 
 "options": 
@@ -1663,7 +1647,7 @@
 
 }, { 
 
-"question":"Given two nested divs and the code below:<code>window.onload = (event) => {\n\tdocument.querySelector('.outerDiv') .addEventListener('click', displayOuterMessage, true);\n\tdocument.querySelector('.innerDiv').addEventListener('click', displayInnerMessage, true);\n};</code>What order will the event listeners be called when the innerDiv is clicked?", 
+"question":"Given two nested divs and the code below:<code>window.onload = (event) => {\n\tdocument.querySelector('.outerDiv').addEventListener('click', displayOuterMessage, true);\n\tdocument.querySelector('.innerDiv').addEventListener('click', displayInnerMessage, true);\n};</code>What order will the event listeners be called when the innerDiv is clicked?", 
 
 "options": 
 
@@ -1675,7 +1659,8 @@
 
 {"option":"displayOuterMessage, displayInnerMessage","explanation":"Events in the target phase will trigger all listeners on an element in the order they were registered."}],  
 
-"answers":[4] 
+"answers":[4],
+"favorite": true
 
 }, { 
 
@@ -1691,7 +1676,8 @@
 
 {"option":"async function getResult() {\n\tconst data = p1;\n\tconst result = p2(data);\n}\nawait getResult();","explanation":"The await is outside the function calling the data."}], 
 
-"answers":[1,2] 
+"answers":[1,2],
+"favorite": true
 
 }, { 
 
@@ -1707,7 +1693,8 @@
 
 {"option":"async function getBookInfo() {\n\tconst Id = getId;\n\tconst result = getBook(id);\n}\nawait getBookInfo();","explanation":"Wrong use of await and async to get info. The await expression is always inside an async function."}], 
 
-"answers":[1] 
+"answers":[1],
+"favorite": true
 
 }, { 
 
@@ -2410,8 +2397,8 @@
 
 {"option":"console.timeStamp()"}], 
 
-"answers":[3] 
-
+"answers":[3],
+"favorite": true
 }, { 
 
 "question":"Given the code below:<code>const copy = JSON.stringify([new String('false'), new Boolean(false), undefined]);</code>What is the value of copy?", 
@@ -3569,7 +3556,8 @@
 
 {"option":"String.concat(var1 +var2)"}], 
 
-"answers":[1,3] 
+"answers":[1,3],
+"favorite": true
 
 }, 
 
