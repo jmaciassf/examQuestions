@@ -3834,7 +3834,7 @@
 	{"option":"List objects"}],
 	"answers":[1, 2]
 }, {
-	"question":"What is the proper syntax for adding placeholders in template literals?<br>\n\n\n${expression}\n\n\n$(expression)\n\n\n$[expression]\n\n\n$expression",
+	"question":"What is the proper syntax for adding placeholders in template literals?",
 	"options":
 	[{"option":"${expression}"},
 	{"option":"$(expression)"},
