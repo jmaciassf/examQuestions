@@ -884,15 +884,8 @@
 
     "options":  
 
- 
-
- 
-
     [{"option":"node start inspect server.js"},  
 
- 
-
- 
 
     {"option":"node inspect server.js"},  
 
@@ -912,7 +905,8 @@
 
  
 
-    "answers":[2]  
+    "answers":[2],
+    "favorite": true
 
  
 
@@ -1615,7 +1609,8 @@
 
 {"option":"4 5 2 1 3"}], 
 
-"answers":[3] 
+"answers":[3],
+"favorite": true
 
 }, { 
 
@@ -1635,7 +1630,7 @@
 
 }, { 
 
-"question":"Refer to the code below:<code>const searchText = 'Yay! Salesforce is amazing!';\nlet result1 = searchText.search(/sales/i);\nlet result21 = searchText.search(/sales/);\nconsole.log(result1);\nconsole.log(result2);</code>After running this code, which result is displayed on the console?", 
+"question":"Refer to the code below:<code>const searchText = 'Yay! Salesforce is amazing!';\nlet result1 = searchText.search(/sales/i);\nlet result2 = searchText.search(/sales/);\nconsole.log(result1);\nconsole.log(result2);</code>After running this code, which result is displayed on the console?", 
 
 "options": 
 
@@ -1647,7 +1642,8 @@
 
 {"option":"&gt; 5 &gt; 0"}], 
 
-"answers":[2] 
+"answers":[4],
+"favorite": true
 
 },{ 
 
@@ -3434,7 +3430,8 @@
 
 {"option":"Add the statement use strict = false; before any other statements in the module to enable not- strict mode."}], 
 
-"answers":[2] 
+"answers":[2],
+"favorite": true
 
 }, { 
 
