@@ -2137,8 +2137,8 @@
 
 {"option":"Object.freeze()"}], 
 
-"answers":[4] 
-
+"answers":[4],
+"favorite": true
 }, { 
 
 "question":"Given the code below:<code>function GameConsole (name) {\n\tthis.name = name;\n}\nGameConsole.prototype.load = function(gamename) {\n\tconsole.log(`$(this.name) is loading a game : $(gamename)...`);\n}\nfunction Console16bit (name) {\n\tGameConsole.call(this, name);\n}\nConsole16bit.prototype = Object.create ( GameConsole.prototype);\n// insert code here\n\tconsole.log(`${this.name} is loading a cartridge game : ${gamename}...`);\n}\nconst console16bit = new Console16bit(\"SNEGeneziz\");\nconsole16bit.load(\"Super Nonic 3x Force\");</code>What should a developer insert to output the following message using the method? > SNEGeneziz is loading a cartridge game: Super Monic 3x Force...", 
