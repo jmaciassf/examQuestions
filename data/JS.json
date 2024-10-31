@@ -3817,4 +3817,44 @@
 
 "answers":[1] 
 
+}, {
+	"question":"What are the different data types used in Javascript",
+	"options":
+	[{"option":"string, number, BigInt, Boolean, null, undefined, object, symbol"},
+	{"option":"string, number, decimal, Boolean, null, undefined, object, double"},
+	{"option":"string, number, BigInt, Boolean, null, undefined, object, double"},
+	{"option":"string, number, Int, Boolean, null, undefined, object, symbol"}],
+	"answers":[1]
+}, {
+	"question":"Which collections of data are ordered by a key? Select two options",
+	"options":
+	[{"option":"Map objects"},
+	{"option":"Set objects"},
+	{"option":"Objects"},
+	{"option":"List objects"}],
+	"answers":[1, 2]
+}, {
+	"question":"What is the proper syntax for adding placeholders in template literals?<br>\n\n\n${expression}\n\n\n$(expression)\n\n\n$[expression]\n\n\n$expression",
+	"options":
+	[{"option":"${expression}"},
+	{"option":"$(expression)"},
+	{"option":"$[expression]"},
+	{"option":"$expression"}],
+	"answers":[1]
+}, {
+	"question":"Given the code below: <code>function Person(name, email) {\n\tthis.name = name;\n\tthis.email = email;\n}\n\nconst john = new Person(\"John\", \"john@email.com\");\nconst jane = new Person(\"Jane\", \"jane@email.com\");\nconst emily = new Person(\"Emily\", \"emily@email.com\");\n\nlet userList = [john, jane, emily];</code>Which method can be provide a visual representation of the list if users and to allow sorting by the name or email attributes.",
+	"options":
+	[{"option":"console.table(userList);"},
+	{"option":"console.groupCollapsed(userslist);"},
+	{"option":"console.info(userlist);"},
+    {"option":"console.group(userList);"}],
+	"answers":[1]
+}, {
+	"question":"The developer wants to test the code:<code>const toNumber = (strOrNum) => + strOrNum;</code>Which two tests are most accurate for this code? Choose 2 answers",
+	"options":
+	[{"option":"console.assert(toNumber ('2') === 2 );"},
+	{"option":"console.assert(Number.isNaN(toNumber()));"},
+	{"option":"console.assert(toNumber ('-3') &lt; 0);"},
+	{"option":"console.assert(toNumber() === NaN );"}],
+	"answers":[1, 3]
 }] 
