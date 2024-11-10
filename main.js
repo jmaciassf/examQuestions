@@ -320,13 +320,15 @@ function getQuestions(data){
                 }
                 else {
                     $item.addClass("bodyShow").removeClass("bodyHide");
-                }
 
-                if(!$item.hasClass("opened")){
-                    $item.addClass("opened");
-
-                    // Remove checkboxes checked
-                    $item.find("input[type=checkbox]").attr("checked", false);
+                    if(!$item.hasClass("opened")){
+                        $item.addClass("opened");
+    
+                        // Remove checkboxes checked
+                        //setTimeout(function(){
+                            $item.find("input[type=checkbox]").prop("checked", false);
+                        //}, 0);
+                    }
                 }
 
                 return;

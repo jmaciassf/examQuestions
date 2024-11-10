@@ -1726,7 +1726,8 @@
 
 {"option":"name and message","explanation":"Both name and message are main properties."}], 
 
-"answers":[4] 
+"answers":[4],
+"favorite":true
 
 }, { 
 
@@ -1829,10 +1830,8 @@
 
 }, { 
 
-"question":"A test has a dependency on database.query. During the test the dependency is replaced with an object called database with the method, query, that returns an array. The developer needs to verify how many times the method was called and the arguments used each time.", 
-
+"question":"A test has a dependency on database.query. During the test the dependency is replaced with an object called database with the method, query, that returns an array. The developer needs to verify how many times the method was called and the arguments used each time. Which two test approaches describe the requirement? Choose 2 answers.", 
 "options": 
-
 [{"option":"Integration"}, 
 
 {"option":"Black box"}, 
@@ -2660,8 +2659,8 @@
 
 {"option":"Undefined"}], 
 
-"answers":[1] 
-
+"answers":[1],
+"favorite":true
 }, { 
 
 "question":"<code>function Person(firstName, lastName, eyeColor) {\n\tthis.firstName = firstName;\n\tthis.lastName = lastName;\n\tthis.eyeColor = eyeColor;\n}\n\nPerson.job = 'Developer';\nconst myFather = new Person('John', 'Doe');\nconsole.log(myFather.job);</code>What is the output after the code executes?", 
@@ -2813,9 +2812,8 @@
 {"option":"04 const reader = new File();\n08 if (file) reader.readAsDataURL(file);"}, 
 
 {"option":"04 const reader = new FileReader();\n08 if (file) reader.readAsDataURL(file);"}], 
-
-"answers":[4] 
-
+"answers":[4],
+"favorite":true
 }, { 
 
 "question":"Given the following code, what is the value of x?<code>let x = ('15' + 10) * 2;</code>", 
@@ -3276,8 +3274,8 @@
 
 {"option":"'Update' , {  Details: { recordId: '123abc' } }"}], 
 
-"answers":[3,4] 
-
+"answers":[3,4],
+"favorite":true
 }, { 
 
 "question":"Refer to the following object.<code>const dog = {\n\tfirstName: 'Beau',\n\tlastName: 'Boo',\n\tget fullName(){\n\t\treturn this.firstName + ' ' + this.lastName;\n\t}\n}</code>How can a developer access the fullName property for dog?", 
