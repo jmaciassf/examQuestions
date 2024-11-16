@@ -195,53 +195,13 @@
  
 
     "question":"Refer to the following code: <code>let sampleText = 'The quick brown fox jumps';</code> A developer needs to determine if a certain substring is part of a string. Which three expressions return true for the given substring ? Choose 3 answers",  
-
- 
-
- 
-
     "options":  
-
- 
-
- 
-
     [{"option":"sampleText.includes('fox');"},  
-
- 
-
- 
-
-    {"option":"sampleText.includes(' quick ', 4);"},  
-
- 
-
- 
-
-    {"option":"sampleText.includes('Fox', 3)"},  
-
- 
-
- 
-
-    {"option":"sampleText.includes(' fox ');"},  
-
- 
-
- 
-
+    {"option":"sampleText.includes('quick', 4);"},  
+    {"option":"sampleText.includes('Fox', 3)"},
+    {"option":"sampleText.substring('fox');"},  
     {"option":"sampleText.includes('quick') !== -1;"}],  
-
- 
-
- 
-
-    "answers":[1,4,5]  
-
- 
-
- 
-
+    "answers":[1,2,5]  
 },  
 
  
