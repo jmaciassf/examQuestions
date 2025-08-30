@@ -1005,28 +1005,11 @@
  
 
 }, {  
-
- 
-
- 
-
     "question":"Given the HTML below:<code><div id=\"row-uc\">Universal Containers</div></code>Which statement adds the priority-account CSS class to the Universal Containers row?",  
-
- 
-
- 
 
     "options":  
 
- 
-
- 
-
     [{"option":"document.queryselector('#row-uc').classList.add('priority-account');"},  
-
- 
-
- 
 
     {"option":"document.querySelector(#row-uc').classes-push('priority-account');"},  
 

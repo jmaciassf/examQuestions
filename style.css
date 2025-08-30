@@ -95,7 +95,7 @@ body.expandAll .item .body { display: block; }
 }
 
 code {
-    background-color: #e3e3e3;
+    background-color: #e3e3e3; 
     display: block;
     margin: 10px 0px;
     padding: 7px 10px;
